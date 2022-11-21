@@ -14,11 +14,17 @@ import queue
 import threading
 import geoip2.database
 import uuid
+import logging
 
+logging.basicConfig(level=logging.INFO,
+                    format="[%(levelname)s] [%(asctime)s] %(message)s",
+                    datefmt='%Y-%m-%d %H:%M:%S'
+                    )
 
 WORKDIR = os.path.dirname(os.path.realpath('__file__'))
 
-OUTPUT = "%s/output/openproxy.txt" % WORKDIR
+OUTPUT = "%s/output/%s.txt" % (WORKDIR,
+                               time.strftime("%Y%m%d%H%M%S", time.localtime()))
 
 
 def get_sub_collection():
@@ -27,7 +33,6 @@ def get_sub_collection():
     path_year = sub_path+'/'+str(today.year)
     path_mon = path_year+'/'+str(today.month)
     path_yaml = path_mon+'/'+str(today.month)+'-'+str(today.day)+'.yaml'
-    path_yaml = 'https://ghproxy.com/https://raw.githubusercontent.com/rxsweet/collectSub/main/sub/2022/11/11-20.yaml'
     response = requests.get(path_yaml)
     if response.ok:
         return response.content.decode("utf8")
@@ -86,14 +91,12 @@ def check_v2ray_status(proxy):
         try:
             ip = response.content.decode("utf8")
             country = geoip_reader.country(ip).country.iso_code
-            print(ip, country)
             if country is None:
                 raise Exception("")
             status = country
         except Exception as _:
-            status = "NONE"
-    except Exception as e:
-        print(e)
+            status = "NA"
+    except Exception as _:
         pass
     finally:
         s.terminate()
@@ -103,7 +106,9 @@ def check_v2ray_status(proxy):
 
 def save_v2ray_config(proxy, country):
     global name_count
-    status = False
+    global v2ray_servers
+    global clash_servers
+    status = None
     try:
         v2ray = {
             "v": "2",
@@ -139,6 +144,7 @@ def save_v2ray_config(proxy, country):
                 name_count[country] = 0
             v2ray['ps'] = '%s-%s' % (country,
                                      str(name_count[country]).zfill(3))
+            proxy['name'] = v2ray['ps']
             name_count[country] += 1
         except Exception as _:
             pass
@@ -146,27 +152,31 @@ def save_v2ray_config(proxy, country):
         with open(OUTPUT, "a", encoding="utf8") as v:
             v.write("%s://%s\n" % (proxy['type'], base64.b64encode(
                 json.dumps(v2ray).encode("utf8")).decode("utf8")))
-            status = True
-    except Exception as e:
-        print(e)
+            status = v2ray['ps']
+            v2ray['schema'] = proxy['type']
+            v2ray_servers.append(v2ray)
+            clash_servers.append(proxy)
+    except Exception as _:
+        pass
 
     return status
 
 
 def analyse_sub(sub):
+    logging.info("Get Sub %s" % sub)
     proxies = []
     response = requests.get(sub, headers={
         'User-Agent': 'v2rayN/5.37'
     })
     if response.status_code != 200:
-        print("Http Error %s" % response.status_code)
+        logging.error("Get Sub Http Error %s" % response.status_code)
         return
     content = response.content.decode('utf8')
     if len(content) <= 100:
-        print("Empty Content")
+        logging.error("Get Sub Empty Content")
         return
     if 'proxies' in content.lower():
-        print("handle clash sub")
+        logging.info("load clash sub")
         data = yaml.unsafe_load(content)
         for proxy in data['proxies']:
             try:
@@ -175,7 +185,7 @@ def analyse_sub(sub):
             except Exception as _:
                 pass
     else:
-        print("handle v2ray sub")
+        logging.info("load v2ray sub")
         data = base64.b64decode(content)
         for s in data.decode("utf8").split("\n"):
             if len(s) == 0:
@@ -216,29 +226,36 @@ def analyse_sub(sub):
     return proxies
 
 
-def check_proxy(proxy):
+def check_proxy(proxy, index):
     if re.search(r'公告|流量|套餐|严禁|剩余', str(proxy['name'])):
-        print("%s -> pass" % (proxy['name']))
+        logging.info("[%s]%s -> pass" % (index, proxy['name']))
         return
     if check_port_status(proxy['server'], int(proxy['port'])) is False:
-        print("%s -> port closed" % (proxy['name']))
+        logging.info("[%s]%s -> port closed" % (index, proxy['name']))
         return
     country = check_v2ray_status(proxy)
     if country is None:
-        print("%s -> server down" % (proxy['name']))
+        logging.info("[%s]%s -> server down" % (index, proxy['name']))
         return
-    if save_v2ray_config(proxy, country) is False:
-        print("%s -> save fail" % (proxy['name']))
+    save = save_v2ray_config(proxy, country)
+    if save is None:
+        logging.info("[%s]%s -> save fail" % (index, proxy['name']))
         return
+    logging.info("[%s]%s -> %s" % (index, proxy['name'], save))
 
 
 def check_proxy_thread(sid):
     global running
-    print("THREAD %s START" % sid)
+    global index
+    logging.info("THREAD %s START" % sid)
     while running:
-        proxy = check.get()
-        check_proxy(proxy)
-    print("THREAD %s STOPED" % sid)
+        try:
+            proxy = check.get(timeout=1)
+            index += 1
+            check_proxy(proxy, index)
+        except Exception as _:
+            pass
+    logging.info("THREAD %s STOPED" % sid)
 
 
 if os.path.exists(OUTPUT):
@@ -250,9 +267,13 @@ check = queue.Queue(10)
 running = True
 geoip_reader = geoip2.database.Reader('%s/Country.mmdb' % WORKDIR)
 name_count = {}
+v2ray_servers = []
+clash_servers = []
+index = 0
 
+logging.info("Set Output %s" % OUTPUT)
 
-for i in range(10):
+for i in range(20):
     threading.Thread(target=check_proxy_thread, args=(i,)).start()
 
 for group in data:
@@ -266,9 +287,36 @@ for group in data:
                 if proxy is not None:
                     check.put(proxy)
         except Exception as e:
-            print(e)
+            logging.error(e)
 
 while True:
     if check.empty():
         running = False
+        break
     time.sleep(1)
+
+while threading.active_count() != 1:
+    logging.debug("RUNNING THREAD %s" % threading.active_count())
+    time.sleep(1)
+
+v2ray_subscription = ""
+
+logging.info("generate v2ray subscription")
+
+for vs in sorted(v2ray_servers, key=lambda e: e.__getitem__('ps')):
+    schema = vs['schema']
+    del vs['schema']
+    v2ray_subscription += "%s://%s\n" % (schema, base64.b64encode(
+        json.dumps(vs).encode("utf8")).decode("utf8"))
+
+with open("%s/output/v2ray.txt"%WORKDIR, "w", encoding="utf8") as f:
+    f.write(base64.b64encode(v2ray_subscription.encode("utf8")).decode("utf8"))
+
+logging.info("generate clash subscription")
+
+clash_subscription = {
+    'proxies': clash_servers
+}
+
+with open("%s/output/clash.yaml" % WORKDIR, "w", encoding="utf8") as f:
+    f.write(yaml.safe_dump(clash_subscription))
