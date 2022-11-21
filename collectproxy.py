@@ -299,9 +299,10 @@ while threading.active_count() != 1:
     logging.debug("RUNNING THREAD %s" % threading.active_count())
     time.sleep(1)
 
-v2ray_subscription = ""
 
 logging.info("generate v2ray subscription")
+
+v2ray_subscription = ""
 
 for vs in sorted(v2ray_servers, key=lambda e: e.__getitem__('ps')):
     schema = vs['schema']
@@ -313,6 +314,8 @@ with open("%s/output/v2ray.txt" % WORKDIR, "w", encoding="utf8") as f:
     f.write(base64.b64encode(v2ray_subscription.encode("utf8")).decode("utf8"))
 
 logging.info("generate clash subscription")
+
+clash_servers = sorted(clash_servers, key=lambda e: e.__getitem__('name'))
 
 clash_subscription = {
     'mixed-port': 7891,
