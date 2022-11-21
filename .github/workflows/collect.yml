@@ -33,7 +33,7 @@ jobs:
         run: |
           python collectproxy.py
       - name: Upload Result
-        uses: actions/upload-artifact@v3
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
-          name: openproxy
-          path: output
+          branch: output
+          folder: output
