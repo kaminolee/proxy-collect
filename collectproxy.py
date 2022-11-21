@@ -75,7 +75,7 @@ def check_v2ray_status(proxy):
         fc.write(yaml.safe_dump(config))
     s = subprocess.Popen(['clash', "-f", config_path],
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    time.sleep(0.2)
+    time.sleep(1)
     try:
         response = requests.get('http://api.ipify.org',
                                 proxies={
@@ -309,13 +309,31 @@ for vs in sorted(v2ray_servers, key=lambda e: e.__getitem__('ps')):
     v2ray_subscription += "%s://%s\n" % (schema, base64.b64encode(
         json.dumps(vs).encode("utf8")).decode("utf8"))
 
-with open("%s/output/v2ray.txt"%WORKDIR, "w", encoding="utf8") as f:
+with open("%s/output/v2ray.txt" % WORKDIR, "w", encoding="utf8") as f:
     f.write(base64.b64encode(v2ray_subscription.encode("utf8")).decode("utf8"))
 
 logging.info("generate clash subscription")
 
 clash_subscription = {
-    'proxies': clash_servers
+    'mixed-port': 7891,
+    'mode': 'rule',
+    'profile': {
+        'store-selected': False
+    },
+    'proxies': clash_servers,
+    'proxy-groups': [
+        {
+            'name': 'balanced',
+            'type': 'load-balance',
+            'strategy': 'round-robin',
+            'url': 'http://www.gstatic.com/generate_204',
+            'interval': 300,
+            'proxies': [cs['name'] for cs in clash_servers]
+        }
+    ],
+    'rules': [
+        'MATCH,balanced'
+    ]
 }
 
 with open("%s/output/clash.yaml" % WORKDIR, "w", encoding="utf8") as f:
