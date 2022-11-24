@@ -104,58 +104,18 @@ def check_v2ray_status(proxy):
     return status
 
 
-def save_v2ray_config(proxy, country):
+def rename_proxy(proxy, country):
     global name_count
-    global v2ray_servers
     global clash_servers
     status = None
     try:
-        v2ray = {
-            "v": "2",
-            "ps": str(proxy['name']),
-            "add": proxy['server'],
-            "port": proxy['port'],
-            "type": "auto",
-            "id": proxy['uuid'],
-            "aid": proxy['alterId'],
-            "net": "tcp",
-            "path": "/",
-            "host": proxy['server'],
-            "tls": ""
-        }
-        try:
-            v2ray['tls'] = 'tls'
-        except Exception as _:
-            pass
-        try:
-            v2ray['net'] = proxy['network']
-        except Exception as _:
-            pass
-        try:
-            v2ray['path'] = proxy['ws-opts']['path']
-        except Exception as _:
-            pass
-        try:
-            v2ray['host'] = proxy['ws-opts']['headers']['Host']
-        except Exception as _:
-            pass
-        try:
-            if country not in name_count:
-                name_count[country] = 0
-            v2ray['ps'] = '%s-%s' % (country,
+        if country not in name_count:
+            name_count[country] = 0
+        proxy['name'] = '%s-%s' % (country,
                                      str(name_count[country]).zfill(3))
-            proxy['name'] = v2ray['ps']
-            name_count[country] += 1
-        except Exception as _:
-            pass
-
-        with open(OUTPUT, "a", encoding="utf8") as v:
-            v.write("%s://%s\n" % (proxy['type'], base64.b64encode(
-                json.dumps(v2ray).encode("utf8")).decode("utf8")))
-            status = v2ray['ps']
-            v2ray['schema'] = proxy['type']
-            v2ray_servers.append(v2ray)
-            clash_servers.append(proxy)
+        name_count[country] += 1
+        clash_servers.append(proxy)
+        status = proxy['name']
     except Exception as _:
         pass
 
@@ -180,7 +140,7 @@ def analyse_sub(sub):
         data = yaml.unsafe_load(content)
         for proxy in data['proxies']:
             try:
-                if proxy['type'] == 'vmess' or proxy['type'] == 'vless':
+                if True:
                     proxies.append(proxy)
             except Exception as _:
                 pass
@@ -237,7 +197,7 @@ def check_proxy(proxy, index):
     if country is None:
         logging.info("[%s]%s -> server down" % (index, proxy['name']))
         return
-    save = save_v2ray_config(proxy, country)
+    save = rename_proxy(proxy, country)
     if save is None:
         logging.info("[%s]%s -> save fail" % (index, proxy['name']))
         return
@@ -298,20 +258,6 @@ while True:
 while threading.active_count() != 1:
     logging.debug("RUNNING THREAD %s" % threading.active_count())
     time.sleep(1)
-
-
-logging.info("generate v2ray subscription")
-
-v2ray_subscription = ""
-
-for vs in sorted(v2ray_servers, key=lambda e: e.__getitem__('ps')):
-    schema = vs['schema']
-    del vs['schema']
-    v2ray_subscription += "%s://%s\n" % (schema, base64.b64encode(
-        json.dumps(vs).encode("utf8")).decode("utf8"))
-
-with open("%s/output/v2ray.txt" % WORKDIR, "w", encoding="utf8") as f:
-    f.write(base64.b64encode(v2ray_subscription.encode("utf8")).decode("utf8"))
 
 logging.info("generate clash subscription")
 
