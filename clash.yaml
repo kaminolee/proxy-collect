@@ -66,9 +66,16 @@ proxies:
     headers:
       Host: ca2.v2rayserv.com
     path: /sshocean
+- name: CA-003
+  password: HdsUZmsHQW
+  port: 443
+  server: 148.113.141.99
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - alterId: '0'
   cipher: auto
-  name: CA-003
+  name: CA-004
   network: ws
   port: '443'
   server: 35.182.165.120
@@ -86,7 +93,7 @@ proxies:
   ws-path: /v2ray
 - alterId: '0'
   cipher: auto
-  name: CA-004
+  name: CA-005
   network: ws
   port: '443'
   server: 168.138.94.194
@@ -100,24 +107,6 @@ proxies:
   ws-opts:
     headers:
       Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: CA-005
-  network: ws
-  port: '443'
-  server: 219.76.13.169
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: tgunivstar.168-138-94-194.sslip.io
-  ws-opts:
-    headers:
-      Host: tgunivstar.168-138-94-194.sslip.io
     path: /
   ws-path: /
 - alterId: '0'
@@ -179,7 +168,7 @@ proxies:
   name: CA-009
   network: ws
   port: '443'
-  server: 185.160.26.114
+  server: 129.154.221.237
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -197,7 +186,7 @@ proxies:
   name: CA-010
   network: ws
   port: '443'
-  server: 124.156.238.155
+  server: 185.160.26.114
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -215,7 +204,7 @@ proxies:
   name: CA-011
   network: ws
   port: '443'
-  server: 193.123.251.98
+  server: 124.156.238.155
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -233,7 +222,7 @@ proxies:
   name: CA-012
   network: ws
   port: '443'
-  server: 129.154.221.237
+  server: 193.123.251.98
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -251,24 +240,6 @@ proxies:
   name: CA-013
   network: ws
   port: '443'
-  server: 219.76.13.180
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: tgunivstar.168-138-94-194.sslip.io
-  ws-opts:
-    headers:
-      Host: tgunivstar.168-138-94-194.sslip.io
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: CA-014
-  network: ws
-  port: '443'
   server: 155.248.230.241
   skip-cert-verify: true
   tls: true
@@ -284,7 +255,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: CA-015
+  name: CA-014
   network: ws
   port: '443'
   server: 155.248.229.119
@@ -303,24 +274,6 @@ proxies:
 - alterId: '0'
   cipher: auto
   name: CH-000
-  network: ws
-  port: '443'
-  server: www.kehuai.tk
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 353b3a7d-28d2-4e4b-9633-1c90f23b6514
-  ws-headers:
-    Host: www.kehuai.tk
-  ws-opts:
-    headers:
-      Host: www.kehuai.tk
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: CH-001
   network: ws
   port: '443'
   server: www.liuyiyang19891222.tk
@@ -390,9 +343,27 @@ proxies:
       Host: ''
     path: ''
   ws-path: ''
-- alterId: '0'
+- alterId: '64'
   cipher: auto
   name: CN-003
+  network: tcp
+  port: '50002'
+  server: 49.234.84.132
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+  ws-path: ''
+- alterId: '0'
+  cipher: auto
+  name: CN-004
   network: ws
   port: '10020'
   server: ah.yd01.paopaocloud.cyou
@@ -408,24 +379,6 @@ proxies:
       Host: paopao.v2.hk02.paopaocloud.cyou
     path: /v2ray
   ws-path: /v2ray
-- alterId: '0'
-  cipher: auto
-  name: CN-004
-  network: tcp
-  port: '31372'
-  server: 106.55.234.95
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 374d3519-455c-45b8-e3b1-0e2e9fcf4411
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
 - alterId: '0'
   cipher: auto
   name: CN-005
@@ -447,6 +400,24 @@ proxies:
 - alterId: '0'
   cipher: auto
   name: CN-006
+  network: tcp
+  port: '31372'
+  server: 106.55.234.95
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 374d3519-455c-45b8-e3b1-0e2e9fcf4411
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: CN-007
   network: ws
   port: '10009'
   server: ah.yd01.paopaocloud.cyou
@@ -464,7 +435,7 @@ proxies:
   ws-path: /v2ray
 - alterId: '0'
   cipher: auto
-  name: CN-007
+  name: CN-008
   network: http
   port: '50797'
   server: 124.221.131.176
@@ -482,7 +453,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: CN-008
+  name: CN-009
   network: ws
   port: '53022'
   server: 47.93.231.218
@@ -496,24 +467,6 @@ proxies:
   ws-opts:
     headers:
       Host: sd.189.cn
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: CN-009
-  network: ws
-  port: '13156'
-  server: 106.12.168.13
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9bf4cba4-9e9e-4da4-8e65-f7c487c539df
-  ws-headers:
-    Host: a.189.cn
-  ws-opts:
-    headers:
-      Host: a.189.cn
     path: /
   ws-path: /
 - alterId: 0
@@ -535,6 +488,36 @@ proxies:
   cipher: auto
   name: DE-001
   network: ws
+  port: 443
+  server: 8.218.126.208
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1197321c-eb59-4159-959f-5d81f53c1792
+  ws-opts:
+    headers:
+      Host: h1.800876.xyz
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: DE-002
+  network: ws
+  port: 80
+  server: 138.2.122.225
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 461aed20-0743-4f13-ee68-43394e875e42
+  ws-opts:
+    headers:
+      Host: h1.800876.xyz
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: DE-003
+  network: ws
   port: 6374
   server: 150.230.149.55
   skip-cert-verify: true
@@ -543,10 +526,12 @@ proxies:
   udp: true
   uuid: 80f25361-877d-46d4-8404-f0dce1faf84f
   ws-opts:
+    headers:
+      Host: 150.230.149.55
     path: /
 - alterId: 0
   cipher: auto
-  name: DE-002
+  name: DE-004
   network: ws
   port: 443
   server: 45.64.22.6
@@ -561,7 +546,25 @@ proxies:
     path: /
 - alterId: '0'
   cipher: auto
-  name: DE-003
+  name: DE-005
+  network: ws
+  port: 443
+  server: 45.64.22.23
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 43a55a45-6fbd-4713-9ff5-48f90bd74c5f
+  ws-headers:
+    Host: hax-tunnels.petll.tk
+  ws-opts:
+    headers:
+      Host: hax-tunnels.petll.tk
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: DE-006
   network: ws
   port: '25052'
   server: 167.235.192.0
@@ -579,7 +582,25 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: DE-004
+  name: DE-007
+  network: ws
+  port: '443'
+  server: 45.64.22.55
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1197321c-eb59-4159-959f-5d81f53c1792
+  ws-headers:
+    Host: h1.800876.xyz
+  ws-opts:
+    headers:
+      Host: h1.800876.xyz
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: DE-008
   network: ws
   port: '35855'
   server: 188.34.159.186
@@ -597,7 +618,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: DE-005
+  name: DE-009
   network: ws
   port: '443'
   server: 55.72img.xyz
@@ -615,7 +636,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: DE-006
+  name: DE-010
   network: ws
   port: '443'
   server: 53.72img.xyz
@@ -633,7 +654,25 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: DE-007
+  name: DE-011
+  network: ws
+  port: '443'
+  server: 52.72img.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  ws-headers:
+    Host: 52.72img.xyz
+  ws-opts:
+    headers:
+      Host: 52.72img.xyz
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: DE-012
   network: ws
   port: '6245'
   server: 206.81.31.184
@@ -651,7 +690,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: DE-008
+  name: DE-013
   network: ws
   port: '80'
   server: 8.219.123.110
@@ -660,96 +699,6 @@ proxies:
   type: vmess
   udp: true
   uuid: 429b13a5-3747-493d-a5d0-de6fa67d51d1
-  ws-headers:
-    Host: h2.800876.xyz
-  ws-opts:
-    headers:
-      Host: h2.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-009
-  network: ws
-  port: '443'
-  server: 8.218.126.208
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d217db0c-0faa-4270-ea38-e6093d9774e3
-  ws-headers:
-    Host: h2.800876.xyz
-  ws-opts:
-    headers:
-      Host: h2.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-010
-  network: ws
-  port: '80'
-  server: 8.219.123.110
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 461aed20-0743-4f13-ee68-43394e875e42
-  ws-headers:
-    Host: h1.800876.xyz
-  ws-opts:
-    headers:
-      Host: h1.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-011
-  network: ws
-  port: '443'
-  server: 45.64.22.55
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d217db0c-0faa-4270-ea38-e6093d9774e3
-  ws-headers:
-    Host: h2.800876.xyz
-  ws-opts:
-    headers:
-      Host: h2.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-012
-  network: ws
-  port: '443'
-  server: 45.64.22.6
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 1197321c-eb59-4159-959f-5d81f53c1792
-  ws-headers:
-    Host: h1.800876.xyz
-  ws-opts:
-    headers:
-      Host: h1.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-013
-  network: ws
-  port: '443'
-  server: 8.219.123.110
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d217db0c-0faa-4270-ea38-e6093d9774e3
   ws-headers:
     Host: h2.800876.xyz
   ws-opts:
@@ -780,61 +729,7 @@ proxies:
   name: DE-015
   network: ws
   port: '443'
-  server: 47.243.253.120
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d217db0c-0faa-4270-ea38-e6093d9774e3
-  ws-headers:
-    Host: h2.800876.xyz
-  ws-opts:
-    headers:
-      Host: h2.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-016
-  network: ws
-  port: '443'
   server: 47.243.170.245
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 1197321c-eb59-4159-959f-5d81f53c1792
-  ws-headers:
-    Host: h1.800876.xyz
-  ws-opts:
-    headers:
-      Host: h1.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-017
-  network: ws
-  port: '443'
-  server: 47.243.253.120
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 1197321c-eb59-4159-959f-5d81f53c1792
-  ws-headers:
-    Host: h1.800876.xyz
-  ws-opts:
-    headers:
-      Host: h1.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: DE-018
-  network: ws
-  port: '443'
-  server: 8.219.123.110
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -883,27 +778,104 @@ proxies:
       Host: ''
     path: /
   ws-path: /
-- alterId: '0'
+- alterId: 0
   cipher: auto
   name: FR-000
   network: ws
-  port: '80'
-  server: 57.128.45.161
+  port: 443
+  server: 141.101.114.121
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 35d25899-ed20-46d9-9c7c-99c0d414d5e4
-  ws-headers:
-    Host: ''
+  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
   ws-opts:
     headers:
-      Host: ''
-    path: /user
-  ws-path: /user
-- alterId: '0'
+      Host: fr2.cfcdn4.xyz
+    path: /ray
+- alterId: 0
   cipher: auto
   name: FR-001
+  network: ws
+  port: 443
+  server: 141.101.114.111
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
+  ws-opts:
+    headers:
+      Host: fr2.cfcdn4.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: FR-002
+  network: ws
+  port: 443
+  server: 104.29.64.2
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
+  ws-opts:
+    headers:
+      Host: fr2.cfcdn4.xyz
+    path: /ray
+- name: FR-003
+  password: Sp3eDVp
+  port: 443
+  server: content-provider5.cdn-delivery.akamaicd.com
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: FR-004
+  password: origin
+  port: 443
+  server: 51.77.71.134
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: '0'
+  cipher: auto
+  name: FR-005
+  network: ws
+  port: '443'
+  server: 172.64.148.111
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
+  ws-headers:
+    Host: fr2.cfcdn4.xyz
+  ws-opts:
+    headers:
+      Host: fr2.cfcdn4.xyz
+    path: /ray
+  ws-path: /ray
+- alterId: '0'
+  cipher: auto
+  name: FR-006
+  network: ws
+  port: '443'
+  server: 141.101.115.111
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
+  ws-headers:
+    Host: fr2.cfcdn4.xyz
+  ws-opts:
+    headers:
+      Host: fr2.cfcdn4.xyz
+    path: /ray
+  ws-path: /ray
+- alterId: '0'
+  cipher: auto
+  name: FR-007
   network: ws
   port: '8080'
   server: 141.94.59.200
@@ -921,46 +893,10 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: FR-002
-  network: ws
-  port: '80'
-  server: 8.219.123.110
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0f1f1cca-56dc-4feb-8b4b-50ab074f4467
-  ws-headers:
-    Host: w1.800876.xyz
-  ws-opts:
-    headers:
-      Host: w1.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: FR-003
+  name: FR-008
   network: ws
   port: '443'
   server: 8.219.123.110
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 1f4322e1-0e7e-4af2-cc09-84666ac15616
-  ws-headers:
-    Host: w1.800876.xyz
-  ws-opts:
-    headers:
-      Host: w1.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: FR-004
-  network: ws
-  port: '443'
-  server: 45.64.22.6
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -988,9 +924,16 @@ proxies:
     headers:
       Host: www.96357765.xyz
     path: /path/243535322906
+- cipher: aes-128-gcm
+  name: GB-001
+  password: shadowsocks
+  port: 443
+  server: 212.102.53.80
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: GB-001
+  name: GB-002
   network: ws
   port: 443
   server: vuk2.0bad.com
@@ -1008,7 +951,7 @@ proxies:
   ws-path: /chat
 - alterId: 0
   cipher: auto
-  name: GB-002
+  name: GB-003
   network: tcp
   port: 13472
   server: 161.35.47.70
@@ -1029,7 +972,7 @@ proxies:
   name: HK-000
   network: ws
   port: 80
-  server: hk80-2.sanfen001.pics
+  server: hk80.sanfen001.pics
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -1044,7 +987,7 @@ proxies:
   name: HK-001
   network: ws
   port: 80
-  server: hk80.sanfen001.pics
+  server: hk80-2.sanfen001.pics
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -1054,9 +997,17 @@ proxies:
     headers:
       Host: a.189.cn
     path: /zh-cn/download
+- name: HK-002
+  password: 357827e5-a45d-3f09-9b73-ef4431dfb323
+  port: 20014
+  server: 20014.purefast2.com
+  skip-cert-verify: true
+  sni: purefast1.com
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: HK-002
+  name: HK-003
   network: tcp
   port: 6666
   server: 128.1.134.126
@@ -1074,7 +1025,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: HK-003
+  name: HK-004
   network: tcp
   port: 30862
   server: 23.91.100.243
@@ -1092,7 +1043,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: HK-004
+  name: HK-005
   network: tcp
   port: 14444
   server: 165.154.5.235
@@ -1108,24 +1059,6 @@ proxies:
       Host: ''
     path: ''
   ws-path: ''
-- alterId: '0'
-  cipher: auto
-  name: HK-005
-  network: ws
-  port: '10010'
-  server: az.hk01.paopaocloud.cyou
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d8c5b486-84bb-3887-a1d9-07455ea608f2
-  ws-headers:
-    Host: paopao.v2.az01.paopaocloud.cyou
-  ws-opts:
-    headers:
-      Host: paopao.v2.az01.paopaocloud.cyou
-    path: /v2ray
-  ws-path: /v2ray
 - alterId: '0'
   cipher: auto
   name: HK-006
@@ -1144,24 +1077,24 @@ proxies:
       Host: ''
     path: /
   ws-path: /
-- alterId: '0'
+- alterId: 0
   cipher: auto
   name: HK-007
   network: ws
-  port: '443'
-  server: hkb1.sanfen001.pics
+  port: 443
+  server: univstar-104-208-117-86.nip.io
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d
+  uuid: 328b2547-d141-4df4-a76e-4f1c2e361f5c
   ws-headers:
-    Host: www.microsoft.com
+    Host: ''
   ws-opts:
     headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-  ws-path: /zh-cn
+      Host: ''
+    path: /
+  ws-path: /
 - alterId: '0'
   cipher: auto
   name: HK-008
@@ -1203,7 +1136,7 @@ proxies:
   name: HK-010
   network: ws
   port: '443'
-  server: hk11.sanfen001.pics
+  server: hkb2.sanfen001.pics
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1239,7 +1172,7 @@ proxies:
   name: HK-012
   network: ws
   port: '443'
-  server: hk3.sanfen001.pics
+  server: hk11.sanfen001.pics
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1257,24 +1190,6 @@ proxies:
   name: HK-013
   network: ws
   port: '443'
-  server: hkb2.sanfen001.pics
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d
-  ws-headers:
-    Host: www.microsoft.com
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-  ws-path: /zh-cn
-- alterId: '0'
-  cipher: auto
-  name: HK-014
-  network: ws
-  port: '443'
   server: hk4.sanfen001.pics
   skip-cert-verify: true
   tls: true
@@ -1288,24 +1203,6 @@ proxies:
       Host: www.microsoft.com
     path: /zh-cn
   ws-path: /zh-cn
-- alterId: '0'
-  cipher: auto
-  name: HU-000
-  network: tcp
-  port: '45081'
-  server: 185.225.69.134
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3c3bfd75-dc30-4e76-8940-47e1137e21f9
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
 - alterId: 0
   cipher: auto
   name: ID-000
@@ -1419,7 +1316,7 @@ proxies:
   name: IN-003
   network: ws
   port: '443'
-  server: 129.150.38.247
+  server: 8.210.181.145
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1437,7 +1334,7 @@ proxies:
   name: IN-004
   network: ws
   port: '443'
-  server: 8.210.181.145
+  server: 112.120.41.171
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1455,7 +1352,7 @@ proxies:
   name: IN-005
   network: ws
   port: '443'
-  server: 219.76.13.181
+  server: 129.150.38.247
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1473,7 +1370,7 @@ proxies:
   name: IN-006
   network: ws
   port: '443'
-  server: 112.120.41.171
+  server: 42.3.182.146
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1491,7 +1388,7 @@ proxies:
   name: IN-007
   network: ws
   port: '443'
-  server: 42.3.182.146
+  server: 138.2.70.213
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -1581,78 +1478,6 @@ proxies:
   name: IN-012
   network: ws
   port: '443'
-  server: 23.72img.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: 23.72img.xyz
-  ws-opts:
-    headers:
-      Host: 23.72img.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: IN-013
-  network: ws
-  port: '443'
-  server: 24.72img.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: 24.72img.xyz
-  ws-opts:
-    headers:
-      Host: 24.72img.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: IN-014
-  network: ws
-  port: '443'
-  server: 15.72img.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: 15.72img.xyz
-  ws-opts:
-    headers:
-      Host: 15.72img.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: IN-015
-  network: ws
-  port: '443'
-  server: 16.72img.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: 16.72img.xyz
-  ws-opts:
-    headers:
-      Host: 16.72img.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: IN-016
-  network: ws
-  port: '443'
   server: 17.72img.xyz
   skip-cert-verify: true
   tls: true
@@ -1668,7 +1493,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: IN-017
+  name: IN-013
   network: ws
   port: '443'
   server: 20.72img.xyz
@@ -1686,25 +1511,43 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: IN-018
+  name: IN-014
   network: ws
   port: '443'
-  server: 129.154.37.199
+  server: 24.72img.xyz
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
   uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
   ws-headers:
-    Host: ''
+    Host: 24.72img.xyz
   ws-opts:
     headers:
-      Host: ''
+      Host: 24.72img.xyz
     path: /
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: IN-019
+  name: IN-015
+  network: ws
+  port: '443'
+  server: 23.72img.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  ws-headers:
+    Host: 23.72img.xyz
+  ws-opts:
+    headers:
+      Host: 23.72img.xyz
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: IN-016
   network: ws
   port: '443'
   server: 140.238.249.80
@@ -1722,7 +1565,25 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: IN-020
+  name: IN-017
+  network: ws
+  port: '443'
+  server: 129.154.37.199
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: IN-018
   network: ws
   port: '443'
   server: 150.230.234.195
@@ -1738,9 +1599,80 @@ proxies:
       Host: ''
     path: /
   ws-path: /
+- cipher: aes-256-gcm
+  name: JP-000
+  password: XKFKl2rULjIp74
+  port: 8009
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP-001
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP-002
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP-003
+  password: pKEW8JPByTVTLtM
+  port: 443
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP-004
+  password: e4FCWrgpkji3QY
+  port: 9101
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP-005
+  password: TEzjfAYq2IjtuoS
+  port: 6697
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP-006
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP-007
+  password: kDWvXYZoTBcGkC4
+  port: 8881
+  server: 85.208.108.60
+  type: ss
+  udp: true
+- name: JP-008
+  password: Ty33ylFA4u6A5e0NE3wRFp3DIa8lZOzC87CeKnxYgpSOSa2ZaXBjDDSY9qCcxR
+  port: 443
+  server: 45.64.22.55
+  skip-cert-verify: true
+  sni: flowery.meijireform.com
+  type: trojan
+  udp: true
+- name: JP-009
+  password: 14bdba6dede262387ebdebaa706e1c90
+  port: 443
+  server: trs12.bolab.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: JP-000
+  name: JP-010
   network: ws
   port: 20960
   server: jp3.gamell.top
@@ -1755,7 +1687,7 @@ proxies:
     path: /ray
 - alterId: '0'
   cipher: auto
-  name: JP-001
+  name: JP-011
   network: tcp
   port: '21365'
   server: 168.138.207.66
@@ -1773,7 +1705,7 @@ proxies:
   ws-path: /
 - alterId: '64'
   cipher: auto
-  name: JP-002
+  name: JP-012
   network: tcp
   port: '20081'
   server: 138.2.44.211
@@ -1791,7 +1723,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: JP-003
+  name: JP-013
   network: tcp
   port: '1069'
   server: 152.69.197.60
@@ -1809,7 +1741,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: JP-004
+  name: JP-014
   network: ws
   port: 443
   server: suzhihan.eu.org
@@ -1827,7 +1759,7 @@ proxies:
   ws-path: /roewesu
 - alterId: '0'
   cipher: auto
-  name: JP-005
+  name: JP-015
   network: ws
   port: '10015'
   server: ah.yd01.paopaocloud.cyou
@@ -1845,7 +1777,25 @@ proxies:
   ws-path: /v2ray
 - alterId: '0'
   cipher: auto
-  name: JP-006
+  name: JP-016
+  network: ws
+  port: '443'
+  server: 141.147.181.219
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 0b873cff-11ab-4716-c41a-04f886135091
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /roewesu
+  ws-path: /roewesu
+- alterId: '0'
+  cipher: auto
+  name: JP-017
   network: ws
   port: '80'
   server: http.download.yunzhongzhuan.com
@@ -1863,7 +1813,25 @@ proxies:
   ws-path: /api/v3/download.getFile
 - alterId: '0'
   cipher: auto
-  name: JP-007
+  name: JP-018
+  network: ws
+  port: '443'
+  server: 27.72img.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  ws-headers:
+    Host: 27.72img.xyz
+  ws-opts:
+    headers:
+      Host: 27.72img.xyz
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: JP-019
   network: ws
   port: '10007'
   server: ah.yd01.paopaocloud.cyou
@@ -1881,25 +1849,7 @@ proxies:
   ws-path: /v2ray
 - alterId: '0'
   cipher: auto
-  name: JP-008
-  network: ws
-  port: '443'
-  server: 29.72img.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: 29.72img.xyz
-  ws-opts:
-    headers:
-      Host: 29.72img.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: JP-009
+  name: JP-020
   network: ws
   port: '443'
   server: 28.72img.xyz
@@ -1917,7 +1867,43 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: JP-010
+  name: JP-021
+  network: ws
+  port: '443'
+  server: vjp1.0bad.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-headers:
+    Host: vjp1.0bad.com
+  ws-opts:
+    headers:
+      Host: vjp1.0bad.com
+    path: /chat
+  ws-path: /chat
+- alterId: '0'
+  cipher: auto
+  name: JP-022
+  network: ws
+  port: '42517'
+  server: 43.128.228.119
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: JP-023
   network: ws
   port: '443'
   server: jp2.sanfen001.pics
@@ -1933,9 +1919,23 @@ proxies:
       Host: www.microsoft.com
     path: /zh-cn
   ws-path: /zh-cn
+- name: KR-000
+  password: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  port: 443
+  server: 138.2.114.255
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: KR-001
+  password: b291d129-ee55-4801-a9b8-b5316e5c37b7
+  port: 443
+  server: 138.2.113.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - alterId: '0'
   cipher: auto
-  name: KR-000
+  name: KR-002
   network: tcp
   port: '26676'
   server: 152.70.241.18
@@ -1953,7 +1953,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-001
+  name: KR-003
   network: ws
   port: '42517'
   server: 13.125.33.31
@@ -1971,7 +1971,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-002
+  name: KR-004
   network: tcp
   port: '37121'
   server: m4.40010010.xyz
@@ -1989,7 +1989,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-003
+  name: KR-005
   network: ws
   port: '443'
   server: surongwei.eu.org
@@ -2007,56 +2007,20 @@ proxies:
   ws-path: /reffs7y26g0ua
 - alterId: '0'
   cipher: auto
-  name: KR-004
-  network: tcp
-  port: '445'
-  server: kr-direct.node002.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5f04de84-6b7e-3564-82c2-d2a998002629
-  ws-headers:
-    Host: kr-direct.node002.xyz
-  ws-opts:
-    headers:
-      Host: kr-direct.node002.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-005
-  network: ws
-  port: '80'
-  server: 152.69.230.170
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6aa24ded-5f15-48c7-8cba-3e2a159d6b77
-  ws-headers:
-    Host: 152.69.230.170
-  ws-opts:
-    headers:
-      Host: 152.69.230.170
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
   name: KR-006
   network: ws
   port: '443'
-  server: 26.72img.xyz
+  server: 146.56.104.236
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
   uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
   ws-headers:
-    Host: 26.72img.xyz
+    Host: ''
   ws-opts:
     headers:
-      Host: 26.72img.xyz
+      Host: ''
     path: /
   ws-path: /
 - alterId: '0'
@@ -2082,6 +2046,24 @@ proxies:
   name: KR-008
   network: ws
   port: '443'
+  server: 26.72img.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  ws-headers:
+    Host: 26.72img.xyz
+  ws-opts:
+    headers:
+      Host: 26.72img.xyz
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: KR-009
+  network: ws
+  port: '443'
   server: 1.72img.xyz
   skip-cert-verify: true
   tls: true
@@ -2097,61 +2079,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-009
-  network: http
-  port: '46842'
-  server: 150.230.249.15
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4530b5ee-ced4-4e64-9285-1867fc5df7f8
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
   name: KR-010
-  network: ws
-  port: '42517'
-  server: 54.180.131.191
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-011
-  network: ws
-  port: '43417'
-  server: 13.125.5.159
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-012
   network: ws
   port: '42517'
   server: 54.180.117.118
@@ -2169,79 +2097,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-013
-  network: ws
-  port: '42517'
-  server: 13.209.68.219
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-014
-  network: ws
-  port: '42517'
-  server: 13.124.228.70
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-015
-  network: ws
-  port: '42517'
-  server: 54.180.156.175
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-016
-  network: ws
-  port: '42517'
-  server: 54.180.114.77
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-017
+  name: KR-011
   network: ws
   port: '42517'
   server: 13.125.24.153
@@ -2259,25 +2115,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-018
-  network: ws
-  port: '42517'
-  server: 52.79.182.230
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: KR-019
+  name: KR-012
   network: ws
   port: '42517'
   server: 54.180.150.171
@@ -2295,10 +2133,10 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-020
+  name: KR-013
   network: ws
   port: '42517'
-  server: 43.200.177.138
+  server: 13.124.228.70
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -2313,7 +2151,61 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: KR-021
+  name: KR-014
+  network: ws
+  port: '42517'
+  server: 13.209.68.219
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: KR-015
+  network: ws
+  port: '42517'
+  server: 54.180.114.77
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: KR-016
+  network: ws
+  port: '42517'
+  server: 54.180.156.175
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: KR-017
   network: ws
   port: '42517'
   server: 54.180.152.188
@@ -2347,27 +2239,16 @@ proxies:
       Host: 104.244.73.218
     path: /v2ray
   ws-path: /v2ray
-- alterId: '0'
-  cipher: auto
-  name: LU-001
-  network: ws
-  port: '443'
-  server: buyvm.imkcp.eu.org
+- name: NL-000
+  password: Sp3eDVp
+  port: 443
+  server: content-provider23.cdn-delivery.akamaicd.com
   skip-cert-verify: true
-  tls: true
-  type: vmess
+  type: trojan
   udp: true
-  uuid: 6fb9a750-55b8-4e6e-857b-242b795399dc
-  ws-headers:
-    Host: buyvm.imkcp.eu.org
-  ws-opts:
-    headers:
-      Host: buyvm.imkcp.eu.org
-    path: /imkcpyyds
-  ws-path: /imkcpyyds
 - alterId: '0'
   cipher: auto
-  name: NL-000
+  name: NL-001
   network: ws
   port: '80'
   server: 163.172.213.74
@@ -2383,24 +2264,6 @@ proxies:
       Host: ''
     path: /fastssh/sezarhacks/633be1a74319b/
   ws-path: /fastssh/sezarhacks/633be1a74319b/
-- alterId: '0'
-  cipher: auto
-  name: NL-001
-  network: ws
-  port: '80'
-  server: nl.v2-ray.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: bb97ee0a-6d57-40c0-a446-45b78c303603
-  ws-headers:
-    Host: nl.v2-ray.com
-  ws-opts:
-    headers:
-      Host: nl.v2-ray.com
-    path: /fastssh/hkgzs01/6315d407657f6/
-  ws-path: /fastssh/hkgzs01/6315d407657f6/
 - alterId: '0'
   cipher: auto
   name: NL-002
@@ -2421,44 +2284,8 @@ proxies:
   ws-path: /dgfdrg5GB5t5er
 - alterId: '0'
   cipher: auto
-  name: NL-003
-  network: ws
-  port: '2095'
-  server: king2.mmadserr.ml
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: dabdbbec-f774-41ff-a296-18026f469a97
-  ws-headers:
-    Host: king2.mmadserr.ml
-  ws-opts:
-    headers:
-      Host: king2.mmadserr.ml
-    path: /fhf5hfth565fhtf
-  ws-path: /fhf5hfth565fhtf
-- alterId: '0'
-  cipher: auto
   name: PH-000
   network: ws
-  port: '80'
-  server: ph1.v2rayserv.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a267a68e-4b59-413e-96a4-6388948a401c
-  ws-headers:
-    Host: ph1.v2rayserv.com
-  ws-opts:
-    headers:
-      Host: ph1.v2rayserv.com
-    path: /sshocean
-  ws-path: /sshocean
-- alterId: '0'
-  cipher: auto
-  name: PH-001
-  network: ws
   port: '443'
   server: ph1.v2rayserv.com
   skip-cert-verify: true
@@ -2473,93 +2300,6 @@ proxies:
       Host: ph1.v2rayserv.com
     path: /sshocean
   ws-path: /sshocean
-- alterId: 0
-  cipher: auto
-  name: PL-000
-  network: ws
-  port: 80
-  server: 47.88.52.220
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: c9fe8359-5878-4413-c80e-3ffeabc47b02
-  ws-opts:
-    headers:
-      Host: w.800876.xyz
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: PL-001
-  network: ws
-  port: '443'
-  server: 45.64.22.55
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: c13be7b9-bb72-4424-bb2f-00c468f4f282
-  ws-headers:
-    Host: w.800876.xyz
-  ws-opts:
-    headers:
-      Host: w.800876.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: PL-002
-  network: ws
-  port: '63077'
-  server: hk-core.pvpgames.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5f04de84-6b7e-3564-82c2-d2a998002629
-  ws-headers:
-    Host: '%7B%22Host%22:%22pl01x.myn1des.com%22%7D'
-  ws-opts:
-    headers:
-      Host: '%7B%22Host%22:%22pl01x.myn1des.com%22%7D'
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: PL-003
-  network: ws
-  port: '80'
-  server: 8.219.123.110
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: c9fe8359-5878-4413-c80e-3ffeabc47b02
-  ws-headers:
-    Host: w.800876.xyz
-  ws-opts:
-    headers:
-      Host: w.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
-- alterId: '0'
-  cipher: auto
-  name: PL-004
-  network: ws
-  port: '443'
-  server: 8.219.123.110
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: c13be7b9-bb72-4424-bb2f-00c468f4f282
-  ws-headers:
-    Host: w.800876.xyz
-  ws-opts:
-    headers:
-      Host: w.800876.xyz
-    path: /?ed=2048
-  ws-path: /?ed=2048
 - alterId: 0
   cipher: auto
   name: RU-000
@@ -2593,116 +2333,28 @@ proxies:
       Host: ''
     path: /
   ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: RU-002
-  network: tcp
-  port: '48181'
-  server: 194.38.9.6
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
-  ws-headers:
-    Host: node.napsternetv.com
-  ws-opts:
-    headers:
-      Host: node.napsternetv.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: RU-003
-  network: tcp
-  port: '48181'
-  server: 194.38.9.6
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 217F677E-C1A0-1AF0-D13B-F7956CBD313E
-  ws-headers:
-    Host: node.napsternetv.com
-  ws-opts:
-    headers:
-      Host: node.napsternetv.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: RU-004
-  network: tcp
-  port: '48181'
-  server: 194.38.9.6
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 9E9948FD-90E4-FE29-3D42-CABA01740EC0
-  ws-headers:
-    Host: node.napsternetv.com
-  ws-opts:
-    headers:
-      Host: node.napsternetv.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: RU-005
-  network: ws
-  port: '10031'
-  server: az.hk01.paopaocloud.cyou
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d8c5b486-84bb-3887-a1d9-07455ea608f2
-  ws-headers:
-    Host: az.hk01.paopaocloud.cyou
-  ws-opts:
-    headers:
-      Host: az.hk01.paopaocloud.cyou
-    path: /v2ray
-  ws-path: /v2ray
-- alterId: 0
-  cipher: auto
+- cipher: aes-256-cfb
   name: SG-000
-  network: ws
-  port: 80
-  server: tgunivstar-119-237-43-96.sslip.io
-  skip-cert-verify: true
-  tls: false
-  type: vmess
+  password: 9XwYyZsK8SNzQDtY
+  port: 9059
+  server: 103.172.116.8
+  type: ss
   udp: true
-  uuid: 7aa90c37-8928-4b27-adbe-8e7157fff7a2
-  ws-opts:
-    headers:
-      Host: sg11.cloudfast.vn
-    path: /cloudfast
-- alterId: 0
-  cipher: auto
-  name: SG-001
-  network: ws
-  port: 80
-  server: 15.235.147.186
+- name: SG-001
+  password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S
+  port: 443
+  server: 219.76.13.180
   skip-cert-verify: true
-  tls: false
-  type: vmess
+  sni: httah.freetrade.link
+  type: trojan
   udp: true
-  uuid: 6fea1649-425b-4092-bf53-29792152c925
-  ws-opts:
-    path: /sshkit/Ertusg86/635014638c264/
-- alterId: 2
-  cipher: auto
+- cipher: aes-256-cfb
   name: SG-002
-  port: 52234
-  server: 34.wgong1.top
-  skip-cert-verify: true
-  tls: false
-  type: vmess
+  password: TPqX8edgbAURcAMb
+  port: 9079
+  server: 103.172.116.7
+  type: ss
   udp: true
-  uuid: 9fee262e-87e1-312a-8d8e-cbb9e01a5657
 - alterId: '32'
   cipher: auto
   name: SG-003
@@ -2743,10 +2395,10 @@ proxies:
   cipher: auto
   name: SG-005
   network: ws
-  port: 80
+  port: 443
   server: sg2.v2-ray.com
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
   uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee
@@ -2761,10 +2413,10 @@ proxies:
   cipher: auto
   name: SG-006
   network: ws
-  port: 443
+  port: 80
   server: sg2.v2-ray.com
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
   uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee
@@ -2779,10 +2431,10 @@ proxies:
   cipher: auto
   name: SG-007
   network: ws
-  port: 443
+  port: 80
   server: sg-ovh2.v2-ray.com
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
   uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee
@@ -2797,10 +2449,10 @@ proxies:
   cipher: auto
   name: SG-008
   network: ws
-  port: 80
+  port: 443
   server: sg-ovh2.v2-ray.com
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
   uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee
@@ -2832,6 +2484,42 @@ proxies:
 - alterId: '0'
   cipher: auto
   name: SG-010
+  network: tcp
+  port: '40771'
+  server: lll.277428.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 61194810-5193-48bc-eb0a-7978a059d681
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+  ws-path: ''
+- alterId: '0'
+  cipher: auto
+  name: SG-011
+  network: ws
+  port: '80'
+  server: 15.235.147.186
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: /sshkit/Ertusg86/635014638c264/
+  ws-path: /sshkit/Ertusg86/635014638c264/
+- alterId: '0'
+  cipher: auto
+  name: SG-012
   network: ws
   port: '80'
   server: sg1.v2-ray.com
@@ -2849,58 +2537,22 @@ proxies:
   ws-path: /fastssh/hgfjk/6327373e44d3f/
 - alterId: '0'
   cipher: auto
-  name: SG-011
-  network: ws
-  port: '80'
-  server: sg11.cloudfast.vn
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 7aa90c37-8928-4b27-adbe-8e7157fff7a2
-  ws-headers:
-    Host: sg11.cloudfast.vn
-  ws-opts:
-    headers:
-      Host: sg11.cloudfast.vn
-    path: /cloudfast
-  ws-path: /cloudfast
-- alterId: '0'
-  cipher: auto
-  name: SG-012
-  network: ws
-  port: '443'
-  server: sg1.sanfen001.pics
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d
-  ws-headers:
-    Host: www.microsoft.com
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-  ws-path: /zh-cn
-- alterId: '0'
-  cipher: auto
   name: SG-013
-  network: ws
+  network: tcp
   port: '80'
-  server: 18.141.170.5
+  server: 00000000000000000000000000000000000000000000000000000000000005a.rui77.com
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 8ae99d30-65a6-4f38-8ecc-56c1c3f4d679
+  uuid: f57a34a9-dfab-45ba-b4be-3e5ebcbc7601
   ws-headers:
-    Host: shoutingtoutiao3.10010.com
+    Host: sg01.awcloud.top
   ws-opts:
     headers:
-      Host: shoutingtoutiao3.10010.com
-    path: /images
-  ws-path: /images
+      Host: sg01.awcloud.top
+    path: /
+  ws-path: /
 - alterId: '0'
   cipher: auto
   name: SG-014
@@ -2919,6 +2571,32 @@ proxies:
       Host: sg1-v2ray.sshkit.org
     path: /sshkit/401452697/635b464921141/
   ws-path: /sshkit/401452697/635b464921141/
+- alterId: '0'
+  cipher: auto
+  name: SG-015
+  network: ws
+  port: '443'
+  server: sg2.sanfen001.pics
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d
+  ws-headers:
+    Host: www.microsoft.com
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /zh-cn
+  ws-path: /zh-cn
+- name: TH-000
+  password: 357827e5-a45d-3f09-9b73-ef4431dfb323
+  port: 20005
+  server: 20005.purefast2.com
+  skip-cert-verify: true
+  sni: purefast1.com
+  type: trojan
+  udp: true
 - alterId: '0'
   cipher: auto
   name: TW-000
@@ -2959,38 +2637,20 @@ proxies:
   cipher: auto
   name: TW-002
   network: tcp
-  port: '445'
-  server: tw99-hinet.mynodes001.one
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5f04de84-6b7e-3564-82c2-d2a998002629
-  ws-headers:
-    Host: '%7B%22Host%22:%22ws-aicdn.com%22%7D'
-  ws-opts:
-    headers:
-      Host: '%7B%22Host%22:%22ws-aicdn.com%22%7D'
-    path: /index
-  ws-path: /index
-- alterId: '0'
-  cipher: auto
-  name: TW-003
-  network: ws
-  port: '443'
-  server: tw1.sanfen001.pics
+  port: '39999'
+  server: tw-tb-c.zc20200426.club
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d
+  uuid: 67c50f6a-816d-3555-89b4-19dd29608f8b
   ws-headers:
-    Host: www.microsoft.com
+    Host: csharp.protocolbuffer.com
   ws-opts:
     headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-  ws-path: /zh-cn
+      Host: csharp.protocolbuffer.com
+    path: /
+  ws-path: /
 - alterId: 0
   cipher: auto
   name: US-000
@@ -3026,64 +2686,19 @@ proxies:
   name: US-002
   network: ws
   port: 443
-  server: 4.72img.xyz
-  skip-cert-verify: true
+  server: 198.41.212.122
+  skip-cert-verify: false
   tls: true
   type: vmess
   udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
   ws-opts:
     headers:
-      Host: 4.72img.xyz
-    path: /
+      Host: lg1.cfcdn1.xyz
+    path: /ray
 - alterId: 0
   cipher: auto
   name: US-003
-  network: ws
-  port: 3389
-  server: 84.32.4.25
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 886868e2-b3fc-4a2c-8c66-1d2691861671
-  ws-opts:
-    headers:
-      Host: 84.32.4.25
-    path: /
-- alterId: 0
-  cipher: auto
-  name: US-004
-  network: ws
-  port: 2083
-  server: 173.245.49.171
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 8985723f-0b3c-44fa-ebee-a3153d57ccad
-  ws-opts:
-    headers:
-      Host: cdn.vip6.ml
-    path: /
-- alterId: 64
-  cipher: auto
-  name: US-005
-  network: ws
-  port: 443
-  server: 185.250.220.134
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.56759072.xyz
-    path: /path/321113221131
-- alterId: 0
-  cipher: auto
-  name: US-006
   network: ws
   port: 443
   server: 30.72img.xyz
@@ -3096,43 +2711,27 @@ proxies:
     headers:
       Host: 30.72img.xyz
     path: /
-- alterId: 64
+- alterId: 0
   cipher: auto
-  name: US-007
+  name: US-004
   network: ws
   port: 443
-  server: 23.224.30.70
+  server: 4.72img.xyz
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
   ws-opts:
     headers:
-      Host: www.67416562.xyz
-    path: /path/321113221131
+      Host: 4.72img.xyz
+    path: /
 - alterId: 0
   cipher: auto
-  name: US-008
+  name: US-005
   network: ws
   port: 443
-  server: 146.56.162.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: US-009
-  network: ws
-  port: 443
-  server: 51.75.70.34
-  servername: clash1.trump2023.net
+  server: 141.101.115.20
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -3144,7 +2743,22 @@ proxies:
     path: /dongtaiwang.com
 - alterId: 0
   cipher: auto
-  name: US-010
+  name: US-006
+  network: ws
+  port: 443
+  server: 141.101.114.133
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
+  ws-opts:
+    headers:
+      Host: lg1.cfcdn1.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: US-007
   network: ws
   port: 443
   server: 172.64.154.222
@@ -3159,22 +2773,67 @@ proxies:
     path: /ray
 - alterId: 0
   cipher: auto
-  name: US-011
+  name: US-008
+  network: ws
+  port: 3389
+  server: 84.32.4.25
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 886868e2-b3fc-4a2c-8c66-1d2691861671
+  ws-opts:
+    headers:
+      Host: 84.32.4.25
+    path: /
+- name: US-009
+  password: SyOxpKxC8u5jgNa3DCZ34y3D9CRenFcaABpYATEeqI2RSaXD76zS8YF0Owl3lZ
+  port: 443
+  server: 219.76.13.181
+  skip-cert-verify: true
+  sni: arbettp.freetrade.link
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: US-010
   network: ws
   port: 443
-  server: 128.14.140.254
+  server: 198.41.203.1
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  uuid: 267a9f38-40d8-4ed6-ab58-cafc67e9c933
   ws-opts:
     headers:
-      Host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
+      Host: lg1.cfcdn2.xyz
+    path: /VHONOFZ3
+- alterId: 64
+  cipher: auto
+  name: US-011
+  network: ws
+  port: 443
+  server: 23.224.30.70
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.67416562.xyz
+    path: /path/321113221131
+- name: US-012
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 23.175.144.181
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: US-012
+  name: US-013
   network: ws
   port: 443
   server: 128.14.140.254
@@ -3187,9 +2846,39 @@ proxies:
     headers:
       Host: zz1.wblogw1.tk
     path: /123
+- alterId: 0
+  cipher: auto
+  name: US-014
+  network: ws
+  port: 443
+  server: 146.56.162.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: US-015
+  network: ws
+  port: 2083
+  server: 173.245.49.171
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 8985723f-0b3c-44fa-ebee-a3153d57ccad
+  ws-opts:
+    headers:
+      Host: cdn.vip6.ml
+    path: /
 - alterId: 64
   cipher: auto
-  name: US-013
+  name: US-016
   network: ws
   port: 443
   server: 67.21.72.44
@@ -3205,9 +2894,27 @@ proxies:
       Host: www.48816626.xyz
     path: /path/120208301422
   ws-path: /path/120208301422
+- alterId: '0'
+  cipher: auto
+  name: US-017
+  network: tcp
+  port: '37584'
+  server: 23.105.199.160
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 61914893-393a-4685-fc2d-13328bd8e491
+  ws-headers:
+    Host: sanandaj.ir
+  ws-opts:
+    headers:
+      Host: sanandaj.ir
+    path: /graphql
+  ws-path: /graphql
 - alterId: 0
   cipher: auto
-  name: US-014
+  name: US-018
   network: ws
   port: 443
   server: 141.101.114.120
@@ -3225,25 +2932,7 @@ proxies:
   ws-path: /dongtaiwang.com
 - alterId: '0'
   cipher: auto
-  name: US-015
-  network: tcp
-  port: '37584'
-  server: 23.105.199.160
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 61914893-393a-4685-fc2d-13328bd8e491
-  ws-headers:
-    Host: sanandaj.ir
-  ws-opts:
-    headers:
-      Host: sanandaj.ir
-    path: /graphql
-  ws-path: /graphql
-- alterId: '0'
-  cipher: auto
-  name: US-016
+  name: US-019
   network: ws
   port: '2086'
   server: linus.oppo.quest
@@ -3261,7 +2950,43 @@ proxies:
   ws-path: /aries
 - alterId: '0'
   cipher: auto
-  name: US-017
+  name: US-020
+  network: ws
+  port: '443'
+  server: 141.101.115.120
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
+  ws-headers:
+    Host: lg1.cfcdn3.xyz
+  ws-opts:
+    headers:
+      Host: lg1.cfcdn3.xyz
+    path: /dongtaiwang.com
+  ws-path: /dongtaiwang.com
+- alterId: '0'
+  cipher: auto
+  name: US-021
+  network: ws
+  port: '443'
+  server: 172.64.154.155
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  ws-headers:
+    Host: clash6.ssr-free.xyz
+  ws-opts:
+    headers:
+      Host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
+  ws-path: /dongtaiwang.com
+- alterId: '0'
+  cipher: auto
+  name: US-022
   network: ws
   port: '443'
   server: 198.41.212.100
@@ -3279,7 +3004,7 @@ proxies:
   ws-path: /ray
 - alterId: '0'
   cipher: auto
-  name: US-018
+  name: US-023
   network: tcp
   port: '25078'
   server: 23.105.199.160
@@ -3297,7 +3022,7 @@ proxies:
   ws-path: /
 - alterId: '64'
   cipher: auto
-  name: US-019
+  name: US-024
   network: ws
   port: '443'
   server: 67.21.72.41
@@ -3315,7 +3040,7 @@ proxies:
   ws-path: /path/173418141123
 - alterId: '0'
   cipher: auto
-  name: US-020
+  name: US-025
   network: tcp
   port: '27317'
   server: 23.105.199.160
@@ -3333,43 +3058,25 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-021
-  network: ws
-  port: '10018'
-  server: az.hk01.paopaocloud.cyou
+  name: US-026
+  network: tcp
+  port: '23903'
+  server: 23.105.199.160
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
-  uuid: d8c5b486-84bb-3887-a1d9-07455ea608f2
+  uuid: 60b6c1a6-6306-4e28-91d9-8d2be2449ae8
   ws-headers:
-    Host: ssru.v2.us03.2yun.win
+    Host: ''
   ws-opts:
     headers:
-      Host: ssru.v2.us03.2yun.win
-    path: /v2ray
-  ws-path: /v2ray
-- alterId: '0'
-  cipher: auto
-  name: US-022
-  network: ws
-  port: '10025'
-  server: ah.yd01.paopaocloud.cyou
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d8c5b486-84bb-3887-a1d9-07455ea608f2
-  ws-headers:
-    Host: paopao.v2.us05.paopaocloud.cyou
-  ws-opts:
-    headers:
-      Host: paopao.v2.us05.paopaocloud.cyou
-    path: /v2ray
-  ws-path: /v2ray
+      Host: ''
+    path: /
+  ws-path: /
 - alterId: '10'
   cipher: auto
-  name: US-023
+  name: US-027
   network: tcp
   port: '8189'
   server: 206.119.112.6
@@ -3387,7 +3094,7 @@ proxies:
   ws-path: /
 - alterId: '10'
   cipher: auto
-  name: US-024
+  name: US-028
   network: tcp
   port: '8189'
   server: hk1vdf-node.aiqiche123.com
@@ -3405,25 +3112,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-025
-  network: tcp
-  port: '23903'
-  server: 23.105.199.160
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 60b6c1a6-6306-4e28-91d9-8d2be2449ae8
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-026
+  name: US-029
   network: tcp
   port: '23292'
   server: 150.230.41.9
@@ -3441,7 +3130,7 @@ proxies:
   ws-path: ''
 - alterId: '0'
   cipher: auto
-  name: US-027
+  name: US-030
   network: tcp
   port: '32586'
   server: 129.159.41.233
@@ -3459,7 +3148,7 @@ proxies:
   ws-path: ''
 - alterId: '0'
   cipher: auto
-  name: US-028
+  name: US-031
   network: tcp
   port: '1258'
   server: 23.230.146.254
@@ -3477,7 +3166,7 @@ proxies:
   ws-path: ''
 - alterId: '0'
   cipher: auto
-  name: US-029
+  name: US-032
   network: tcp
   port: '23166'
   server: 23.105.199.160
@@ -3495,7 +3184,7 @@ proxies:
   ws-path: /
 - alterId: '2'
   cipher: auto
-  name: US-030
+  name: US-033
   network: ws
   port: '443'
   server: lc-kr02-direct01.lc-kr02.lc-node.com
@@ -3513,7 +3202,7 @@ proxies:
   ws-path: /
 - alterId: '2'
   cipher: auto
-  name: US-031
+  name: US-034
   network: ws
   port: '443'
   server: 161.129.34.102
@@ -3531,7 +3220,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-032
+  name: US-035
   network: ws
   port: '443'
   server: 204.44.110.196
@@ -3549,7 +3238,7 @@ proxies:
   ws-path: /dongtaiwang.com
 - alterId: '0'
   cipher: auto
-  name: US-033
+  name: US-036
   network: ws
   port: '443'
   server: 23.237.33.106
@@ -3567,7 +3256,7 @@ proxies:
   ws-path: /dongtaiwang.com
 - alterId: '0'
   cipher: auto
-  name: US-034
+  name: US-037
   network: ws
   port: '443'
   server: 14.72img.xyz
@@ -3585,7 +3274,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: US-035
+  name: US-038
   network: ws
   port: 443
   server: do-2.heicloud.cf
@@ -3603,43 +3292,7 @@ proxies:
   ws-path: /m2
 - alterId: 0
   cipher: auto
-  name: US-036
-  network: ws
-  port: 8443
-  server: ca.0112233.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: c3000e9d-bee7-4fdb-b312-dd07030f325d
-  ws-headers:
-    Host: ca.0112233.xyz
-  ws-opts:
-    headers:
-      Host: ca.0112233.xyz
-    path: /home
-  ws-path: /home
-- alterId: 0
-  cipher: auto
-  name: US-037
-  network: ws
-  port: 443
-  server: 198.41.203.3
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-  ws-headers:
-    Host: lg1.cfcdn3.xyz
-  ws-opts:
-    headers:
-      Host: lg1.cfcdn3.xyz
-    path: /dongtaiwang.com
-  ws-path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: US-038
+  name: US-039
   network: ws
   port: 443
   server: 35.72img.xyz
@@ -3657,7 +3310,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: US-039
+  name: US-040
   network: ws
   port: 80
   server: us-lb.sshkit.org
@@ -3673,81 +3326,9 @@ proxies:
       Host: zoom.us
     path: /sshkit/Variu88/634dab7abadf1/
   ws-path: /sshkit/Variu88/634dab7abadf1/
-- alterId: 0
-  cipher: auto
-  name: US-040
-  network: ws
-  port: 443
-  server: 172.64.154.201
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-headers:
-    Host: lg30.cfcdn3.xyz
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-  ws-path: /ray
 - alterId: '0'
   cipher: auto
   name: US-041
-  network: ws
-  port: '443'
-  server: 198.41.212.145
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-  ws-headers:
-    Host: lg1.cfcdn3.xyz
-  ws-opts:
-    headers:
-      Host: lg1.cfcdn3.xyz
-    path: /dongtaiwang.com
-  ws-path: /dongtaiwang.com
-- alterId: '0'
-  cipher: auto
-  name: US-042
-  network: ws
-  port: '443'
-  server: 141.101.114.17
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-headers:
-    Host: clash6.ssr-free.xyz
-  ws-opts:
-    headers:
-      Host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-  ws-path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: US-043
-  network: ws
-  port: 443
-  server: 172.64.153.155
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-headers:
-    Host: clash6.ssr-free.xyz
-  ws-opts:
-    headers:
-      Host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-  ws-path: /dongtaiwang.com
-- alterId: '0'
-  cipher: auto
-  name: US-044
   network: ws
   port: '80'
   server: 51.81.220.195
@@ -3763,45 +3344,9 @@ proxies:
       Host: 51.81.220.195
     path: /sshkit/Variu88/634dab7abadf1/
   ws-path: /sshkit/Variu88/634dab7abadf1/
-- alterId: 0
-  cipher: auto
-  name: US-045
-  network: ws
-  port: 443
-  server: 198.41.212.100
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-  ws-headers:
-    Host: lg1.cfcdn3.xyz
-  ws-opts:
-    headers:
-      Host: lg1.cfcdn3.xyz
-    path: /dongtaiwang.com
-  ws-path: /dongtaiwang.com
 - alterId: '0'
   cipher: auto
-  name: US-046
-  network: ws
-  port: '443'
-  server: 34.145.145.76
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-headers:
-    Host: clash6.ssr-free.xyz
-  ws-opts:
-    headers:
-      Host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-  ws-path: /dongtaiwang.com
-- alterId: '0'
-  cipher: auto
-  name: US-047
+  name: US-042
   network: ws
   port: '443'
   server: 128.14.162.48
@@ -3819,10 +3364,10 @@ proxies:
   ws-path: /dongtaiwang.com
 - alterId: '0'
   cipher: auto
-  name: US-048
+  name: US-043
   network: ws
   port: '443'
-  server: 219.76.13.180
+  server: 34.145.145.76
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -3837,7 +3382,7 @@ proxies:
   ws-path: /dongtaiwang.com
 - alterId: 0
   cipher: auto
-  name: US-049
+  name: US-044
   network: ws
   port: 443
   server: 198.41.212.155
@@ -3855,25 +3400,7 @@ proxies:
   ws-path: /VHONOFZ3
 - alterId: '0'
   cipher: auto
-  name: US-050
-  network: ws
-  port: '443'
-  server: 211.75.11.74
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-headers:
-    Host: clash6.ssr-free.xyz
-  ws-opts:
-    headers:
-      Host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-  ws-path: /dongtaiwang.com
-- alterId: '0'
-  cipher: auto
-  name: US-051
+  name: US-045
   network: ws
   port: '443'
   server: 146.56.166.153
@@ -3889,9 +3416,27 @@ proxies:
       Host: clash6.ssr-free.xyz
     path: /dongtaiwang.com
   ws-path: /dongtaiwang.com
+- alterId: 0
+  cipher: auto
+  name: US-046
+  network: ws
+  port: 80
+  server: 104.19.22.249
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e8d7eb23-d79e-42ec-ff2d-8e0871cec1fc
+  ws-headers:
+    Host: raksmart.dopamine.ga
+  ws-opts:
+    headers:
+      Host: raksmart.dopamine.ga
+    path: /
+  ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-052
+  name: US-047
   network: ws
   port: '443'
   server: 172.67.225.31
@@ -3909,7 +3454,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-053
+  name: US-048
   network: ws
   port: '443'
   server: 141.101.114.25
@@ -3927,25 +3472,7 @@ proxies:
   ws-path: /ray
 - alterId: '0'
   cipher: auto
-  name: US-054
-  network: ws
-  port: '80'
-  server: cfhk.oppo.quest
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 615a1285-5848-42a1-9859-d4cb37b1fbd8
-  ws-headers:
-    Host: us.awsbest.com
-  ws-opts:
-    headers:
-      Host: us.awsbest.com
-    path: /share
-  ws-path: /share
-- alterId: '0'
-  cipher: auto
-  name: US-055
+  name: US-049
   network: ws
   port: '26613'
   server: 5.161.114.91
@@ -3963,7 +3490,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-056
+  name: US-050
   network: ws
   port: '443'
   server: 92.223.63.22
@@ -3981,25 +3508,7 @@ proxies:
   ws-path: /run
 - alterId: '0'
   cipher: auto
-  name: US-057
-  network: ws
-  port: '80'
-  server: www.digitalocean.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0db0a479-8993-4e5b-a002-629e9e0b40e5
-  ws-headers:
-    Host: o07.tgfaka.com
-  ws-opts:
-    headers:
-      Host: o07.tgfaka.com
-    path: /api/v3/download.getFile
-  ws-path: /api/v3/download.getFile
-- alterId: '0'
-  cipher: auto
-  name: US-058
+  name: US-051
   network: ws
   port: '80'
   server: gg1.tanglu.xyz
@@ -4017,7 +3526,7 @@ proxies:
   ws-path: /api/v3/download.getFile
 - alterId: '0'
   cipher: auto
-  name: US-059
+  name: US-052
   network: ws
   port: '443'
   server: 172.66.40.10
@@ -4035,25 +3544,25 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-060
+  name: US-053
   network: ws
-  port: '2052'
-  server: cm.cf.cname.club
+  port: '443'
+  server: 172.64.154.102
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 6e902fde-dcb1-4d5a-9079-8c086d867954
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   ws-headers:
-    Host: us.cf.cname.club
+    Host: clash6.ssr-free.xyz
   ws-opts:
     headers:
-      Host: us.cf.cname.club
-    path: /
-  ws-path: /
+      Host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
+  ws-path: /dongtaiwang.com
 - alterId: '0'
   cipher: auto
-  name: US-061
+  name: US-054
   network: ws
   port: '443'
   server: 172.64.154.150
@@ -4071,7 +3580,7 @@ proxies:
   ws-path: /dongtaiwang.com
 - alterId: '0'
   cipher: auto
-  name: US-062
+  name: US-055
   network: ws
   port: '443'
   server: 198.244.148.214
@@ -4089,7 +3598,7 @@ proxies:
   ws-path: /ray
 - alterId: '0'
   cipher: auto
-  name: US-063
+  name: US-056
   network: ws
   port: '443'
   server: 167.179.32.53
@@ -4107,7 +3616,7 @@ proxies:
   ws-path: /ray
 - alterId: '0'
   cipher: auto
-  name: US-064
+  name: US-057
   network: ws
   port: '443'
   server: 8.219.58.58
@@ -4125,25 +3634,25 @@ proxies:
   ws-path: /ray
 - alterId: '0'
   cipher: auto
-  name: US-065
+  name: US-058
   network: ws
-  port: '443'
-  server: zhuyong.hucloud-dns.xyz
+  port: '2052'
+  server: cm.cf.cname.club
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
-  uuid: 4ce21a11-44fe-4814-a639-4b7caf501031
+  uuid: 6e902fde-dcb1-4d5a-9079-8c086d867954
   ws-headers:
-    Host: zhuyong.hucloud-dns.xyz
+    Host: us.cf.cname.club
   ws-opts:
     headers:
-      Host: zhuyong.hucloud-dns.xyz
+      Host: us.cf.cname.club
     path: /
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-066
+  name: US-059
   network: ws
   port: '443'
   server: 198.41.203.5
@@ -4161,43 +3670,7 @@ proxies:
   ws-path: /ray
 - alterId: '0'
   cipher: auto
-  name: US-067
-  network: ws
-  port: '443'
-  server: ca.0112233.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: c3000e9d-bee7-4fdb-b312-dd07030f325d
-  ws-headers:
-    Host: ca.0112233.xyz
-  ws-opts:
-    headers:
-      Host: ca.0112233.xyz
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-068
-  network: ws
-  port: '3389'
-  server: 5.161.105.171
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 06d52c29-1230-49a7-8fa6-66dbc9749a95
-  ws-headers:
-    Host: 5.161.105.171
-  ws-opts:
-    headers:
-      Host: 5.161.105.171
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-069
+  name: US-060
   network: ws
   port: '80'
   server: 5.161.105.171
@@ -4215,7 +3688,43 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-070
+  name: US-061
+  network: ws
+  port: '3389'
+  server: 5.161.105.171
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 06d52c29-1230-49a7-8fa6-66dbc9749a95
+  ws-headers:
+    Host: 5.161.105.171
+  ws-opts:
+    headers:
+      Host: 5.161.105.171
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: US-062
+  network: ws
+  port: '443'
+  server: zhuyong.hucloud-dns.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 4ce21a11-44fe-4814-a639-4b7caf501031
+  ws-headers:
+    Host: zhuyong.hucloud-dns.xyz
+  ws-opts:
+    headers:
+      Host: zhuyong.hucloud-dns.xyz
+    path: /
+  ws-path: /
+- alterId: '0'
+  cipher: auto
+  name: US-063
   network: ws
   port: '443'
   server: vus3.0bad.com
@@ -4233,7 +3742,7 @@ proxies:
   ws-path: /chat
 - alterId: '0'
   cipher: auto
-  name: US-071
+  name: US-064
   network: ws
   port: '443'
   server: 38.72img.xyz
@@ -4251,7 +3760,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-072
+  name: US-065
   network: ws
   port: '443'
   server: 34.72img.xyz
@@ -4269,7 +3778,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-073
+  name: US-066
   network: ws
   port: '443'
   server: 33.72img.xyz
@@ -4287,79 +3796,25 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-074
+  name: US-067
   network: ws
   port: '443'
-  server: 141.101.115.120
+  server: 36.72img.xyz
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
   ws-headers:
-    Host: lg30.cfcdn3.xyz
+    Host: 36.72img.xyz
   ws-opts:
     headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-  ws-path: /ray
+      Host: 36.72img.xyz
+    path: /
+  ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-075
-  network: ws
-  port: '443'
-  server: 92.223.61.21
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 06d3d7a6-bc43-46f2-be8e-ad46c4416a27
-  ws-headers:
-    Host: us.wwcloud.tk
-  ws-opts:
-    headers:
-      Host: us.wwcloud.tk
-    path: /run
-  ws-path: /run
-- alterId: '0'
-  cipher: auto
-  name: US-076
-  network: ws
-  port: '443'
-  server: 31.184.207.4
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 06d3d7a6-bc43-46f2-be8e-ad46c4416a27
-  ws-headers:
-    Host: us.wwcloud.tk
-  ws-opts:
-    headers:
-      Host: us.wwcloud.tk
-    path: /run
-  ws-path: /run
-- alterId: '0'
-  cipher: auto
-  name: US-077
-  network: ws
-  port: '443'
-  server: 31.184.207.8
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 06d3d7a6-bc43-46f2-be8e-ad46c4416a27
-  ws-headers:
-    Host: us.wwcloud.tk
-  ws-opts:
-    headers:
-      Host: us.wwcloud.tk
-    path: /run
-  ws-path: /run
-- alterId: '0'
-  cipher: auto
-  name: US-078
+  name: US-068
   network: tcp
   port: '51009'
   server: 129.146.133.157
@@ -4377,7 +3832,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-079
+  name: US-069
   network: ws
   port: '443'
   server: hope.jingledev.me
@@ -4395,7 +3850,7 @@ proxies:
   ws-path: /zvtyvws
 - alterId: '0'
   cipher: auto
-  name: US-080
+  name: US-070
   network: ws
   port: '443'
   server: 193.233.207.105
@@ -4413,79 +3868,7 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-081
-  network: tcp
-  port: '52356'
-  server: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 78065c14-fc80-40b5-a46c-0e34efdf82fa
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-082
-  network: tcp
-  port: '52356'
-  server: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2100274e-55ae-4686-a380-a66ae8b0ef1b
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-083
-  network: tcp
-  port: '52356'
-  server: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2100274e-55ae-4686-a380-a66ae8b0ef1b
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-084
-  network: tcp
-  port: '12356'
-  server: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2100274e-55ae-4686-a380-a66ae8b0ef1b
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-085
+  name: US-071
   network: tcp
   port: '443'
   server: 00000000000000000000000000000000000000000000000000000000000010a.rui77.com
@@ -4493,7 +3876,7 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 2100274e-55ae-4686-a380-a66ae8b0ef1b
+  uuid: 78065c14-fc80-40b5-a46c-0e34efdf82fa
   ws-headers:
     Host: 00000000000000000000000000000000000000000000000000000000000010a.rui77.com
   ws-opts:
@@ -4503,61 +3886,31 @@ proxies:
   ws-path: /
 - alterId: '0'
   cipher: auto
-  name: US-086
-  network: tcp
-  port: '80'
-  server: 00000000000000000000000000000000000000000000000000000000000009a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2100274e-55ae-4686-a380-a66ae8b0ef1b
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000009a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000009a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-087
-  network: tcp
-  port: '10392'
-  server: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2100274e-55ae-4686-a380-a66ae8b0ef1b
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-088
+  name: US-072
   network: ws
   port: '443'
-  server: us1.sanfen001.pics
+  server: 172.67.183.35
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
   ws-headers:
-    Host: www.microsoft.com
+    Host: 38.72img.xyz
   ws-opts:
     headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-  ws-path: /zh-cn
+      Host: 38.72img.xyz
+    path: /
+  ws-path: /
+- name: US-073
+  password: ca2345ba-46e7-3991-b1b7-45d18954caf1
+  port: 20712
+  server: azgy001.xibai6.top
+  sni: ssl.ssl12.xyz
+  type: trojan
 - alterId: '0'
   cipher: auto
-  name: US-089
+  name: US-074
   network: ws
   port: '443'
   server: us2.sanfen001.pics
@@ -4573,240 +3926,6 @@ proxies:
       Host: www.microsoft.com
     path: /zh-cn
   ws-path: /zh-cn
-- alterId: '0'
-  cipher: auto
-  name: US-090
-  network: ws
-  port: '443'
-  server: 113.31.124.147
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-headers:
-    Host: lg30.cfcdn3.xyz
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-  ws-path: /ray
-- alterId: '0'
-  cipher: auto
-  name: US-091
-  network: ws
-  port: '443'
-  server: 100.42.78.170
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-092
-  network: tcp
-  port: '443'
-  server: 00000000000000000000000000000000000000000000000000000000000010a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000010a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000010a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-093
-  network: tcp
-  port: '80'
-  server: 00000000000000000000000000000000000000000000000000000000000009a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000009a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000009a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-094
-  network: tcp
-  port: '10392'
-  server: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-095
-  network: tcp
-  port: '52356'
-  server: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-096
-  network: tcp
-  port: '52356'
-  server: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-097
-  network: tcp
-  port: '12356'
-  server: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-098
-  network: tcp
-  port: '12356'
-  server: 00000000000000000000000000000000000000000000000000000000000039a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000039a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000039a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-099
-  network: ws
-  port: '443'
-  server: 161.35.229.94
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 27848739-7e62-4138-9fd3-098a63964b6b
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: /tech
-  ws-path: /tech
-- alterId: '0'
-  cipher: auto
-  name: US-100
-  network: tcp
-  port: '10392'
-  server: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d81d5bff-925c-4713-99a4-5a6c40f5bd01
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000012a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-101
-  network: tcp
-  port: '52356'
-  server: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d81d5bff-925c-4713-99a4-5a6c40f5bd01
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000030a.rui77.com
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-102
-  network: tcp
-  port: '12356'
-  server: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d81d5bff-925c-4713-99a4-5a6c40f5bd01
-  ws-headers:
-    Host: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-  ws-opts:
-    headers:
-      Host: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com
-    path: /
-  ws-path: /
 - alterId: 64
   cipher: auto
   name: VN-000
@@ -4914,9 +4033,7 @@ proxy-groups:
   - CA-012
   - CA-013
   - CA-014
-  - CA-015
   - CH-000
-  - CH-001
   - CN-000
   - CN-001
   - CN-002
@@ -4943,9 +4060,6 @@ proxy-groups:
   - DE-013
   - DE-014
   - DE-015
-  - DE-016
-  - DE-017
-  - DE-018
   - FI-000
   - FI-001
   - FR-000
@@ -4953,9 +4067,14 @@ proxy-groups:
   - FR-002
   - FR-003
   - FR-004
+  - FR-005
+  - FR-006
+  - FR-007
+  - FR-008
   - GB-000
   - GB-001
   - GB-002
+  - GB-003
   - HK-000
   - HK-001
   - HK-002
@@ -4970,8 +4089,6 @@ proxy-groups:
   - HK-011
   - HK-012
   - HK-013
-  - HK-014
-  - HU-000
   - ID-000
   - ID-001
   - IL-000
@@ -4994,8 +4111,6 @@ proxy-groups:
   - IN-016
   - IN-017
   - IN-018
-  - IN-019
-  - IN-020
   - JP-000
   - JP-001
   - JP-002
@@ -5007,6 +4122,19 @@ proxy-groups:
   - JP-008
   - JP-009
   - JP-010
+  - JP-011
+  - JP-012
+  - JP-013
+  - JP-014
+  - JP-015
+  - JP-016
+  - JP-017
+  - JP-018
+  - JP-019
+  - JP-020
+  - JP-021
+  - JP-022
+  - JP-023
   - KR-000
   - KR-001
   - KR-002
@@ -5025,29 +4153,13 @@ proxy-groups:
   - KR-015
   - KR-016
   - KR-017
-  - KR-018
-  - KR-019
-  - KR-020
-  - KR-021
   - LU-000
-  - LU-001
   - NL-000
   - NL-001
   - NL-002
-  - NL-003
   - PH-000
-  - PH-001
-  - PL-000
-  - PL-001
-  - PL-002
-  - PL-003
-  - PL-004
   - RU-000
   - RU-001
-  - RU-002
-  - RU-003
-  - RU-004
-  - RU-005
   - SG-000
   - SG-001
   - SG-002
@@ -5063,10 +4175,11 @@ proxy-groups:
   - SG-012
   - SG-013
   - SG-014
+  - SG-015
+  - TH-000
   - TW-000
   - TW-001
   - TW-002
-  - TW-003
   - US-000
   - US-001
   - US-002
@@ -5142,34 +4255,6 @@ proxy-groups:
   - US-072
   - US-073
   - US-074
-  - US-075
-  - US-076
-  - US-077
-  - US-078
-  - US-079
-  - US-080
-  - US-081
-  - US-082
-  - US-083
-  - US-084
-  - US-085
-  - US-086
-  - US-087
-  - US-088
-  - US-089
-  - US-090
-  - US-091
-  - US-092
-  - US-093
-  - US-094
-  - US-095
-  - US-096
-  - US-097
-  - US-098
-  - US-099
-  - US-100
-  - US-101
-  - US-102
   - VN-000
   - VN-001
   - VN-002
