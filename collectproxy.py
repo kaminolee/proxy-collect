@@ -240,10 +240,10 @@ for group in data:
     for sub in data[group]:
         try:
             for proxy in analyse_sub(sub):
-                if "%s%s%s" % (proxy['server'], proxy['port'], proxy['uuid']) in pool:
+                if "%s%s%s" % (proxy['server'], proxy['port'], proxy['type']) in pool:
                     continue
                 pool.append("%s%s%s" %
-                            (proxy['server'], proxy['port'], proxy['uuid']))
+                            (proxy['server'], proxy['port'], proxy['type']))
                 if proxy is not None:
                     check.put(proxy)
         except Exception as e:
