@@ -3,42 +3,34 @@ mode: rule
 profile:
   store-selected: false
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: CH-000
-  password: jinajina123
-  port: 443
-  server: samanehha.co
-  type: ss
-  udp: true
-- alterId: 0
+- alterId: '0'
   cipher: auto
   name: DE-000
   network: ws
-  port: 24748
-  server: 35.156.177.79
+  port: '2083'
+  server: news.microsoft.com
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 413f1279-4c68-4350-c731-dcac4cc693ed
+  uuid: 1ffeca67-a2bc-471b-b138-369d6762967d
+  ws-headers:
+    Host: 30.tehvp.xyz
   ws-opts:
+    headers:
+      Host: 30.tehvp.xyz
     path: /
-- alterId: 0
-  cipher: auto
-  name: FI-000
-  network: ws
-  port: 8585
-  server: 37.32.20.250
+  ws-path: /
+- name: FR-000
+  password: 814b6e9a-805a-4bda-b15a-a321c96092e1
+  port: 443
+  server: 51.68.89.16
   skip-cert-verify: true
-  tls: false
-  type: vmess
+  type: trojan
   udp: true
-  uuid: 25e36825-4598-4ef8-8b1f-164eee3fa1cd
-  ws-opts:
-    path: /
 - alterId: 0
   cipher: auto
-  name: FR-000
+  name: FR-001
   network: ws
   port: 80
   server: 8.219.139.136
@@ -53,149 +45,64 @@ proxies:
     path: /?ed=2048
 - alterId: 0
   cipher: auto
-  name: FR-001
+  name: HK-000
   network: ws
-  port: 443
-  server: 159.100.206.88
-  skip-cert-verify: false
-  tls: true
+  port: 80
+  server: hk80.sanfen001.pics
+  skip-cert-verify: true
+  tls: false
   type: vmess
   udp: true
-  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
+  uuid: befa5a35-c958-4fc9-8f80-0efb4480fdce
   ws-opts:
     headers:
-      Host: uk2.v2rayserv.com
-    path: /sshocean
+      Host: hk80.sanfen001.pics
+    path: /zh-cn/download
 - alterId: 0
   cipher: auto
-  name: FR-002
+  name: HK-001
   network: ws
-  port: 443
-  server: 203.30.188.120
+  port: 56890
+  server: p-hk.accddup.top
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
+  uuid: c4010ba7-b665-4d61-90ea-1806d6a0ee77
   ws-opts:
     headers:
-      Host: opfr1.v2rayfree1.xyz
-    path: /IYKLD53M
-- name: FR-003
-  password: 814b6e9a-805a-4bda-b15a-a321c96092e1
+      Host: p-hk.accddup.top
+    path: /c2d0b638a0f5440eaaedc1ef11f0e5bb
+- alterId: 0
+  cipher: auto
+  name: HK-002
+  network: ws
   port: 443
-  server: 51.68.89.16
+  server: hk11.sanfen001.pics
+  servername: hk1.sanfen001.pics
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: befa5a35-c958-4fc9-8f80-0efb4480fdce
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /zh-cn
+- name: ID-000
+  password: 60d47bb6-47d1-45b1-b67b-4d236a4a5957
+  port: 443
+  server: 103.167.34.206
   skip-cert-verify: true
   type: trojan
   udp: true
 - alterId: 0
   cipher: auto
-  name: FR-004
-  network: ws
-  port: 443
-  server: 141.101.114.111
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
-  ws-opts:
-    headers:
-      Host: fr1.trump2023.org
-    path: /9JZFDTKE
-- alterId: 0
-  cipher: auto
-  name: FR-005
-  network: ws
-  port: 80
-  server: 94.101.181.171
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0d49958b-5d9a-4755-9353-f3c4567195f7
-  ws-opts:
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: HK-000
-  network: ws
-  port: 80
-  server: hongkong.yunavip4g.pw
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 1f776c80-bcdc-4890-bc7c-8c88f806e770
-  ws-opts:
-    headers:
-      Host: dizzme.sni.lifebox.lordvcl.trash.vcl.vutmevaosotrac.akmaized.net.tv360.com.viettelidc.cloud.tv360.snidaivaicalon.daivaichuong.yunactv.vietteltelecom.tv360.appfly3m.project4gyuna.pw.yunagrp.xyz.appsflyer.com.a248.e.akamai.net
-    path: /project4gyuna.pw
-- alterId: 0
-  cipher: auto
-  name: HK-001
-  network: ws
-  port: 80
-  server: v23.idcloudhost.de
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d7a75318-3581-4f16-936c-671937ddd8ed
-  ws-opts:
-    headers:
-      Host: tms.dingtalk.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: HK-002
-  network: ws
-  port: 80
-  server: v24.idcloudhost.de
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d7a75318-3581-4f16-936c-671937ddd8ed
-  ws-opts:
-    headers:
-      Host: tms.dingtalk.com
-    path: /
-- alterId: 1
-  cipher: auto
-  name: HK-003
-  port: 22229
-  server: sdwaxfazzxxx.hjspyto.cn
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 494d6fc2-5985-3f1d-a262-b4696185c948
-- alterId: '1'
-  cipher: auto
-  name: HK-004
-  network: tcp
-  port: '22228'
-  server: sdwaxfazzxxx.hjspyto.cn
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 494d6fc2-5985-3f1d-a262-b4696185c948
-  ws-headers:
-    Host: ''
-  ws-opts:
-    headers:
-      Host: ''
-    path: ''
-  ws-path: ''
-- alterId: 0
-  cipher: auto
-  name: ID-000
+  name: ID-001
   network: ws
   port: 80
   server: 104.22.25.131
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
@@ -204,310 +111,87 @@ proxies:
     headers:
       Host: id5.v2rayserv.com
     path: /
-- alterId: 0
-  cipher: auto
+- cipher: aes-256-cfb
   name: JP-000
-  network: ws
-  port: 80
-  server: japan.vankhanh4g.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
+  obfs: tls1.2_ticket_auth
+  obfs-param: ''
+  password: eAokbaDN6
+  port: 8081
+  protocol: origin
+  protocol-param: ''
+  server: jp-am48-6.eqnode.net
+  type: ssr
   udp: true
-  uuid: 91ad7c9c-09e9-4170-8123-b3b7d83e579a
-  ws-opts:
-    headers:
-      Host: dl.ops.kgvn.garenanow.com
-    path: /vankhanh4g.com
 - name: JP-001
+  password: 96bc3fa7-b258-47ef-978c-21ee6452ac37
+  port: 443
+  server: dl-jp1.efpan.one
+  skip-cert-verify: true
+  sni: data-jp.efpan.one
+  type: trojan
+  udp: true
+- name: JP-002
   password: 40c89b10235c40321e7a3cef82b53a03
   port: 22
   server: trs17.bolab.net
-  skip-cert-verify: true
+  skip-cert-verify: false
+  sni: trs17.bolab.net
   type: trojan
   udp: true
-- alterId: 0
+- alterId: '0'
   cipher: auto
-  name: JP-002
+  name: NL-000
   network: ws
-  port: 443
-  server: suzhihan.eu.org
+  port: '42066'
+  server: 37.48.102.95
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
-  uuid: 0b873cff-11ab-4716-c41a-04f886135091
+  uuid: 147e8924-4079-4125-be5f-15b3d0462c4d
+  ws-headers:
+    Host: 37.48.102.95
   ws-opts:
     headers:
-      Host: suzhihan.eu.org
-    path: /roewesu
-- alterId: 1
-  cipher: auto
-  name: JP-003
-  port: 22230
-  server: sdwaxfazzxxx.hjspyto.cn
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 494d6fc2-5985-3f1d-a262-b4696185c948
-- alterId: 1
-  cipher: auto
-  name: JP-004
-  port: 22231
-  server: sdwaxfazzxxx.hjspyto.cn
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 494d6fc2-5985-3f1d-a262-b4696185c948
+      Host: 37.48.102.95
+    path: /dgfdrg5GB5t5er
+  ws-path: /dgfdrg5GB5t5er
 - alterId: 0
   cipher: auto
-  name: JP-005
-  network: ws
-  port: 80
-  server: v31.idcloudhost.de
+  name: RU-000
+  port: 13936
+  server: 95.163.243.235
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: d7a75318-3581-4f16-936c-671937ddd8ed
-  ws-opts:
-    headers:
-      Host: tms.dingtalk.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: JP-006
-  network: ws
-  port: 80
-  server: v34.idcloudhost.de
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d7a75318-3581-4f16-936c-671937ddd8ed
-  ws-opts:
-    headers:
-      Host: tms.dingtalk.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: JP-007
-  port: 16119
-  server: zfd-moblev2.gatknqh.cn
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f1d39fe1-bfa3-34ff-86a2-29250af03183
-- name: KR-000
-  password: f2117e99-9b6e-47fd-b0a9-634a0b15b998
-  port: 443
-  server: 45.64.22.41
-  skip-cert-verify: true
-  sni: jgw2.gaox.ml
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: LU-000
-  network: ws
-  port: 443
-  server: buyvm.imkcp.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 6fb9a750-55b8-4e6e-857b-242b795399dc
-  ws-opts:
-    headers:
-      Host: buyvm.imkcp.eu.org
-    path: /imkcpyyds
+  uuid: eeca7f96-8255-453e-c000-46d0396e77a8
 - name: SG-000
-  password: NqYpxKxB8A5jnDaISe834lAOaTwEOYzCeSD7CSZyFa0C3ypcR2F9XD3ug36lZR
+  password: ZCRe0IlTyApFDO73qeaSlyDEaXwSOYCZ9B3j6ca3Anxg84CDKF2SxpzuNY58R3
   port: 443
   server: 45.64.22.55
-  skip-cert-verify: false
-  sni: pbvre.freetrade.link
+  skip-cert-verify: true
+  sni: leeihs.freetrade.link
   type: trojan
   udp: true
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: SG-001
+  name: US-000
   network: ws
-  port: 80
-  server: 20.212.157.236
-  skip-cert-verify: false
-  tls: false
+  port: 443
+  server: 185.250.220.110
+  skip-cert-verify: true
+  tls: true
   type: vmess
   udp: true
-  uuid: 1f776c80-bcdc-4890-bc7c-8c88f806e770
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     headers:
-      Host: dizzme.sni.lifebox.lordvcl.trash.vcl.vutmevaosotrac.akmaized.net.tv360.com.viettelidc.cloud.tv360.snidaivaicalon.daivaichuong.yunactv.vietteltelecom.tv360.appfly3m.project4gyuna.pw.yunagrp.xyz.appsflyer.com.a248.e.akamai.net
-    path: /project4gyuna.pw
-- name: SG-002
-  password: 03b5ded3-2ec2-407d-b327-71048098c803
-  port: 443
-  server: tw1111.tfzhc.top
-  skip-cert-verify: false
-  type: trojan
-  udp: true
-- cipher: aes-256-cfb
-  name: SG-003
-  password: Sn5B7jTqr76aCJT8
-  port: 9097
-  server: 103.172.116.5
-  type: ss
-  udp: true
-- alterId: 1
-  cipher: auto
-  name: SG-004
-  port: 22232
-  server: sdwaxfazzxxx.hjspyto.cn
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 494d6fc2-5985-3f1d-a262-b4696185c948
-- name: TW-000
-  password: 03b5ded3-2ec2-407d-b327-71048098c803
-  port: 38011
-  server: tw1114.tfzhc.top
-  skip-cert-verify: false
-  type: trojan
-  udp: true
-- name: US-000
-  password: 431b22e2-d67b-4a41-9c97-773cde0329a4
-  port: 54675
-  server: tr2.tgcunzhang.xyz
-  skip-cert-verify: false
-  sni: tr2.tgcunzhang.xyz
-  type: trojan
-  udp: true
+      Host: www.22963352.xyz
+    path: /path/321113221131
 - alterId: 0
   cipher: auto
   name: US-001
-  network: ws
-  port: 443
-  server: 198.41.203.4
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
-  ws-opts:
-    headers:
-      Host: lg1.cfcdn1.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: US-002
-  network: ws
-  port: 25253
-  server: 54.90.85.126
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 10c0bf3e-9d0d-4a32-9e32-151aa8e46330
-  ws-opts:
-    headers:
-      Host: 54.90.85.126
-    path: /cctv13/hd.m3u8
-- alterId: 0
-  cipher: auto
-  name: US-003
-  network: ws
-  port: 443
-  server: 141.101.114.200
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 0479eb9d-999d-4bff-ae3f-4f7cc440ce46
-  ws-opts:
-    headers:
-      Host: v2ray2.ssr-free2.xyz
-    path: /dongtaiwang.com
-- name: US-004
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: 23.175.144.181
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: US-005
-  password: 15fb9e4ea7
-  port: 10001
-  server: 47.87.199.91
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: US-006
-  network: ws
-  port: 443
-  server: zhuyong.hucloud-dns.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 4ce21a11-44fe-4814-a639-4b7caf501031
-  ws-opts:
-    headers:
-      Host: zhuyong.hucloud-dns.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: US-007
-  network: ws
-  port: 443
-  server: 141.101.114.20
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a
-  ws-opts:
-    headers:
-      Host: clash1.trump2023.net
-    path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: US-008
-  network: ws
-  port: 443
-  server: 141.101.115.120
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: US-009
-  network: ws
-  port: 443
-  server: 172.64.154.222
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
-  ws-opts:
-    headers:
-      Host: lg1.cfcdn1.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: US-010
   network: ws
   port: 443
   server: 45.64.22.22
@@ -522,82 +206,78 @@ proxies:
     path: /P3gjm
 - alterId: 0
   cipher: auto
-  name: VN-000
+  name: US-002
   network: ws
-  port: 80
-  server: vn5.vankhanh4g.com
+  port: 443
+  server: 172.64.154.222
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: cfb96b76-1b62-4684-8c79-371bf5c465bb
+  uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
   ws-opts:
     headers:
-      Host: dl.ops.kgvn.garenanow.com
-    path: /vankhanh4g.com
-- alterId: 0
+      Host: lg1.cfcdn1.xyz
+    path: /ray
+- alterId: '0'
   cipher: auto
-  name: VN-001
+  name: US-003
   network: ws
-  port: 80
-  server: visualnetvn.yunavpn.com
-  skip-cert-verify: false
-  tls: false
+  port: '443'
+  server: news.microsoft.com
+  skip-cert-verify: true
+  tls: true
   type: vmess
   udp: true
-  uuid: 1f776c80-bcdc-4890-bc7c-8c88f806e770
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  ws-headers:
+    Host: lg1.trump2023.us
   ws-opts:
     headers:
-      Host: dizme.sni.lifebox.lordvcl.trash.vcl.vutmevaosotrac.akmaized.net.tv360.com.viettelidc.cloud.tv360.snidaivaicalon.daivaichuong.yunactv.vietteltelecom.tv360.appfly3m.project4gyuna.pw.yunagrp.xyz.appsflyer.com
-    path: /project4gyuna.pw
+      Host: lg1.trump2023.us
+    path: /ECTCJ0DF
+  ws-path: /ECTCJ0DF
+- alterId: '0'
+  cipher: auto
+  name: US-004
+  network: ws
+  port: '2053'
+  server: cf.ultrayuki.me
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 7cdfca78-b048-4358-8574-9c52a2beae68
+  ws-headers:
+    Host: do2.ultrayuki.me
+  ws-opts:
+    headers:
+      Host: do2.ultrayuki.me
+    path: /
+  ws-path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - CH-000
   - DE-000
-  - FI-000
   - FR-000
   - FR-001
-  - FR-002
-  - FR-003
-  - FR-004
-  - FR-005
   - HK-000
   - HK-001
   - HK-002
-  - HK-003
-  - HK-004
   - ID-000
+  - ID-001
   - JP-000
   - JP-001
   - JP-002
-  - JP-003
-  - JP-004
-  - JP-005
-  - JP-006
-  - JP-007
-  - KR-000
-  - LU-000
+  - NL-000
+  - RU-000
   - SG-000
-  - SG-001
-  - SG-002
-  - SG-003
-  - SG-004
-  - TW-000
   - US-000
   - US-001
   - US-002
   - US-003
   - US-004
-  - US-005
-  - US-006
-  - US-007
-  - US-008
-  - US-009
-  - US-010
-  - VN-000
-  - VN-001
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
