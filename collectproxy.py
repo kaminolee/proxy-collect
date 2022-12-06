@@ -135,29 +135,23 @@ def analyse_sub(sub):
     if len(content) <= 100:
         logging.error("Get Sub Empty Content")
         return
-    if 'proxies' in content.lower():
-        logging.info("load clash sub")
-        data = yaml.unsafe_load(content)
-        for proxy in data['proxies']:
-            try:
-                if True:
-                    proxies.append(proxy)
-            except Exception as _:
-                pass
-    else:
-        logging.info("load v2ray sub")
-        data = base64.b64decode(content)
-        for url in data.decode("utf8").split("\n"):
-            if len(url) == 0:
-                continue
-            try:
-                response = requests.get("http://127.0.0.1:25500/sub?target=clash&url=%s"%url)
-                data = yaml.safe_load(response.content.decode("utf8"))
-                for proxy in data['proxies']:
-                    proxies.append(proxy)
-            except Exception as e:
-                print(e)
-                pass
+    if 'proxies' not in content.lower():
+        urls = base64.b64decode(content).decode("utf8")
+        try:
+            logging.info("convert to clash")
+            response = requests.get("http://127.0.0.1:25500/sub?target=clash&url=%s"%urls.replace("\n","|").replace("\r",""))
+            content = response.content.decode("utf8")
+        except Exception as e:
+            logging.error("Convert Sub Error %s"%str(e))
+            return
+    
+    logging.info("load clash sub")
+    data = yaml.unsafe_load(content)
+    for proxy in data['proxies']:
+        try:
+            proxies.append(proxy)
+        except Exception as _:
+            pass
 
     return proxies
 
