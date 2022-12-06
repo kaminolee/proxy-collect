@@ -27,12 +27,6 @@ proxies:
     headers:
       host: 165.22.229.248
     path: /vmess
-- cipher: aes-256-cfb
-  name: CY-000
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 213.169.137.221
-  type: ss
 - alterId: '0'
   cipher: auto
   name: DE-000
@@ -43,59 +37,30 @@ proxies:
   uuid: 9d39cb34-5261-43fb-b0f8-4f8a22b10f15
   ws-opts:
     path: /
-- alterId: '0'
-  cipher: auto
+- cipher: chacha20-ietf-poly1305
   name: DE-001
-  network: ws
-  port: '1080'
-  server: 162.55.218.47
-  type: vmess
-  uuid: 8475ec47-cf71-4ffc-9e42-a52e1fb39ad7
-  ws-opts:
-    path: /
-- alterId: 64
-  cipher: auto
+  password: G!yBwPWH3Vao
+  port: 803
+  server: 193.176.86.190
+  type: ss
+- cipher: chacha20-ietf-poly1305
   name: DE-002
-  network: ws
-  port: 443
-  server: 213.202.233.39
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.45922802.xyz
-    path: /path/243535322906
-- alterId: 64
-  cipher: auto
-  name: DE-003
-  network: ws
-  port: 443
-  server: 81.30.144.78
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.83473207.xyz
-    path: /path/243535322906
-- alterId: '0'
-  cipher: auto
+  password: G!yBwPWH3Vao
+  port: 802
+  server: 193.176.86.190
+  type: ss
+- cipher: aes-256-cfb
+  name: ES-000
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 45.136.196.45
+  type: ss
+- cipher: chacha20-ietf-poly1305
   name: FI-000
-  network: ws
-  port: '443'
-  server: s.phoenixmelinet2.ga
-  tls: true
-  type: vmess
-  uuid: a110fb8d-5f71-41d6-9386-208d3f501438
-  ws-opts:
-    headers:
-      host: s.phoenixmelinet2.ga
-    path: /ugbovws
+  password: siF98xBL2v1i
+  port: 8478
+  server: 135.181.114.242
+  type: ss
 - name: FR-000
   password: 973ed2e0-c4d8-4737-a093-71629148086d
   port: 443
@@ -108,21 +73,21 @@ proxies:
   cipher: auto
   name: FR-001
   network: ws
-  port: '8443'
+  port: '80'
   server: cdn1.soft9821.gq
-  tls: true
   type: vmess
-  uuid: eb88f1ce-2b92-4b9e-cbba-8d98d750c8b3
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
   ws-opts:
     path: /
 - alterId: '0'
   cipher: auto
   name: FR-002
   network: ws
-  port: '80'
+  port: '8443'
   server: cdn1.soft9821.gq
+  tls: true
   type: vmess
-  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
+  uuid: eb88f1ce-2b92-4b9e-cbba-8d98d750c8b3
   ws-opts:
     path: /
 - alterId: '0'
@@ -135,94 +100,81 @@ proxies:
   uuid: 08bc30e1-be39-4eb4-e887-e6579be15a45
   ws-opts:
     path: /
-- alterId: 64
+- alterId: 0
   cipher: auto
   name: FR-004
   network: ws
   port: 443
-  server: 141.95.6.57
-  skip-cert-verify: false
+  server: 198.41.203.6
+  skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-headers:
+    Host: fr1.trump2023.org
   ws-opts:
     headers:
-      Host: www.22284376.xyz
-    path: /path/243535322906
+      Host: fr1.trump2023.org
+    path: /9JZFDTKE
+  ws-path: /9JZFDTKE
+- alterId: 0
+  cipher: auto
+  name: FR-005
+  network: ws
+  port: 443
+  server: 203.30.188.120
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
+  ws-headers:
+    Host: opfr1.v2rayfree1.xyz
+  ws-opts:
+    headers:
+      Host: opfr1.v2rayfree1.xyz
+    path: /IYKLD53M
+  ws-path: /IYKLD53M
 - cipher: chacha20-ietf-poly1305
   name: GB-000
   password: G!yBwPWH3Vao
   port: 808
   server: 78.129.253.9
   type: ss
-- alterId: '0'
-  cipher: auto
+- cipher: chacha20-ietf-poly1305
   name: GB-001
-  network: ws
-  port: '8080'
-  server: 162.159.160.148
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
-  ws-headers:
-    Host: uk.jiedian01.cf
-  ws-opts:
-    headers:
-      Host: uk.jiedian01.cf
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
+  password: G!yBwPWH3Vao
+  port: 802
+  server: 78.129.253.9
+  type: ss
+- cipher: chacha20-ietf-poly1305
   name: GB-002
-  network: ws
-  port: '8080'
-  server: 104.17.191.85
+  password: G!yBwPWH3Vao
+  port: 806
+  server: 78.129.253.9
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: GB-003
+  password: G!yBwPWH3Vao
+  port: 807
+  server: 78.129.253.9
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: GB-004
+  password: G!yBwPWH3Vao
+  port: 801
+  server: 78.129.253.9
+  type: ss
+- name: GB-005
+  password: 8e3fdb7d-401d-42a4-92f2-b12fb805cd0f
+  port: 443
+  server: uk.stablize.top
   skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
-  ws-headers:
-    Host: uk.jiedian01.cf
-  ws-opts:
-    headers:
-      Host: uk.jiedian01.cf
-    path: /
-  ws-path: /
-- alterId: 0
+  type: trojan
+- alterId: '0'
   cipher: auto
   name: HK-000
-  network: ws
-  port: 44300
-  server: 18.162.168.102
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: a2111984-44c5-3240-9968-8145e94b0a10
-  ws-opts:
-    headers:
-      Host: 18.162.168.102
-    path: /ny
-- alterId: 0
-  cipher: auto
-  name: HK-001
-  network: ws
-  port: 44300
-  server: 18.166.75.138
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: a2111984-44c5-3240-9968-8145e94b0a10
-  ws-opts:
-    headers:
-      Host: 18.166.75.138
-    path: /ny
-- alterId: '0'
-  cipher: auto
-  name: HK-002
   network: tcp
   port: '14444'
   server: 165.154.5.235
@@ -230,7 +182,7 @@ proxies:
   uuid: 0eb9d2fa-17d1-4276-af80-15323dc1dca5
 - alterId: '0'
   cipher: auto
-  name: HK-003
+  name: HK-001
   network: ws
   port: '2086'
   server: gcorehk.arc.pics
@@ -242,60 +194,89 @@ proxies:
     path: /aries
 - alterId: '0'
   cipher: auto
-  name: HK-004
+  name: HK-002
   network: tcp
   port: '6666'
   server: 128.1.134.126
   type: vmess
   uuid: 7fb3b571-cda8-40f6-c9e6-db9765ea8faa
-- alterId: 0
+- alterId: '0'
   cipher: auto
   http-opts:
-    method: GET
     path:
     - /
-  name: HK-005
+  name: HK-003
   network: http
-  port: 25167
-  server: 47.243.29.114
-  skip-cert-verify: false
+  port: '58944'
+  server: 47.243.104.195
+  type: vmess
+  uuid: a0f25e25-9c5d-4d96-9051-5481c46e277d
+- alterId: '0'
+  cipher: auto
+  name: HK-004
+  network: tcp
+  port: '24222'
+  server: 71.136.72.34
+  skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 3e870054-fc9c-4937-a7d9-f5878296da4d
-- alterId: 0
+  uuid: e438f54c-0916-4b9a-a5cd-f4e75afaf79b
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+  ws-path: ''
+- alterId: '0'
   cipher: auto
   name: ID-000
   network: ws
-  port: 80
-  server: sg-atha.v2-ray.com
-  skip-cert-verify: false
-  tls: false
+  port: '80'
+  server: 45.12.80.141
   type: vmess
-  udp: true
-  uuid: 5fc32973-a15e-404c-b1f7-707187f7fd6e
+  uuid: eee80aee-738c-4255-9a4e-9fef076b245a
   ws-opts:
     headers:
-      Host: zoom.us
-    path: /fastssh/amrozi87/6350416ec330b/
-- cipher: aes-256-cfb
-  name: IN-000
-  password: d3b8321945c24105ae485662024620f6
-  port: 28260
-  server: 134.209.158.149
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: IN-001
-  port: 2000
-  server: iayaha.sansmnd.tk
+      host: namaz.ir
+    path: /worryfree/?u=testiej&p=638725f558253
+- name: ID-001
+  password: vvip-periantara
+  port: 443
+  server: id3tr.jagoan.vip
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 0a78f919-7044-4c1f-a38e-64fedf110729
+  type: trojan
+  udp: true
+- name: ID-002
+  password: vvip-periantara
+  port: 443
+  server: 38.9.140.66
+  skip-cert-verify: true
+  sni: id3tr.jagoan.vip
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: IL-000
+  password: '4415934295'
+  port: 50004
+  server: 185.162.125.91
+  type: ss
+- cipher: aes-256-cfb
+  name: IL-001
+  password: '3135771619'
+  port: 50000
+  server: 31.133.100.49
+  type: ss
+- cipher: aes-256-cfb
+  name: IM-000
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 37.235.55.42
+  type: ss
 - alterId: '0'
   cipher: auto
-  name: IN-002
+  name: IN-000
   network: ws
   port: '8081'
   server: 134.209.150.57
@@ -304,33 +285,85 @@ proxies:
   ws-opts:
     path: /
 - cipher: aes-256-cfb
-  name: JP-000
-  obfs: tls1.2_ticket_auth
-  obfs-param: ''
-  password: eAokbaDN6
-  port: 8081
-  protocol: origin
-  protocol-param: ''
-  server: jp-am48-6.eqnode.net
-  type: ssr
-  udp: true
-- cipher: aes-256-gcm
-  name: NL-000
-  password: faBAoD54k87UJG7
-  port: 2375
-  server: 172.99.188.99
+  name: IN-001
+  password: d3b8321945c24105ae485662024620f6
+  port: 28260
+  server: 134.209.158.149
   type: ss
 - alterId: '0'
   cipher: auto
-  name: NL-001
+  name: IN-002
   network: ws
-  port: '16418'
-  server: 95.211.58.55
+  port: '8081'
+  server: 159.65.151.44
   type: vmess
-  uuid: 9756c7d0-4a86-4210-fad1-13d5cbd86b03
+  uuid: 30e1d1f5-1d7f-4a44-d129-a910b85a6bdf
   ws-opts:
-    path: /gdgHG55tht
-- name: NL-002
+    headers:
+      host: 159.65.151.44
+    path: /
+- alterId: 0
+  cipher: auto
+  name: IN-003
+  port: 2000
+  server: iayaha.sansmnd.tk
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 0a78f919-7044-4c1f-a38e-64fedf110729
+- name: JP-000
+  password: 8e3fdb7d-401d-42a4-92f2-b12fb805cd0f
+  port: 443
+  server: jp.stablize.top
+  skip-cert-verify: true
+  type: trojan
+- alterId: '0'
+  cipher: auto
+  name: JP-001
+  network: tcp
+  port: '17214'
+  server: 71.136.72.34
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e438f54c-0916-4b9a-a5cd-f4e75afaf79b
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+  ws-path: ''
+- alterId: '0'
+  cipher: auto
+  name: JP-002
+  network: tcp
+  port: '16854'
+  server: 52.81.210.196
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e438f54c-0916-4b9a-a5cd-f4e75afaf79b
+  ws-headers:
+    Host: ''
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
+  ws-path: ''
+- alterId: '0'
+  cipher: auto
+  name: KR-000
+  network: ws
+  port: '42517'
+  server: 54.180.150.171
+  type: vmess
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-opts:
+    path: /
+- name: NL-000
   password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1
   port: 443
   server: tj2.dalazhi.cyou
@@ -339,7 +372,7 @@ proxies:
   udp: true
 - alterId: '0'
   cipher: auto
-  name: NL-003
+  name: NL-001
   network: ws
   port: '41065'
   server: 95.211.249.49
@@ -347,30 +380,134 @@ proxies:
   uuid: a81cc101-bc8b-4124-acc6-4b1eba08fefa
   ws-opts:
     path: /dfgd55dg5dG
+- alterId: '0'
+  cipher: auto
+  name: NL-002
+  network: ws
+  port: '16418'
+  server: 95.211.58.55
+  type: vmess
+  uuid: 9756c7d0-4a86-4210-fad1-13d5cbd86b03
+  ws-opts:
+    path: /gdgHG55tht
+- cipher: aes-256-gcm
+  name: NL-003
+  password: faBAoD54k87UJG7
+  port: 2375
+  server: 172.99.188.99
+  type: ss
+- alterId: '0'
+  cipher: auto
+  name: NL-004
+  network: ws
+  port: '36306'
+  server: 85.17.5.150
+  type: vmess
+  uuid: 4070fdde-43d5-4b3f-dbcf-7751c77e4bf6
+  ws-opts:
+    path: /Af5645tr
+- alterId: '0'
+  cipher: auto
+  name: NL-005
+  network: ws
+  port: '42066'
+  server: 37.48.102.95
+  type: vmess
+  uuid: 147e8924-4079-4125-be5f-15b3d0462c4d
+  ws-opts:
+    path: /dgfdrg5GB5t5er
+- cipher: aes-256-gcm
+  name: NL-006
+  password: pKEW8JPByTVTLtM
+  port: 4444
+  server: 172.99.188.99
+  type: ss
+- cipher: aes-256-gcm
+  name: NL-007
+  password: Y6R9pAtvxxzmGC
+  port: 5000
+  server: 172.99.188.99
+  type: ss
+- cipher: aes-256-gcm
+  name: NL-008
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 172.99.188.99
+  type: ss
+- cipher: aes-256-gcm
+  name: NL-009
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 172.99.188.99
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: NL-010
+  password: GJtJKYlAAuva
+  port: 31558
+  server: 178.162.164.142
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: NL-011
+  password: 0lirUrGQIf6s
+  port: 21114
+  server: 178.162.165.202
+  type: ss
+- cipher: aes-256-cfb
+  name: RU-000
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 62.109.22.113
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: SG-000
   password: G!yBwPWH3Vao
   port: 807
   server: 81.90.189.41
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: SG-001
+  password: G!yBwPWH3Vao
+  port: 802
+  server: 81.90.189.41
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: SG-002
+  password: G!yBwPWH3Vao
+  port: 810
+  server: 81.90.189.41
+  type: ss
+- name: SG-003
+  password: trojan_tcp_tls
+  port: 8000
+  server: sg.multiport2.artunnel57.host
+  skip-cert-verify: true
+  sni: sg.multiport2.artunnel57.host
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: SG-004
+  password: G!yBwPWH3Vao
+  port: 801
+  server: 81.90.189.41
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: SG-005
+  password: G!yBwPWH3Vao
+  port: 806
+  server: ak1565.free.www.outline.network
+  type: ss
 - alterId: 0
   cipher: auto
-  name: SG-001
+  name: SG-006
   port: 1000
   server: a.sansmnd.tk
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 0a78f919-7044-4c1f-a38e-64fedf110729
-- cipher: aes-256-gcm
-  name: US-000
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 38.91.107.72
-  type: ss
 - alterId: 0
   cipher: auto
-  name: US-001
+  name: US-000
   network: ws
   port: 8081
   server: 5.161.150.87
@@ -381,7 +518,7 @@ proxies:
   uuid: 2b2f1e82-057d-420f-e404-43e403f2437d
   ws-opts:
     path: /
-- name: US-002
+- name: US-001
   password: KLF0qOU0ZZGw5Tnu
   port: 443
   server: 45.64.22.55
@@ -389,78 +526,55 @@ proxies:
   sni: swift.protocolbuffer.com
   type: trojan
   udp: true
-- name: US-003
-  password: b84d16a244460e09
-  port: 3389
-  server: 211.72.35.155
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: US-004
+- name: US-002
   password: 7ac49a893e0bd10c
   port: 3389
   server: 211.72.35.157
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: US-005
+- name: US-003
   password: b84d16a244460e09
   port: 3389
   server: 211.72.35.152
   skip-cert-verify: true
   type: trojan
   udp: true
-- alterId: 64
+- cipher: aes-256-gcm
+  name: US-004
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 38.91.107.72
+  type: ss
+- alterId: '0'
+  cipher: auto
+  name: US-005
+  network: ws
+  port: '80'
+  server: 51.81.220.195
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-opts:
+    path: /sshkit/Variu88/634dab7abadf1/
+- alterId: '0'
   cipher: auto
   name: US-006
   network: ws
-  port: 443
-  server: 198.2.222.155
-  skip-cert-verify: false
+  port: '2053'
+  server: news.microsoft.com
   tls: true
   type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 8947fbe5-c1c7-4716-8564-2092ce776f92
   ws-opts:
     headers:
-      Host: www.67271513.xyz
-    path: /path/243535322906
-- alterId: '0'
-  cipher: auto
-  name: US-007
-  network: ws
-  port: '2095'
-  server: 104.17.191.85
+      host: v2ray.wefuckgfw.ga
+    path: /DQsafRJn/
+- name: US-007
+  password: 8e3fdb7d-401d-42a4-92f2-b12fb805cd0f
+  port: 443
+  server: usa.stablize.top
   skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
-  ws-headers:
-    Host: dknbyn3lw16n5elj.gongyiyun.cf
-  ws-opts:
-    headers:
-      Host: dknbyn3lw16n5elj.gongyiyun.cf
-    path: /
-  ws-path: /
-- alterId: '0'
-  cipher: auto
-  name: US-008
-  network: ws
-  port: '2095'
-  server: cu.gongyiyun.cf
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
-  ws-headers:
-    Host: dknbyn3lw16n5elj.gongyiyun.cf
-  ws-opts:
-    headers:
-      Host: dknbyn3lw16n5elj.gongyiyun.cf
-    path: /
-  ws-path: /
+  type: trojan
 proxy-groups:
 - interval: 300
   name: balanced
@@ -468,37 +582,62 @@ proxy-groups:
   - AR-000
   - BE-000
   - CA-000
-  - CY-000
   - DE-000
   - DE-001
   - DE-002
-  - DE-003
+  - ES-000
   - FI-000
   - FR-000
   - FR-001
   - FR-002
   - FR-003
   - FR-004
+  - FR-005
   - GB-000
   - GB-001
   - GB-002
+  - GB-003
+  - GB-004
+  - GB-005
   - HK-000
   - HK-001
   - HK-002
   - HK-003
   - HK-004
-  - HK-005
   - ID-000
+  - ID-001
+  - ID-002
+  - IL-000
+  - IL-001
+  - IM-000
   - IN-000
   - IN-001
   - IN-002
+  - IN-003
   - JP-000
+  - JP-001
+  - JP-002
+  - KR-000
   - NL-000
   - NL-001
   - NL-002
   - NL-003
+  - NL-004
+  - NL-005
+  - NL-006
+  - NL-007
+  - NL-008
+  - NL-009
+  - NL-010
+  - NL-011
+  - RU-000
   - SG-000
   - SG-001
+  - SG-002
+  - SG-003
+  - SG-004
+  - SG-005
+  - SG-006
   - US-000
   - US-001
   - US-002
@@ -507,7 +646,6 @@ proxy-groups:
   - US-005
   - US-006
   - US-007
-  - US-008
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
