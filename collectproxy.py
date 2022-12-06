@@ -56,7 +56,7 @@ def check_port_status(ip, port):
     return status
 
 
-def check_v2ray_status(proxy):
+def check_proxy_status(proxy):
     global geoip_reader
     status = None
     config_tepmlate = {
@@ -147,40 +147,16 @@ def analyse_sub(sub):
     else:
         logging.info("load v2ray sub")
         data = base64.b64decode(content)
-        for s in data.decode("utf8").split("\n"):
-            if len(s) == 0:
+        for url in data.decode("utf8").split("\n"):
+            if len(url) == 0:
                 continue
             try:
-                if 'vmess' in s or 'vless' in s:
-                    url = s.replace("\r", "").replace(
-                        "vmess://", "").replace("vless://", "")
-                    v = json.loads(base64.b64decode(url).decode("utf8"))
-                    proxy = {
-                        "name": v['ps'],
-                        "server": v['add'],
-                        "port": v['port'],
-                        "type": "vmess",
-                        "uuid": v['id'],
-                        "alterId": v['aid'],
-                        "cipher": "auto",
-                        "tls": v['tls'] == 'tls',
-                        "skip-cert-verify": True,
-                        "network": v['net'],
-                        "ws-opts": {
-                            "path": v['path'],
-                            "headers": {
-                                "Host": v['host']
-                            }
-                        },
-                        "ws-path": v['path'],
-                        "ws-headers": {
-                            "Host": v['host']
-                        },
-                        "udp": True
-                    }
+                response = requests.get("http://127.0.0.1:25500/sub?target=clash&url=%s"%url)
+                data = yaml.safe_load(response.content.decode("utf8"))
+                for proxy in data['proxies']:
                     proxies.append(proxy)
-
-            except Exception as _:
+            except Exception as e:
+                print(e)
                 pass
 
     return proxies
@@ -193,7 +169,7 @@ def check_proxy(proxy, index):
     if check_port_status(proxy['server'], int(proxy['port'])) is False:
         logging.info("[%s]%s -> port closed" % (index, proxy['name']))
         return
-    country = check_v2ray_status(proxy)
+    country = check_proxy_status(proxy)
     if country is None:
         logging.info("[%s]%s -> server down" % (index, proxy['name']))
         return
