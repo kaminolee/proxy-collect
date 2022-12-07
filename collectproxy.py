@@ -27,6 +27,33 @@ OUTPUT = "%s/output/%s.txt" % (WORKDIR,
                                time.strftime("%Y%m%d%H%M%S", time.localtime()))
 
 
+def get_subscriptions():
+    subscriptions = []
+
+    # collectSub
+    try:
+        today = datetime.datetime.today()
+        sub_path = 'https://raw.githubusercontent.com/rxsweet/collectSub/main/sub'
+        path_year = sub_path+'/'+str(today.year)
+        path_mon = path_year+'/'+str(today.month)
+        path_yaml = path_mon+'/'+str(today.month)+'-'+str(today.day)+'.yaml'
+        response = requests.get(path_yaml)
+        if response.ok:
+            for group in json.loads(response.content.decode("utf8")):
+                for sub in group:
+                    subscriptions.append(sub)
+    except Exception as e:
+        logging.error("Get sub from collectSub fail %s" % str(e))
+
+    return subscriptions
+
+
+def get_proxies():
+    proxies = []
+
+    return proxies
+
+
 def get_sub_collection():
     today = datetime.datetime.today()
     sub_path = 'https://raw.githubusercontent.com/rxsweet/collectSub/main/sub'
@@ -112,7 +139,7 @@ def rename_proxy(proxy, country):
         if country not in name_count:
             name_count[country] = 0
         proxy['name'] = '%s-%s' % (country,
-                                     str(name_count[country]).zfill(3))
+                                   str(name_count[country]).zfill(3))
         name_count[country] += 1
         clash_servers.append(proxy)
         status = proxy['name']
@@ -139,14 +166,16 @@ def analyse_sub(sub):
         urls = base64.b64decode(content).decode("utf8")
         try:
             logging.info("convert to clash")
-            response = requests.get("http://127.0.0.1:25500/sub?target=clash&url=%s"%urls.replace("\n","|").replace("\r",""))
+            response = requests.get(
+                "http://127.0.0.1:25500/sub?target=clash&url=%s" % urls.replace("\n", "|").replace("\r", ""))
             content = response.content.decode("utf8")
         except Exception as e:
-            logging.error("Convert Sub Error %s"%str(e))
+            logging.error("Convert Sub Error %s" % str(e))
             return
-    
+
     logging.info("load clash sub")
     data = yaml.unsafe_load(content)
+    logging.info("Get proxies %s" % str(len(data['proxies'])))
     for proxy in data['proxies']:
         try:
             proxies.append(proxy)
@@ -191,44 +220,56 @@ def check_proxy_thread(sid):
 if os.path.exists(OUTPUT):
     os.unlink(OUTPUT)
 
-data = yaml.load(get_sub_collection(), Loader=yaml.FullLoader)
 pool = []
 check = queue.Queue(10)
 running = True
 geoip_reader = geoip2.database.Reader('%s/Country.mmdb' % WORKDIR)
 name_count = {}
-v2ray_servers = []
 clash_servers = []
 index = 0
 
+SUBSCRIPTIONS = []
+PROXIES = []
+
 logging.info("Set Output %s" % OUTPUT)
 
+# import subs and proxies
+SUBSCRIPTIONS = get_subscriptions()
+PROXIES = get_proxies()
+
+# start check proxy thread
 for i in range(20):
     threading.Thread(target=check_proxy_thread, args=(i,)).start()
 
-for group in data:
-    for sub in data[group]:
-        try:
-            for proxy in analyse_sub(sub):
-                if "%s%s%s" % (proxy['server'], proxy['port'], proxy['type']) in pool:
-                    continue
-                pool.append("%s%s%s" %
-                            (proxy['server'], proxy['port'], proxy['type']))
-                if proxy is not None:
-                    check.put(proxy)
-        except Exception as e:
-            logging.error(e)
+# check proxies
+# TODO
 
+# check subscriptions
+for sub in SUBSCRIPTIONS:
+    try:
+        for proxy in analyse_sub(sub):
+            if "%s%s%s" % (proxy['server'], proxy['port'], proxy['type']) in pool:
+                continue
+            pool.append("%s%s%s" %
+                        (proxy['server'], proxy['port'], proxy['type']))
+            if proxy is not None:
+                check.put(proxy)
+    except Exception as e:
+        logging.error(e)
+
+# waiting for queue empty
 while True:
     if check.empty():
         running = False
         break
     time.sleep(1)
 
+# waiting for thread empty
 while threading.active_count() != 1:
     logging.debug("RUNNING THREAD %s" % threading.active_count())
     time.sleep(1)
 
+# generate clash config
 logging.info("generate clash subscription")
 
 clash_servers = sorted(clash_servers, key=lambda e: e.__getitem__('name'))
