@@ -30,6 +30,13 @@ OUTPUT = "%s/output/%s.txt" % (WORKDIR,
 def get_subscriptions():
     subscriptions = []
 
+    # local file
+    with open("subscriptions.txt", "r", encoding="utf8") as f:
+        for line in f.readlines():
+            sub = line.replace("\n", "")
+            if len(sub) > 0:
+                subscriptions.append(sub)
+
     # collectSub
     try:
         today = datetime.datetime.today()
@@ -41,7 +48,7 @@ def get_subscriptions():
         response = requests.get(path_yaml)
         if response.ok:
             collection = yaml.safe_load(response.content.decode("utf8"))
-            for group in collection :
+            for group in collection:
                 for sub in collection[group]:
                     subscriptions.append(sub)
     except Exception as e:
