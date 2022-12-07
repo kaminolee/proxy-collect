@@ -40,8 +40,9 @@ def get_subscriptions():
         logging.debug(path_yaml)
         response = requests.get(path_yaml)
         if response.ok:
-            for group in yaml.safe_load(response.content.decode("utf8")):
-                for sub in group:
+            collection = yaml.safe_load(response.content.decode("utf8"))
+            for group in collection :
+                for sub in collection[group]:
                     subscriptions.append(sub)
     except Exception as e:
         logging.error("Get sub from collectSub fail %s" % str(e))
