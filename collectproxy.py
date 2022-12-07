@@ -44,6 +44,21 @@ def get_subscriptions():
                     subscriptions.append(sub)
     except Exception as e:
         logging.error("Get sub from collectSub fail %s" % str(e))
+        logging.info("try get yesterday")
+        try:
+            today = datetime.datetime.today()
+            sub_path = 'https://raw.githubusercontent.com/rxsweet/collectSub/main/sub'
+            path_year = sub_path+'/'+str(today.year)
+            path_mon = path_year+'/'+str(today.month)
+            path_yaml = path_mon+'/' + \
+                str(today.month)+'-'+str(today.day - 1)+'.yaml'
+            response = requests.get(path_yaml)
+            if response.ok:
+                for group in json.loads(response.content.decode("utf8")):
+                    for sub in group:
+                        subscriptions.append(sub)
+        except Exception as _:
+            pass
 
     return subscriptions
 
@@ -52,19 +67,6 @@ def get_proxies():
     proxies = []
 
     return proxies
-
-
-def get_sub_collection():
-    today = datetime.datetime.today()
-    sub_path = 'https://raw.githubusercontent.com/rxsweet/collectSub/main/sub'
-    path_year = sub_path+'/'+str(today.year)
-    path_mon = path_year+'/'+str(today.month)
-    path_yaml = path_mon+'/'+str(today.month)+'-'+str(today.day)+'.yaml'
-    response = requests.get(path_yaml)
-    if response.ok:
-        return response.content.decode("utf8")
-
-    raise Exception("Get Collection Error %s" % response.status_code)
 
 
 def check_port_status(ip, port):
