@@ -37,6 +37,7 @@ def get_subscriptions():
         path_year = sub_path+'/'+str(today.year)
         path_mon = path_year+'/'+str(today.month)
         path_yaml = path_mon+'/'+str(today.month)+'-'+str(today.day)+'.yaml'
+        logging.info(path_yaml)
         response = requests.get(path_yaml)
         if response.ok:
             for group in json.loads(response.content.decode("utf8")):
@@ -52,6 +53,7 @@ def get_subscriptions():
             path_mon = path_year+'/'+str(today.month)
             path_yaml = path_mon+'/' + \
                 str(today.month)+'-'+str(today.day - 1)+'.yaml'
+            logging.info(path_yaml)
             response = requests.get(path_yaml)
             if response.ok:
                 for group in json.loads(response.content.decode("utf8")):
