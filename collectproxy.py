@@ -59,8 +59,8 @@ def get_subscriptions():
                 for group in json.loads(response.content.decode("utf8")):
                     for sub in group:
                         subscriptions.append(sub)
-        except Exception as _:
-            pass
+        except Exception as e:
+            logging.error("Get sub from collectSub fail %s" % str(e))
 
     return subscriptions
 
