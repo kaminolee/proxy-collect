@@ -152,7 +152,10 @@ def analyse_sub(sub):
         logging.error("Get Sub Empty Content")
         return
     if 'proxies' not in content.lower():
-        urls = base64.b64decode(content).decode("utf8")
+        try:
+            urls = base64.b64decode(content).decode("utf8")
+        except Exception as _:
+            urls = content
         try:
             logging.info("convert to clash")
             response = requests.get(
