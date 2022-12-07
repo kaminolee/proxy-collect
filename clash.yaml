@@ -7,19 +7,50 @@ proxies:
   cipher: auto
   name: AE-000
   port: 4443
-  server: jp10.tejiewm.com
-  servername: jp10.tejiewm.com
+  server: jp11.tejiewm.com
+  servername: jp11.tejiewm.com
   skip-cert-verify: false
   tls: true
   type: vmess
   udp: true
-  uuid: 1e032d6a-e7ba-46e6-afe2-d47b067ada6f
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
+- alterId: 0
+  cipher: auto
+  name: AE-001
+  port: 4443
+  server: jp12.tejiewm.com
+  servername: jp12.tejiewm.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
+- cipher: dummy
+  name: AU-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10111
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.aus.hideu.tw
+  type: ssr
 - cipher: aes-256-cfb
   name: BE-000
   password: f8f7aCzcPKbsF8p3
   port: 989
   server: 192.71.249.108
   type: ss
+- cipher: dummy
+  name: BR-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10131
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.br.hideu.tw
+  type: ssr
 - alterId: '0'
   cipher: auto
   name: CA-000
@@ -42,25 +73,19 @@ proxies:
   uuid: 9d39cb34-5261-43fb-b0f8-4f8a22b10f15
   ws-opts:
     path: /
-- alterId: '0'
-  cipher: auto
+- cipher: dummy
   name: DE-001
-  network: ws
-  port: '35855'
-  server: 188.34.159.186
-  type: vmess
-  uuid: 97e8fba7-327a-4752-8aca-043858a7e518
-  ws-opts:
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: DE-002
-  password: G!yBwPWH3Vao
-  port: 802
-  server: 193.176.86.190
-  type: ss
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10021
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.de.hideu.tw
+  type: ssr
 - alterId: '0'
   cipher: auto
-  name: DE-003
+  name: DE-002
   network: ws
   port: '80'
   server: 167.235.250.53
@@ -99,31 +124,35 @@ proxies:
     headers:
       host: lg10.cfcdn1.xyz
     path: /A2DJOPFT
+- cipher: dummy
+  name: FR-002
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10103
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.fr.hideu.tw
+  type: ssr
 - alterId: 0
   cipher: auto
-  name: FR-002
+  name: GB-000
   network: ws
-  port: 443
-  server: 198.41.203.6
-  skip-cert-verify: true
-  tls: true
+  port: 8080
+  server: uk-01.lynet.works
+  skip-cert-verify: false
+  tls: false
   type: vmess
   udp: true
-  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  uuid: ffffcac7-ce9b-4792-af3f-7db594ec5c79
   ws-opts:
     headers:
-      Host: fr1.trump2023.org
-    path: /9JZFDTKE
-- cipher: chacha20-ietf-poly1305
-  name: GB-000
-  password: G!yBwPWH3Vao
-  port: 801
-  server: 78.129.253.9
-  type: ss
+      Host: uk-01.lynet.works
+    path: /
 - cipher: chacha20-ietf-poly1305
   name: GB-001
   password: G!yBwPWH3Vao
-  port: 802
+  port: 801
   server: 78.129.253.9
   type: ss
 - cipher: chacha20-ietf-poly1305
@@ -133,14 +162,67 @@ proxies:
   server: 78.129.253.9
   type: ss
 - cipher: chacha20-ietf-poly1305
+  name: GB-003
+  password: G!yBwPWH3Vao
+  port: 802
+  server: 78.129.253.9
+  type: ss
+- cipher: dummy
+  name: GB-004
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10022
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.uk.hideu.tw
+  type: ssr
+- alterId: 0
+  cipher: auto
+  name: GB-005
+  network: ws
+  port: 8080
+  server: 104.17.191.85
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
+  ws-opts:
+    headers:
+      Host: uk.jiedian01.cf
+    path: /
+- alterId: 0
+  cipher: auto
   name: HK-000
+  port: 8011
+  server: hk10.czs1000.com
+  servername: hk10.czs1000.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
+- alterId: 0
+  cipher: auto
+  name: HK-001
+  port: 3886
+  server: hk3.czs1000.com
+  servername: hk3.czs1000.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: bca22c00-0e9f-40db-adf8-be9ab9036a11
+- cipher: chacha20-ietf-poly1305
+  name: HK-002
   password: G!yBwPWH3Vao
   port: 800
   server: 148.66.56.98
   type: ss
 - alterId: '0'
   cipher: auto
-  name: HK-001
+  name: HK-003
   network: ws
   port: '2086'
   server: gcorehk.arc.pics
@@ -150,18 +232,6 @@ proxies:
     headers:
       host: gcorehk.arc.pics
     path: /aries
-- cipher: chacha20-ietf-poly1305
-  name: HK-002
-  password: G!yBwPWH3Vao
-  port: 801
-  server: 148.66.56.98
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: HK-003
-  password: G!yBwPWH3Vao
-  port: 805
-  server: 148.66.56.98
-  type: ss
 - alterId: '0'
   cipher: auto
   name: HK-004
@@ -170,19 +240,24 @@ proxies:
   server: 165.154.5.235
   type: vmess
   uuid: 0eb9d2fa-17d1-4276-af80-15323dc1dca5
+- cipher: chacha20-ietf-poly1305
+  name: HK-005
+  password: G!yBwPWH3Vao
+  port: 804
+  server: 148.66.56.98
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: HK-006
+  password: G!yBwPWH3Vao
+  port: 805
+  server: 148.66.56.98
+  type: ss
 - name: ID-000
   password: vvip-periantara
   port: 443
   server: 38.9.140.66
   skip-cert-verify: true
   sni: id3tr.jagoan.vip
-  type: trojan
-  udp: true
-- name: ID-001
-  password: vvip-periantara
-  port: 443
-  server: id3tr.jagoan.vip
-  skip-cert-verify: true
   type: trojan
   udp: true
 - cipher: aes-256-cfb
@@ -197,53 +272,140 @@ proxies:
   port: 989
   server: 37.235.55.42
   type: ss
+- cipher: dummy
+  name: IN-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10121
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.in.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: IT-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10107
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.it.hideu.tw
+  type: ssr
 - alterId: 0
   cipher: auto
-  grpc-opts:
-    grpc-service-name: funkyun
   name: JP-000
-  network: grpc
-  port: 1414
-  server: jp.funkyun.tk
-  servername: jp.funkyun.tk
+  network: ws
+  port: 50000
+  server: jp-01.lynet.works
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ffffcac7-ce9b-4792-af3f-7db594ec5c79
+  ws-opts:
+    headers:
+      Host: jp-01.lynet.works
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP-001
+  network: ws
+  port: 45678
+  server: jp-03.lynet.works
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 51fa981b-324a-460a-af7c-de03517df4e3
+  ws-opts:
+    headers:
+      Host: jp-03.lynet.works
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP-002
+  port: 6633
+  server: jp19.czs1000.com
+  servername: jp19.czs1000.com
   skip-cert-verify: false
   tls: true
   type: vmess
   udp: true
-  uuid: 734d9343-8630-44ad-bb51-6853d5629f23
-- name: KR-000
-  password: 4ef7d1a5-d82f-48d5-b29c-17c06377246c
-  port: 40827
-  server: kr-02-tr.yhyun.top
-  skip-cert-verify: false
-  sni: kr-02-tr.yhyun.top
-  type: trojan
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
+- cipher: dummy
+  name: JP-003
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.jp.hideu.tw
+  type: ssr
+- cipher: aes-256-cfb
+  name: JP-004
+  obfs: tls1.2_ticket_auth
+  obfs-param: ''
+  password: eAokbaDN6
+  port: 8081
+  protocol: origin
+  protocol-param: ''
+  server: jp-am48-6.eqnode.net
+  type: ssr
   udp: true
-- alterId: '0'
+- cipher: chacha20-ietf-poly1305
+  name: KR-000
+  password: bdecf580-0294-4231-a6b2-64205f04055b
+  port: 63156
+  server: ko6.lianpi.xyz
+  type: ss
+  udp: true
+- alterId: 0
   cipher: auto
   name: KR-001
+  port: 4101
+  server: kr5.18878a24-49d8-4fb2-a1e3-f37dce7cf2a8.czs1000.com
+  servername: kr5.18878a24-49d8-4fb2-a1e3-f37dce7cf2a8.czs1000.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: bca22c00-0e9f-40db-adf8-be9ab9036a11
+- alterId: 0
+  cipher: auto
+  name: KR-002
+  port: 8869
+  server: kr1.czs1000.com
+  servername: kr1.czs1000.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
+- alterId: '0'
+  cipher: auto
+  name: KR-003
   network: ws
   port: '42517'
-  server: 54.180.131.191
+  server: 54.180.150.171
   type: vmess
   uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
   ws-opts:
     path: /
+- cipher: dummy
+  name: MY-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10095
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.my.hideu.tw
+  type: ssr
 - alterId: '0'
   cipher: auto
   name: NL-000
-  network: ws
-  port: '80'
-  server: 163.172.213.74
-  type: vmess
-  uuid: 45d0eb68-955c-4760-91cd-fa6bf07b693f
-  ws-opts:
-    headers:
-      host: 163.172.213.74
-    path: /fastssh/sezarhacks/633be1a74319b/
-- alterId: '0'
-  cipher: auto
-  name: NL-001
   network: ws
   port: '36306'
   server: 85.17.5.150
@@ -253,43 +415,93 @@ proxies:
     headers:
       host: 85.17.5.150
     path: /Af5645tr
+- cipher: aes-256-gcm
+  name: NL-001
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 172.99.188.99
+  type: ss
+- name: NL-002
+  password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1
+  port: 443
+  server: tj2.dalazhi.cyou
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: NL-003
+  network: ws
+  port: 8080
+  server: 162.159.160.104
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
+  ws-opts:
+    headers:
+      Host: v6nt.gongyiyun.cf
+    path: /
+- cipher: dummy
+  name: PH-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10097
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.ph.hideu.tw
+  type: ssr
 - cipher: aes-256-cfb
   name: RU-000
   password: f8f7aCzcPKbsF8p3
   port: 989
   server: 62.109.22.113
   type: ss
+- cipher: dummy
+  name: RU-001
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10101
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.rus.hideu.tw
+  type: ssr
 - alterId: 0
   cipher: auto
   name: SG-000
-  network: ws
-  port: 80
-  server: 66.42.59.36
+  port: 4106
+  server: sg12.18878a24-49d8-4fb2-a1e3-f37dce7cf2a8.czs1000.com
+  servername: sg12.18878a24-49d8-4fb2-a1e3-f37dce7cf2a8.czs1000.com
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 1e032d6a-e7ba-46e6-afe2-d47b067ada6f
-  ws-opts:
-    headers:
-      Host: tlu.dl.delivery.mp.microsoft.com
-    path: /filestreamingservice/files/20f813e2-036a-42a8-92e2-a3a55a0b239b
-- name: SG-001
-  password: ZDAAFTxBNu5j9pl3Re834a3xSXwOZYeIlE30Dp86qc7yYgKaDCaROCSSnz2FCy
-  port: 443
-  server: 45.64.22.55
+  uuid: bca22c00-0e9f-40db-adf8-be9ab9036a11
+- alterId: 0
+  cipher: auto
+  name: SG-001
+  port: 4106
+  server: sg10.18878a24-49d8-4fb2-a1e3-f37dce7cf2a8.czs1000.com
+  servername: tls.czs1000.com
   skip-cert-verify: false
-  sni: csharp.protocolbuffer.com
-  type: trojan
+  tls: true
+  type: vmess
   udp: true
-- name: SG-002
-  password: ZDAAFTxBNu5j9pl3Re834a3xSXwOZYeIlE30Dp86qc7yYgKaDCaROCSSnz2FCy
-  port: 443
-  server: 47.52.101.237
-  skip-cert-verify: true
-  sni: csharp.protocolbuffer.com
-  type: trojan
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
+- alterId: 0
+  cipher: auto
+  name: SG-002
+  port: 4106
+  server: sg9.18878a24-49d8-4fb2-a1e3-f37dce7cf2a8.czs1000.com
+  servername: sg9.18878a24-49d8-4fb2-a1e3-f37dce7cf2a8.czs1000.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
   udp: true
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
 - cipher: chacha20-ietf-poly1305
   name: SG-003
   password: G!yBwPWH3Vao
@@ -305,87 +517,189 @@ proxies:
 - cipher: chacha20-ietf-poly1305
   name: SG-005
   password: G!yBwPWH3Vao
-  port: 802
+  port: 810
   server: 81.90.189.41
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: SG-006
   password: G!yBwPWH3Vao
-  port: 810
+  port: 802
   server: 81.90.189.41
   type: ss
-- name: SG-007
-  password: trojan_tcp_tls
-  port: 8000
-  server: sg.multiport2.artunnel57.host
-  skip-cert-verify: true
-  sni: sg.multiport2.artunnel57.host
-  type: trojan
+- cipher: aes-256-cfb
+  name: SG-007
+  obfs: tls1.2_ticket_auth
+  obfs-param: ''
+  password: 3g0dHlKME
+  port: 32001
+  protocol: origin
+  protocol-param: ''
+  server: sg-am3.eqsunshine.com
+  type: ssr
   udp: true
-- alterId: '0'
-  cipher: auto
-  name: SG-008
-  network: ws
-  port: '80'
-  server: sg.multiport2.artunnel57.host
-  type: vmess
-  uuid: aa168ae4-8923-49c8-a33e-d89b6a508a35
-  ws-opts:
-    headers:
-      host: sg.multiport2.artunnel57.host
-    path: /vmess/
-- alterId: '0'
-  cipher: auto
-  name: SG-009
-  network: ws
-  port: '443'
-  server: sg.multiport2.artunnel57.host
-  tls: true
-  type: vmess
-  uuid: c853de7a-9291-4604-a6f7-3791914e540e
-  ws-opts:
-    headers:
-      host: sg.multiport2.artunnel57.host
-    path: /vmess/
+- cipher: dummy
+  name: TH-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10091
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.th.hideu.tw
+  type: ssr
 - alterId: 0
   cipher: auto
   name: TW-000
   port: 1001
-  server: tw2.czs1000.com
-  servername: tw2.czs1000.com
+  server: tw3.czs1000.com
+  servername: tw3.czs1000.com
   skip-cert-verify: false
   tls: true
   type: vmess
   udp: true
-  uuid: 1e032d6a-e7ba-46e6-afe2-d47b067ada6f
-- alterId: 0
-  cipher: auto
-  name: US-000
-  network: ws
-  port: 3389
-  server: panel.casperco.online
+  uuid: 911622c8-4fc9-4864-8984-03281076b44f
+- cipher: dummy
+  name: TW-001
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: c.usa.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-002
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: b.usa.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-003
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: b.hk.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-004
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: b.jp.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-005
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.ca.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-006
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: d.usa.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-007
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.hk.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-008
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.kr.hideu.tw
+  type: ssr
+- cipher: dummy
+  name: TW-009
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10629
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.usa.hideu.tw
+  type: ssr
+- name: US-000
+  password: 512027a1-ce9b-4662-900f-487f9d75a042
+  port: 10020
+  server: 45.45.177.203
   skip-cert-verify: false
-  tls: false
-  type: vmess
+  sni: cn2.usa1.ridefullspeed.com
+  type: trojan
   udp: true
-  uuid: 06d52c29-1230-49a7-8fa6-66dbc9749a95
-  ws-opts:
-    headers:
-      Host: panel.casperco.online
-    path: /
-- alterId: '0'
+- alterId: 0
   cipher: auto
   name: US-001
   network: ws
-  port: '8081'
-  server: 5.161.125.97
+  port: 443
+  server: 185.162.228.229
+  skip-cert-verify: false
+  tls: true
   type: vmess
-  uuid: 24d2dcb8-9670-4905-f35b-61df65bdfe84
+  udp: true
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
   ws-opts:
-    path: /
-- alterId: '0'
+    headers:
+      Host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: 0
   cipher: auto
   name: US-002
+  port: 4103
+  server: tr.tejiewm.com
+  servername: tr.tejiewm.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: bca22c00-0e9f-40db-adf8-be9ab9036a11
+- alterId: 0
+  cipher: auto
+  name: US-003
+  network: ws
+  port: 443
+  server: 198.41.203.5
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: '0'
+  cipher: auto
+  name: US-004
   network: ws
   port: '58637'
   server: 5.161.131.154
@@ -393,36 +707,59 @@ proxies:
   uuid: e741be25-c051-4009-bc12-060ddb41f6cb
   ws-opts:
     path: /
-- cipher: aes-256-gcm
-  name: US-003
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 38.91.107.72
-  type: ss
 - alterId: 0
   cipher: auto
-  name: US-004
+  name: US-005
   network: ws
-  port: 8081
-  server: 5.161.150.87
+  port: 2095
+  server: 104.17.191.85
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 2b2f1e82-057d-420f-e404-43e403f2437d
+  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
   ws-opts:
+    headers:
+      Host: dknbyn3lw16n5elj.gongyiyun.cf
     path: /
+- alterId: 0
+  cipher: auto
+  name: US-006
+  network: ws
+  port: 2095
+  server: cu.gongyiyun.cf
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e3dba91f-b31c-473a-8f17-92e1dedda38f
+  ws-opts:
+    headers:
+      Host: dknbyn3lw16n5elj.gongyiyun.cf
+    path: /
+- cipher: dummy
+  name: VN-000
+  obfs: plain
+  obfs-param: ''
+  password: .hideu0430.
+  port: 10093
+  protocol: auth_chain_a
+  protocol-param: 258433:khUdcw
+  server: a.vn.hideu.tw
+  type: ssr
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - AE-000
+  - AE-001
+  - AU-000
   - BE-000
+  - BR-000
   - CA-000
   - DE-000
   - DE-001
   - DE-002
-  - DE-003
   - ES-000
   - FR-000
   - FR-001
@@ -430,21 +767,38 @@ proxy-groups:
   - GB-000
   - GB-001
   - GB-002
+  - GB-003
+  - GB-004
+  - GB-005
   - HK-000
   - HK-001
   - HK-002
   - HK-003
   - HK-004
+  - HK-005
+  - HK-006
   - ID-000
-  - ID-001
   - IL-000
   - IM-000
+  - IN-000
+  - IT-000
   - JP-000
+  - JP-001
+  - JP-002
+  - JP-003
+  - JP-004
   - KR-000
   - KR-001
+  - KR-002
+  - KR-003
+  - MY-000
   - NL-000
   - NL-001
+  - NL-002
+  - NL-003
+  - PH-000
   - RU-000
+  - RU-001
   - SG-000
   - SG-001
   - SG-002
@@ -453,14 +807,25 @@ proxy-groups:
   - SG-005
   - SG-006
   - SG-007
-  - SG-008
-  - SG-009
+  - TH-000
   - TW-000
+  - TW-001
+  - TW-002
+  - TW-003
+  - TW-004
+  - TW-005
+  - TW-006
+  - TW-007
+  - TW-008
+  - TW-009
   - US-000
   - US-001
   - US-002
   - US-003
   - US-004
+  - US-005
+  - US-006
+  - VN-000
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
