@@ -27,6 +27,7 @@ jobs:
           sudo timedatectl set-timezone 'Asia/Shanghai'
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          wget https://github.com/Dreamacro/maxmind-geoip/raw/release/Country.mmdb
           mkdir /tmp/download
           cd /tmp/download
           wget https://github.com/Dreamacro/clash/releases/download/v1.11.12/clash-linux-amd64-v3-v1.11.12.gz
