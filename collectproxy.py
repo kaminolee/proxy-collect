@@ -16,6 +16,8 @@ import geoip2.database
 import uuid
 import logging
 
+start_time = int(time.time())
+
 logging.basicConfig(level=logging.INFO,
                     format="[%(levelname)s] [%(asctime)s] %(message)s",
                     datefmt='%Y-%m-%d %H:%M:%S'
@@ -146,6 +148,7 @@ def rename_proxy(proxy, country):
 
 
 def analyse_sub(sub):
+    global stats_count
     logging.info("Get Sub %s" % sub)
     proxies = []
     response = requests.get(sub, headers={
@@ -185,21 +188,28 @@ def analyse_sub(sub):
 
 
 def check_proxy(proxy, index):
+    global stats_fail
+    global stats_success
     if re.search(r'公告|流量|套餐|严禁|剩余', str(proxy['name'])):
+        stats_fail += 1
         logging.info("[%s]%s -> pass" % (index, proxy['name']))
         return
     if check_port_status(proxy['server'], int(proxy['port'])) is False:
+        stats_fail += 1
         logging.info("[%s]%s -> port closed" % (index, proxy['name']))
         return
     country = check_proxy_status(proxy)
     if country is None:
+        stats_fail += 1
         logging.info("[%s]%s -> server down" % (index, proxy['name']))
         return
     save = rename_proxy(proxy, country)
     if save is None:
+        stats_fail += 1
         logging.info("[%s]%s -> save fail" % (index, proxy['name']))
         return
     logging.info("[%s]%s -> %s" % (index, proxy['name'], save))
+    stats_success += 1
 
 
 def check_proxy_thread(sid):
@@ -227,6 +237,11 @@ name_count = {}
 clash_servers = []
 index = 0
 
+stats_count = 0
+stats_success = 0
+stats_fail = 0
+stats_repeat = 0
+
 SUBSCRIPTIONS = []
 PROXIES = []
 
@@ -247,11 +262,14 @@ for i in range(20):
 for sub in SUBSCRIPTIONS:
     try:
         for proxy in analyse_sub(sub):
+            
             if "%s%s%s" % (proxy['server'], proxy['port'], proxy['type']) in pool:
+                stats_repeat +=1
                 continue
             pool.append("%s%s%s" %
                         (proxy['server'], proxy['port'], proxy['type']))
             if proxy is not None:
+                stats_count +=1
                 check.put(proxy)
     except Exception as e:
         logging.error(e)
@@ -297,3 +315,14 @@ clash_subscription = {
 
 with open("%s/output/clash.yaml" % WORKDIR, "w", encoding="utf8") as f:
     f.write(yaml.safe_dump(clash_subscription))
+
+end_time = int(time.time())
+
+with open("result.txt","w",encoding="utf8") as fr:
+    fr.write("""
+Running Time: %ss
+Check Proxies: %s
+Success Proxies: %s
+Fail Proxies: %s
+Repeat Proxies: %s
+"""%(end_time - start_time,stats_count,stats_success,stats_fail,stats_repeat))

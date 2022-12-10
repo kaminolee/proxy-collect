@@ -37,6 +37,9 @@ jobs:
       - name: Run Python Scripts
         run: |
           python collectproxy.py
+      - name: Show Stats
+        run: |
+          cat result.txt
       - name: Upload Result
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
