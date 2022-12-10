@@ -108,7 +108,7 @@ def check_proxy_status(proxy):
                                     'https': 'http://127.0.0.1:%s' % config['port'],
                                 }, headers={
                                     'User-Agent': 'v2rayN/5.37'
-                                }, timeout=5, verify=False
+                                }, timeout=10, verify=False
                                 )
         if not response.ok:
             raise Exception("Http Error %s" % response.status_code)
