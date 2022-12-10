@@ -5,32 +5,7 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: AU-000
-  network: ws
-  port: 443
-  server: vau1.0bad.com
-  tls: true
-  type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  ws-opts:
-    headers:
-      host: vau1.0bad.com
-    path: /chat
-- alterId: 0
-  cipher: auto
   name: CA-000
-  network: ws
-  port: 80
-  server: ca2.v2rayserv.com
-  type: vmess
-  uuid: e3eba3ac-5bea-409f-ac5c-6c964e04d0c4
-  ws-opts:
-    headers:
-      host: ca2.v2rayserv.com
-    path: /sshocean
-- alterId: 0
-  cipher: auto
-  name: CA-001
   network: ws
   port: 80
   server: 165.22.229.248
@@ -41,6 +16,21 @@ proxies:
   uuid: 6b7261aa-1dea-4ab4-8e96-fa726b5a9feb
   ws-opts:
     path: /vmess
+- alterId: 0
+  cipher: auto
+  name: CA-001
+  network: ws
+  port: 443
+  server: news.microsoft.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: e3eba3ac-5bea-409f-ac5c-6c964e04d0c4
+  ws-opts:
+    headers:
+      Host: ca2.v2rayserv.com
+    path: /sshocean
 - alterId: 0
   cipher: auto
   name: DE-000
@@ -56,27 +46,32 @@ proxies:
     headers:
       Host: cdn1.parshost.site
     path: /
+- alterId: 0
+  cipher: auto
+  name: DE-001
+  network: ws
+  port: 80
+  server: 94.101.180.92
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5c36a295-625f-47af-a9f9-16dfa3cabe64
+  ws-opts:
+    headers:
+      Host: 94.101.180.92
+    path: /ray
 - alterId: '0'
   cipher: auto
   http-opts:
     path:
     - /
-  name: DE-001
+  name: DE-002
   network: http
   port: '443'
   server: 5.78.40.205
   type: vmess
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: '0'
-  cipher: auto
-  name: DE-002
-  network: ws
-  port: '6245'
-  server: 206.81.31.184
-  type: vmess
-  uuid: 9d39cb34-5261-43fb-b0f8-4f8a22b10f15
-  ws-opts:
-    path: /
 - alterId: '64'
   cipher: auto
   name: DE-003
@@ -90,34 +85,13 @@ proxies:
     headers:
       host: server1.internetgateway.website
     path: /media
-- alterId: '0'
-  cipher: auto
-  name: DE-004
-  network: ws
-  port: '36453'
-  server: v2ray.tawanaproxy.tk
-  type: vmess
-  uuid: 3109cae1-cf94-4e1a-f59d-b5d83a9d7f1c
-  ws-opts:
-    path: /tawanaproxy
-- name: DE-005
+- name: DE-004
   password: tawanaproxy1401
   port: 8443
   server: v2ray.tawanaproxy.tk
   skip-cert-verify: true
   type: trojan
   udp: true
-- alterId: '0'
-  cipher: auto
-  name: DE-006
-  network: ws
-  port: '2098'
-  server: v2ray.tawanaproxy.tk
-  tls: true
-  type: vmess
-  uuid: dd1e1d04-0b2e-4fd2-c07c-9374409613b2
-  ws-opts:
-    path: /tawanaproxy
 - alterId: '0'
   cipher: auto
   http-opts:
@@ -134,69 +108,30 @@ proxies:
   name: FR-000
   network: ws
   port: 443
-  server: 203.30.189.191
+  server: 203.30.188.120
   tls: true
   type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
   ws-opts:
     headers:
-      host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
+      host: opfr1.v2rayfree1.xyz
+    path: /IYKLD53M
 - alterId: '0'
   cipher: auto
   name: FR-001
   network: ws
   port: 443
-  server: 190.93.245.4
+  server: 198.41.203.5
   tls: true
   type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
   ws-opts:
     headers:
-      host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
+      host: opfr1.v2rayfree1.xyz
+    path: /IYKLD53M
 - alterId: '0'
   cipher: auto
   name: FR-002
-  network: ws
-  port: 443
-  server: 198.41.212.123
-  tls: true
-  type: vmess
-  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
-  ws-opts:
-    headers:
-      host: opfr1.v2rayfree1.xyz
-    path: /IYKLD53M
-- alterId: '0'
-  cipher: auto
-  name: FR-003
-  network: ws
-  port: 443
-  server: 190.93.245.170
-  tls: true
-  type: vmess
-  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
-  ws-opts:
-    headers:
-      host: opfr1.v2rayfree1.xyz
-    path: /IYKLD53M
-- alterId: '0'
-  cipher: auto
-  name: FR-004
-  network: ws
-  port: 443
-  server: 198.41.203.6
-  tls: true
-  type: vmess
-  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
-  ws-opts:
-    headers:
-      host: fr1.trump2023.org
-    path: /9JZFDTKE
-- alterId: '0'
-  cipher: auto
-  name: FR-005
   network: ws
   port: 443
   server: 190.93.246.4
@@ -207,22 +142,16 @@ proxies:
     headers:
       host: lg10.cfcdn1.xyz
     path: /A2DJOPFT
-- alterId: '0'
-  cipher: auto
-  name: FR-006
-  network: ws
+- name: FR-003
+  password: origin
   port: 443
-  server: 23.227.38.40
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
+  server: content-provider26.cdn-delivery.akamaicd.com
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: FR-007
+  name: FR-004
   network: ws
   port: 443
   server: 141.101.114.100
@@ -233,14 +162,7 @@ proxies:
     headers:
       host: v2ray1.zhujicn2.org
     path: /dongtaiwang.com
-- name: FR-008
-  password: Sp3eDVp
-  port: 443
-  server: 51.77.71.131
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: FR-009
+- name: FR-005
   password: Sp3eDVp
   port: 443
   server: content-provider5.cdn-delivery.akamaicd.com
@@ -249,7 +171,21 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: FR-010
+  name: FR-006
+  network: ws
+  port: 443
+  server: 203.24.108.10
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      Host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
+- alterId: 0
+  cipher: auto
+  name: FR-007
   network: ws
   port: 443
   server: 203.30.191.193
@@ -263,38 +199,10 @@ proxies:
     path: /A2DJOPFT
 - alterId: 0
   cipher: auto
-  name: FR-011
+  name: FR-008
   network: ws
   port: 443
-  server: 185.162.228.230
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      Host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- alterId: 0
-  cipher: auto
-  name: FR-012
-  network: ws
-  port: 443
-  server: 203.30.190.192
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      Host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- alterId: 0
-  cipher: auto
-  name: FR-013
-  network: ws
-  port: 443
-  server: 190.93.244.200
+  server: 190.93.246.195
   skip-cert-verify: false
   tls: true
   type: vmess
@@ -305,7 +213,7 @@ proxies:
     path: /IYKLD53M
 - alterId: 0
   cipher: auto
-  name: FR-014
+  name: FR-009
   network: ws
   port: 443
   server: 203.30.188.190
@@ -317,45 +225,9 @@ proxies:
     headers:
       Host: lg10.cfcdn1.xyz
     path: /A2DJOPFT
-- alterId: 0
-  cipher: auto
-  name: FR-015
-  network: ws
-  port: 443
-  server: main.millionaireaisle.com
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
-  ws-opts:
-    headers:
-      Host: fr1.trump2023.org
-    path: /9JZFDTKE
 - alterId: '0'
   cipher: auto
-  name: FR-016
-  network: ws
-  port: '80'
-  server: 51.159.2.152
-  type: vmess
-  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
-  ws-opts:
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: FR-017
-  network: ws
-  port: '80'
-  server: cdn1.soft9821.gq
-  type: vmess
-  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
-  ws-opts:
-    headers:
-      host: cdn1.soft9821.gq
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: FR-018
+  name: FR-010
   network: ws
   port: '8880'
   server: cdn1.soft9821.gq
@@ -367,7 +239,7 @@ proxies:
     path: /
 - alterId: '0'
   cipher: auto
-  name: FR-019
+  name: FR-011
   network: ws
   port: '80'
   server: 54.36.162.144
@@ -379,32 +251,41 @@ proxies:
     path: /vmess
 - alterId: '0'
   cipher: auto
-  name: FR-020
+  name: FR-012
   network: ws
-  port: '2096'
-  server: sea.caspian.cf
-  tls: true
+  port: '80'
+  server: 51.159.2.152
   type: vmess
-  uuid: 6135ebcc-6be1-46a6-9fc1-2264dcb1ed60
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
   ws-opts:
-    headers:
-      host: sea.caspian.cf
     path: /
 - alterId: '0'
   cipher: auto
-  name: FR-021
+  name: FR-013
   network: ws
   port: '80'
-  server: 51.158.231.4
+  server: apphtz.tarazo.lol
   type: vmess
-  uuid: e7129b5d-1be6-4130-a0bb-267bd2c58500
+  uuid: 08bc30e1-be39-4eb4-e887-e6579be15a45
   ws-opts:
     headers:
-      host: 51.158.231.4
-    path: /vmess
+      host: apphtz.tarazo.lol
+    path: /
 - alterId: '0'
   cipher: auto
-  name: FR-022
+  name: FR-014
+  network: ws
+  port: '80'
+  server: cdn1.soft9821.gq
+  type: vmess
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
+  ws-opts:
+    headers:
+      host: cdn1.soft9821.gq
+    path: /
+- alterId: '0'
+  cipher: auto
+  name: FR-015
   network: ws
   port: '8443'
   server: cdn1.soft9821.gq
@@ -413,31 +294,25 @@ proxies:
   uuid: eb88f1ce-2b92-4b9e-cbba-8d98d750c8b3
   ws-opts:
     path: /
+- name: GB-000
+  password: 02e653c9-7c93-46a9-999d-11834bd0c577
+  port: 443
+  server: 132.145.51.172
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - cipher: chacha20-ietf-poly1305
-  name: GB-000
+  name: GB-001
   password: G!yBwPWH3Vao
   port: 809
   server: 78.129.253.9
   type: ss
-- alterId: 0
-  cipher: auto
-  http-opts:
-    path:
-    - /
-  name: HK-000
-  network: http
-  port: 57194
-  server: 47.242.30.73
-  type: vmess
-  uuid: 190f9f72-0144-40c2-862b-8c7fbe7fc34a
-- name: IN-000
-  password: e05c749b-7c6b-41b8-9c71-9dcf685edf4a
-  port: 443
-  server: jgwhdlb1.gaox.ml
-  skip-cert-verify: true
-  sni: jgwhdlb1.gaox.ml
+- name: HK-000
+  password: 6a5cb4b7-8dad-3077-b21c-6f47e8dfb9af
+  port: 10102
+  server: azhk095.xiaohouzi.club
+  sni: azhk095.xiaohouzi.club
   type: trojan
-  udp: true
 - cipher: aes-256-gcm
   name: JP-000
   password: kDWvXYZoTBcGkC4
@@ -447,7 +322,7 @@ proxies:
 - name: JP-001
   password: d06a3f01-1ff0-4792-9b8e-a5a604bc74a2
   port: 443
-  server: jgwdb4.gaox.ml
+  server: 168.138.43.89
   skip-cert-verify: true
   type: trojan
   udp: true
@@ -455,89 +330,83 @@ proxies:
   cipher: auto
   name: JP-002
   network: ws
-  port: 80
-  server: http.download.yunzhongzhuan.com
-  skip-cert-verify: true
+  port: 34512
+  server: yfhuh.snaksksk.cf
   tls: false
   type: vmess
-  udp: true
-  uuid: a4d1d3dd-5097-4dd5-93fa-9b412233174f
+  uuid: d710f7e8-c245-4bf5-b385-877b30599c38
   ws-opts:
     headers:
-      Host: ssrsub.v02.asuka.buzz
-    path: /api/v3/download.getFile
+      Host: '%7B%22Host%22:%22yfhuh.snaksksk.cf%22%7D'
+    path: /
 - alterId: 0
   cipher: auto
   name: JP-003
   network: ws
   port: 443
-  server: cf-lt.sharecentre.online
-  skip-cert-verify: false
+  server: 172.105.223.136
+  skip-cert-verify: true
   tls: true
   type: vmess
-  udp: true
-  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
   ws-opts:
     headers:
-      Host: jp.sharecentre.online
-    path: /shirker
+      Host: www.microsoft.com
+    path: /zh-cn
 - alterId: 0
   cipher: auto
   name: JP-004
-  port: 50000
-  server: 00000000000000000000000000000000000000000000000000000000000016a.node-for-bigairport.win
+  port: 12356
+  server: 00000000000000000000000000000000000000000000000000000000000033a.node-for-bigairport.win
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
   uuid: 15dcb118-88f6-44e8-895a-1770479ab8dc
-- name: KR-000
+- alterId: '0'
+  cipher: auto
+  name: KR-000
+  network: ws
+  port: 42517
+  server: 54.180.156.175
+  type: vmess
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-opts:
+    path: /
+- name: KR-001
   password: 9c822f05-cfdc-479a-9534-60f3d4127435
   port: 443
-  server: 138.2.113.248
+  server: jgwcc2.gaox.ml
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: KR-001
+- name: KR-002
   password: b291d129-ee55-4801-a9b8-b5316e5c37b7
   port: 443
   server: 138.2.113.84
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: KR-002
+- name: KR-003
   password: 7118b5f4-0ea4-4c11-be7f-11471cb91e4a
   port: 443
   server: 144.24.72.126
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: KR-003
-  password: f2117e99-9b6e-47fd-b0a9-634a0b15b998
-  port: 443
-  server: 146.56.189.146
-  skip-cert-verify: true
-  type: trojan
-  udp: true
 - alterId: 0
   cipher: auto
   name: KR-004
-  port: 12356
-  server: 00000000000000000000000000000000000000000000000000000000000037a.node-for-bigairport.win
+  port: 52356
+  server: 00000000000000000000000000000000000000000000000000000000000027a.node-for-bigairport.win
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
   uuid: 15dcb118-88f6-44e8-895a-1770479ab8dc
-- cipher: aes-256-cfb
-  name: NL-000
-  password: EXN3S3eQpjE7EJu8
-  port: 9027
-  server: 213.183.59.214
-  type: ss
 - alterId: '0'
   cipher: auto
-  name: NL-001
+  name: NL-000
   network: ws
   port: '36306'
   server: 85.17.5.150
@@ -549,21 +418,44 @@ proxies:
     path: /Af5645tr
 - alterId: 0
   cipher: auto
+  name: RU-000
+  network: ws
+  port: 21901
+  server: ru1.xiaolongyun.xyz
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 7046ae69-3bb2-3fe8-afb6-a92e8e7987b2
+  ws-headers:
+    Host: ru1.xiaolongyun.xyz
+  ws-opts:
+    headers:
+      Host: ru1.xiaolongyun.xyz
+    path: /vv
+  ws-path: /vv
+- alterId: '0'
+  cipher: auto
   name: SG-000
   network: ws
   port: 443
-  server: 172.67.199.34
-  skip-cert-verify: false
+  server: cacerts.digicert.com
   tls: true
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
   ws-opts:
     headers:
-      Host: sg3-v2ray.sshkit.org
-    path: /sshkit/1736960111/63859bc177a33/
+      host: sg1-v2ray.sshkit.org
+    path: /sshkit/1736960111/63859b5b38f53/
+- name: SG-001
+  password: '123456'
+  port: 443
+  server: trojan-ctb-sg01.globalssh.xyz
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: SG-001
+  name: SG-002
   network: ws
   port: 443
   server: stock.hostmonit.com
@@ -578,7 +470,7 @@ proxies:
     path: /shirker
 - alterId: 0
   cipher: auto
-  name: SG-002
+  name: SG-003
   network: ws
   port: 443
   server: cf-dx-dns.sharecentre.online
@@ -591,19 +483,6 @@ proxies:
     headers:
       Host: sg-ovh.sharecentre.online
     path: /shirker
-- alterId: 0
-  cipher: auto
-  name: SG-003
-  network: ws
-  port: 23131
-  server: ajgw.snaksksk.cf
-  tls: false
-  type: vmess
-  uuid: d710f7e8-c245-4bf5-b385-877b30599c38
-  ws-opts:
-    headers:
-      Host: '%7B%22Host%22:%22sg-01.231231131.xyz%22%7D'
-    path: /
 - alterId: '0'
   cipher: auto
   name: SG-004
@@ -623,20 +502,6 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: TW-000
-  network: ws
-  port: 443
-  server: 1.162.49.30
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
 - alterId: '0'
   cipher: auto
   name: US-000
@@ -655,7 +520,7 @@ proxies:
   name: US-001
   network: ws
   port: 443
-  server: 190.93.246.3
+  server: 190.93.245.3
   tls: true
   type: vmess
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
@@ -668,7 +533,7 @@ proxies:
   name: US-002
   network: ws
   port: 443
-  server: 190.93.245.3
+  server: 190.93.244.3
   tls: true
   type: vmess
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
@@ -694,7 +559,7 @@ proxies:
   name: US-004
   network: ws
   port: 443
-  server: 185.162.228.229
+  server: 188.114.99.10
   tls: true
   type: vmess
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
@@ -707,20 +572,20 @@ proxies:
   name: US-005
   network: ws
   port: 443
-  server: 188.114.99.9
+  server: 185.162.228.229
   tls: true
   type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
   ws-opts:
     headers:
-      host: lg1.trump2023.us
-    path: /ECTCJ0DF
+      host: oplg1.zhujicn2.com
+    path: /5QNROSRV
 - alterId: '0'
   cipher: auto
   name: US-006
   network: ws
   port: 443
-  server: 203.30.190.190
+  server: 190.93.245.2
   tls: true
   type: vmess
   uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
@@ -733,20 +598,20 @@ proxies:
   name: US-007
   network: ws
   port: 443
-  server: 203.30.188.188
+  server: 190.93.246.3
   tls: true
   type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
   ws-opts:
     headers:
-      host: lg1.trump2023.us
-    path: /ECTCJ0DF
+      host: oplg1.zhujicn2.com
+    path: /5QNROSRV
 - alterId: '0'
   cipher: auto
   name: US-008
   network: ws
   port: 443
-  server: 190.93.244.3
+  server: 203.30.188.189
   tls: true
   type: vmess
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
@@ -759,20 +624,7 @@ proxies:
   name: US-009
   network: ws
   port: 443
-  server: 203.24.108.8
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      host: lg1.trump2023.us
-    path: /ECTCJ0DF
-- alterId: '0'
-  cipher: auto
-  name: US-010
-  network: ws
-  port: 443
-  server: 66.235.200.21
+  server: 203.30.189.190
   tls: true
   type: vmess
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
@@ -782,20 +634,20 @@ proxies:
     path: /5QNROSRV
 - alterId: '0'
   cipher: auto
-  name: US-011
+  name: US-010
   network: ws
-  port: 443
-  server: 190.93.245.2
+  port: 2053
+  server: 172.67.199.34
   tls: true
   type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  uuid: ce02a636-88ac-4c29-963d-e09961ec3b3d
   ws-opts:
     headers:
-      host: lg1.trump2023.us
-    path: /ECTCJ0DF
+      host: v2ray.wefuckgfw.ga
+    path: /DQsafRJn/
 - alterId: 0
   cipher: auto
-  name: US-012
+  name: US-011
   network: ws
   port: 443
   server: 141.101.114.31
@@ -808,40 +660,27 @@ proxies:
     path: /5QNROSRV
 - alterId: 0
   cipher: auto
-  name: US-013
+  name: US-012
   network: ws
   port: 443
-  server: 219.76.13.180
+  server: ca.0112233.xyz
   tls: true
   type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  uuid: c3000e9d-bee7-4fdb-b312-dd07030f325d
   ws-opts:
     headers:
-      host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-- name: US-014
-  password: dbf9bf9c-2c3f-474a-8031-d4c00666a989
+      host: ca.0112233.xyz
+    path: /
+- name: US-013
+  password: f39bd244-f5fe-415c-8b98-a1e5250bf178
   port: 443
-  server: 129.146.190.42
+  server: 129.146.255.158
   skip-cert-verify: true
   type: trojan
   udp: true
 - alterId: 0
   cipher: auto
-  name: US-015
-  network: ws
-  port: 443
-  server: 198.41.212.100
-  tls: true
-  type: vmess
-  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-  ws-opts:
-    headers:
-      host: lg1.cfcdn3.xyz
-    path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: US-016
+  name: US-014
   network: ws
   port: 443
   server: 141.101.115.100
@@ -854,19 +693,33 @@ proxies:
     path: /VHONOFZ3
 - alterId: 0
   cipher: auto
-  name: US-017
+  name: US-015
   network: ws
-  port: 80
-  server: us-lb.sshkit.org
+  port: 443
+  server: 198.41.203.3
+  tls: true
   type: vmess
-  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
   ws-opts:
     headers:
-      host: us-lb.sshkit.org
-    path: /sshkit/Variu88/634dab7abadf1/
+      host: lg1.cfcdn3.xyz
+    path: /dongtaiwang.com
 - alterId: 0
   cipher: auto
-  name: US-018
+  name: US-016
+  network: ws
+  port: 443
+  server: 198.41.212.155
+  tls: true
+  type: vmess
+  uuid: 267a9f38-40d8-4ed6-ab58-cafc67e9c933
+  ws-opts:
+    headers:
+      host: lg1.cfcdn2.xyz
+    path: /VHONOFZ3
+- alterId: 0
+  cipher: auto
+  name: US-017
   network: ws
   port: 80
   server: 51.81.220.195
@@ -878,32 +731,7 @@ proxies:
     path: /sshkit/Variu88/634dab7abadf1/
 - alterId: 0
   cipher: auto
-  name: US-019
-  network: ws
-  port: 443
-  server: zhuyong.hucloud-dns.xyz
-  tls: true
-  type: vmess
-  uuid: 4ce21a11-44fe-4814-a639-4b7caf501031
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: US-020
-  network: ws
-  port: 443
-  server: 203.30.191.192
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      Host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: 0
-  cipher: auto
-  name: US-021
+  name: US-018
   network: ws
   port: 443
   server: 185.162.228.228
@@ -917,10 +745,38 @@ proxies:
     path: /ECTCJ0DF
 - alterId: 0
   cipher: auto
-  name: US-022
+  name: US-019
   network: ws
   port: 443
-  server: 190.93.244.2
+  server: 141.193.213.20
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      Host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: 0
+  cipher: auto
+  name: US-020
+  network: ws
+  port: 443
+  server: 203.30.190.191
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      Host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: 0
+  cipher: auto
+  name: US-021
+  network: ws
+  port: 443
+  server: 190.93.246.2
   skip-cert-verify: false
   tls: true
   type: vmess
@@ -931,7 +787,7 @@ proxies:
     path: /ECTCJ0DF
 - alterId: 0
   cipher: auto
-  name: US-023
+  name: US-022
   network: ws
   port: 443
   server: 141.193.213.21
@@ -945,19 +801,32 @@ proxies:
     path: /5QNROSRV
 - alterId: 0
   cipher: auto
-  name: US-024
+  name: US-023
   network: ws
-  port: 80
-  server: 15.204.31.63
-  skip-cert-verify: true
-  tls: false
+  port: 443
+  server: 190.93.244.2
+  skip-cert-verify: false
+  tls: true
   type: vmess
-  udp: true
-  uuid: ee9f4b3b-0bf7-4316-8b10-650a9e706aad
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
   ws-opts:
     headers:
-      Host: vahid-spacer.tk
-    path: /vmess
+      Host: lg1.trump2023.us
+    path: /ECTCJ0DF
+- alterId: 0
+  cipher: auto
+  name: US-024
+  network: ws
+  port: 443
+  server: 203.30.189.189
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  ws-opts:
+    headers:
+      Host: lg1.trump2023.us
+    path: /ECTCJ0DF
 - alterId: 0
   cipher: auto
   name: US-025
@@ -973,17 +842,37 @@ proxies:
     headers:
       Host: 15.204.207.28
     path: /vmess
-- name: US-026
-  password: KLF0qOU0ZZGw5Tnu
-  port: 443
-  server: 45.64.22.55
+- alterId: 0
+  cipher: auto
+  name: US-026
+  network: ws
+  port: 22768
+  server: 91.149.202.5
   skip-cert-verify: true
-  sni: swift.protocolbuffer.com
-  type: trojan
+  tls: false
+  type: vmess
   udp: true
-- alterId: '0'
+  uuid: e1e8f303-5b51-415a-bf3f-898845d58322
+  ws-opts:
+    headers:
+      Host: 91.149.202.5
+    path: /
+- alterId: 0
   cipher: auto
   name: US-027
+  network: ws
+  port: 8081
+  server: 5.161.150.87
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 2b2f1e82-057d-420f-e404-43e403f2437d
+  ws-opts:
+    path: /
+- alterId: '0'
+  cipher: auto
+  name: US-028
   network: ws
   port: '8081'
   server: 5.161.112.236
@@ -993,7 +882,38 @@ proxies:
     path: /
 - alterId: '0'
   cipher: auto
-  name: US-028
+  name: US-029
+  network: ws
+  port: '8081'
+  server: 5.161.123.231
+  type: vmess
+  uuid: 0a4da98b-7d4a-4c35-ce23-b6dc6d9bdb64
+  ws-opts:
+    path: /
+- name: US-030
+  password: d1478689-439c-4590-b7ce-36e786a02dc3
+  port: 443
+  server: youtube-bai-piao-wang-zhe-usa.98848.xyz
+  skip-cert-verify: true
+  sni: youtube-bai-piao-wang-zhe-usa.98848.xyz
+  type: trojan
+  udp: true
+- alterId: '0'
+  cipher: auto
+  name: US-031
+  network: ws
+  port: '443'
+  server: 128.14.162.48
+  tls: true
+  type: vmess
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  ws-opts:
+    headers:
+      host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
+- alterId: '0'
+  cipher: auto
+  name: US-032
   network: ws
   port: '80'
   server: us-v.sshmax.xyz
@@ -1003,17 +923,11 @@ proxies:
     headers:
       host: us-v.sshmax.xyz
     path: /vmess
-- cipher: aes-256-gcm
-  name: US-029
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 38.91.107.72
-  type: ss
 - alterId: 0
   cipher: auto
-  name: US-030
-  port: 80
-  server: 00000000000000000000000000000000000000000000000000000000000009a.node-for-bigairport.win
+  name: US-033
+  port: 443
+  server: 00000000000000000000000000000000000000000000000000000000000010a.node-for-bigairport.win
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -1021,14 +935,21 @@ proxies:
   uuid: 15dcb118-88f6-44e8-895a-1770479ab8dc
 - alterId: 0
   cipher: auto
-  name: US-031
-  port: 10392
-  server: 00000000000000000000000000000000000000000000000000000000000012a.node-for-bigairport.win
-  skip-cert-verify: true
-  tls: false
+  name: US-034
+  network: ws
+  port: 21903
+  server: usrn1.xiaolongyun.xyz
+  tls: true
   type: vmess
   udp: true
-  uuid: 15dcb118-88f6-44e8-895a-1770479ab8dc
+  uuid: 7046ae69-3bb2-3fe8-afb6-a92e8e7987b2
+  ws-headers:
+    Host: usrn1.xiaolongyun.xyz
+  ws-opts:
+    headers:
+      Host: usrn1.xiaolongyun.xyz
+    path: /vv
+  ws-path: /vv
 - alterId: '0'
   cipher: auto
   name: VN-000
@@ -1039,11 +960,25 @@ proxies:
   uuid: 7fd77cee-282f-4f59-8e78-27146725ba89
   ws-opts:
     path: /
+- alterId: 0
+  cipher: auto
+  name: VN-001
+  network: ws
+  port: 80
+  server: 103.167.196.48
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 56716a96-a265-448c-8969-03e626889580
+  ws-opts:
+    headers:
+      Host: dl.kgvn.garenanow.com
+    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - AU-000
   - CA-000
   - CA-001
   - DE-000
@@ -1051,8 +986,6 @@ proxy-groups:
   - DE-002
   - DE-003
   - DE-004
-  - DE-005
-  - DE-006
   - FI-000
   - FR-000
   - FR-001
@@ -1070,16 +1003,9 @@ proxy-groups:
   - FR-013
   - FR-014
   - FR-015
-  - FR-016
-  - FR-017
-  - FR-018
-  - FR-019
-  - FR-020
-  - FR-021
-  - FR-022
   - GB-000
+  - GB-001
   - HK-000
-  - IN-000
   - JP-000
   - JP-001
   - JP-002
@@ -1091,14 +1017,13 @@ proxy-groups:
   - KR-003
   - KR-004
   - NL-000
-  - NL-001
+  - RU-000
   - SG-000
   - SG-001
   - SG-002
   - SG-003
   - SG-004
   - SG-005
-  - TW-000
   - US-000
   - US-001
   - US-002
@@ -1131,7 +1056,11 @@ proxy-groups:
   - US-029
   - US-030
   - US-031
+  - US-032
+  - US-033
+  - US-034
   - VN-000
+  - VN-001
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
