@@ -15,6 +15,7 @@ import threading
 import geoip2.database
 import uuid
 import logging
+import urllib3
 
 start_time = int(time.time())
 
@@ -28,6 +29,8 @@ WORKDIR = os.path.dirname(os.path.realpath('__file__'))
 OUTPUT = "%s/output/%s.txt" % (WORKDIR,
                                time.strftime("%Y%m%d%H%M%S", time.localtime()))
 
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def get_subscriptions():
     subscriptions = []
