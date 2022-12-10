@@ -102,7 +102,7 @@ def check_proxy_status(proxy):
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     time.sleep(1)
     try:
-        response = requests.get('http://api.ipify.org',
+        response = requests.get('https://api.ip.sb/ip',
                                 proxies={
                                     'http': 'http://127.0.0.1:%s' % config['port'],
                                     'https': 'http://127.0.0.1:%s' % config['port'],
