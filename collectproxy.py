@@ -117,14 +117,13 @@ def check_proxy_status(proxy):
             raise Exception("Http Error %s" % response.status_code)
 
         try:
-            ip = response.content.decode("utf8")
-            logging.info("IP: %s"%ip)
+            ip = response.content.decode("utf8").replace(" ","").replace("\n","")        
             country = geoip_reader.country(ip).country.names['zh-CN']
             if country is None:
                 raise Exception("Country is None")
             status = country
         except Exception as e:
-            logging.error("Location Error: %s"%str(e))
+            logging.error("Ip Location: %s"%str(e))
             status = "未知"
     except Exception as _:
         pass
