@@ -3,78 +3,83 @@ mode: rule
 profile:
   store-selected: false
 proxies:
-- name: CA-000
-  password: HdsUZmsHQW
-  port: 443
-  server: 148.113.141.99
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CH-000
-  password: jinajina123
-  port: 443
-  server: samanehha.co
-  type: ss
-- alterId: '0'
-  cipher: auto
-  name: CN-000
-  network: tcp
-  port: 31372
-  server: 106.55.234.95
-  type: vmess
-  uuid: 374d3519-455c-45b8-e3b1-0e2e9fcf4411
-- alterId: '64'
-  cipher: auto
-  name: CN-001
-  port: 50002
-  server: 47.104.237.32
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: DE-000
-  password: TvBypqQJ9b
-  port: 443
-  server: bdvasxmahl.injafarvpnwebelieve.gq
-  skip-cert-verify: true
-  type: trojan
-  udp: true
 - alterId: 0
   cipher: auto
-  name: DE-001
+  name: AU-000
   network: ws
   port: 443
-  server: 45.64.22.6
+  server: vau1.0bad.com
   tls: true
   type: vmess
-  uuid: 1197321c-eb59-4159-959f-5d81f53c1792
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   ws-opts:
     headers:
-      host: h1.800876.xyz
-    path: /
+      host: vau1.0bad.com
+    path: /chat
 - alterId: 0
   cipher: auto
-  name: DE-002
+  name: CA-000
   network: ws
-  port: 35855
-  server: 188.34.159.186
+  port: 80
+  server: ca2.v2rayserv.com
   type: vmess
-  uuid: 97e8fba7-327a-4752-8aca-043858a7e518
+  uuid: e3eba3ac-5bea-409f-ac5c-6c964e04d0c4
   ws-opts:
+    headers:
+      host: ca2.v2rayserv.com
+    path: /sshocean
+- alterId: 0
+  cipher: auto
+  name: CA-001
+  network: ws
+  port: 80
+  server: 165.22.229.248
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6b7261aa-1dea-4ab4-8e96-fa726b5a9feb
+  ws-opts:
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: DE-000
+  network: ws
+  port: 80
+  server: cdn1.parshost.site
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ff2cc50d-d579-49a8-9560-cb5eaa33612f
+  ws-opts:
+    headers:
+      Host: cdn1.parshost.site
     path: /
 - alterId: '0'
   cipher: auto
   http-opts:
     path:
     - /
-  name: DE-003
+  name: DE-001
   network: http
   port: '443'
   server: 5.78.40.205
   type: vmess
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: '0'
+  cipher: auto
+  name: DE-002
+  network: ws
+  port: '6245'
+  server: 206.81.31.184
+  type: vmess
+  uuid: 9d39cb34-5261-43fb-b0f8-4f8a22b10f15
+  ws-opts:
+    path: /
 - alterId: '64'
   cipher: auto
-  name: DE-004
+  name: DE-003
   network: ws
   port: '443'
   server: server1.internetgateway.website
@@ -87,60 +92,7 @@ proxies:
     path: /media
 - alterId: '0'
   cipher: auto
-  name: DE-005
-  network: ws
-  port: '80'
-  server: Channel-MA.unlimiteddev.ml
-  type: vmess
-  uuid: 93370ca5-4b22-4386-f850-b290bf32427d
-  ws-opts:
-    path: /
-- alterId: '0'
-  cipher: auto
-  http-opts:
-    path:
-    - /
-  name: DE-006
-  network: http
-  port: '443'
-  server: 188.40.163.178
-  type: vmess
-  uuid: 00f540fb-ca7f-49d0-8dfe-44a607416283
-- alterId: '0'
-  cipher: auto
-  name: DE-007
-  network: ws
-  port: '6245'
-  server: 206.81.31.184
-  type: vmess
-  uuid: 9d39cb34-5261-43fb-b0f8-4f8a22b10f15
-  ws-opts:
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: DE-008
-  network: ws
-  port: '80'
-  server: 5.78.45.87
-  type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  ws-opts:
-    headers:
-      host: google.com
-    path: /telegram-id-@privatevpns
-- alterId: '0'
-  cipher: auto
-  name: DE-009
-  network: ws
-  port: '80'
-  server: mame.cyber-nigga.pro
-  type: vmess
-  uuid: e09c15e1-db01-4748-ed81-7e385c779ffc
-  ws-opts:
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: DE-010
+  name: DE-004
   network: ws
   port: '36453'
   server: v2ray.tawanaproxy.tk
@@ -148,7 +100,7 @@ proxies:
   uuid: 3109cae1-cf94-4e1a-f59d-b5d83a9d7f1c
   ws-opts:
     path: /tawanaproxy
-- name: DE-011
+- name: DE-005
   password: tawanaproxy1401
   port: 8443
   server: v2ray.tawanaproxy.tk
@@ -157,14 +109,15 @@ proxies:
   udp: true
 - alterId: '0'
   cipher: auto
-  name: DE-012
+  name: DE-006
   network: ws
-  port: '56625'
-  server: 159.69.30.80
+  port: '2098'
+  server: v2ray.tawanaproxy.tk
+  tls: true
   type: vmess
-  uuid: e28d49cf-8a56-4435-89c1-c9cafff23e9e
+  uuid: dd1e1d04-0b2e-4fd2-c07c-9374409613b2
   ws-opts:
-    path: /
+    path: /tawanaproxy
 - alterId: '0'
   cipher: auto
   http-opts:
@@ -178,93 +131,7 @@ proxies:
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
 - alterId: '0'
   cipher: auto
-  name: FI-001
-  network: ws
-  port: '80'
-  server: 65.21.153.136
-  type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  ws-opts:
-    headers:
-      host: google.com
-    path: /telegram-id-@privatevpns
-- alterId: 0
-  cipher: auto
   name: FR-000
-  network: ws
-  port: 443
-  server: 203.30.188.120
-  tls: true
-  type: vmess
-  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
-  ws-opts:
-    headers:
-      host: opfr1.v2rayfree1.xyz
-    path: /IYKLD53M
-- alterId: 0
-  cipher: auto
-  name: FR-001
-  network: ws
-  port: 443
-  server: 66.235.200.22
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- name: FR-002
-  password: origin
-  port: 443
-  server: content-provider26.cdn-delivery.akamaicd.com
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: FR-003
-  password: origin
-  port: 443
-  server: content-provider12.cdn-delivery.akamaicd.com
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: FR-004
-  password: origin
-  port: 443
-  server: 51.77.71.134
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: FR-005
-  network: ws
-  port: 443
-  server: 141.101.114.100
-  tls: true
-  type: vmess
-  uuid: 4679f00e-90ce-430d-9714-6a19367ba112
-  ws-opts:
-    headers:
-      host: v2ray1.zhujicn2.org
-    path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: FR-006
-  network: ws
-  port: 443
-  server: 141.101.114.32
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      Host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- alterId: '0'
-  cipher: auto
-  name: FR-007
   network: ws
   port: 443
   server: 203.30.189.191
@@ -277,20 +144,7 @@ proxies:
     path: /A2DJOPFT
 - alterId: '0'
   cipher: auto
-  name: FR-008
-  network: ws
-  port: 443
-  server: 190.93.245.170
-  tls: true
-  type: vmess
-  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
-  ws-opts:
-    headers:
-      host: opfr1.v2rayfree1.xyz
-    path: /IYKLD53M
-- alterId: '0'
-  cipher: auto
-  name: FR-009
+  name: FR-001
   network: ws
   port: 443
   server: 190.93.245.4
@@ -303,20 +157,7 @@ proxies:
     path: /A2DJOPFT
 - alterId: '0'
   cipher: auto
-  name: FR-010
-  network: ws
-  port: 443
-  server: 23.227.38.40
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- alterId: '0'
-  cipher: auto
-  name: FR-011
+  name: FR-002
   network: ws
   port: 443
   server: 198.41.212.123
@@ -329,33 +170,20 @@ proxies:
     path: /IYKLD53M
 - alterId: '0'
   cipher: auto
-  name: FR-012
+  name: FR-003
   network: ws
   port: 443
-  server: 190.93.246.4
+  server: 190.93.245.170
   tls: true
   type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
   ws-opts:
     headers:
-      host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
+      host: opfr1.v2rayfree1.xyz
+    path: /IYKLD53M
 - alterId: '0'
   cipher: auto
-  name: FR-013
-  network: ws
-  port: 443
-  server: 188.114.99.11
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- alterId: '0'
-  cipher: auto
-  name: FR-014
+  name: FR-004
   network: ws
   port: 443
   server: 198.41.203.6
@@ -368,19 +196,154 @@ proxies:
     path: /9JZFDTKE
 - alterId: '0'
   cipher: auto
-  name: FR-015
+  name: FR-005
   network: ws
-  port: '80'
-  server: 54.36.162.144
+  port: 443
+  server: 190.93.246.4
+  tls: true
   type: vmess
-  uuid: 7bee95fc-20c9-47be-a825-0d10f51ec20c
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
   ws-opts:
     headers:
-      host: 54.36.162.144
-    path: /vmess
+      host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
+- alterId: '0'
+  cipher: auto
+  name: FR-006
+  network: ws
+  port: 443
+  server: 23.227.38.40
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
+- alterId: 0
+  cipher: auto
+  name: FR-007
+  network: ws
+  port: 443
+  server: 141.101.114.100
+  tls: true
+  type: vmess
+  uuid: 4679f00e-90ce-430d-9714-6a19367ba112
+  ws-opts:
+    headers:
+      host: v2ray1.zhujicn2.org
+    path: /dongtaiwang.com
+- name: FR-008
+  password: Sp3eDVp
+  port: 443
+  server: 51.77.71.131
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: FR-009
+  password: Sp3eDVp
+  port: 443
+  server: content-provider5.cdn-delivery.akamaicd.com
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: FR-010
+  network: ws
+  port: 443
+  server: 203.30.191.193
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      Host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
+- alterId: 0
+  cipher: auto
+  name: FR-011
+  network: ws
+  port: 443
+  server: 185.162.228.230
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      Host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
+- alterId: 0
+  cipher: auto
+  name: FR-012
+  network: ws
+  port: 443
+  server: 203.30.190.192
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      Host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
+- alterId: 0
+  cipher: auto
+  name: FR-013
+  network: ws
+  port: 443
+  server: 190.93.244.200
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
+  ws-opts:
+    headers:
+      Host: opfr1.v2rayfree1.xyz
+    path: /IYKLD53M
+- alterId: 0
+  cipher: auto
+  name: FR-014
+  network: ws
+  port: 443
+  server: 203.30.188.190
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  ws-opts:
+    headers:
+      Host: lg10.cfcdn1.xyz
+    path: /A2DJOPFT
+- alterId: 0
+  cipher: auto
+  name: FR-015
+  network: ws
+  port: 443
+  server: main.millionaireaisle.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-opts:
+    headers:
+      Host: fr1.trump2023.org
+    path: /9JZFDTKE
 - alterId: '0'
   cipher: auto
   name: FR-016
+  network: ws
+  port: '80'
+  server: 51.159.2.152
+  type: vmess
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
+  ws-opts:
+    path: /
+- alterId: '0'
+  cipher: auto
+  name: FR-017
   network: ws
   port: '80'
   server: cdn1.soft9821.gq
@@ -389,19 +352,6 @@ proxies:
   ws-opts:
     headers:
       host: cdn1.soft9821.gq
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: FR-017
-  network: ws
-  port: '2053'
-  server: sea.caspian.cf
-  tls: true
-  type: vmess
-  uuid: f3072c34-08fd-422a-afd3-ec3f693cbdf9
-  ws-opts:
-    headers:
-      host: sea.caspian.cf
     path: /
 - alterId: '0'
   cipher: auto
@@ -419,15 +369,14 @@ proxies:
   cipher: auto
   name: FR-019
   network: ws
-  port: '443'
-  server: cdn1.soft9821.gq
-  tls: true
+  port: '80'
+  server: 54.36.162.144
   type: vmess
-  uuid: 32e418ce-843c-44d6-85a2-1f17488cb262
+  uuid: 7bee95fc-20c9-47be-a825-0d10f51ec20c
   ws-opts:
     headers:
-      host: cdn1.soft9821.gq
-    path: /
+      host: 54.36.162.144
+    path: /vmess
 - alterId: '0'
   cipher: auto
   name: FR-020
@@ -464,18 +413,6 @@ proxies:
   uuid: eb88f1ce-2b92-4b9e-cbba-8d98d750c8b3
   ws-opts:
     path: /
-- alterId: '0'
-  cipher: auto
-  name: FR-023
-  network: ws
-  port: '80'
-  server: apphtz.tarazo.lol
-  type: vmess
-  uuid: 08bc30e1-be39-4eb4-e887-e6579be15a45
-  ws-opts:
-    headers:
-      host: apphtz.tarazo.lol
-    path: /
 - cipher: chacha20-ietf-poly1305
   name: GB-000
   password: G!yBwPWH3Vao
@@ -493,129 +430,67 @@ proxies:
   server: 47.242.30.73
   type: vmess
   uuid: 190f9f72-0144-40c2-862b-8c7fbe7fc34a
-- alterId: 0
-  cipher: auto
-  name: HK-001
-  network: ws
-  port: 443
-  server: 18.162.52.52
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-- alterId: 0
-  cipher: auto
-  name: HK-002
-  network: ws
-  port: 443
-  server: 18.163.50.240
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-- alterId: 0
-  cipher: auto
-  name: HK-003
-  network: ws
-  port: 443
-  server: 18.166.215.48
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-- name: ID-000
-  password: vvip-periantara
-  port: 443
-  server: 38.9.140.66
-  skip-cert-verify: true
-  sni: id3tr.jagoan.vip
-  type: trojan
-  udp: true
 - name: IN-000
-  password: 54080134-2cba-4535-8599-95650bd9aa54
+  password: e05c749b-7c6b-41b8-9c71-9dcf685edf4a
   port: 443
-  server: 152.67.160.174
+  server: jgwhdlb1.gaox.ml
   skip-cert-verify: true
+  sni: jgwhdlb1.gaox.ml
   type: trojan
   udp: true
-- name: JP-000
-  password: 8d2d5953-d649-4034-94f2-72f2df2623da
-  port: 443
-  server: jgwdb3.gaox.ml
-  skip-cert-verify: true
-  type: trojan
-  udp: true
+- cipher: aes-256-gcm
+  name: JP-000
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 85.208.108.60
+  type: ss
 - name: JP-001
-  password: d06a3f01-1ff0-4792-9b8e-a5a604bc74a2
-  port: 443
-  server: 168.138.43.89
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: JP-002
   password: d06a3f01-1ff0-4792-9b8e-a5a604bc74a2
   port: 443
   server: jgwdb4.gaox.ml
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: JP-003
-  password: 8d2d5953-d649-4034-94f2-72f2df2623da
-  port: 443
-  server: 168.138.44.176
-  skip-cert-verify: true
-  type: trojan
-  udp: true
 - alterId: 0
   cipher: auto
-  name: JP-004
+  name: JP-002
   network: ws
-  port: 2003
-  server: 35.77.97.182
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-- alterId: 0
-  cipher: auto
-  name: JP-005
-  network: ws
-  port: 443
-  server: 172.105.223.136
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /zh-cn
-- alterId: 0
-  cipher: auto
-  name: JP-006
-  port: 52356
-  server: 00000000000000000000000000000000000000000000000000000000000024a.node-for-bigairport.win
+  port: 80
+  server: http.download.yunzhongzhuan.com
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 1617ff1b-4e85-4a8a-81c3-511b3c2efad8
+  uuid: a4d1d3dd-5097-4dd5-93fa-9b412233174f
+  ws-opts:
+    headers:
+      Host: ssrsub.v02.asuka.buzz
+    path: /api/v3/download.getFile
+- alterId: 0
+  cipher: auto
+  name: JP-003
+  network: ws
+  port: 443
+  server: cf-lt.sharecentre.online
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  ws-opts:
+    headers:
+      Host: jp.sharecentre.online
+    path: /shirker
+- alterId: 0
+  cipher: auto
+  name: JP-004
+  port: 50000
+  server: 00000000000000000000000000000000000000000000000000000000000016a.node-for-bigairport.win
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 15dcb118-88f6-44e8-895a-1770479ab8dc
 - name: KR-000
   password: 9c822f05-cfdc-479a-9534-60f3d4127435
   port: 443
@@ -631,20 +506,13 @@ proxies:
   type: trojan
   udp: true
 - name: KR-002
-  password: 9c822f05-cfdc-479a-9534-60f3d4127435
-  port: 443
-  server: jgwcc2.gaox.ml
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: KR-003
   password: 7118b5f4-0ea4-4c11-be7f-11471cb91e4a
   port: 443
   server: 144.24.72.126
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: KR-004
+- name: KR-003
   password: f2117e99-9b6e-47fd-b0a9-634a0b15b998
   port: 443
   server: 146.56.189.146
@@ -653,59 +521,23 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: KR-005
-  network: ws
-  port: 443
-  server: surongwei.eu.org
-  tls: true
-  type: vmess
-  uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
-  ws-opts:
-    path: /reffs7y26g0ua
-- name: KR-006
-  password: 3a2c0c6c-9ee5-c05f-c951-fcd73831983e
-  port: 443
-  server: kr05.wangxd.life
+  name: KR-004
+  port: 12356
+  server: 00000000000000000000000000000000000000000000000000000000000037a.node-for-bigairport.win
   skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: '0'
-  cipher: auto
-  name: KR-007
-  network: ws
-  port: 42517
-  server: 54.180.156.175
+  tls: false
   type: vmess
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-opts:
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: LU-000
-  network: ws
-  port: 443
-  server: buyvm.imkcp.eu.org
-  tls: true
-  type: vmess
-  uuid: 6fb9a750-55b8-4e6e-857b-242b795399dc
-  ws-opts:
-    path: /imkcpyyds
-- name: NL-000
-  password: Sp3eDVp
-  port: 443
-  server: 185.212.200.75
-  skip-cert-verify: true
-  type: trojan
   udp: true
+  uuid: 15dcb118-88f6-44e8-895a-1770479ab8dc
 - cipher: aes-256-cfb
-  name: NL-001
-  password: KnJGad3FqTvjqbaX
-  port: 9014
+  name: NL-000
+  password: EXN3S3eQpjE7EJu8
+  port: 9027
   server: 213.183.59.214
   type: ss
 - alterId: '0'
   cipher: auto
-  name: NL-002
+  name: NL-001
   network: ws
   port: '36306'
   server: 85.17.5.150
@@ -715,91 +547,30 @@ proxies:
     headers:
       host: 85.17.5.150
     path: /Af5645tr
-- alterId: '0'
-  cipher: auto
-  name: NL-003
-  network: ws
-  port: '443'
-  server: amshare.jingledev.me
-  tls: true
-  type: vmess
-  uuid: 532a5f12-cadb-46e4-963f-ee7c075e40f0
-  ws-opts:
-    headers:
-      host: amshare.jingledev.me
-    path: /pkhhvws
-- alterId: 64
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - apple.com
-    path:
-    - /
-  name: RU-000
-  network: http
-  port: 37672
-  server: 176.119.159.245
-  type: vmess
-  uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
-- cipher: aes-256-cfb
-  name: SG-000
-  obfs: tls1.2_ticket_auth
-  password: 3g0dHlKME
-  port: 32001
-  protocol: origin
-  server: sg-am3.eqsunshine.com
-  type: ssr
 - alterId: 0
   cipher: auto
-  name: SG-001
-  network: tcp
-  port: 40771
-  server: lll.277428.xyz
-  tls: true
-  type: vmess
-  uuid: 61194810-5193-48bc-eb0a-7978a059d681
-- name: SG-002
-  password: '123456'
-  port: 443
-  server: trojan-ctb-sg01.globalssh.xyz
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: '0'
-  cipher: auto
-  name: SG-003
+  name: SG-000
   network: ws
   port: 443
-  server: cacerts.digicert.com
+  server: 172.67.199.34
+  skip-cert-verify: false
   tls: true
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
   ws-opts:
     headers:
-      host: sg1-v2ray.sshkit.org
-    path: /sshkit/1736960111/63859b5b38f53/
-- alterId: '0'
-  cipher: auto
-  name: SG-004
-  network: ws
-  port: 8443
-  server: dosg.gmlovebaipiao.tech
-  tls: true
-  type: vmess
-  uuid: 706596c5-2315-41e9-c97b-5a4d32ffd5e6
-  ws-opts:
-    path: /GenshinMinecraft
+      Host: sg3-v2ray.sshkit.org
+    path: /sshkit/1736960111/63859bc177a33/
 - alterId: 0
   cipher: auto
-  name: SG-005
+  name: SG-001
   network: ws
   port: 443
-  server: cf-yd-dns.sharecentre.online
-  servername: sg-ovh.sharecentre.online
-  skip-cert-verify: false
+  server: stock.hostmonit.com
+  skip-cert-verify: true
   tls: true
   type: vmess
+  udp: true
   uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
   ws-opts:
     headers:
@@ -807,7 +578,7 @@ proxies:
     path: /shirker
 - alterId: 0
   cipher: auto
-  name: SG-006
+  name: SG-002
   network: ws
   port: 443
   server: cf-dx-dns.sharecentre.online
@@ -820,1588 +591,55 @@ proxies:
     headers:
       Host: sg-ovh.sharecentre.online
     path: /shirker
-- alterId: '0'
-  cipher: auto
-  name: SG-007
-  network: ws
-  port: '8880'
-  server: 104.25.136.228
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-008
-  network: ws
-  port: '8880'
-  server: 172.64.85.59
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-009
-  network: ws
-  port: '8880'
-  server: 162.159.130.194
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-010
-  network: ws
-  port: '8880'
-  server: 104.20.206.81
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-011
-  network: ws
-  port: '8880'
-  server: 188.114.97.255
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-012
-  network: ws
-  port: '8880'
-  server: 104.19.196.32
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-013
-  network: ws
-  port: '8880'
-  server: 188.114.97.232
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-014
-  network: ws
-  port: '8880'
-  server: 188.114.96.104
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-015
-  network: ws
-  port: '8880'
-  server: 104.25.136.168
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-016
-  network: ws
-  port: '8880'
-  server: 141.101.115.2
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-017
-  network: ws
-  port: '8880'
-  server: 104.21.78.186
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-018
-  network: ws
-  port: '8880'
-  server: 172.67.106.29
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-019
-  network: ws
-  port: '8880'
-  server: 104.25.186.219
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-020
-  network: ws
-  port: '8880'
-  server: 172.67.20.60
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-021
-  network: ws
-  port: '8880'
-  server: 104.24.75.134
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-022
-  network: ws
-  port: '8880'
-  server: 188.114.97.33
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-023
-  network: ws
-  port: '8880'
-  server: 190.93.246.255
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-024
-  network: ws
-  port: '8880'
-  server: 188.114.96.203
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-025
-  network: ws
-  port: '8880'
-  server: 172.67.175.205
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-026
-  network: ws
-  port: '8880'
-  server: 104.17.208.150
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-027
-  network: ws
-  port: '8880'
-  server: 198.41.214.195
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-028
-  network: ws
-  port: '8880'
-  server: 162.159.129.224
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-029
-  network: ws
-  port: '8880'
-  server: 104.24.251.134
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-030
-  network: ws
-  port: '8880'
-  server: 104.24.43.69
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-031
-  network: ws
-  port: '8880'
-  server: 173.245.49.141
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-032
-  network: ws
-  port: '8880'
-  server: 198.41.217.41
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-033
-  network: ws
-  port: '8880'
-  server: 104.20.228.213
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-034
-  network: ws
-  port: '8880'
-  server: 198.41.212.11
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-035
-  network: ws
-  port: '8880'
-  server: 104.19.81.4
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-036
-  network: ws
-  port: '8880'
-  server: 104.24.88.29
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-037
-  network: ws
-  port: '8880'
-  server: 162.159.194.153
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-038
-  network: ws
-  port: '8880'
-  server: 188.114.97.37
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-039
-  network: ws
-  port: '8880'
-  server: 104.17.204.255
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-040
-  network: ws
-  port: '8880'
-  server: 104.19.248.252
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-041
-  network: ws
-  port: '8880'
-  server: 104.25.143.65
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-042
-  network: ws
-  port: '8880'
-  server: 104.24.192.166
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-043
-  network: ws
-  port: '8880'
-  server: 104.18.57.27
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-044
-  network: ws
-  port: '8880'
-  server: 104.24.249.207
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-045
-  network: ws
-  port: '8880'
-  server: 141.101.123.129
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-046
-  network: ws
-  port: '8880'
-  server: 104.21.123.146
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-047
-  network: ws
-  port: '8880'
-  server: 198.41.222.214
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-048
-  network: ws
-  port: '8880'
-  server: 188.114.99.31
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-049
-  network: ws
-  port: '8880'
-  server: 190.93.247.83
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-050
-  network: ws
-  port: '8880'
-  server: 198.41.206.115
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-051
-  network: ws
-  port: '8880'
-  server: 104.27.100.156
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-052
-  network: ws
-  port: '8880'
-  server: 104.16.124.128
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-053
-  network: ws
-  port: '8880'
-  server: 188.114.99.49
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-054
-  network: ws
-  port: '8880'
-  server: 188.114.96.109
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-055
-  network: ws
-  port: '8880'
-  server: 104.24.90.26
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-056
-  network: ws
-  port: '8880'
-  server: 104.25.228.199
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-057
-  network: ws
-  port: '8880'
-  server: 104.24.200.116
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-058
-  network: ws
-  port: '8880'
-  server: 104.21.106.101
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-059
-  network: ws
-  port: '8880'
-  server: 104.26.14.83
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-060
-  network: ws
-  port: '8880'
-  server: 190.93.247.26
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-061
-  network: ws
-  port: '8880'
-  server: 190.93.245.51
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-062
-  network: ws
-  port: '8880'
-  server: 188.114.99.98
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-063
-  network: ws
-  port: '8880'
-  server: 162.159.143.137
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-064
-  network: ws
-  port: '8880'
-  server: 104.22.5.132
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-065
-  network: ws
-  port: '8880'
-  server: 104.27.110.197
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-066
-  network: ws
-  port: '8880'
-  server: 190.93.247.151
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-067
-  network: ws
-  port: '8880'
-  server: 104.24.175.42
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-068
-  network: ws
-  port: '8880'
-  server: 104.27.30.2
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-069
-  network: ws
-  port: '8880'
-  server: 190.93.245.193
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-070
-  network: ws
-  port: '8880'
-  server: 162.159.247.189
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-071
-  network: ws
-  port: '8880'
-  server: 104.25.32.227
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-072
-  network: ws
-  port: '8880'
-  server: 172.67.245.211
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-073
-  network: ws
-  port: '8880'
-  server: 162.159.251.201
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-074
-  network: ws
-  port: '8880'
-  server: 104.18.48.168
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-075
-  network: ws
-  port: '8880'
-  server: 141.101.122.34
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-076
-  network: ws
-  port: '8880'
-  server: 104.27.204.255
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-077
-  network: ws
-  port: '8880'
-  server: 172.67.110.185
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-078
-  network: ws
-  port: '8880'
-  server: 172.64.110.248
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-079
-  network: ws
-  port: '8880'
-  server: 104.16.84.65
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-080
-  network: ws
-  port: '8880'
-  server: 104.27.95.227
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-081
-  network: ws
-  port: '8880'
-  server: 188.114.99.130
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-082
-  network: ws
-  port: '8880'
-  server: 198.41.198.43
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-083
-  network: ws
-  port: '8880'
-  server: 104.25.31.187
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-084
-  network: ws
-  port: '8880'
-  server: 104.27.28.199
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-085
-  network: ws
-  port: '8880'
-  server: 172.67.187.84
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-086
-  network: ws
-  port: '8880'
-  server: 198.41.207.140
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-087
-  network: ws
-  port: '8880'
-  server: 104.27.1.74
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-088
-  network: ws
-  port: '8880'
-  server: 190.93.247.135
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-089
-  network: ws
-  port: '8880'
-  server: 162.159.142.108
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-090
-  network: ws
-  port: '8880'
-  server: 190.93.244.141
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-091
-  network: ws
-  port: '8880'
-  server: 188.114.96.77
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-092
-  network: ws
-  port: '8880'
-  server: 104.20.23.228
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-093
-  network: ws
-  port: '8880'
-  server: 190.93.244.138
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-094
-  network: ws
-  port: '8880'
-  server: 104.16.249.191
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-095
-  network: ws
-  port: '8880'
-  server: 162.159.136.45
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-096
-  network: ws
-  port: '8880'
-  server: 188.114.99.32
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-097
-  network: ws
-  port: '8880'
-  server: 104.18.146.80
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-098
-  network: ws
-  port: '8880'
-  server: 190.93.244.244
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-099
-  network: ws
-  port: '8880'
-  server: 188.114.97.194
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-100
-  network: ws
-  port: '8880'
-  server: 104.25.242.24
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-101
-  network: ws
-  port: '8880'
-  server: 104.27.80.220
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-102
-  network: ws
-  port: '8880'
-  server: 188.114.98.4
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-103
-  network: ws
-  port: '8880'
-  server: 173.245.49.133
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-104
-  network: ws
-  port: '8880'
-  server: 104.24.90.148
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-105
-  network: ws
-  port: '8880'
-  server: 172.67.3.66
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-106
-  network: ws
-  port: '8880'
-  server: 104.24.4.158
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-107
-  network: ws
-  port: '8880'
-  server: 104.27.92.151
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-108
-  network: ws
-  port: '8880'
-  server: 104.23.133.204
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-109
-  network: ws
-  port: '8880'
-  server: 104.21.94.13
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-110
-  network: ws
-  port: '8880'
-  server: 104.27.96.88
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-111
-  network: ws
-  port: '8880'
-  server: 190.93.245.90
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-112
-  network: ws
-  port: '8880'
-  server: 190.93.246.120
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
-  cipher: auto
-  name: SG-113
-  network: ws
-  port: '8880'
-  server: 188.114.98.160
-  type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
-  ws-opts:
-    headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- alterId: '0'
+- alterId: 0
   cipher: auto
-  name: SG-114
+  name: SG-003
   network: ws
-  port: '8880'
-  server: 198.41.216.118
+  port: 23131
+  server: ajgw.snaksksk.cf
+  tls: false
   type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
+  uuid: d710f7e8-c245-4bf5-b385-877b30599c38
   ws-opts:
     headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
+      Host: '%7B%22Host%22:%22sg-01.231231131.xyz%22%7D'
+    path: /
 - alterId: '0'
   cipher: auto
-  name: SG-115
+  name: SG-004
   network: ws
-  port: '8880'
-  server: 172.64.68.123
+  port: '80'
+  server: sg1-v.sshmax.xyz
   type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
+  uuid: a72bd7a7-732d-46c1-8274-bf16bca30e78
   ws-opts:
     headers:
-      host: sg1021.hkaa0.tk
-    path: /hkaa0
-- cipher: chacha20-ietf
-  name: TW-000
-  obfs: plain
-  obfs-param: ''
-  password: MAYING
-  port: 1371
-  protocol: auth_aes128_md5
-  protocol-param: 18530:FTsxij
-  server: b20tox4scvhj.nodelist.club
-  type: ssr
+      host: sg1-v.sshmax.xyz
+    path: /vmess
+- name: SG-005
+  password: d1667181-eec0-49c9-924f-6589de4d2257
+  port: 42356
+  server: hxsg.fty708.top
+  skip-cert-verify: true
+  type: trojan
   udp: true
 - alterId: 0
+  cipher: auto
+  name: TW-000
+  network: ws
+  port: 443
+  server: 1.162.49.30
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /zh-cn
+- alterId: '0'
   cipher: auto
   name: US-000
-  network: ws
-  port: 443
-  server: 185.162.228.229
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: 0
-  cipher: auto
-  name: US-001
-  network: ws
-  port: 443
-  server: 203.30.190.190
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      host: lg1.trump2023.us
-    path: /ECTCJ0DF
-- alterId: 0
-  cipher: auto
-  name: US-002
-  network: ws
-  port: 443
-  server: 203.30.188.188
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      host: lg1.trump2023.us
-    path: /ECTCJ0DF
-- alterId: 0
-  cipher: auto
-  name: US-003
-  network: ws
-  port: 443
-  server: 141.101.114.31
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: 0
-  cipher: auto
-  name: US-004
-  network: ws
-  port: 443
-  server: 198.41.203.1
-  tls: true
-  type: vmess
-  uuid: 267a9f38-40d8-4ed6-ab58-cafc67e9c933
-  ws-opts:
-    headers:
-      host: lg1.cfcdn2.xyz
-    path: /VHONOFZ3
-- alterId: 0
-  cipher: auto
-  name: US-005
-  network: ws
-  port: 443
-  server: 219.76.13.180
-  tls: true
-  type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-opts:
-    headers:
-      host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: US-006
-  network: ws
-  port: 443
-  server: ca.0112233.xyz
-  tls: true
-  type: vmess
-  uuid: c3000e9d-bee7-4fdb-b312-dd07030f325d
-  ws-opts:
-    headers:
-      host: ca.0112233.xyz
-    path: /
-- name: US-007
-  password: dbf9bf9c-2c3f-474a-8031-d4c00666a989
-  port: 443
-  server: fhcamd2.gaox.ml
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: US-008
-  network: ws
-  port: 5505
-  server: huclouds.ml
-  type: vmess
-  uuid: 69801534-3870-4d14-9d07-6f65da593da4
-  ws-opts:
-    headers:
-      host: huclouds.ml
-    path: /
-- name: US-009
-  password: f39bd244-f5fe-415c-8b98-a1e5250bf178
-  port: 443
-  server: 129.146.255.158
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: US-010
-  password: 05742120-ce23-4cc8-88f5-6d221ce45bf4
-  port: 443
-  server: 129.146.242.130
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: US-011
-  network: ws
-  port: 443
-  server: 198.41.203.3
-  tls: true
-  type: vmess
-  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-  ws-opts:
-    headers:
-      host: lg1.cfcdn3.xyz
-    path: /dongtaiwang.com
-- name: US-012
-  password: 05742120-ce23-4cc8-88f5-6d221ce45bf4
-  port: 443
-  server: fhcarm1.gaox.ml
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: US-013
-  network: ws
-  port: 443
-  server: 198.41.212.150
-  tls: true
-  type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-opts:
-    headers:
-      host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: US-014
-  network: ws
-  port: 443
-  server: 172.64.153.155
-  tls: true
-  type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-opts:
-    headers:
-      host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-- alterId: 0
-  cipher: auto
-  name: US-015
-  network: ws
-  port: 443
-  server: zhuyong.hucloud-dns.xyz
-  tls: true
-  type: vmess
-  uuid: 4ce21a11-44fe-4814-a639-4b7caf501031
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: US-016
-  network: ws
-  port: 443
-  server: 188.114.99.9
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      Host: lg1.trump2023.us
-    path: /ECTCJ0DF
-- alterId: '0'
-  cipher: auto
-  name: US-017
-  network: ws
-  port: 443
-  server: 190.93.245.3
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: '0'
-  cipher: auto
-  name: US-018
-  network: ws
-  port: 443
-  server: 66.235.200.21
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: '0'
-  cipher: auto
-  name: US-019
-  network: ws
-  port: 443
-  server: 188.114.99.10
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: '0'
-  cipher: auto
-  name: US-020
-  network: ws
-  port: 443
-  server: 203.30.188.189
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      host: oplg1.zhujicn2.com
-    path: /5QNROSRV
-- alterId: '0'
-  cipher: auto
-  name: US-021
-  network: ws
-  port: 443
-  server: 190.93.245.2
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      host: lg1.trump2023.us
-    path: /ECTCJ0DF
-- alterId: '0'
-  cipher: auto
-  name: US-022
   network: ws
   port: 443
   server: 203.24.108.9
@@ -2414,10 +652,10 @@ proxies:
     path: /5QNROSRV
 - alterId: '0'
   cipher: auto
-  name: US-023
+  name: US-001
   network: ws
   port: 443
-  server: 203.30.189.190
+  server: 190.93.246.3
   tls: true
   type: vmess
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
@@ -2427,20 +665,20 @@ proxies:
     path: /5QNROSRV
 - alterId: '0'
   cipher: auto
-  name: US-024
+  name: US-002
   network: ws
-  port: 2053
-  server: 141.193.213.20
+  port: 443
+  server: 190.93.245.3
   tls: true
   type: vmess
-  uuid: ce02a636-88ac-4c29-963d-e09961ec3b3d
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
   ws-opts:
     headers:
-      host: v2ray.wefuckgfw.ga
-    path: /DQsafRJn/
+      host: oplg1.zhujicn2.com
+    path: /5QNROSRV
 - alterId: '0'
   cipher: auto
-  name: US-025
+  name: US-003
   network: ws
   port: 443
   server: 23.227.38.39
@@ -2453,10 +691,23 @@ proxies:
     path: /5QNROSRV
 - alterId: '0'
   cipher: auto
-  name: US-026
+  name: US-004
   network: ws
   port: 443
-  server: 203.30.191.191
+  server: 185.162.228.229
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: '0'
+  cipher: auto
+  name: US-005
+  network: ws
+  port: 443
+  server: 188.114.99.9
   tls: true
   type: vmess
   uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
@@ -2466,7 +717,46 @@ proxies:
     path: /ECTCJ0DF
 - alterId: '0'
   cipher: auto
-  name: US-027
+  name: US-006
+  network: ws
+  port: 443
+  server: 203.30.190.190
+  tls: true
+  type: vmess
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  ws-opts:
+    headers:
+      host: lg1.trump2023.us
+    path: /ECTCJ0DF
+- alterId: '0'
+  cipher: auto
+  name: US-007
+  network: ws
+  port: 443
+  server: 203.30.188.188
+  tls: true
+  type: vmess
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  ws-opts:
+    headers:
+      host: lg1.trump2023.us
+    path: /ECTCJ0DF
+- alterId: '0'
+  cipher: auto
+  name: US-008
+  network: ws
+  port: 443
+  server: 190.93.244.3
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: '0'
+  cipher: auto
+  name: US-009
   network: ws
   port: 443
   server: 203.24.108.8
@@ -2479,10 +769,36 @@ proxies:
     path: /ECTCJ0DF
 - alterId: '0'
   cipher: auto
-  name: US-028
+  name: US-010
   network: ws
   port: 443
-  server: 190.93.244.3
+  server: 66.235.200.21
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: '0'
+  cipher: auto
+  name: US-011
+  network: ws
+  port: 443
+  server: 190.93.245.2
+  tls: true
+  type: vmess
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  ws-opts:
+    headers:
+      host: lg1.trump2023.us
+    path: /ECTCJ0DF
+- alterId: 0
+  cipher: auto
+  name: US-012
+  network: ws
+  port: 443
+  server: 141.101.114.31
   tls: true
   type: vmess
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
@@ -2492,18 +808,172 @@ proxies:
     path: /5QNROSRV
 - alterId: 0
   cipher: auto
-  name: US-029
+  name: US-013
   network: ws
-  port: 8081
-  server: 5.161.150.87
+  port: 443
+  server: 219.76.13.180
+  tls: true
+  type: vmess
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  ws-opts:
+    headers:
+      host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
+- name: US-014
+  password: dbf9bf9c-2c3f-474a-8031-d4c00666a989
+  port: 443
+  server: 129.146.190.42
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: US-015
+  network: ws
+  port: 443
+  server: 198.41.212.100
+  tls: true
+  type: vmess
+  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
+  ws-opts:
+    headers:
+      host: lg1.cfcdn3.xyz
+    path: /dongtaiwang.com
+- alterId: 0
+  cipher: auto
+  name: US-016
+  network: ws
+  port: 443
+  server: 141.101.115.100
+  tls: true
+  type: vmess
+  uuid: 267a9f38-40d8-4ed6-ab58-cafc67e9c933
+  ws-opts:
+    headers:
+      host: lg1.cfcdn2.xyz
+    path: /VHONOFZ3
+- alterId: 0
+  cipher: auto
+  name: US-017
+  network: ws
+  port: 80
+  server: us-lb.sshkit.org
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-opts:
+    headers:
+      host: us-lb.sshkit.org
+    path: /sshkit/Variu88/634dab7abadf1/
+- alterId: 0
+  cipher: auto
+  name: US-018
+  network: ws
+  port: 80
+  server: 51.81.220.195
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-opts:
+    headers:
+      host: 51.81.220.195
+    path: /sshkit/Variu88/634dab7abadf1/
+- alterId: 0
+  cipher: auto
+  name: US-019
+  network: ws
+  port: 443
+  server: zhuyong.hucloud-dns.xyz
+  tls: true
+  type: vmess
+  uuid: 4ce21a11-44fe-4814-a639-4b7caf501031
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: US-020
+  network: ws
+  port: 443
+  server: 203.30.191.192
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      Host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: 0
+  cipher: auto
+  name: US-021
+  network: ws
+  port: 443
+  server: 185.162.228.228
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  ws-opts:
+    headers:
+      Host: lg1.trump2023.us
+    path: /ECTCJ0DF
+- alterId: 0
+  cipher: auto
+  name: US-022
+  network: ws
+  port: 443
+  server: 190.93.244.2
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  ws-opts:
+    headers:
+      Host: lg1.trump2023.us
+    path: /ECTCJ0DF
+- alterId: 0
+  cipher: auto
+  name: US-023
+  network: ws
+  port: 443
+  server: 141.193.213.21
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  ws-opts:
+    headers:
+      Host: oplg1.zhujicn2.com
+    path: /5QNROSRV
+- alterId: 0
+  cipher: auto
+  name: US-024
+  network: ws
+  port: 80
+  server: 15.204.31.63
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 2b2f1e82-057d-420f-e404-43e403f2437d
+  uuid: ee9f4b3b-0bf7-4316-8b10-650a9e706aad
   ws-opts:
-    path: /
-- name: US-030
+    headers:
+      Host: vahid-spacer.tk
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: US-025
+  network: ws
+  port: 80
+  server: 15.204.207.28
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d5c96874-3c3f-4978-8973-cbc6cb96cb47
+  ws-opts:
+    headers:
+      Host: 15.204.207.28
+    path: /vmess
+- name: US-026
   password: KLF0qOU0ZZGw5Tnu
   port: 443
   server: 45.64.22.55
@@ -2511,17 +981,9 @@ proxies:
   sni: swift.protocolbuffer.com
   type: trojan
   udp: true
-- name: US-031
-  password: d1478689-439c-4590-b7ce-36e786a02dc3
-  port: 443
-  server: youtube-bai-piao-wang-zhe-usa.98848.xyz
-  skip-cert-verify: true
-  sni: youtube-bai-piao-wang-zhe-usa.98848.xyz
-  type: trojan
-  udp: true
 - alterId: '0'
   cipher: auto
-  name: US-032
+  name: US-027
   network: ws
   port: '8081'
   server: 5.161.112.236
@@ -2531,42 +993,7 @@ proxies:
     path: /
 - alterId: '0'
   cipher: auto
-  name: US-033
-  network: ws
-  port: '8081'
-  server: 5.161.123.231
-  type: vmess
-  uuid: 0a4da98b-7d4a-4c35-ce23-b6dc6d9bdb64
-  ws-opts:
-    path: /
-- alterId: '0'
-  cipher: auto
-  name: US-034
-  network: ws
-  port: '80'
-  server: 15.204.31.63
-  type: vmess
-  uuid: ee9f4b3b-0bf7-4316-8b10-650a9e706aad
-  ws-opts:
-    headers:
-      host: vahid-spacer.tk
-    path: /vmess
-- alterId: '0'
-  cipher: auto
-  name: US-035
-  network: ws
-  port: '443'
-  server: 128.14.162.48
-  tls: true
-  type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  ws-opts:
-    headers:
-      host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
-- alterId: '0'
-  cipher: auto
-  name: US-036
+  name: US-028
   network: ws
   port: '80'
   server: us-v.sshmax.xyz
@@ -2576,42 +1003,27 @@ proxies:
     headers:
       host: us-v.sshmax.xyz
     path: /vmess
-- alterId: '0'
-  cipher: auto
-  name: US-037
-  network: ws
-  port: '2053'
-  server: news.microsoft.com
-  tls: true
-  type: vmess
-  uuid: ce3f0dd3-8a04-4daa-9416-e67c5d42083a
-  ws-opts:
-    headers:
-      host: v2ray.wefuckgfw.ga
-    path: /DQsafRJn/
-- alterId: '0'
-  cipher: auto
-  name: US-038
-  network: ws
-  port: '80'
-  server: 139.84.226.230
-  type: vmess
-  uuid: 23ca6ebf-5962-4742-92bc-add0ff36a17f
-  ws-opts:
-    headers:
-      host: vahid-spacer.tk
-    path: /vmess
 - cipher: aes-256-gcm
-  name: US-039
+  name: US-029
   password: KixLvKzwjekG00rm
   port: 5500
   server: 38.91.107.72
   type: ss
 - alterId: 0
   cipher: auto
-  name: US-040
-  port: 443
-  server: 00000000000000000000000000000000000000000000000000000000000010a.node-for-bigairport.win
+  name: US-030
+  port: 80
+  server: 00000000000000000000000000000000000000000000000000000000000009a.node-for-bigairport.win
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 15dcb118-88f6-44e8-895a-1770479ab8dc
+- alterId: 0
+  cipher: auto
+  name: US-031
+  port: 10392
+  server: 00000000000000000000000000000000000000000000000000000000000012a.node-for-bigairport.win
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -2627,29 +1039,13 @@ proxies:
   uuid: 7fd77cee-282f-4f59-8e78-27146725ba89
   ws-opts:
     path: /
-- alterId: 0
-  cipher: auto
-  name: VN-001
-  network: ws
-  port: 80
-  server: 103.167.196.48
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 56716a96-a265-448c-8969-03e626889580
-  ws-opts:
-    headers:
-      Host: dl.kgvn.garenanow.com
-    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
+  - AU-000
   - CA-000
-  - CH-000
-  - CN-000
-  - CN-001
+  - CA-001
   - DE-000
   - DE-001
   - DE-002
@@ -2657,14 +1053,7 @@ proxy-groups:
   - DE-004
   - DE-005
   - DE-006
-  - DE-007
-  - DE-008
-  - DE-009
-  - DE-010
-  - DE-011
-  - DE-012
   - FI-000
-  - FI-001
   - FR-000
   - FR-001
   - FR-002
@@ -2688,151 +1077,27 @@ proxy-groups:
   - FR-020
   - FR-021
   - FR-022
-  - FR-023
   - GB-000
   - HK-000
-  - HK-001
-  - HK-002
-  - HK-003
-  - ID-000
   - IN-000
   - JP-000
   - JP-001
   - JP-002
   - JP-003
   - JP-004
-  - JP-005
-  - JP-006
   - KR-000
   - KR-001
   - KR-002
   - KR-003
   - KR-004
-  - KR-005
-  - KR-006
-  - KR-007
-  - LU-000
   - NL-000
   - NL-001
-  - NL-002
-  - NL-003
-  - RU-000
   - SG-000
   - SG-001
   - SG-002
   - SG-003
   - SG-004
   - SG-005
-  - SG-006
-  - SG-007
-  - SG-008
-  - SG-009
-  - SG-010
-  - SG-011
-  - SG-012
-  - SG-013
-  - SG-014
-  - SG-015
-  - SG-016
-  - SG-017
-  - SG-018
-  - SG-019
-  - SG-020
-  - SG-021
-  - SG-022
-  - SG-023
-  - SG-024
-  - SG-025
-  - SG-026
-  - SG-027
-  - SG-028
-  - SG-029
-  - SG-030
-  - SG-031
-  - SG-032
-  - SG-033
-  - SG-034
-  - SG-035
-  - SG-036
-  - SG-037
-  - SG-038
-  - SG-039
-  - SG-040
-  - SG-041
-  - SG-042
-  - SG-043
-  - SG-044
-  - SG-045
-  - SG-046
-  - SG-047
-  - SG-048
-  - SG-049
-  - SG-050
-  - SG-051
-  - SG-052
-  - SG-053
-  - SG-054
-  - SG-055
-  - SG-056
-  - SG-057
-  - SG-058
-  - SG-059
-  - SG-060
-  - SG-061
-  - SG-062
-  - SG-063
-  - SG-064
-  - SG-065
-  - SG-066
-  - SG-067
-  - SG-068
-  - SG-069
-  - SG-070
-  - SG-071
-  - SG-072
-  - SG-073
-  - SG-074
-  - SG-075
-  - SG-076
-  - SG-077
-  - SG-078
-  - SG-079
-  - SG-080
-  - SG-081
-  - SG-082
-  - SG-083
-  - SG-084
-  - SG-085
-  - SG-086
-  - SG-087
-  - SG-088
-  - SG-089
-  - SG-090
-  - SG-091
-  - SG-092
-  - SG-093
-  - SG-094
-  - SG-095
-  - SG-096
-  - SG-097
-  - SG-098
-  - SG-099
-  - SG-100
-  - SG-101
-  - SG-102
-  - SG-103
-  - SG-104
-  - SG-105
-  - SG-106
-  - SG-107
-  - SG-108
-  - SG-109
-  - SG-110
-  - SG-111
-  - SG-112
-  - SG-113
-  - SG-114
-  - SG-115
   - TW-000
   - US-000
   - US-001
@@ -2866,17 +1131,7 @@ proxy-groups:
   - US-029
   - US-030
   - US-031
-  - US-032
-  - US-033
-  - US-034
-  - US-035
-  - US-036
-  - US-037
-  - US-038
-  - US-039
-  - US-040
   - VN-000
-  - VN-001
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
