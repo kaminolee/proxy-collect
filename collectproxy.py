@@ -138,13 +138,10 @@ def check_proxy_status(proxy):
             raise Exception("Http Error %s" % response.status_code)
 
         try:
-            ip = response.content.decode("utf8").replace(" ","").replace("\n","")        
-            country = geoip_reader.country(ip).country.names['zh-CN']
-            if country is None:
-                raise Exception("Country is None")
-            status = country
+            ip = response.content.decode("utf8").replace(" ","").replace("\n","")
+            status  = ip
         except Exception as e:
-            logging.error("Ip Location: %s"%str(e))
+            logging.error("Get ip fail: %s"%str(e))
             status = "未知"
     except Exception as _:
         pass
@@ -154,15 +151,15 @@ def check_proxy_status(proxy):
     return status
 
 
-def rename_proxy(proxy, country):
+def rename_proxy(proxy, country,ip):
     global name_count
     global clash_servers
     status = None
     try:
         if country not in name_count:
             name_count[country] = 0
-        proxy['name'] = '%s-%s' % (country,
-                                   str(name_count[country]).zfill(3))
+        proxy['name'] = '%s-%s-%s' % (country,
+                                   str(name_count[country]).zfill(3),ip)
         name_count[country] += 1
         clash_servers.append(proxy)
         status = proxy['name']
@@ -223,12 +220,19 @@ def check_proxy(proxy, index):
         stats_fail += 1
         logging.info("[%s]%s -> port closed" % (index, proxy['name']))
         return
-    country = check_proxy_status(proxy)
-    if country is None:
+    ip = check_proxy_status(proxy)
+    if ip is None:
         stats_fail += 1
         logging.info("[%s]%s -> server down" % (index, proxy['name']))
         return
-    save = rename_proxy(proxy, country)
+    try:
+        country = geoip_reader.country(ip).country.names['zh-CN']
+        if country is None:
+            raise Exception("Country is None")
+    except Exception as e:
+        logging.error("Get Location Fail %s"%ip)
+        country = "未知"
+    save = rename_proxy(proxy, country,ip)
     if save is None:
         stats_fail += 1
         logging.info("[%s]%s -> save fail" % (index, proxy['name']))
