@@ -16,6 +16,7 @@ import geoip2.database
 import uuid
 import logging
 import urllib3
+import dns.resolver
 
 start_time = int(time.time())
 
@@ -83,6 +84,26 @@ def check_port_status(ip, port):
 
     return status
 
+def domain_to_host(domain):
+    hosts = []
+    try:
+        answers = dns.resolver.resolve(domain,'A')
+        for rdata in answers:
+            hosts.append(str(rdata))
+    except Exception as _:
+        pass
+
+    try:
+        answers = dns.resolver.resolve(domain,'AAAA')
+        for rdata in answers:
+            hosts.append(str(rdata))
+    except Exception as _:
+        pass
+    if len(hosts) == 1:
+        logging.debug("Resolve %s to %s"%(domain,hosts[0]))
+        return hosts[0]
+    else:
+        return domain
 
 def check_proxy_status(proxy):
     global geoip_reader
@@ -266,7 +287,7 @@ for i in range(20):
 for sub in SUBSCRIPTIONS:
     try:
         for proxy in analyse_sub(sub):
-            
+            proxy['server'] = domain_to_host(proxy['server'])
             if "%s%s%s" % (proxy['server'], proxy['port'], proxy['type']) in pool:
                 stats_repeat +=1
                 continue
