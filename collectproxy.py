@@ -321,7 +321,7 @@ logging.info("generate clash subscription")
 clash_servers = sorted(clash_servers, key=lambda e: e.__getitem__('name'))
 
 clash_subscription = {
-    'mixed-port': 7891,
+    'mixed-port': 7892,
     'mode': 'rule',
     'profile': {
         'store-selected': False
