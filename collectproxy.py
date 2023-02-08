@@ -323,7 +323,7 @@ clash_servers = sorted(clash_servers, key=lambda e: e.__getitem__('name'))
 clash_subscription = {
     'mixed-port': 7892,
     'mode': 'rule',
-    'allow-lan': 'true',
+    'allow-lan': True,
     'profile': {
         'store-selected': False
     },
