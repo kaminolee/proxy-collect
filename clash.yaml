@@ -6,17 +6,14 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u4E4C\u514B\u5170-000-2a02:27ad::51"
-  network: ws
-  port: 2083
-  server: v2ray.ibgfw.top
-  servername: v2ray.ibgfw.top
+  name: "\u4E2D\u56FD-000-106.55.234.95"
+  network: tcp
+  port: 31372
+  server: 106.55.234.95
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 4efdd8a5-ba9a-4faf-b4ef-127c68924aa2
-  ws-opts:
-    path: /5rtP40gj/
+  uuid: 374d3519-455c-45b8-e3b1-0e2e9fcf4411
 - name: "\u4FC4\u7F57\u65AF\u8054\u90A6-000-85.117.234.145"
   network: tcp
   password: 1d0a80ca-0f96-4016-ac51-c284dedd28a1
@@ -47,27 +44,40 @@ proxies:
   port: 3306
   server: 134.195.196.107
   type: ss
+- alterId: 0
+  cipher: auto
+  name: "\u52A0\u62FF\u5927-002-2600:1f11:20c:be00:cc5b:6060:9374:1829"
+  network: ws
+  port: 64443
+  server: 3.96.190.46
+  servername: ca-ls03.nb1.fr
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: cb7001c7-e495-41ac-b942-f25f60523414
+  ws-opts:
+    path: /clientarea
 - cipher: aes-256-cfb
-  name: "\u52A0\u62FF\u5927-002-3.99.143.182"
+  name: "\u52A0\u62FF\u5927-003-3.97.153.156"
   obfs: http_simple
   password: YpX2opBbrfqJzzMs
   port: 42833
   protocol: origin
-  server: 3.99.143.182
-  type: ssr
-- cipher: aes-256-cfb
-  name: "\u5370\u5EA6-000-3.110.29.251"
-  obfs: http_simple
-  obfs-param: ====
-  password: YpX2opBbrfqJzzMs
-  port: 42833
-  protocol: origin
-  protocol-param: ====
-  server: 3.110.29.251
+  server: 3.97.153.156
   type: ssr
 - alterId: 0
   cipher: auto
-  name: "\u5370\u5EA6-001-139.144.12.196"
+  name: "\u5357\u975E-000-129.151.164.152"
+  network: ws
+  port: 55600
+  server: 129.151.164.152
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e30f8588-2555-48b8-c354-c8e63f57232d
+- alterId: 0
+  cipher: auto
+  name: "\u5370\u5EA6-000-139.144.12.196"
   network: ws
   port: 443
   server: 139.144.12.196
@@ -77,6 +87,16 @@ proxies:
   uuid: 927094d3-d678-4763-8591-e240d0bcae87
   ws-opts:
     path: /chat
+- cipher: aes-256-cfb
+  name: "\u5370\u5EA6-001-15.206.37.209"
+  obfs: http_simple
+  obfs-param: ====
+  password: YpX2opBbrfqJzzMs
+  port: 42833
+  protocol: origin
+  protocol-param: ====
+  server: 15.206.37.209
+  type: ssr
 - alterId: 0
   cipher: auto
   name: "\u5370\u5EA6\u5C3C\u897F\u4E9A-000-147.139.160.130"
@@ -90,16 +110,16 @@ proxies:
   uuid: b9f6ef01-a4a6-4a95-8c22-59666be14599
   ws-opts:
     path: /vmess
-- alterId: 0
+- alterId: 1
   cipher: auto
-  name: "\u53F0\u6E7E-000-118.169.75.240"
-  network: ws
-  port: 18730
-  server: 20.205.214.65
+  name: "\u53F0\u6E7E-000-60.251.33.11"
+  network: tcp
+  port: 3230
+  server: 103.45.78.187
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: b8ec1401-e5c1-4299-b315-9694cca0c2f8
+  uuid: cb7001c7-e495-41ac-b942-f25f60523414
 - alterId: 0
   cipher: auto
   name: "\u53F0\u6E7E-001-1.171.172.113"
@@ -110,14 +130,23 @@ proxies:
   tls: false
   type: vmess
   uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
+- alterId: 1
+  cipher: auto
+  name: "\u571F\u8033\u5176-000-5.180.32.170"
+  port: 10001
+  server: 103.45.78.147
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: cb7001c7-e495-41ac-b942-f25f60523414
 - cipher: aes-256-cfb
-  name: "\u5FB7\u56FD-000-3.77.9.237"
+  name: "\u5FB7\u56FD-000-3.75.224.145"
   obfs: http_simple
   obfs-param: www.microsoft.com#User-Agent:Mozilla/5.0(iPhone;CPUiPhoneOS11_4_1likeMacOSX)AppleWebKit/602.4.6(KHTML,likeGecko)Version/10.0Mobile/14D27MicroMessenger/6.5.13Accept:/Connection:keep-alive
   password: YpX2opBbrfqJzzMs
   port: 42833
   protocol: origin
-  server: 3.77.9.237
+  server: 3.75.224.145
   type: ssr
 - alterId: 0
   cipher: auto
@@ -158,44 +187,27 @@ proxies:
     headers:
       host: en1.wanwushenghua.me
     path: /123
-- alterId: 0
-  cipher: auto
-  name: "\u5FB7\u56FD-004-138.199.19.247"
-  network: ws
+- cipher: aes-256-cfb
+  name: "\u65B0\u52A0\u5761-000-18.141.224.98"
+  password: amazonskr05
   port: 443
-  server: Kansas.v2ray.online
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 00BBF5B8-173E-6818-9927-5AD1AA073C7D
-  ws-opts:
-    headers:
-      Host: Kansas.v2ray.online
-    path: /speedtest
+  server: 18.141.224.98
+  type: ss
+- cipher: aes-256-cfb
+  name: "\u65B0\u52A0\u5761-001-13.215.183.79"
+  password: doub.io
+  port: 8080
+  server: 13.215.183.79
+  type: ss
+- cipher: aes-256-cfb
+  name: "\u65B0\u52A0\u5761-002-13.213.38.103"
+  password: amazonskr05
+  port: 443
+  server: 13.213.38.103
+  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-000-2400:8901::f03c:93ff:fe2b:3351"
-  network: ws
-  port: 54597
-  server: 20.205.214.65
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b8ec1401-e5c1-4299-b315-9694cca0c2f8
-- alterId: 0
-  cipher: auto
-  name: "\u65B0\u52A0\u5761-001-20.205.214.65"
-  network: ws
-  port: 543
-  server: 20.205.214.65
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b8ec1401-e5c1-4299-b315-9694cca0c2f8
-- alterId: 0
-  cipher: auto
-  name: "\u65B0\u52A0\u5761-002-118.107.57.180"
+  name: "\u65B0\u52A0\u5761-003-118.107.57.180"
   network: tcp
   port: 27542
   server: 118.107.57.180
@@ -204,16 +216,27 @@ proxies:
   type: vmess
   uuid: 0c88b5fe-b19b-4b17-9abb-99a0824d04f1
 - cipher: aes-256-cfb
-  name: "\u65B0\u52A0\u5761-003-13.229.224.88"
+  name: "\u65B0\u52A0\u5761-004-13.213.0.224"
   obfs: tls1.2_ticket_auth
   password: 3g0dHlKME
   port: 32001
   protocol: origin
-  server: 13.229.224.88
+  server: 13.213.0.224
   type: ssr
+- alterId: 0
+  cipher: auto
+  name: "\u65B0\u52A0\u5761-005-188.166.176.180"
+  network: none
+  port: 10000
+  server: 3.1.21.201
+  servername: sc.svip8.cn
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 18cd2ad7-02b0-4959-9ccd-eb02c1155c69
 - alterId: 64
   cipher: auto
-  name: "\u65B0\u52A0\u5761-004-27.124.2.32"
+  name: "\u65B0\u52A0\u5761-006-27.124.2.32"
   network: ws
   port: 443
   server: 27.124.2.38
@@ -223,7 +246,7 @@ proxies:
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     path: /path/031730091420
-- name: "\u65B0\u52A0\u5761-005-194.233.88.109"
+- name: "\u65B0\u52A0\u5761-007-194.233.88.109"
   network: tcp
   password: '123456'
   port: 443
@@ -232,28 +255,6 @@ proxies:
   sni: trojan-ctb-sg01.globalssh.xyz
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: "\u65B0\u52A0\u5761-006-206.189.47.136"
-  network: ws
-  port: 443
-  server: 206.189.47.136
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
-- alterId: 64
-  cipher: auto
-  name: "\u65B0\u52A0\u5761-007-202.79.172.27"
-  network: ws
-  port: 443
-  server: 202.79.172.53
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 30216206-14b7-40e7-995d-61c1219ba584
-  ws-opts:
-    path: /path/220128071100
 - alterId: 0
   cipher: auto
   name: "\u65B0\u52A0\u5761-008-143.198.219.182"
@@ -266,9 +267,21 @@ proxies:
   uuid: e9c4ce52-9a78-4381-b6f8-23350bc4d606
   ws-opts:
     path: /v2ray
+- alterId: 64
+  cipher: auto
+  name: "\u65B0\u52A0\u5761-009-202.79.172.27"
+  network: ws
+  port: 443
+  server: 202.79.172.53
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 30216206-14b7-40e7-995d-61c1219ba584
+  ws-opts:
+    path: /path/220128071100
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-009-2406:da18:57:1f01:bab8:d3f9:d2ff:c0a0"
+  name: "\u65B0\u52A0\u5761-010-2406:da18:57:1f01:bab8:d3f9:d2ff:c0a0"
   network: ws
   port: 80
   server: 18.143.123.35
@@ -276,9 +289,27 @@ proxies:
   tls: false
   type: vmess
   uuid: 68df4838-46d0-4b5b-c3f0-a40ec7063245
+- cipher: aes-256-cfb
+  name: "\u65B0\u52A0\u5761-011-13.215.191.190"
+  password: amazonskr05
+  port: 443
+  server: 13.215.191.190
+  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-010-13.213.45.172"
+  name: "\u65B0\u52A0\u5761-012-51.79.173.222"
+  network: ws
+  port: 443
+  server: 51.79.173.222
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: b655be0e-4b1a-4e3e-b63f-22a928a6e808
+  ws-opts:
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: "\u65B0\u52A0\u5761-013-13.213.45.172"
   network: tcp
   port: 26704
   server: 13.213.45.172
@@ -288,7 +319,7 @@ proxies:
   uuid: 95ab0ae8-63a4-4f17-cd60-fd17d579489a
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-011-168.138.174.28"
+  name: "\u65B0\u52A0\u5761-014-168.138.174.28"
   network: ws
   port: 25932
   server: 168.138.174.28
@@ -311,11 +342,11 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: "\u65E5\u672C-001-172.105.200.131"
+  name: "\u65E5\u672C-001-172.105.198.139"
   network: ws
   port: 443
-  server: 172.105.200.131
-  servername: vjp1.0bad.com
+  server: 172.105.198.139
+  servername: vjp2.0bad.com
   skip-cert-verify: true
   tls: true
   type: vmess
@@ -359,17 +390,7 @@ proxies:
     path: /1234
 - alterId: 0
   cipher: auto
-  name: "\u65E5\u672C-005-38.150.10.10"
-  network: tcp
-  port: 10001
-  server: 103.45.78.185
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: cb7001c7-e495-41ac-b942-f25f60523414
-- alterId: 0
-  cipher: auto
-  name: "\u65E5\u672C-006-140.83.57.80"
+  name: "\u65E5\u672C-005-140.83.57.80"
   network: tcp
   port: 49840
   server: 140.83.57.80
@@ -377,9 +398,50 @@ proxies:
   tls: false
   type: vmess
   uuid: 2969ad1b-9787-4927-94e6-22f597618de0
+- cipher: aes-256-gcm
+  name: "\u65E5\u672C-006-85.208.108.90"
+  password: faBAoD54k87UJG7
+  port: 2375
+  server: 85.208.108.90
+  type: ss
+- cipher: aes-256-gcm
+  name: "\u65E5\u672C-007-85.208.108.90"
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 85.208.108.90
+  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u65E5\u672C-007-152.69.197.74"
+  name: "\u65E5\u672C-008-168.138.194.243"
+  network: tcp
+  port: 33421
+  server: 168.138.194.243
+  servername: www.kuromi.eu.org
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 94e56ff9-ccf1-414e-a114-46e0a79f6614
+- cipher: aes-256-gcm
+  name: "\u65E5\u672C-009-85.208.108.90"
+  password: faBAoD54k87UJG7
+  port: 2376
+  server: 85.208.108.90
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: "\u65E5\u672C-010-152.69.192.50"
+  network: ws
+  port: 443
+  server: ming2.kiwireich.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 18e5f40f-bda6-4c15-9334-e87cda6047af
+  ws-opts:
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: "\u65E5\u672C-011-152.69.197.74"
   network: ws
   port: 12345
   server: 152.69.197.74
@@ -389,8 +451,20 @@ proxies:
   uuid: b8a6bf58-485a-4046-b386-b3661bf65eff
   ws-opts:
     path: /bb
+- alterId: 0
+  cipher: auto
+  name: "\u65E5\u672C-012-172.104.121.185"
+  network: ws
+  port: 443
+  server: 172.104.121.185
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    path: /chat
 - cipher: aes-256-cfb
-  name: "\u65E5\u672C-008-18.177.140.50"
+  name: "\u65E5\u672C-013-18.177.140.50"
   obfs: tls1.2_ticket_auth
   password: eAokbaDN6
   port: 8081
@@ -398,14 +472,14 @@ proxies:
   server: 18.177.140.50
   type: ssr
 - cipher: aes-256-gcm
-  name: "\u65E5\u672C-009-85.208.108.58"
+  name: "\u65E5\u672C-014-85.208.108.58"
   password: Y6R9pAtvxxzmGC
   port: 3306
   server: 85.208.108.60
   type: ss
 - alterId: 0
   cipher: auto
-  name: "\u65E5\u672C-010-132.226.5.189"
+  name: "\u65E5\u672C-015-132.226.5.189"
   network: tcp
   port: 26369
   server: 132.226.5.189
@@ -414,41 +488,44 @@ proxies:
   type: vmess
   uuid: f5934f6a-6a07-4c7c-bb0f-3af328ea6897
 - cipher: aes-256-gcm
-  name: "\u65E5\u672C-011-85.208.108.58"
+  name: "\u65E5\u672C-016-85.208.108.58"
   password: pKEW8JPByTVTLtM
   port: 4444
   server: 85.208.108.60
   type: ss
 - alterId: 0
   cipher: auto
-  name: "\u672A\u77E5-000-172.16.206.33"
-  network: ws
-  port: 8080
-  server: 173.245.59.168
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 27848739-7e62-4138-9fd3-938a63964b6b
-  ws-opts:
-    headers:
-      Host: 2.arvanktbr.store
-    path: /KTR
-- alterId: 0
-  cipher: auto
-  name: "\u6CD5\u56FD-000-2001:41d0:303:580:1234:1234:443:1"
+  name: "\u6CD5\u56FD-000-62.210.36.54"
   network: ws
   port: 443
-  server: cdn.chigua.tk
+  server: 172.67.199.31
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
   ws-opts:
     headers:
-      host: v2.chigua.tk
-    path: /vmess
-- name: "\u6CD5\u56FD-001-51.91.96.97"
+      host: fr1.trump2023.org
+    path: /9JZFDTKE
+- alterId: 0
+  cipher: auto
+  name: "\u6CD5\u56FD-001-35.180.19.74"
+  network: tcp
+  port: 10001
+  server: 103.45.78.185
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: cb7001c7-e495-41ac-b942-f25f60523414
+- cipher: aes-256-cfb
+  name: "\u6CD5\u56FD-002-13.38.105.53"
+  obfs: http_simple
+  password: YpX2opBbrfqJzzMs
+  port: 42833
+  protocol: origin
+  server: 13.38.105.53
+  type: ssr
+- name: "\u6CD5\u56FD-003-51.91.96.97"
   network: tcp
   password: e1c12e6f-a555-4ff8-b071-1e09dd5d91e6
   port: 443
@@ -459,7 +536,7 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: "\u6CD5\u56FD-002-62.210.36.54"
+  name: "\u6CD5\u56FD-004-62.210.36.54"
   network: ws
   port: 443
   server: fr1.trump2023.org
@@ -471,15 +548,29 @@ proxies:
     headers:
       host: fr1.trump2023.org
     path: /9JZFDTKE
+- alterId: 0
+  cipher: auto
+  name: "\u6CD5\u56FD-005-62.210.36.54"
+  network: ws
+  port: 443
+  server: 172.67.199.34
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-opts:
+    headers:
+      host: fr1.trump2023.org
+    path: /9JZFDTKE
 - cipher: aes-256-gcm
-  name: "\u6CD5\u56FD-003-149.202.82.172"
+  name: "\u6CD5\u56FD-006-149.202.82.172"
   password: Y6R9pAtvxxzmGC
   port: 5600
   server: 149.202.82.172
   type: ss
 - alterId: 0
   cipher: auto
-  name: "\u6CE2\u5170-000-2a03:cfc0:8004::b:2069"
+  name: "\u6CE2\u5170-000-104.28.193.182"
   network: ws
   port: 2053
   server: foxpol2.fovi.tk
@@ -490,30 +581,20 @@ proxies:
   uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
   ws-opts:
     path: /eisasqa
-- alterId: 0
-  cipher: auto
-  name: "\u6FB3\u5927\u5229\u4E9A-000-2400:8907::f03c:93ff:fe2b:33f6"
-  network: ws
-  port: 35848
-  server: 20.205.214.65
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b8ec1401-e5c1-4299-b315-9694cca0c2f8
 - cipher: aes-256-cfb
-  name: "\u6FB3\u5927\u5229\u4E9A-001-54.253.174.90"
+  name: "\u6FB3\u5927\u5229\u4E9A-000-54.253.128.22"
   obfs: http_simple
   password: YpX2opBbrfqJzzMs
   port: 42833
   protocol: origin
-  server: 54.253.174.90
+  server: 54.253.128.22
   type: ssr
 - alterId: 0
   cipher: auto
-  name: "\u6FB3\u5927\u5229\u4E9A-002-192.46.221.93"
+  name: "\u6FB3\u5927\u5229\u4E9A-001-172.105.186.35"
   network: ws
   port: 443
-  server: 192.46.221.93
+  server: 172.105.186.35
   servername: vau1.0bad.com
   skip-cert-verify: true
   tls: true
@@ -523,7 +604,7 @@ proxies:
     path: /chat
 - alterId: 1
   cipher: auto
-  name: "\u6FB3\u5927\u5229\u4E9A-003-2406:da1c:f50:d000:ab9d:af17:3f54:ca21"
+  name: "\u6FB3\u5927\u5229\u4E9A-002-2406:da1c:f50:d000:ab9d:af17:3f54:ca21"
   network: ws
   port: 64443
   server: 54.66.50.34
@@ -533,22 +614,35 @@ proxies:
   uuid: cb7001c7-e495-41ac-b942-f25f60523414
   ws-opts:
     path: /clientarea
+- alterId: 0
+  cipher: auto
+  name: "\u7231\u5C14\u5170-000-2a05:d018:9ba:4f00:32f0:db31:4704:e9e7"
+  network: ws
+  port: 64443
+  server: 3.249.129.133
+  servername: ie-ls03.nb1.fr
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: cb7001c7-e495-41ac-b942-f25f60523414
+  ws-opts:
+    path: /clientarea
 - cipher: aes-256-cfb
-  name: "\u7231\u5C14\u5170-000-54.72.79.17"
+  name: "\u7231\u5C14\u5170-001-54.216.138.255"
   obfs: http_simple
   obfs-param: www.microsoft.com#User-Agent:Mozilla/5.0(iPhone;CPUiPhoneOS11_4_1likeMacOSX)AppleWebKit/602.4.6(KHTML,likeGecko)Version/10.0Mobile/14D27MicroMessenger/6.5.13Accept:/Connection:keep-alive
   password: YpX2opBbrfqJzzMs
   port: 42833
   protocol: origin
-  server: 54.72.79.17
+  server: 54.216.138.255
   type: ssr
 - cipher: aes-256-cfb
-  name: "\u745E\u5178-000-13.53.37.186"
+  name: "\u745E\u5178-000-16.170.162.181"
   obfs: http_simple
   password: YpX2opBbrfqJzzMs
   port: 42833
   protocol: origin
-  server: 13.53.37.186
+  server: 16.170.162.181
   type: ssr
 - alterId: 0
   cipher: auto
@@ -562,7 +656,13 @@ proxies:
   uuid: cb7001c7-e495-41ac-b942-f25f60523414
   ws-opts:
     path: /clientarea
-- name: "\u7F8E\u56FD-000-158.101.5.62"
+- cipher: aes-256-cfb
+  name: "\u7F8E\u56FD-000-35.92.132.241"
+  password: amazonskr05
+  port: 443
+  server: 35.92.132.241
+  type: ss
+- name: "\u7F8E\u56FD-001-158.101.5.62"
   network: tcp
   password: 4134219f-2384-449c-92e9-50fe8474c30a
   port: 10086
@@ -573,7 +673,7 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-001-174.136.207.177"
+  name: "\u7F8E\u56FD-002-174.136.207.177"
   network: ws
   port: 443
   server: 174.136.207.177
@@ -586,22 +686,21 @@ proxies:
     path: /kmbkvws
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-002-104.149.131.27"
+  name: "\u7F8E\u56FD-003-104.149.130.253"
   network: ws
   port: 443
-  server: 203.30.191.18
-  servername: clash6.ssr-free.xyz
+  server: 203.30.191.7
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
   ws-opts:
     headers:
-      host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
+      host: oplg1.cfcdn2.xyz
+    path: /AUIKN8AU
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-003-104.149.130.253"
+  name: "\u7F8E\u56FD-004-104.149.130.253"
   network: ws
   port: 443
   server: 23.227.38.20
@@ -613,18 +712,6 @@ proxies:
     headers:
       host: oplg1.cfcdn2.xyz
     path: /AUIKN8AU
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-004-143.42.241.30"
-  network: ws
-  port: 443
-  server: 143.42.241.30
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  ws-opts:
-    path: /chat
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-005-104.149.130.253"
@@ -641,29 +728,32 @@ proxies:
     path: /AUIKN8AU
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-006-143.42.173.175"
+  name: "\u7F8E\u56FD-006-104.149.131.27"
   network: ws
   port: 443
-  server: 143.42.173.175
+  server: 172.64.154.102
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   ws-opts:
-    path: /chat
+    headers:
+      host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-007-104.149.130.253"
+  name: "\u7F8E\u56FD-007-104.149.131.27"
   network: ws
   port: 443
-  server: oplg1.cfcdn2.xyz
-  servername: oplg1.cfcdn2.xyz
+  server: 172.64.154.155
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   ws-opts:
-    path: /AUIKN8AU
+    headers:
+      host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-008-45.92.163.115"
@@ -680,41 +770,40 @@ proxies:
     path: /api/v3/download.getFile
 - cipher: aes-256-gcm
   name: "\u7F8E\u56FD-009-167.88.63.79"
-  password: e4FCWrgpkji3QY
-  port: 9101
-  server: 167.88.63.79
-  type: ss
-- cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-010-167.88.63.79"
   password: pKEW8JPByTVTLtM
   port: 443
   server: 167.88.63.79
   type: ss
+- cipher: aes-256-gcm
+  name: "\u7F8E\u56FD-010-167.88.61.213"
+  password: FoOiGlkAA9yPEGP
+  port: 7307
+  server: 167.88.61.213
+  type: ss
+- cipher: aes-256-gcm
+  name: "\u7F8E\u56FD-011-167.88.63.79"
+  password: e4FCWrgpkji3QY
+  port: 9101
+  server: 167.88.63.79
+  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-011-104.149.130.253"
+  name: "\u7F8E\u56FD-012-104.149.130.253"
   network: ws
   port: 443
-  server: 203.30.191.3
+  server: oplg1.cfcdn2.xyz
+  servername: oplg1.cfcdn2.xyz
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
   ws-opts:
-    headers:
-      host: oplg1.cfcdn2.xyz
     path: /AUIKN8AU
 - cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-012-167.88.63.79"
+  name: "\u7F8E\u56FD-013-167.88.63.123"
   password: faBAoD54k87UJG7
-  port: 2375
-  server: 167.88.63.79
-  type: ss
-- cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-013-167.88.61.213"
-  password: FoOiGlkAA9yPEGP
-  port: 7307
-  server: 167.88.61.213
+  port: 2376
+  server: 167.88.63.123
   type: ss
 - cipher: aes-256-gcm
   name: "\u7F8E\u56FD-014-167.88.63.79"
@@ -723,10 +812,10 @@ proxies:
   server: 167.88.63.79
   type: ss
 - cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-015-167.88.63.79"
-  password: XKFKl2rULjIp74
-  port: 8009
-  server: 167.88.63.79
+  name: "\u7F8E\u56FD-015-167.88.61.213"
+  password: PCnnH6SQSnfoS27
+  port: 8090
+  server: 167.88.61.213
   type: ss
 - cipher: aes-256-gcm
   name: "\u7F8E\u56FD-016-167.88.63.79"
@@ -734,26 +823,30 @@ proxies:
   port: 3389
   server: 167.88.63.79
   type: ss
-- cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-017-167.88.61.213"
-  password: PCnnH6SQSnfoS27
-  port: 8090
-  server: 167.88.61.213
-  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-018-104.149.130.253"
+  name: "\u7F8E\u56FD-017-143.42.173.172"
   network: ws
   port: 443
-  server: 172.67.145.166
+  server: 143.42.173.172
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   ws-opts:
-    headers:
-      host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
+    path: /chat
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-018-170.187.206.48"
+  network: ws
+  port: 443
+  server: 170.187.206.48
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    path: /chat
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-019-104.149.130.253"
@@ -770,83 +863,27 @@ proxies:
     path: /AUIKN8AU
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-020-104.149.130.253"
+  name: "\u7F8E\u56FD-020-2604:a880:4:1d0::3d2:7000"
   network: ws
   port: 443
-  server: 185.162.228.110
+  server: 24.199.119.135
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
+  uuid: e6da31cb-6c97-4699-c412-124d5ab80856
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-021-104.149.130.253"
+  name: "\u7F8E\u56FD-021-144.34.175.46"
   network: ws
-  port: 443
-  server: 203.30.191.6
+  port: 80
+  server: 144.34.175.46
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
+  uuid: 751192f4-437e-4ea9-f34f-4f0252509267
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-022-104.149.130.253"
-  network: ws
-  port: 443
-  server: 172.67.135.55
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-023-104.149.130.253"
-  network: ws
-  port: 443
-  server: 23.227.38.24
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-024-143.42.173.172"
-  network: ws
-  port: 443
-  server: 143.42.173.172
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  ws-opts:
-    path: /chat
-- name: "\u7F8E\u56FD-025-129.159.39.30"
-  network: tcp
-  password: cd27884b-c5af-34ec-b75f-8248077818fe
-  port: 8646
-  server: 129.159.39.30
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-026-205.185.121.162"
+  name: "\u7F8E\u56FD-022-205.185.121.162"
   network: ws
   port: 443
   server: new6.hucloud-dns.xyz
@@ -857,21 +894,17 @@ proxies:
   uuid: 0a5dc877-0211-4352-f73a-8fbdae81d673
   ws-opts:
     path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-027-170.187.206.48"
-  network: ws
-  port: 443
-  server: 170.187.206.48
+- name: "\u7F8E\u56FD-023-129.159.39.30"
+  network: tcp
+  password: cd27884b-c5af-34ec-b75f-8248077818fe
+  port: 8646
+  server: 129.159.39.30
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  ws-opts:
-    path: /chat
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-028-2603:c024:c005:479e::4856"
+  name: "\u7F8E\u56FD-024-2603:c024:c005:479e::4856"
   network: ws
   port: 43815
   server: 152.67.254.16
@@ -884,19 +917,60 @@ proxies:
     path: /abc
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-029-104.149.130.253"
+  name: "\u7F8E\u56FD-025-45.15.170.215"
+  network: ws
+  port: 2082
+  server: 172.67.207.209
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 082122a2-8479-4089-82f0-f32ba5fc5426
+  ws-opts:
+    headers:
+      host: hao.huaqian.icu
+    path: /bb
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-026-2a09:bac5:636c:296::42:3c"
   network: ws
   port: 443
-  server: 172.67.135.57
+  server: khvwycch.cymlr.xyz
+  servername: khvwycch.cymlr.xyz
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  uuid: db39ef95-4245-418a-84c0-14c202f29bc6
+  ws-opts:
+    path: /videnset
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-027-52.205.253.241"
+  network: ws
+  port: 443
+  server: cooing-luxuriant-blue.glitch.me
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 80e7dd59-b1fc-45a0-98be-1478a9af89f2
   ws-opts:
     headers:
-      host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: "\u7F8E\u56FD-030-155.248.193.254"
+      host: cooing-luxuriant-blue.glitch.me
+    path: /api
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-028-104.149.131.27"
+  network: ws
+  port: 443
+  server: 203.30.191.20
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  ws-opts:
+    headers:
+      host: clash6.ssr-free.xyz
+    path: /dongtaiwang.com
+- name: "\u7F8E\u56FD-029-155.248.193.254"
   network: tcp
   password: jKRJgS7uvI
   port: 31853
@@ -906,7 +980,7 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-031-104.149.143.105"
+  name: "\u7F8E\u56FD-030-104.149.143.105"
   network: ws
   port: 443
   server: 141.193.213.20
@@ -920,7 +994,7 @@ proxies:
     path: /5QNROSRV
 - alterId: 64
   cipher: auto
-  name: "\u7F8E\u56FD-032-23.224.191.3"
+  name: "\u7F8E\u56FD-031-23.224.191.3"
   network: ws
   port: 443
   server: 23.224.191.6
@@ -930,24 +1004,17 @@ proxies:
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     path: /path/220128071100
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-033-104.149.143.105"
-  network: ws
-  port: 443
-  server: 203.24.108.9
-  servername: oplg1.zhujicn2.com
+- name: "\u7F8E\u56FD-032-141.148.172.93"
+  network: tcp
+  password: 4d111af8-5078-37e0-a583-34155f60b32c
+  port: 44302
+  server: 141.148.172.93
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      host: oplg1.zhujicn2.com
-    path: /5QNROSRV
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-034-104.149.131.27"
+  name: "\u7F8E\u56FD-033-104.149.131.27"
   network: ws
   port: 443
   server: 203.30.191.19
@@ -961,7 +1028,7 @@ proxies:
     path: /dongtaiwang.com
 - alterId: 1
   cipher: auto
-  name: "\u7F8E\u56FD-035-2602:feda:d40:7b2::1"
+  name: "\u7F8E\u56FD-034-2602:feda:d40:7b2::1"
   network: ws
   port: 64443
   server: 103.149.145.115
@@ -972,35 +1039,15 @@ proxies:
   uuid: cb7001c7-e495-41ac-b942-f25f60523414
   ws-opts:
     path: /clientarea
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-036-104.149.130.253"
-  network: ws
-  port: 443
-  server: 172.67.164.123
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
 - cipher: aes-256-cfb
-  name: "\u7F8E\u56FD-037-93.179.112.70"
+  name: "\u7F8E\u56FD-035-93.179.112.70"
   password: bwhskrskr06
   port: 253
   server: 93.179.112.70
   type: ss
-- cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-038-167.88.63.79"
-  password: kDWvXYZoTBcGkC4
-  port: 8881
-  server: 167.88.63.79
-  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-039-104.149.131.27"
+  name: "\u7F8E\u56FD-036-104.149.131.27"
   network: ws
   port: 443
   server: 172.64.153.150
@@ -1014,7 +1061,7 @@ proxies:
     path: /dongtaiwang.com
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-040-104.149.131.27"
+  name: "\u7F8E\u56FD-037-104.149.131.27"
   network: ws
   port: 443
   server: 198.41.212.150
@@ -1028,7 +1075,7 @@ proxies:
     path: /dongtaiwang.com
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-041-104.149.130.253"
+  name: "\u7F8E\u56FD-038-104.149.130.253"
   network: ws
   port: 443
   server: 203.30.191.10
@@ -1040,36 +1087,12 @@ proxies:
     headers:
       host: oplg1.cfcdn2.xyz
     path: /AUIKN8AU
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-042-2a09:bac1:7680:7c0::1d2:4c"
-  network: ws
-  port: 443
-  server: america2.yj2022.ga
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 4b5e4565-322f-4223-a891-78a84f189726
-  ws-opts:
-    headers:
-      Host: america2.yj2022.ga
-    path: /SRhXKZqggNrPMELA525Kw
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-043-141.193.68.52"
-  network: ws
-  port: 80
-  server: 141.193.68.52
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e9ff4d30-b9e9-11ed-b039-205c6d5f5d78
-  ws-opts:
-    headers:
-      Host: us1.oceis.net
-    path: /vmws
+- cipher: aes-256-gcm
+  name: "\u7F8E\u56FD-039-167.88.63.79"
+  password: kDWvXYZoTBcGkC4
+  port: 8881
+  server: 167.88.63.79
+  type: ss
 - cipher: aes-128-gcm
   name: "\u82F1\u56FD-000-212.102.53.198"
   password: shadowsocks
@@ -1090,29 +1113,7 @@ proxies:
   type: ss
 - alterId: 0
   cipher: auto
-  name: "\u82F1\u56FD-003-2a01:7e00::f03c:93ff:fe2b:33f3"
-  network: ws
-  port: 55053
-  server: 20.205.214.65
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b8ec1401-e5c1-4299-b315-9694cca0c2f8
-- alterId: 0
-  cipher: auto
-  name: "\u82F1\u56FD-004-2001:41d0:800:17ac::1"
-  network: ws
-  port: 443
-  server: england1.yj2022.ga
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 4b5e4565-322f-4223-a891-78a84f189726
-  ws-opts:
-    path: /Eynyyo4kJfl2fkJfl2f
-- alterId: 0
-  cipher: auto
-  name: "\u82F1\u56FD-005-2a05:d01c:c01:7c00:8e8c:3f32:6485:8305"
+  name: "\u82F1\u56FD-003-2a05:d01c:c01:7c00:8e8c:3f32:6485:8305"
   network: ws
   port: 64443
   server: 18.132.41.147
@@ -1124,7 +1125,19 @@ proxies:
     path: /clientarea
 - alterId: 0
   cipher: auto
-  name: "\u82F1\u56FD-006-51.89.8.119"
+  name: "\u82F1\u56FD-004-143.42.99.183"
+  network: ws
+  port: 443
+  server: 143.42.99.183
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    path: /chat
+- alterId: 0
+  cipher: auto
+  name: "\u82F1\u56FD-005-51.89.8.119"
   network: tcp
   port: 54766
   server: 51.89.8.119
@@ -1140,8 +1153,8 @@ proxies:
   type: ss
 - cipher: aes-256-gcm
   name: "\u8377\u5170-001-172.99.188.99"
-  password: Y6R9pAtvxxzmGC
-  port: 5000
+  password: kDWvXYZoTBcGkC4
+  port: 8882
   server: 172.99.188.99
   type: ss
 - cipher: aes-256-gcm
@@ -1153,7 +1166,7 @@ proxies:
 - cipher: aes-256-gcm
   name: "\u8377\u5170-003-172.99.188.99"
   password: Y6R9pAtvxxzmGC
-  port: 8888
+  port: 5000
   server: 172.99.188.99
   type: ss
 - cipher: aes-256-gcm
@@ -1164,51 +1177,54 @@ proxies:
   type: ss
 - cipher: aes-256-gcm
   name: "\u8377\u5170-005-172.99.188.99"
-  password: g5MeD6Ft3CWlJId
-  port: 5004
-  server: 172.99.188.99
-  type: ss
-- cipher: aes-256-gcm
-  name: "\u8377\u5170-006-172.99.188.99"
   password: zDNVedRFPQexG9v
   port: 6379
   server: 172.99.188.99
   type: ss
 - cipher: aes-256-gcm
+  name: "\u8377\u5170-006-172.99.188.99"
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 172.99.188.99
+  type: ss
+- cipher: aes-256-gcm
   name: "\u8377\u5170-007-172.99.188.99"
+  password: g5MeD6Ft3CWlJId
+  port: 5004
+  server: 172.99.188.99
+  type: ss
+- cipher: aes-256-gcm
+  name: "\u8377\u5170-008-172.99.188.99"
   password: Y6R9pAtvxxzmGC
   port: 3389
   server: 172.99.188.99
   type: ss
 - alterId: 0
   cipher: auto
-  name: "\u8377\u5170-008-79.132.133.38"
+  name: "\u8D8A\u5357-000-103.143.209.42"
   network: ws
-  port: 54458
-  server: 79.132.133.38
+  port: 80
+  server: 103.143.209.42
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 31b022f2-5441-4e9a-ffe7-43fee7ab0688
-  ws-opts:
-    path: /
-- name: "\u8D8A\u5357-000-103.173.255.127"
-  network: tcp
-  password: 5aebe74d-326d-4c34-813b-1283236649ec
-  port: 443
-  server: 103.173.255.127
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- cipher: aes-256-cfb
-  name: "\u97E9\u56FD-000-43.201.48.212"
-  password: amazonskr05
-  port: 443
-  server: 43.201.48.212
-  type: ss
+  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
 - alterId: 0
   cipher: auto
-  name: "\u97E9\u56FD-001-140.238.19.165"
+  name: "\u8D8A\u5357-001-103.237.145.22"
+  network: ws
+  port: 80
+  server: 103.237.145.22
+  servername: hn1.safepn.net
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: "\u97E9\u56FD-000-140.238.19.165"
   network: ws
   port: 443
   server: 140.238.19.165
@@ -1221,29 +1237,7 @@ proxies:
     path: /reffs7y26g0ua
 - alterId: 0
   cipher: auto
-  name: "\u97E9\u56FD-002-152.69.230.170"
-  network: ws
-  port: 80
-  server: 152.69.230.170
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6aa24ded-5f15-48c7-8cba-3e2a159d6b77
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u9999\u6E2F-000-8.218.150.152"
-  network: http
-  port: 45106
-  server: 8.218.150.152
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: aa7f7fd3-8f88-45c7-9e27-a03380d6cc89
-- alterId: 0
-  cipher: auto
-  name: "\u9999\u6E2F-001-8.218.36.140"
+  name: "\u9999\u6E2F-000-8.218.36.140"
   network: http
   port: 38369
   server: 8.218.36.140
@@ -1252,123 +1246,162 @@ proxies:
   tls: false
   type: vmess
   uuid: c78723e2-7fd2-4621-95a2-fe525855440a
-- name: "\u9999\u6E2F-002-2a0e:aa00:120:400:216:3cff:fe37:6f38"
-  network: tcp
-  password: shenmegui
-  port: 28897
-  server: 37.123.196.225
+- alterId: 0
+  cipher: auto
+  name: "\u9999\u6E2F-001-8.218.150.29"
+  network: http
+  port: 31595
+  server: 8.218.150.29
+  servername: 8.218.150.29
   skip-cert-verify: true
-  sni: hk.swiftfalcon.app
-  type: trojan
+  tls: false
+  type: vmess
+  uuid: 2c370b03-c322-4ddc-81f1-67ac84e8d09b
+- alterId: 64
+  cipher: auto
+  name: "\u9999\u6E2F-002-43.154.233.89"
+  network: ws
+  port: 45516
+  server: 43.154.233.89
+  skip-cert-verify: true
+  tls: true
+  type: vmess
   udp: true
+  uuid: 2264f24e-d814-4aa6-98c0-ed5a8322a0eb
+  ws-opts:
+    headers:
+      Host: hk12.verichains.co
+    path: /hk12/getData
+- alterId: 64
+  cipher: auto
+  name: "\u9999\u6E2F-003-43.154.90.134"
+  network: ws
+  port: 60672
+  server: 43.154.90.134
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 6b6dd11a-798c-401e-ba46-d6272e29aca3
+  ws-opts:
+    headers:
+      Host: hk5.linkeden.co
+    path: /hk4/getData
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u4E4C\u514B\u5170-000-2a02:27ad::51"
+  - "\u4E2D\u56FD-000-106.55.234.95"
   - "\u4FC4\u7F57\u65AF\u8054\u90A6-000-85.117.234.145"
   - "\u4FC4\u7F57\u65AF\u8054\u90A6-001-2a00:b700::1:24"
   - "\u52A0\u62FF\u5927-000-134.195.196.107"
   - "\u52A0\u62FF\u5927-001-134.195.196.107"
-  - "\u52A0\u62FF\u5927-002-3.99.143.182"
-  - "\u5370\u5EA6-000-3.110.29.251"
-  - "\u5370\u5EA6-001-139.144.12.196"
+  - "\u52A0\u62FF\u5927-002-2600:1f11:20c:be00:cc5b:6060:9374:1829"
+  - "\u52A0\u62FF\u5927-003-3.97.153.156"
+  - "\u5357\u975E-000-129.151.164.152"
+  - "\u5370\u5EA6-000-139.144.12.196"
+  - "\u5370\u5EA6-001-15.206.37.209"
   - "\u5370\u5EA6\u5C3C\u897F\u4E9A-000-147.139.160.130"
-  - "\u53F0\u6E7E-000-118.169.75.240"
+  - "\u53F0\u6E7E-000-60.251.33.11"
   - "\u53F0\u6E7E-001-1.171.172.113"
-  - "\u5FB7\u56FD-000-3.77.9.237"
+  - "\u571F\u8033\u5176-000-5.180.32.170"
+  - "\u5FB7\u56FD-000-3.75.224.145"
   - "\u5FB7\u56FD-001-2a01:4f8:1c1b:23f8::1"
   - "\u5FB7\u56FD-002-2a05:d014:398:8c00:28bc:a146:79fe:994c"
   - "\u5FB7\u56FD-003-2a09:bac1:1e40:a90::27c:89"
-  - "\u5FB7\u56FD-004-138.199.19.247"
-  - "\u65B0\u52A0\u5761-000-2400:8901::f03c:93ff:fe2b:3351"
-  - "\u65B0\u52A0\u5761-001-20.205.214.65"
-  - "\u65B0\u52A0\u5761-002-118.107.57.180"
-  - "\u65B0\u52A0\u5761-003-13.229.224.88"
-  - "\u65B0\u52A0\u5761-004-27.124.2.32"
-  - "\u65B0\u52A0\u5761-005-194.233.88.109"
-  - "\u65B0\u52A0\u5761-006-206.189.47.136"
-  - "\u65B0\u52A0\u5761-007-202.79.172.27"
+  - "\u65B0\u52A0\u5761-000-18.141.224.98"
+  - "\u65B0\u52A0\u5761-001-13.215.183.79"
+  - "\u65B0\u52A0\u5761-002-13.213.38.103"
+  - "\u65B0\u52A0\u5761-003-118.107.57.180"
+  - "\u65B0\u52A0\u5761-004-13.213.0.224"
+  - "\u65B0\u52A0\u5761-005-188.166.176.180"
+  - "\u65B0\u52A0\u5761-006-27.124.2.32"
+  - "\u65B0\u52A0\u5761-007-194.233.88.109"
   - "\u65B0\u52A0\u5761-008-143.198.219.182"
-  - "\u65B0\u52A0\u5761-009-2406:da18:57:1f01:bab8:d3f9:d2ff:c0a0"
-  - "\u65B0\u52A0\u5761-010-13.213.45.172"
-  - "\u65B0\u52A0\u5761-011-168.138.174.28"
+  - "\u65B0\u52A0\u5761-009-202.79.172.27"
+  - "\u65B0\u52A0\u5761-010-2406:da18:57:1f01:bab8:d3f9:d2ff:c0a0"
+  - "\u65B0\u52A0\u5761-011-13.215.191.190"
+  - "\u65B0\u52A0\u5761-012-51.79.173.222"
+  - "\u65B0\u52A0\u5761-013-13.213.45.172"
+  - "\u65B0\u52A0\u5761-014-168.138.174.28"
   - "\u65E5\u672C-000-2406:da14:c5d:8f00:fbc5:a530:e197:f6b9"
-  - "\u65E5\u672C-001-172.105.200.131"
+  - "\u65E5\u672C-001-172.105.198.139"
   - "\u65E5\u672C-002-2400:8902::f03c:93ff:fefc:525b"
   - "\u65E5\u672C-003-150.230.218.56"
   - "\u65E5\u672C-004-104.28.206.119"
-  - "\u65E5\u672C-005-38.150.10.10"
-  - "\u65E5\u672C-006-140.83.57.80"
-  - "\u65E5\u672C-007-152.69.197.74"
-  - "\u65E5\u672C-008-18.177.140.50"
-  - "\u65E5\u672C-009-85.208.108.58"
-  - "\u65E5\u672C-010-132.226.5.189"
-  - "\u65E5\u672C-011-85.208.108.58"
-  - "\u672A\u77E5-000-172.16.206.33"
-  - "\u6CD5\u56FD-000-2001:41d0:303:580:1234:1234:443:1"
-  - "\u6CD5\u56FD-001-51.91.96.97"
-  - "\u6CD5\u56FD-002-62.210.36.54"
-  - "\u6CD5\u56FD-003-149.202.82.172"
-  - "\u6CE2\u5170-000-2a03:cfc0:8004::b:2069"
-  - "\u6FB3\u5927\u5229\u4E9A-000-2400:8907::f03c:93ff:fe2b:33f6"
-  - "\u6FB3\u5927\u5229\u4E9A-001-54.253.174.90"
-  - "\u6FB3\u5927\u5229\u4E9A-002-192.46.221.93"
-  - "\u6FB3\u5927\u5229\u4E9A-003-2406:da1c:f50:d000:ab9d:af17:3f54:ca21"
-  - "\u7231\u5C14\u5170-000-54.72.79.17"
-  - "\u745E\u5178-000-13.53.37.186"
+  - "\u65E5\u672C-005-140.83.57.80"
+  - "\u65E5\u672C-006-85.208.108.90"
+  - "\u65E5\u672C-007-85.208.108.90"
+  - "\u65E5\u672C-008-168.138.194.243"
+  - "\u65E5\u672C-009-85.208.108.90"
+  - "\u65E5\u672C-010-152.69.192.50"
+  - "\u65E5\u672C-011-152.69.197.74"
+  - "\u65E5\u672C-012-172.104.121.185"
+  - "\u65E5\u672C-013-18.177.140.50"
+  - "\u65E5\u672C-014-85.208.108.58"
+  - "\u65E5\u672C-015-132.226.5.189"
+  - "\u65E5\u672C-016-85.208.108.58"
+  - "\u6CD5\u56FD-000-62.210.36.54"
+  - "\u6CD5\u56FD-001-35.180.19.74"
+  - "\u6CD5\u56FD-002-13.38.105.53"
+  - "\u6CD5\u56FD-003-51.91.96.97"
+  - "\u6CD5\u56FD-004-62.210.36.54"
+  - "\u6CD5\u56FD-005-62.210.36.54"
+  - "\u6CD5\u56FD-006-149.202.82.172"
+  - "\u6CE2\u5170-000-104.28.193.182"
+  - "\u6FB3\u5927\u5229\u4E9A-000-54.253.128.22"
+  - "\u6FB3\u5927\u5229\u4E9A-001-172.105.186.35"
+  - "\u6FB3\u5927\u5229\u4E9A-002-2406:da1c:f50:d000:ab9d:af17:3f54:ca21"
+  - "\u7231\u5C14\u5170-000-2a05:d018:9ba:4f00:32f0:db31:4704:e9e7"
+  - "\u7231\u5C14\u5170-001-54.216.138.255"
+  - "\u745E\u5178-000-16.170.162.181"
   - "\u745E\u5178-001-13.51.237.206"
-  - "\u7F8E\u56FD-000-158.101.5.62"
-  - "\u7F8E\u56FD-001-174.136.207.177"
-  - "\u7F8E\u56FD-002-104.149.131.27"
+  - "\u7F8E\u56FD-000-35.92.132.241"
+  - "\u7F8E\u56FD-001-158.101.5.62"
+  - "\u7F8E\u56FD-002-174.136.207.177"
   - "\u7F8E\u56FD-003-104.149.130.253"
-  - "\u7F8E\u56FD-004-143.42.241.30"
+  - "\u7F8E\u56FD-004-104.149.130.253"
   - "\u7F8E\u56FD-005-104.149.130.253"
-  - "\u7F8E\u56FD-006-143.42.173.175"
-  - "\u7F8E\u56FD-007-104.149.130.253"
+  - "\u7F8E\u56FD-006-104.149.131.27"
+  - "\u7F8E\u56FD-007-104.149.131.27"
   - "\u7F8E\u56FD-008-45.92.163.115"
   - "\u7F8E\u56FD-009-167.88.63.79"
-  - "\u7F8E\u56FD-010-167.88.63.79"
-  - "\u7F8E\u56FD-011-104.149.130.253"
-  - "\u7F8E\u56FD-012-167.88.63.79"
-  - "\u7F8E\u56FD-013-167.88.61.213"
+  - "\u7F8E\u56FD-010-167.88.61.213"
+  - "\u7F8E\u56FD-011-167.88.63.79"
+  - "\u7F8E\u56FD-012-104.149.130.253"
+  - "\u7F8E\u56FD-013-167.88.63.123"
   - "\u7F8E\u56FD-014-167.88.63.79"
-  - "\u7F8E\u56FD-015-167.88.63.79"
+  - "\u7F8E\u56FD-015-167.88.61.213"
   - "\u7F8E\u56FD-016-167.88.63.79"
-  - "\u7F8E\u56FD-017-167.88.61.213"
-  - "\u7F8E\u56FD-018-104.149.130.253"
+  - "\u7F8E\u56FD-017-143.42.173.172"
+  - "\u7F8E\u56FD-018-170.187.206.48"
   - "\u7F8E\u56FD-019-104.149.130.253"
-  - "\u7F8E\u56FD-020-104.149.130.253"
-  - "\u7F8E\u56FD-021-104.149.130.253"
-  - "\u7F8E\u56FD-022-104.149.130.253"
-  - "\u7F8E\u56FD-023-104.149.130.253"
-  - "\u7F8E\u56FD-024-143.42.173.172"
-  - "\u7F8E\u56FD-025-129.159.39.30"
-  - "\u7F8E\u56FD-026-205.185.121.162"
-  - "\u7F8E\u56FD-027-170.187.206.48"
-  - "\u7F8E\u56FD-028-2603:c024:c005:479e::4856"
-  - "\u7F8E\u56FD-029-104.149.130.253"
-  - "\u7F8E\u56FD-030-155.248.193.254"
-  - "\u7F8E\u56FD-031-104.149.143.105"
-  - "\u7F8E\u56FD-032-23.224.191.3"
-  - "\u7F8E\u56FD-033-104.149.143.105"
-  - "\u7F8E\u56FD-034-104.149.131.27"
-  - "\u7F8E\u56FD-035-2602:feda:d40:7b2::1"
-  - "\u7F8E\u56FD-036-104.149.130.253"
-  - "\u7F8E\u56FD-037-93.179.112.70"
-  - "\u7F8E\u56FD-038-167.88.63.79"
-  - "\u7F8E\u56FD-039-104.149.131.27"
-  - "\u7F8E\u56FD-040-104.149.131.27"
-  - "\u7F8E\u56FD-041-104.149.130.253"
-  - "\u7F8E\u56FD-042-2a09:bac1:7680:7c0::1d2:4c"
-  - "\u7F8E\u56FD-043-141.193.68.52"
+  - "\u7F8E\u56FD-020-2604:a880:4:1d0::3d2:7000"
+  - "\u7F8E\u56FD-021-144.34.175.46"
+  - "\u7F8E\u56FD-022-205.185.121.162"
+  - "\u7F8E\u56FD-023-129.159.39.30"
+  - "\u7F8E\u56FD-024-2603:c024:c005:479e::4856"
+  - "\u7F8E\u56FD-025-45.15.170.215"
+  - "\u7F8E\u56FD-026-2a09:bac5:636c:296::42:3c"
+  - "\u7F8E\u56FD-027-52.205.253.241"
+  - "\u7F8E\u56FD-028-104.149.131.27"
+  - "\u7F8E\u56FD-029-155.248.193.254"
+  - "\u7F8E\u56FD-030-104.149.143.105"
+  - "\u7F8E\u56FD-031-23.224.191.3"
+  - "\u7F8E\u56FD-032-141.148.172.93"
+  - "\u7F8E\u56FD-033-104.149.131.27"
+  - "\u7F8E\u56FD-034-2602:feda:d40:7b2::1"
+  - "\u7F8E\u56FD-035-93.179.112.70"
+  - "\u7F8E\u56FD-036-104.149.131.27"
+  - "\u7F8E\u56FD-037-104.149.131.27"
+  - "\u7F8E\u56FD-038-104.149.130.253"
+  - "\u7F8E\u56FD-039-167.88.63.79"
   - "\u82F1\u56FD-000-212.102.53.198"
   - "\u82F1\u56FD-001-212.102.53.195"
   - "\u82F1\u56FD-002-212.102.53.196"
-  - "\u82F1\u56FD-003-2a01:7e00::f03c:93ff:fe2b:33f3"
-  - "\u82F1\u56FD-004-2001:41d0:800:17ac::1"
-  - "\u82F1\u56FD-005-2a05:d01c:c01:7c00:8e8c:3f32:6485:8305"
-  - "\u82F1\u56FD-006-51.89.8.119"
+  - "\u82F1\u56FD-003-2a05:d01c:c01:7c00:8e8c:3f32:6485:8305"
+  - "\u82F1\u56FD-004-143.42.99.183"
+  - "\u82F1\u56FD-005-51.89.8.119"
   - "\u8377\u5170-000-172.99.188.99"
   - "\u8377\u5170-001-172.99.188.99"
   - "\u8377\u5170-002-172.99.188.99"
@@ -1377,14 +1410,14 @@ proxy-groups:
   - "\u8377\u5170-005-172.99.188.99"
   - "\u8377\u5170-006-172.99.188.99"
   - "\u8377\u5170-007-172.99.188.99"
-  - "\u8377\u5170-008-79.132.133.38"
-  - "\u8D8A\u5357-000-103.173.255.127"
-  - "\u97E9\u56FD-000-43.201.48.212"
-  - "\u97E9\u56FD-001-140.238.19.165"
-  - "\u97E9\u56FD-002-152.69.230.170"
-  - "\u9999\u6E2F-000-8.218.150.152"
-  - "\u9999\u6E2F-001-8.218.36.140"
-  - "\u9999\u6E2F-002-2a0e:aa00:120:400:216:3cff:fe37:6f38"
+  - "\u8377\u5170-008-172.99.188.99"
+  - "\u8D8A\u5357-000-103.143.209.42"
+  - "\u8D8A\u5357-001-103.237.145.22"
+  - "\u97E9\u56FD-000-140.238.19.165"
+  - "\u9999\u6E2F-000-8.218.36.140"
+  - "\u9999\u6E2F-001-8.218.150.29"
+  - "\u9999\u6E2F-002-43.154.233.89"
+  - "\u9999\u6E2F-003-43.154.90.134"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
