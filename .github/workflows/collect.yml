@@ -30,9 +30,9 @@ jobs:
           wget --no-check-certificate https://github.com/Dreamacro/maxmind-geoip/raw/release/Country.mmdb
           mkdir /tmp/download
           cd /tmp/download
-          wget --no-check-certificate https://github.com/Dreamacro/clash/releases/download/v1.11.12/clash-linux-amd64-v3-v1.11.12.gz
-          gzip -d clash-linux-amd64-v3-v1.11.12.gz
-          sudo mv clash-linux-amd64-v3-v1.11.12 /usr/bin/clash
+          wget --no-check-certificate https://github.com/Kuingsmile/clash-core/releases/download/1.18/clash-linux-amd64-v3-v1.18.0.gz
+          gzip -d clash-linux-amd64-v3-v1.18.0.gz
+          sudo mv clash-linux-amd64-v3-v1.18.0 /usr/bin/clash
           sudo chmod +x /usr/bin/clash
           clash -t
       - name: Run Python Scripts
