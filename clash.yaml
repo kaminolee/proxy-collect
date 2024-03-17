@@ -55,6 +55,21 @@ proxies:
   uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
 - alterId: 0
   cipher: auto
+  name: "\u53F0\u6E7E-000-2406:8dc0:6004:9ba4:654a:8031:b48:59b7"
+  network: ws
+  port: 443
+  server: 166.0.198.78
+  servername: gw.alicdn.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: bfef2469-9d59-4111-b54b-4d58e819a808
+  ws-opts:
+    headers:
+      Host: tw.appleid.bf
+    path: /ws?ed=2048
+- alterId: 0
+  cipher: auto
   http-opts:
     headers:
       Host:
@@ -89,6 +104,20 @@ proxies:
   type: vmess
   udp: true
   uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+- alterId: 0
+  cipher: auto
+  name: "\u5E0C\u814A-000-46.20.109.165"
+  network: ws
+  port: 443
+  server: 46.20.109.165
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: bfef2469-9d59-4111-b54b-4d58e819a808
+  ws-opts:
+    headers:
+      Host: gw.alicdn.com
+    path: /ws?ed=2048
 - alterId: 0
   cipher: auto
   name: "\u5FB7\u56FD-000-194.87.71.23"
@@ -138,7 +167,7 @@ proxies:
   network: ws
   port: 443
   server: 172.67.194.57
-  skip-cert-verify: false
+  skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 9aaceca0-bc5b-49e6-a83f-088e14d94434
@@ -146,20 +175,12 @@ proxies:
     headers:
       Host: no1-vmess.sshmax.xyz
     path: /vmess
-- alterId: 0
-  cipher: auto
-  name: "\u65B0\u52A0\u5761-000-206.189.46.129"
-  network: ws
+- cipher: aes-256-cfb
+  name: "\u65E5\u672C-000-13.113.90.205"
+  password: amazonskr05
   port: 443
-  server: 206.189.46.129
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: bfef2469-9d59-4111-b54b-4d58e819a808
-  ws-opts:
-    headers:
-      Host: gw.alicdn.com
-    path: /ws?ed=2048
+  server: 13.113.90.205
+  type: ss
 - alterId: 0
   cipher: auto
   http-opts:
@@ -217,9 +238,15 @@ proxies:
     headers:
       Host: h161-fr2.kxnn.eu.org
     path: /D26xvdqUdCpvvPTz4R
+- cipher: aes-256-gcm
+  name: "\u6CD5\u56FD-004-146.59.102.109"
+  password: lSreYGyaPfCsJQWf
+  port: 35230
+  server: 146.59.102.109
+  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u6CD5\u56FD-004-2001:41d0:305:1000::a0f"
+  name: "\u6CD5\u56FD-005-2001:41d0:305:1000::a0f"
   network: ws
   port: 2082
   server: 104.21.8.157
@@ -232,12 +259,6 @@ proxies:
     headers:
       Host: s1c.v2.v001sss.xyz
     path: /
-- cipher: aes-256-gcm
-  name: "\u6CD5\u56FD-005-146.59.102.109"
-  password: lSreYGyaPfCsJQWf
-  port: 35230
-  server: 146.59.102.109
-  type: ss
 - alterId: 0
   cipher: auto
   name: "\u6CE2\u5170-000-2a09:bac5:506a:2dc::49:1ea"
@@ -248,34 +269,6 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: 66ccb11f-75a7-4282-8a60-31fed447401d
-  ws-opts:
-    headers:
-      Host: nmsl.kp
-    path: /aries?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u6CE2\u5170-001-2a09:bac5:506a:2dc::49:1ea"
-  network: ws
-  port: 80
-  server: 151.101.3.10
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 66ccb11f-75a7-4282-8a60-31fed447401d
-  ws-opts:
-    headers:
-      Host: nmsl.kp
-    path: /aries?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u6CE2\u5170-002-2a09:bac5:506a:2dc::49:1ea"
-  network: ws
-  port: 80
-  server: 146.75.39.10
-  skip-cert-verify: false
-  tls: false
-  type: vmess
   uuid: 66ccb11f-75a7-4282-8a60-31fed447401d
   ws-opts:
     headers:
@@ -304,55 +297,7 @@ proxies:
     path: /Nbs2DSTSkFW6MrrFQHeSDQ7
 - alterId: 0
   cipher: auto
-  name: "\u745E\u58EB-000-94.131.99.8"
-  network: tcp
-  port: 47182
-  server: 94.131.99.8
-  skip-cert-verify: true
-  type: vmess
-  uuid: 81b2b630-8b6a-404f-b996-b12f13db5786
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-000-38.68.135.15"
-  network: ws
-  port: 8080
-  server: www.velvetmountain.shop
-  skip-cert-verify: true
-  type: vmess
-  uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-  ws-opts:
-    headers:
-      Host: www.velvetmountain.shop
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-001-38.68.135.15"
-  network: ws
-  port: 8080
-  server: 104.21.54.252
-  skip-cert-verify: true
-  type: vmess
-  uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-  ws-opts:
-    headers:
-      Host: www.velvetmountain.shop
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-002-38.68.135.15"
-  network: ws
-  port: 8080
-  server: 172.67.143.192
-  skip-cert-verify: true
-  type: vmess
-  uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-  ws-opts:
-    headers:
-      Host: www.velvetmountain.shop
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-003-169.197.143.199"
+  name: "\u7F8E\u56FD-000-169.197.143.199"
   network: ws
   port: 2087
   server: 104.21.7.162
@@ -366,7 +311,7 @@ proxies:
     path: /fws
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-004-38.75.136.210"
+  name: "\u7F8E\u56FD-001-38.75.136.210"
   network: ws
   port: 2083
   server: 104.21.10.205
@@ -380,7 +325,7 @@ proxies:
     path: /twos
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-005-169.197.143.199"
+  name: "\u7F8E\u56FD-002-169.197.143.199"
   network: ws
   port: 2087
   server: backend.app-browser.org
@@ -394,7 +339,7 @@ proxies:
     path: /fws
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-006-169.197.143.199"
+  name: "\u7F8E\u56FD-003-169.197.143.199"
   network: ws
   port: 2087
   server: 172.67.136.244
@@ -408,7 +353,7 @@ proxies:
     path: /fws
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-007-5.78.111.40"
+  name: "\u7F8E\u56FD-004-5.78.111.40"
   network: ws
   port: 80
   server: 104.21.221.203
@@ -419,9 +364,22 @@ proxies:
     headers:
       Host: a.prapt1.ir
     path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-005-205.185.116.182"
+  network: ws
+  port: 2095
+  server: 104.26.5.57
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
+  ws-opts:
+    headers:
+      Host: ssrsub.v03.ssrsub.com
+    path: /api/v3/download.getFile
 - alterId: 64
   cipher: auto
-  name: "\u7F8E\u56FD-008-137.175.10.241"
+  name: "\u7F8E\u56FD-006-137.175.10.241"
   network: ws
   port: 38001
   server: 38.14.107.242
@@ -435,7 +393,7 @@ proxies:
     path: /path/153428133302
 - alterId: 64
   cipher: auto
-  name: "\u7F8E\u56FD-009-137.175.10.241"
+  name: "\u7F8E\u56FD-007-137.175.10.241"
   network: ws
   port: 38001
   server: 38.14.107.243
@@ -449,7 +407,21 @@ proxies:
     path: /path/153428133302
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-010-38.75.136.56"
+  name: "\u7F8E\u56FD-008-52.6.160.238"
+  network: ws
+  port: 443
+  server: 52.6.160.238
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: bfef2469-9d59-4111-b54b-4d58e819a808
+  ws-opts:
+    headers:
+      Host: gw.alicdn.com
+    path: /CAT
+- alterId: 0
+  cipher: auto
+  name: "\u82F1\u56FD-000-172.99.190.209"
   network: ws
   port: 443
   server: vip2323.cfd
@@ -463,36 +435,21 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-011-209.141.40.65"
+  name: "\u82F1\u56FD-001-149.7.16.75"
   network: ws
-  port: 80
-  server: us65.netfilx.live
-  servername: us65.netfilx.live
-  skip-cert-verify: false
-  tls: false
+  port: 443
+  server: 195.85.59.154
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: 60f12435-bb55-4da2-cb7d-4fea34ecfa37
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: us65.netfilx.live
-    path: /
+      Host: 52aa-super-river-52aa.pobin49599.workers.dev
+    path: /meroiy.icu/linkvws
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-012-205.185.116.182"
-  network: ws
-  port: 8880
-  server: russia.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
-  ws-opts:
-    headers:
-      Host: ssrsub.v03.ssrsub.com
-    path: /api/v3/download.getFile
-- alterId: 0
-  cipher: auto
-  name: "\u82F1\u56FD-000-2001:41d0:801:2000::3d3c"
+  name: "\u82F1\u56FD-002-2001:41d0:801:2000::3d3c"
   network: ws
   port: 8880
   server: 94.140.0.110
@@ -504,37 +461,6 @@ proxies:
     headers:
       Host: food.zhaal.ir
     path: /
-- alterId: 0
-  cipher: auto
-  name: "\u8D8A\u5357-000-103.252.94.224"
-  network: ws
-  port: 80
-  server: 103.252.94.224
-  servername: bs2.loadingip.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 5278f5d3-f001-4459-94b6-7e0915238998
-  ws-opts:
-    path: /bs
-- cipher: aes-256-cfb
-  name: "\u97E9\u56FD-000-211.201.169.70"
-  password: qwerREWQ@@
-  port: 54345
-  server: 211.201.169.70
-  type: ss
-- alterId: 2
-  cipher: auto
-  name: "\u9999\u6E2F-000-62.216.92.70"
-  network: tcp
-  port: 1001
-  server: 62.216.92.70
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 0927b72f-8f1c-38f7-8a86-cb977dba6b83
-  ws-headers:
-    Host: 62.216.92.70
 proxy-groups:
 - interval: 300
   name: balanced
@@ -542,42 +468,36 @@ proxy-groups:
   - "\u52A0\u62FF\u5927-000-134.122.41.160"
   - "\u52A0\u62FF\u5927-001-2607:5300:205:300::16ac"
   - "\u5370\u5EA6-000-139.59.24.215"
+  - "\u53F0\u6E7E-000-2406:8dc0:6004:9ba4:654a:8031:b48:59b7"
   - "\u54C8\u8428\u514B\u65AF\u5766-000-45.82.31.164"
   - "\u5DF4\u897F-000-78.111.102.232"
+  - "\u5E0C\u814A-000-46.20.109.165"
   - "\u5FB7\u56FD-000-194.87.71.23"
   - "\u5FB7\u56FD-001-2001:19f0:6c01:18e7:5400:4ff:fea5:ba19"
   - "\u5FB7\u56FD-002-2a09:bac5:301b:1282::1d8:45"
   - "\u632A\u5A01-000-95.164.38.201"
-  - "\u65B0\u52A0\u5761-000-206.189.46.129"
+  - "\u65E5\u672C-000-13.113.90.205"
   - "\u6CD5\u56FD-000-51.159.155.52"
   - "\u6CD5\u56FD-001-2001:41d0:305:1000::a0f"
   - "\u6CD5\u56FD-002-104.28.211.187"
   - "\u6CD5\u56FD-003-51.195.128.212"
-  - "\u6CD5\u56FD-004-2001:41d0:305:1000::a0f"
-  - "\u6CD5\u56FD-005-146.59.102.109"
+  - "\u6CD5\u56FD-004-146.59.102.109"
+  - "\u6CD5\u56FD-005-2001:41d0:305:1000::a0f"
   - "\u6CE2\u5170-000-2a09:bac5:506a:2dc::49:1ea"
-  - "\u6CE2\u5170-001-2a09:bac5:506a:2dc::49:1ea"
-  - "\u6CE2\u5170-002-2a09:bac5:506a:2dc::49:1ea"
   - "\u7231\u5C14\u5170-000-52.169.6.50"
   - "\u745E\u5178-000-104.28.193.219"
-  - "\u745E\u58EB-000-94.131.99.8"
-  - "\u7F8E\u56FD-000-38.68.135.15"
-  - "\u7F8E\u56FD-001-38.68.135.15"
-  - "\u7F8E\u56FD-002-38.68.135.15"
+  - "\u7F8E\u56FD-000-169.197.143.199"
+  - "\u7F8E\u56FD-001-38.75.136.210"
+  - "\u7F8E\u56FD-002-169.197.143.199"
   - "\u7F8E\u56FD-003-169.197.143.199"
-  - "\u7F8E\u56FD-004-38.75.136.210"
-  - "\u7F8E\u56FD-005-169.197.143.199"
-  - "\u7F8E\u56FD-006-169.197.143.199"
-  - "\u7F8E\u56FD-007-5.78.111.40"
-  - "\u7F8E\u56FD-008-137.175.10.241"
-  - "\u7F8E\u56FD-009-137.175.10.241"
-  - "\u7F8E\u56FD-010-38.75.136.56"
-  - "\u7F8E\u56FD-011-209.141.40.65"
-  - "\u7F8E\u56FD-012-205.185.116.182"
-  - "\u82F1\u56FD-000-2001:41d0:801:2000::3d3c"
-  - "\u8D8A\u5357-000-103.252.94.224"
-  - "\u97E9\u56FD-000-211.201.169.70"
-  - "\u9999\u6E2F-000-62.216.92.70"
+  - "\u7F8E\u56FD-004-5.78.111.40"
+  - "\u7F8E\u56FD-005-205.185.116.182"
+  - "\u7F8E\u56FD-006-137.175.10.241"
+  - "\u7F8E\u56FD-007-137.175.10.241"
+  - "\u7F8E\u56FD-008-52.6.160.238"
+  - "\u82F1\u56FD-000-172.99.190.209"
+  - "\u82F1\u56FD-001-149.7.16.75"
+  - "\u82F1\u56FD-002-2001:41d0:801:2000::3d3c"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
