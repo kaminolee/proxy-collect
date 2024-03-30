@@ -31,24 +31,6 @@ proxies:
     method: GET
     path:
     - /
-  name: "\u54C8\u8428\u514B\u65AF\u5766-000-45.82.31.164"
-  network: http
-  port: 3389
-  server: 45.82.31.164
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-- alterId: 0
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - internet.life.com.by
-    method: GET
-    path:
-    - /
   name: "\u5DF4\u897F-000-78.111.102.232"
   network: http
   port: 3389
@@ -60,7 +42,21 @@ proxies:
   uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
 - alterId: 0
   cipher: auto
-  name: "\u5FB7\u56FD-000-2a05:d014:91c:8201:e001:3de:ad42:f06d"
+  name: "\u5FB7\u56FD-000-130.61.176.111"
+  network: ws
+  port: 443
+  server: cdn2_de.majutsu.top
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 61abbe9b-ac90-4dcc-99de-35e17f0ce847
+  ws-opts:
+    headers:
+      Host: cdn2_de.majutsu.top
+    path: /acc
+- alterId: 0
+  cipher: auto
+  name: "\u5FB7\u56FD-001-2a05:d014:91c:8201:4f42:1c4a:ce22:e667"
   network: ws
   port: 443
   server: ftp-localcdn.kiava-cloud.us.to
@@ -89,33 +85,6 @@ proxies:
     headers:
       Host: s1c.v2.v001sss.xyz
     path: /
-- alterId: 0
-  cipher: auto
-  name: "\u6CD5\u56FD-001-172.232.36.72"
-  network: ws
-  port: 443
-  server: 173.245.58.37
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
-  ws-opts:
-    headers:
-      host: 7wih-darkness-f0af.jivegoh116.workers.dev
-    path: /afrhms07.xfixedfloat.cfd/linkws
-- alterId: 0
-  cipher: auto
-  name: "\u6CE2\u5170-000-2a09:bac5:506d:2dc::49:175"
-  network: ws
-  port: 80
-  server: beijing.mfa.ee
-  skip-cert-verify: true
-  type: vmess
-  uuid: 66ccb11f-75a7-4282-8a60-31fed447401d
-  ws-opts:
-    headers:
-      Host: open.alipay.ovh
-    path: /aries?ed=2048
 - client-fingerprint: chrome
   name: "\u7231\u5C14\u5170-000-63.34.129.168"
   network: tcp
@@ -126,101 +95,9 @@ proxies:
   sni: trojan.burgerip.co.uk
   type: trojan
   udp: false
-- client-fingerprint: chrome
-  name: "\u745E\u5178-000-16.170.111.11"
-  network: tcp
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 16.170.111.11
-  skip-cert-verify: false
-  sni: trojan.burgerip.co.uk
-  type: trojan
-  udp: false
-- client-fingerprint: chrome
-  name: "\u745E\u5178-001-13.51.98.237"
-  network: tcp
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 13.51.98.237
-  skip-cert-verify: false
-  sni: trojan.burgerip.co.uk
-  type: trojan
-  udp: false
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-64.31.55.216"
-  network: ws
-  port: 8080
-  server: 162.159.2.9
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9b196b50-37f2-4f4b-b175-06273adc6207
-  ws-opts:
-    headers:
-      Host: technological-mel-fill-decide.trycloudflare.com
-    path: 9b196b50-37f2-4f4b-b175-06273adc6207-vm
-- alterId: 0
-  cipher: auto
-  country: CA
-  h2-opts: {}
-  http-opts: {}
-  name: "\u7F8E\u56FD-001-108.181.23.161"
-  network: ws
-  port: 8080
-  server: 23.227.38.86
-  servername: dongtaiwang13.dtku47.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: 969f1909-c0d3-4c30-813d-3aec5c838b7d
-  ws-opts:
-    headers:
-      HOST: dongtaiwang13.dtku47.xyz
-    path: /1IKYjV0r/
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-002-5.78.76.95"
-  network: ws
-  port: 80
-  server: 104.21.220.186
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  ws-opts:
-    headers:
-      Host: a.prapt1.ir
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-003-5.78.76.95"
-  network: ws
-  port: 80
-  server: 104.21.227.38
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  ws-opts:
-    headers:
-      Host: a.prapt1.ir
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-004-5.78.76.95"
-  network: ws
-  port: 80
-  server: 104.21.221.181
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  ws-opts:
-    headers:
-      Host: a.prapt1.ir
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-005-38.99.82.47"
+  name: "\u7F8E\u56FD-000-38.99.82.33"
   network: ws
   port: 443
   server: 172.67.174.63
@@ -234,7 +111,49 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-006-5.78.76.95"
+  name: "\u7F8E\u56FD-001-5.78.72.165"
+  network: ws
+  port: 80
+  server: 104.21.220.186
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  ws-opts:
+    headers:
+      Host: a.prapt1.ir
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-002-5.78.72.165"
+  network: ws
+  port: 80
+  server: 104.21.227.38
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  ws-opts:
+    headers:
+      Host: a.prapt1.ir
+    path: /
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-003-5.78.72.165"
+  network: ws
+  port: 80
+  server: 104.21.221.181
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  ws-opts:
+    headers:
+      Host: a.prapt1.ir
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-004-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.224.22
@@ -247,7 +166,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-007-5.78.76.95"
+  name: "\u7F8E\u56FD-005-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.232.44
@@ -260,7 +179,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-008-5.78.76.95"
+  name: "\u7F8E\u56FD-006-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.222.11
@@ -274,7 +193,7 @@ proxies:
     path: /?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-009-5.78.76.95"
+  name: "\u7F8E\u56FD-007-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.220.34
@@ -288,21 +207,7 @@ proxies:
     path: /?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-010-5.78.76.95"
-  network: ws
-  port: 80
-  server: 104.21.225.26
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  ws-opts:
-    headers:
-      Host: a.prapt1.ir
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-011-5.78.76.95"
+  name: "\u7F8E\u56FD-008-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.220.176
@@ -316,7 +221,7 @@ proxies:
     path: /?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-012-5.78.76.95"
+  name: "\u7F8E\u56FD-009-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.223.2
@@ -329,10 +234,26 @@ proxies:
     path: /?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-013-64.31.55.40"
+  name: "\u7F8E\u56FD-010-64.31.55.216"
   network: ws
   port: 8080
-  server: 162.159.130.208
+  server: 23.227.38.11
+  servername: technological-mel-fill-decide.trycloudflare.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 9b196b50-37f2-4f4b-b175-06273adc6207
+  ws-opts:
+    headers:
+      host: technological-mel-fill-decide.trycloudflare.com
+    path: 9b196b50-37f2-4f4b-b175-06273adc6207-vm
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-011-64.31.55.40"
+  network: ws
+  port: 8080
+  server: 23.227.38.44
+  servername: widescreen-instruction-breakdown-postage.trycloudflare.com
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -343,22 +264,7 @@ proxies:
     path: 55021a7c-bd6c-418e-be95-ceac8ba27b45-vm
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-014-208.115.233.81"
-  network: ws
-  port: 8080
-  server: 23.227.39.12
-  servername: uh-lawyers-instruments-kernel.trycloudflare.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 34c0bb5e-c120-432d-9c58-bd7d82c7397b
-  ws-opts:
-    headers:
-      host: uh-lawyers-instruments-kernel.trycloudflare.com
-    path: 34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-015-5.78.76.95"
+  name: "\u7F8E\u56FD-012-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.220.178
@@ -372,7 +278,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-016-5.78.76.95"
+  name: "\u7F8E\u56FD-013-5.78.72.165"
   network: ws
   port: 80
   server: 104.21.220.17
@@ -384,20 +290,6 @@ proxies:
     headers:
       Host: a.prapt1.ir
     path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-017-45.33.49.35"
-  network: ws
-  port: 2082
-  server: 104.17.127.50
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 67d8b1b9-1c9f-4a8b-8ddc-0b9ec2db2d6c
-  ws-opts:
-    headers:
-      host: us4Bb5oSgJA.fzbqfrse.xyz
-    path: /video/CuTy87zAzV/
 - alterId: 0
   cipher: auto
   name: "\u82AC\u5170-000-77.91.103.47"
@@ -414,20 +306,7 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: "\u82F1\u56FD-000-51.38.64.145"
-  network: ws
-  port: 2086
-  server: mizban.arzonhost.ir
-  tls: false
-  type: vmess
-  uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
-  ws-opts:
-    headers:
-      Host: mizban.arzonhost.ir
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u82F1\u56FD-001-2001:41d0:801:2000::3d3c"
+  name: "\u82F1\u56FD-000-2001:41d0:801:2000::3d3c"
   network: ws
   port: 8880
   server: 94.140.0.110
@@ -444,36 +323,27 @@ proxy-groups:
   name: balanced
   proxies:
   - "\u52A0\u62FF\u5927-000-134.122.41.160"
-  - "\u54C8\u8428\u514B\u65AF\u5766-000-45.82.31.164"
   - "\u5DF4\u897F-000-78.111.102.232"
-  - "\u5FB7\u56FD-000-2a05:d014:91c:8201:e001:3de:ad42:f06d"
+  - "\u5FB7\u56FD-000-130.61.176.111"
+  - "\u5FB7\u56FD-001-2a05:d014:91c:8201:4f42:1c4a:ce22:e667"
   - "\u6CD5\u56FD-000-2001:41d0:305:1000::a0f"
-  - "\u6CD5\u56FD-001-172.232.36.72"
-  - "\u6CE2\u5170-000-2a09:bac5:506d:2dc::49:175"
   - "\u7231\u5C14\u5170-000-63.34.129.168"
-  - "\u745E\u5178-000-16.170.111.11"
-  - "\u745E\u5178-001-13.51.98.237"
-  - "\u7F8E\u56FD-000-64.31.55.216"
-  - "\u7F8E\u56FD-001-108.181.23.161"
-  - "\u7F8E\u56FD-002-5.78.76.95"
-  - "\u7F8E\u56FD-003-5.78.76.95"
-  - "\u7F8E\u56FD-004-5.78.76.95"
-  - "\u7F8E\u56FD-005-38.99.82.47"
-  - "\u7F8E\u56FD-006-5.78.76.95"
-  - "\u7F8E\u56FD-007-5.78.76.95"
-  - "\u7F8E\u56FD-008-5.78.76.95"
-  - "\u7F8E\u56FD-009-5.78.76.95"
-  - "\u7F8E\u56FD-010-5.78.76.95"
-  - "\u7F8E\u56FD-011-5.78.76.95"
-  - "\u7F8E\u56FD-012-5.78.76.95"
-  - "\u7F8E\u56FD-013-64.31.55.40"
-  - "\u7F8E\u56FD-014-208.115.233.81"
-  - "\u7F8E\u56FD-015-5.78.76.95"
-  - "\u7F8E\u56FD-016-5.78.76.95"
-  - "\u7F8E\u56FD-017-45.33.49.35"
+  - "\u7F8E\u56FD-000-38.99.82.33"
+  - "\u7F8E\u56FD-001-5.78.72.165"
+  - "\u7F8E\u56FD-002-5.78.72.165"
+  - "\u7F8E\u56FD-003-5.78.72.165"
+  - "\u7F8E\u56FD-004-5.78.72.165"
+  - "\u7F8E\u56FD-005-5.78.72.165"
+  - "\u7F8E\u56FD-006-5.78.72.165"
+  - "\u7F8E\u56FD-007-5.78.72.165"
+  - "\u7F8E\u56FD-008-5.78.72.165"
+  - "\u7F8E\u56FD-009-5.78.72.165"
+  - "\u7F8E\u56FD-010-64.31.55.216"
+  - "\u7F8E\u56FD-011-64.31.55.40"
+  - "\u7F8E\u56FD-012-5.78.72.165"
+  - "\u7F8E\u56FD-013-5.78.72.165"
   - "\u82AC\u5170-000-77.91.103.47"
-  - "\u82F1\u56FD-000-51.38.64.145"
-  - "\u82F1\u56FD-001-2001:41d0:801:2000::3d3c"
+  - "\u82F1\u56FD-000-2001:41d0:801:2000::3d3c"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
