@@ -6,6 +6,19 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
+  name: "\u52A0\u62FF\u5927-000-23.162.200.14"
+  network: ws
+  port: 443
+  server: nicola.pics
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: nicola.pics
+    path: /linkvws
+- alterId: 0
+  cipher: auto
   client-fingerprint: chrome
   name: "\u571F\u8033\u5176-000-2a09:bac5:58c3:d2d::150:16"
   network: ws
@@ -23,26 +36,28 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-000-178.128.116.208"
-  network: ws
-  port: 443
-  server: 104.17.106.203
-  servername: cache-hk-1.cn-db.top
+  http-opts:
+    headers:
+      Host:
+      - internet.life.com.by
+    method: GET
+    path:
+    - /
+  name: "\u5DF4\u897F-000-78.111.102.232"
+  network: http
+  port: 3389
+  server: 78.111.102.232
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
-  uuid: 4f574408-dfef-338a-a7d9-f7d1e70ff8d9
-  ws-opts:
-    headers:
-      Host: cache-hk-1.cn-db.top
-    path: /db00
+  uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
 - alterId: 0
   cipher: auto
   country: "\U0001F3C1ZZ"
   h2-opts: {}
   http-opts: {}
-  name: "\u65B0\u52A0\u5761-001-178.128.116.208"
+  name: "\u65B0\u52A0\u5761-000-178.128.116.208"
   network: ws
   port: 80
   server: 104.20.30.205
@@ -71,12 +86,20 @@ proxies:
     headers:
       Host: s1c.v2.v001sss.xyz
     path: /
+- name: "\u7F8E\u56FD-000-23.142.200.175"
+  network: tcp
+  password: 27876_t7d7f4e3f
+  port: 443
+  server: 23.142.200.175
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   country: US
   h2-opts: {}
   http-opts: {}
-  name: "\u7F8E\u56FD-000-2a05:9402::11"
+  name: "\u7F8E\u56FD-001-2a05:9402::11"
   network: ws
   port: 2053
   server: 155.46.213.135
@@ -89,31 +112,10 @@ proxies:
     headers:
       HOST: v2ray.ibgfw.top
     path: /vVNUJOgb/
-- name: "\u7F8E\u56FD-001-23.142.200.175"
-  network: tcp
-  password: 27876_t7d7f4e3f
-  port: 443
-  server: 23.142.200.175
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: "\u82F1\u56FD-000-149.7.16.197"
-  network: ws
-  port: 443
-  server: nicola.pics
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: nicola.pics
-    path: /linkvws
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
-  name: "\u82F1\u56FD-001-146.59.17.58"
+  name: "\u82F1\u56FD-000-146.59.17.58"
   network: ws
   port: 2086
   server: 104.21.4.14
@@ -127,6 +129,20 @@ proxies:
     headers:
       Host: admin.arzonhost.ir
     path: /
+- alterId: 0
+  cipher: auto
+  name: "\u82F1\u56FD-001-109.74.195.69"
+  network: ws
+  port: 443
+  server: 104.21.44.106
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
+  ws-opts:
+    headers:
+      Host: xmivideo.cfd
+    path: /linkws
 - alterId: 0
   cipher: auto
   name: "\u82F1\u56FD-002-146.59.17.58"
@@ -143,7 +159,7 @@ proxies:
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
-  name: "\u9999\u6E2F-000-2401:b60:10:1d81::1"
+  name: "\u9999\u6E2F-000-157.254.21.67"
   network: ws
   port: 2095
   server: 104.21.23.231
@@ -159,7 +175,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u9999\u6E2F-001-2401:b60:10:1d81::1"
+  name: "\u9999\u6E2F-001-157.254.21.67"
   network: ws
   port: 2095
   server: 172.67.214.33
@@ -170,21 +186,37 @@ proxies:
     headers:
       Host: onea.flha.ru
     path: /
+- alterId: 0
+  cipher: auto
+  name: "\u9999\u6E2F-002-62.72.163.213"
+  network: ws
+  port: 443
+  server: support.zoom.us
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9
+  ws-opts:
+    headers:
+      Host: support.zoom.us.vmess.totonegoro.my.id
+    path: /cfhk.393930.xyz:4431/
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
+  - "\u52A0\u62FF\u5927-000-23.162.200.14"
   - "\u571F\u8033\u5176-000-2a09:bac5:58c3:d2d::150:16"
+  - "\u5DF4\u897F-000-78.111.102.232"
   - "\u65B0\u52A0\u5761-000-178.128.116.208"
-  - "\u65B0\u52A0\u5761-001-178.128.116.208"
   - "\u6CD5\u56FD-000-2001:41d0:305:1000::a0f"
-  - "\u7F8E\u56FD-000-2a05:9402::11"
-  - "\u7F8E\u56FD-001-23.142.200.175"
-  - "\u82F1\u56FD-000-149.7.16.197"
-  - "\u82F1\u56FD-001-146.59.17.58"
+  - "\u7F8E\u56FD-000-23.142.200.175"
+  - "\u7F8E\u56FD-001-2a05:9402::11"
+  - "\u82F1\u56FD-000-146.59.17.58"
+  - "\u82F1\u56FD-001-109.74.195.69"
   - "\u82F1\u56FD-002-146.59.17.58"
-  - "\u9999\u6E2F-000-2401:b60:10:1d81::1"
-  - "\u9999\u6E2F-001-2401:b60:10:1d81::1"
+  - "\u9999\u6E2F-000-157.254.21.67"
+  - "\u9999\u6E2F-001-157.254.21.67"
+  - "\u9999\u6E2F-002-62.72.163.213"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
