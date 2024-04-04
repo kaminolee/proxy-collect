@@ -53,6 +53,23 @@ proxies:
     headers:
       Host: 87.120.204.64
     path: /
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: "\u6CD5\u56FD-000-2001:41d0:305:1000::a0f"
+  network: ws
+  port: 2082
+  server: s1c.v2.v001sss.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  ws-opts:
+    headers:
+      Host: s1c.v2.v001sss.xyz
+    path: /
 - name: "\u7F8E\u56FD-000-23.142.200.175"
   network: tcp
   password: 27876_t7d7f4e3f
@@ -80,8 +97,38 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
+  name: "\u9999\u6E2F-000-62.72.163.213"
+  network: ws
+  port: 443
+  server: support.zoom.us
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9
+  ws-opts:
+    headers:
+      Host: support.zoom.us.vmess.totonegoro.my.id
+    path: /cfhk.393930.xyz:4431/
+- alterId: 0
+  cipher: auto
   client-fingerprint: chrome
-  name: "\u9999\u6E2F-000-2401:b60:10:1d81::1"
+  name: "\u9999\u6E2F-001-2401:b60:10:6a09::1"
+  network: ws
+  port: 2095
+  server: fcdn.flha.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: fcdn.flha.ru
+    path: /
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: "\u9999\u6E2F-002-157.254.21.67"
   network: ws
   port: 2095
   server: 104.21.23.231
@@ -97,20 +144,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u9999\u6E2F-001-2401:b60:10:1d81::1"
-  network: ws
-  port: 2095
-  server: 172.67.214.33
-  skip-cert-verify: true
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u9999\u6E2F-002-194.99.79.178"
+  name: "\u9999\u6E2F-003-194.99.79.178"
   network: ws
   port: 8080
   server: 194.99.79.178
@@ -124,33 +158,16 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u9999\u6E2F-003-62.72.163.213"
-  network: ws
-  port: 443
-  server: support.zoom.us
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9
-  ws-opts:
-    headers:
-      Host: support.zoom.us.vmess.totonegoro.my.id
-    path: /cfhk.393930.xyz:4431/
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: "\u9999\u6E2F-004-2401:b60:10:6a09::1"
+  name: "\u9999\u6E2F-004-2401:b60:10:1d81::1"
   network: ws
   port: 2095
-  server: fcdn.flha.ru
-  skip-cert-verify: false
-  tfo: false
-  tls: false
+  server: 172.67.214.33
+  skip-cert-verify: true
   type: vmess
   uuid: 7a737f41-b792-4260-94ff-3d864da67b80
   ws-opts:
     headers:
-      Host: fcdn.flha.ru
+      Host: onea.flha.ru
     path: /
 proxy-groups:
 - interval: 300
@@ -159,13 +176,14 @@ proxy-groups:
   - "\u4E39\u9EA6-000-176.120.64.134"
   - "\u571F\u8033\u5176-000-2a09:bac5:58c3:d2d::150:16"
   - "\u65E5\u672C-000-87.120.204.64"
+  - "\u6CD5\u56FD-000-2001:41d0:305:1000::a0f"
   - "\u7F8E\u56FD-000-23.142.200.175"
   - "\u82F1\u56FD-000-146.59.17.58"
-  - "\u9999\u6E2F-000-2401:b60:10:1d81::1"
-  - "\u9999\u6E2F-001-2401:b60:10:1d81::1"
-  - "\u9999\u6E2F-002-194.99.79.178"
-  - "\u9999\u6E2F-003-62.72.163.213"
-  - "\u9999\u6E2F-004-2401:b60:10:6a09::1"
+  - "\u9999\u6E2F-000-62.72.163.213"
+  - "\u9999\u6E2F-001-2401:b60:10:6a09::1"
+  - "\u9999\u6E2F-002-157.254.21.67"
+  - "\u9999\u6E2F-003-194.99.79.178"
+  - "\u9999\u6E2F-004-2401:b60:10:1d81::1"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
