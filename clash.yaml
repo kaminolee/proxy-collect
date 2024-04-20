@@ -23,19 +23,26 @@ proxies:
     headers:
       HOST: 158.51.121.36
     path: /linkvws
-- cipher: aes-256-cfb
-  name: "\u5357\u975E-000-41.203.4.34"
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 41.203.4.34
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: "\u53F0\u6E7E-000-220.129.197.206"
+  network: ws
+  port: 8080
+  server: 172.67.199.185
+  skip-cert-verify: true
+  type: vmess
+  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  ws-opts:
+    headers:
+      Host: oiictw.yydsii.com
+    path: /
 - alterId: 0
   cipher: auto
   country: "\U0001F1FA\U0001F1F8US"
   delay: 2194
   h2-opts: {}
   http-opts: {}
-  name: "\u53F0\u6E7E-000-118.160.60.193"
+  name: "\u53F0\u6E7E-001-220.129.197.206"
   network: ws
   port: 8080
   server: 172.67.172.50
@@ -49,7 +56,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u53F0\u6E7E-001-118.160.60.193"
+  name: "\u53F0\u6E7E-002-220.129.197.206"
   network: ws
   port: 8080
   server: 172.67.172.67
@@ -66,7 +73,7 @@ proxies:
   delay: 2445
   h2-opts: {}
   http-opts: {}
-  name: "\u53F0\u6E7E-002-118.160.60.193"
+  name: "\u53F0\u6E7E-003-220.129.197.206"
   network: ws
   port: 8080
   server: 172.67.185.218
@@ -80,12 +87,16 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u53F0\u6E7E-003-118.160.60.193"
+  delay: 2164
+  h2-opts: {}
+  http-opts: {}
+  name: "\u53F0\u6E7E-004-220.129.197.206"
   network: ws
   port: 8080
-  server: 172.67.199.185
+  server: 172.67.169.90
   skip-cert-verify: true
   type: vmess
+  udp: true
   uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
   ws-opts:
     headers:
@@ -94,28 +105,10 @@ proxies:
 - alterId: 0
   cipher: auto
   country: "\U0001F1FA\U0001F1F8US"
-  delay: 2095
-  h2-opts: {}
-  http-opts: {}
-  name: "\u53F0\u6E7E-004-118.160.60.193"
-  network: ws
-  port: 8080
-  server: 172.67.199.221
-  servername: oiictw.yydsii.com
-  skip-cert-verify: true
-  type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-  ws-opts:
-    headers:
-      HOST: oiictw.yydsii.com
-    path: /
-- alterId: 0
-  cipher: auto
-  country: "\U0001F1FA\U0001F1F8US"
   delay: 1911
   h2-opts: {}
   http-opts: {}
-  name: "\u53F0\u6E7E-005-118.160.60.193"
+  name: "\u53F0\u6E7E-005-220.129.197.206"
   network: ws
   port: 8080
   server: 172.67.185.22
@@ -130,10 +123,28 @@ proxies:
 - alterId: 0
   cipher: auto
   country: "\U0001F1FA\U0001F1F8US"
+  delay: 2095
+  h2-opts: {}
+  http-opts: {}
+  name: "\u53F0\u6E7E-006-220.129.197.206"
+  network: ws
+  port: 8080
+  server: 172.67.199.221
+  servername: oiictw.yydsii.com
+  skip-cert-verify: true
+  type: vmess
+  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  ws-opts:
+    headers:
+      HOST: oiictw.yydsii.com
+    path: /
+- alterId: 0
+  cipher: auto
+  country: "\U0001F1FA\U0001F1F8US"
   delay: 2080
   h2-opts: {}
   http-opts: {}
-  name: "\u53F0\u6E7E-006-118.160.60.193"
+  name: "\u53F0\u6E7E-007-220.129.197.206"
   network: ws
   port: 8080
   server: 172.67.199.165
@@ -147,14 +158,12 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  delay: 2164
-  h2-opts: {}
-  http-opts: {}
-  name: "\u53F0\u6E7E-007-118.160.60.193"
+  name: "\u53F0\u6E7E-008-220.129.197.206"
   network: ws
   port: 8080
-  server: 172.67.169.90
-  skip-cert-verify: true
+  server: 172.67.185.79
+  skip-cert-verify: false
+  tls: false
   type: vmess
   udp: true
   uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
@@ -164,60 +173,18 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u53F0\u6E7E-008-118.160.60.193"
-  network: ws
-  port: 8080
-  server: 172.67.172.65
+  grpc-opts:
+    grpc-service-name: argo
+  name: "\u5FB7\u56FD-000-136.243.147.121"
+  network: grpc
+  port: 443
+  server: 188.114.96.6
+  servername: accessories8.freeairlaines.com
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-  ws-opts:
-    headers:
-      Host: oiictw.yydsii.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u53F0\u6E7E-009-118.160.60.193"
-  network: ws
-  port: 8080
-  server: 172.67.172.219
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-  ws-opts:
-    headers:
-      Host: oiictw.yydsii.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u53F0\u6E7E-010-118.160.60.193"
-  network: ws
-  port: 8080
-  server: 172.67.185.64
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-  ws-opts:
-    headers:
-      Host: oiictw.yydsii.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u5FB7\u56FD-000-2a12:3e80:1:511::6705:db2b"
-  network: ws
-  port: 2052
-  server: 104.19.250.15
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
-  ws-opts:
-    headers:
-      Host: helanv6cf.inekokkk.top
-    path: /
+  udp: true
+  uuid: 5b0a489e-e9eb-41b1-902e-d4acad667ba6
 - cipher: chacha20-ietf-poly1305
   name: "\u65B0\u52A0\u5761-000-157.230.43.93"
   password: RZDcjwNCCdxtV3M4MPV7kT
@@ -225,10 +192,10 @@ proxies:
   server: 157.230.43.93
   type: ss
 - cipher: aes-256-cfb
-  name: "\u65B0\u52A0\u5761-001-18.142.225.182"
+  name: "\u65B0\u52A0\u5761-001-47.128.64.71"
   password: amazonskr05
   port: 443
-  server: 18.142.225.182
+  server: 47.128.64.71
   type: ss
 - cipher: aes-256-cfb
   name: "\u65B0\u52A0\u5761-002-13.215.184.228"
@@ -237,10 +204,10 @@ proxies:
   server: 13.215.184.228
   type: ss
 - cipher: aes-256-cfb
-  name: "\u65B0\u52A0\u5761-003-13.214.212.171"
+  name: "\u65B0\u52A0\u5761-003-47.129.9.69"
   password: amazonskr05
   port: 443
-  server: 13.214.212.171
+  server: 47.129.9.69
   type: ss
 - alterId: 0
   cipher: auto
@@ -278,41 +245,49 @@ proxies:
     headers:
       HOST: jpyouyou.mac2winer.cfd
     path: /039fc4e4
+- alterId: 0
+  cipher: auto
+  name: "\u65E5\u672C-002-45.32.252.20"
+  network: ws
+  port: 2095
+  server: crewj1.cyberspeed.win
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 6e0ad609-d828-4674-af4d-125ca947dbcc
+  ws-opts:
+    headers:
+      Host: crewj1.cyberspeed.win
+    path: /video.cgi?ed=2048
 - cipher: aes-256-cfb
-  name: "\u65E5\u672C-002-54.238.23.117"
+  name: "\u65E5\u672C-003-3.112.208.94"
   password: amazonskr05
   port: 443
-  server: 54.238.23.117
+  server: 3.112.208.94
   type: ss
 - cipher: aes-256-cfb
-  name: "\u65E5\u672C-003-13.231.229.41"
+  name: "\u65E5\u672C-004-57.180.65.163"
   password: amazonskr05
   port: 443
-  server: 13.231.229.41
+  server: 57.180.65.163
   type: ss
 - cipher: aes-256-cfb
-  name: "\u65E5\u672C-004-13.114.108.144"
-  password: amazonskr05
-  port: 443
-  server: 13.114.108.144
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u65E5\u672C-005-18.183.168.44"
-  password: amazonskr05
-  port: 443
-  server: 18.183.168.44
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u65E5\u672C-006-52.195.237.101"
-  password: amazonskr05
-  port: 443
-  server: 52.195.237.101
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u65E5\u672C-007-52.195.237.198"
+  name: "\u65E5\u672C-005-52.195.237.198"
   password: amazonskr05
   port: 443
   server: 52.195.237.198
+  type: ss
+- cipher: aes-256-cfb
+  name: "\u65E5\u672C-006-54.168.200.34"
+  password: amazonskr05
+  port: 443
+  server: 54.168.200.34
+  type: ss
+- cipher: aes-256-cfb
+  name: "\u65E5\u672C-007-52.195.225.184"
+  password: amazonskr05
+  port: 443
+  server: 52.195.225.184
   type: ss
 - cipher: aes-256-cfb
   name: "\u65E5\u672C-008-13.113.218.2"
@@ -321,31 +296,13 @@ proxies:
   server: 13.113.218.2
   type: ss
 - cipher: aes-256-cfb
-  name: "\u65E5\u672C-009-18.183.77.187"
+  name: "\u65E5\u672C-009-3.112.214.89"
   password: amazonskr05
   port: 443
-  server: 18.183.77.187
+  server: 3.112.214.89
   type: ss
 - cipher: aes-256-cfb
-  name: "\u65E5\u672C-010-13.231.229.48"
-  password: amazonskr05
-  port: 443
-  server: 13.231.229.48
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u65E5\u672C-011-43.207.175.104"
-  password: amazonskr05
-  port: 443
-  server: 43.207.175.104
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u65E5\u672C-012-52.69.81.42"
-  password: amazonskr05
-  port: 443
-  server: 52.69.81.42
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u65E5\u672C-013-43.206.237.42"
+  name: "\u65E5\u672C-010-43.206.237.42"
   password: amazonskr05
   port: 443
   server: 43.206.237.42
@@ -391,7 +348,7 @@ proxies:
   delay: 1784
   h2-opts: {}
   http-opts: {}
-  name: "\u6CD5\u56FD-002-2600:3c07::f03c:94ff:feca:9f5d"
+  name: "\u6CD5\u56FD-002-2600:3c07::f03c:94ff:fe41:2c0"
   network: ws
   port: 2082
   server: 104.16.60.8
@@ -405,28 +362,10 @@ proxies:
     path: /afrhms16v.bestxray.buzz/linkws
 - alterId: 0
   cipher: auto
-  country: "\U0001F1FA\U0001F1F8US"
-  delay: 1113
-  h2-opts: {}
-  http-opts: {}
-  name: "\u6CD5\u56FD-003-84.235.236.12"
-  network: ws
-  port: 80
-  server: 172.64.104.182
-  servername: fr.grpc.gay
-  skip-cert-verify: true
-  type: vmess
-  uuid: f0f067fe-8e6d-4d95-816b-601038fd5876
-  ws-opts:
-    headers:
-      HOST: fr.grpc.gay
-    path: /rongseven?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u6CD5\u56FD-004-146.59.17.58"
+  name: "\u6CD5\u56FD-003-146.59.17.58"
   network: ws
   port: 2086
-  server: admin.arzonhost.ir
+  server: 188.114.98.0
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -455,41 +394,28 @@ proxies:
     path: /aries?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u6CE2\u5170-001-2a09:bac1:5bc0:d60::49:189"
-  network: ws
-  port: 80
-  server: 146.75.79.10
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: sNpuhb8v1rEIIYTVEagC5V7fI
+  name: "\u745E\u5178-000-104.28.193.219"
+  network: grpc
+  port: 443
+  server: 104.24.197.20
+  servername: hdfyc5.achaemenidempireofpersia.uk
   skip-cert-verify: false
-  tls: false
+  tfo: false
+  tls: true
   type: vmess
   udp: true
-  uuid: d39a347a-00c9-4f91-9255-7f536c07c5a8
-  ws-opts:
-    headers:
-      Host: nmsl.kp
-    path: /aries?ed=2560
-- alterId: 0
-  cipher: auto
-  name: "\u6CE2\u5170-002-104.28.225.185"
-  network: ws
-  port: 80
-  server: 151.101.3.10
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d39a347a-00c9-4f91-9255-7f536c07c5a8
-  ws-opts:
-    headers:
-      Host: nmsl.kp
-    path: /aries?ed=2560
+  uuid: 52701795-3c3b-46b4-b7cf-c5978b3a4cf2
 - alterId: 0
   cipher: auto
   country: "\U0001F3C1ZZ"
   delay: 1399
   h2-opts: {}
   http-opts: {}
-  name: "\u745E\u5178-000-104.28.193.219"
+  name: "\u745E\u5178-001-104.28.193.219"
   network: ws
   port: 443
   server: 104.21.75.142
@@ -502,23 +428,6 @@ proxies:
     headers:
       HOST: hdfy5c1.foriran.trade
     path: /Nbs2DSTSkFW6MrrFQHeSDQ7
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: sNpuhb8v1rEIIYTVEagC5V7fI
-  name: "\u745E\u5178-001-104.28.193.219"
-  network: grpc
-  port: 443
-  server: 104.24.197.20
-  servername: hdfyc5.achaemenidempireofpersia.uk
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 52701795-3c3b-46b4-b7cf-c5978b3a4cf2
 - alterId: 0
   cipher: auto
   country: "\U0001F1FA\U0001F1F8US"
@@ -541,49 +450,31 @@ proxies:
 - alterId: 0
   cipher: auto
   country: "\U0001F3C1ZZ"
-  delay: 2075
+  delay: 1334
   h2-opts: {}
   http-opts: {}
-  name: "\u7F8E\u56FD-001-2600:3c01::f03c:94ff:fefa:1aaf"
+  name: "\u7F8E\u56FD-001-172.233.172.34"
   network: ws
-  port: 2052
-  server: 104.18.202.250
-  servername: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  ws-opts:
-    headers:
-      HOST: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
-    path: /hms02.fxiaomi.sbs/link
-- alterId: 0
-  cipher: auto
-  country: "\U0001F3C1ZZ"
-  delay: 1637
-  h2-opts: {}
-  http-opts: {}
-  name: "\u7F8E\u56FD-002-2a01:7e04::f03c:94ff:fefa:b586"
-  network: ws
-  port: 8080
-  server: 104.18.202.250
-  servername: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
+  port: 8880
+  server: 104.16.61.8
+  servername: yaghoob55freenodes.repaco69437403.workers.dev
   skip-cert-verify: true
   type: vmess
   uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
   ws-opts:
     headers:
-      HOST: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
+      HOST: yaghoob55freenodes.repaco69437403.workers.dev
     path: /jahfkjha.cfd/linkws
 - alterId: 0
   cipher: auto
   country: "\U0001F1E8\U0001F1E6CA"
-  delay: 1070
+  delay: 1076
   h2-opts: {}
   http-opts: {}
-  name: "\u7F8E\u56FD-003-108.181.23.161"
+  name: "\u7F8E\u56FD-002-108.181.23.161"
   network: ws
   port: 8080
-  server: 23.227.39.84
+  server: 23.227.39.86
   servername: dongtaiwang13.dtku47.xyz
   skip-cert-verify: true
   type: vmess
@@ -592,43 +483,45 @@ proxies:
     headers:
       HOST: dongtaiwang13.dtku47.xyz
     path: /1IKYjV0r/
-- cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-004-38.110.1.51"
-  password: PCnnH6SQSnfoS27
-  port: 8091
-  server: 38.110.1.51
-  type: ss
-- cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-005-38.110.1.51"
-  password: PCnnH6SQSnfoS27
-  port: 8090
-  server: 38.110.1.51
-  type: ss
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-006-209.141.60.219"
+  name: "\u7F8E\u56FD-003-2604:4300:a:17d:ad2:0:cf46:a8d1"
   network: ws
-  port: 80
-  server: us219.netfilx.live
+  port: 2052
+  server: 104.18.19.191
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 1e65ec6d-9a42-4cd0-8c51-63030970134f
+  udp: true
+  uuid: 07a902d1-7c2d-47de-f2c5-c2236fc7cd46
   ws-opts:
     headers:
-      Host: us219.netfilx.live
+      Host: usxm.inekokkk.top
     path: /
 - cipher: aes-256-cfb
-  name: "\u7F8E\u56FD-007-35.87.25.21"
+  name: "\u7F8E\u56FD-004-35.91.54.169"
+  password: amazonskr05
+  port: 443
+  server: 35.91.54.169
+  type: ss
+- alterId: 64
+  cipher: auto
+  name: "\u7F8E\u56FD-005-198.2.210.97"
+  network: ws
+  port: 38001
+  server: 142.4.97.66
+  servername: www.31033708.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /path/153428133302
+- cipher: aes-256-cfb
+  name: "\u7F8E\u56FD-006-35.87.25.21"
   password: amazonskr05
   port: 443
   server: 35.87.25.21
-  type: ss
-- cipher: aes-256-gcm
-  name: "\u7F8E\u56FD-008-38.110.1.197"
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 38.110.1.197
   type: ss
 - alterId: 0
   cipher: auto
@@ -648,24 +541,12 @@ proxies:
     headers:
       HOST: food.zhaal.ir
     path: /
-- alterId: 0
-  cipher: auto
-  country: "\U0001F3C1ZZ"
-  delay: 1334
-  h2-opts: {}
-  http-opts: {}
-  name: "\u82F1\u56FD-001-212.71.255.207"
-  network: ws
-  port: 8880
-  server: 104.16.61.8
-  servername: yaghoob55freenodes.repaco69437403.workers.dev
-  skip-cert-verify: true
-  type: vmess
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-  ws-opts:
-    headers:
-      HOST: yaghoob55freenodes.repaco69437403.workers.dev
-    path: /jahfkjha.cfd/linkws
+- cipher: chacha20-ietf-poly1305
+  name: "\u82F1\u56FD-001-52.151.74.225"
+  password: fNDeeFNHeI9cKZkvgERq8n
+  port: 62651
+  server: 52.151.74.225
+  type: ss
 - alterId: 0
   cipher: auto
   name: "\u82F1\u56FD-002-51.38.64.145"
@@ -675,164 +556,93 @@ proxies:
   skip-cert-verify: false
   tls: false
   type: vmess
-  udp: true
   uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
   ws-opts:
     headers:
       Host: mizban.arzonhost.ir
     path: /
-- alterId: 0
-  cipher: auto
-  name: "\u82F1\u56FD-003-2001:41d0:801:2000::3d3c"
-  network: ws
-  port: 8880
-  server: cdn.vds-server.ir
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 0d1bf26a-ce97-4707-a270-7f4d2ae37334
-  ws-opts:
-    headers:
-      Host: cdn.vds-server.ir
-    path: /
 - cipher: aes-256-cfb
-  name: "\u8D8A\u5357-000-103.163.218.2"
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 103.163.218.2
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u97E9\u56FD-000-43.201.69.200"
-  password: amazonskr05
-  port: 443
-  server: 43.201.69.200
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u97E9\u56FD-001-43.201.47.36"
+  name: "\u97E9\u56FD-000-43.201.47.36"
   password: amazonskr05
   port: 443
   server: 43.201.47.36
   type: ss
 - cipher: aes-256-cfb
-  name: "\u97E9\u56FD-002-43.201.34.246"
+  name: "\u97E9\u56FD-001-43.201.110.81"
   password: amazonskr05
   port: 443
-  server: 43.201.34.246
+  server: 43.201.110.81
   type: ss
 - cipher: aes-256-cfb
-  name: "\u97E9\u56FD-003-43.203.233.33"
+  name: "\u97E9\u56FD-002-43.202.41.139"
   password: amazonskr05
   port: 443
-  server: 43.203.233.33
+  server: 43.202.41.139
   type: ss
 - cipher: aes-256-cfb
-  name: "\u97E9\u56FD-004-43.203.192.6"
-  password: amazonskr05
-  port: 443
-  server: 43.203.192.6
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u97E9\u56FD-005-125.141.31.73"
+  name: "\u97E9\u56FD-003-125.141.31.73"
   password: qwerREWQ@@
   port: 42185
   server: 125.141.31.73
   type: ss
 - cipher: aes-256-cfb
-  name: "\u97E9\u56FD-006-125.141.26.7"
-  password: qwerREWQ@@
-  port: 49032
-  server: 125.141.26.7
-  type: ss
-- cipher: aes-256-cfb
-  name: "\u97E9\u56FD-007-43.203.201.192"
+  name: "\u97E9\u56FD-004-3.34.95.205"
   password: amazonskr05
   port: 443
-  server: 43.203.201.192
+  server: 3.34.95.205
   type: ss
-- alterId: 0
-  cipher: auto
-  name: "\u9999\u6E2F-000-5.102.96.125"
-  network: ws
-  port: 2095
-  server: fcdn.flha.ru
-  servername: fcdn.flha.ru
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: fcdn.flha.ru
-    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u52A0\u62FF\u5927-000-158.51.121.36"
-  - "\u5357\u975E-000-41.203.4.34"
-  - "\u53F0\u6E7E-000-118.160.60.193"
-  - "\u53F0\u6E7E-001-118.160.60.193"
-  - "\u53F0\u6E7E-002-118.160.60.193"
-  - "\u53F0\u6E7E-003-118.160.60.193"
-  - "\u53F0\u6E7E-004-118.160.60.193"
-  - "\u53F0\u6E7E-005-118.160.60.193"
-  - "\u53F0\u6E7E-006-118.160.60.193"
-  - "\u53F0\u6E7E-007-118.160.60.193"
-  - "\u53F0\u6E7E-008-118.160.60.193"
-  - "\u53F0\u6E7E-009-118.160.60.193"
-  - "\u53F0\u6E7E-010-118.160.60.193"
-  - "\u5FB7\u56FD-000-2a12:3e80:1:511::6705:db2b"
+  - "\u53F0\u6E7E-000-220.129.197.206"
+  - "\u53F0\u6E7E-001-220.129.197.206"
+  - "\u53F0\u6E7E-002-220.129.197.206"
+  - "\u53F0\u6E7E-003-220.129.197.206"
+  - "\u53F0\u6E7E-004-220.129.197.206"
+  - "\u53F0\u6E7E-005-220.129.197.206"
+  - "\u53F0\u6E7E-006-220.129.197.206"
+  - "\u53F0\u6E7E-007-220.129.197.206"
+  - "\u53F0\u6E7E-008-220.129.197.206"
+  - "\u5FB7\u56FD-000-136.243.147.121"
   - "\u65B0\u52A0\u5761-000-157.230.43.93"
-  - "\u65B0\u52A0\u5761-001-18.142.225.182"
+  - "\u65B0\u52A0\u5761-001-47.128.64.71"
   - "\u65B0\u52A0\u5761-002-13.215.184.228"
-  - "\u65B0\u52A0\u5761-003-13.214.212.171"
+  - "\u65B0\u52A0\u5761-003-47.129.9.69"
   - "\u65E5\u672C-000-2a12:f8c1:50:a:b9e1:a124:2f79:c437"
   - "\u65E5\u672C-001-2a12:f8c1:50:a:b9e1:a124:2f79:c437"
-  - "\u65E5\u672C-002-54.238.23.117"
-  - "\u65E5\u672C-003-13.231.229.41"
-  - "\u65E5\u672C-004-13.114.108.144"
-  - "\u65E5\u672C-005-18.183.168.44"
-  - "\u65E5\u672C-006-52.195.237.101"
-  - "\u65E5\u672C-007-52.195.237.198"
+  - "\u65E5\u672C-002-45.32.252.20"
+  - "\u65E5\u672C-003-3.112.208.94"
+  - "\u65E5\u672C-004-57.180.65.163"
+  - "\u65E5\u672C-005-52.195.237.198"
+  - "\u65E5\u672C-006-54.168.200.34"
+  - "\u65E5\u672C-007-52.195.225.184"
   - "\u65E5\u672C-008-13.113.218.2"
-  - "\u65E5\u672C-009-18.183.77.187"
-  - "\u65E5\u672C-010-13.231.229.48"
-  - "\u65E5\u672C-011-43.207.175.104"
-  - "\u65E5\u672C-012-52.69.81.42"
-  - "\u65E5\u672C-013-43.206.237.42"
+  - "\u65E5\u672C-009-3.112.214.89"
+  - "\u65E5\u672C-010-43.206.237.42"
   - "\u6CD5\u56FD-000-146.59.17.58"
   - "\u6CD5\u56FD-001-94.131.118.246"
-  - "\u6CD5\u56FD-002-2600:3c07::f03c:94ff:feca:9f5d"
-  - "\u6CD5\u56FD-003-84.235.236.12"
-  - "\u6CD5\u56FD-004-146.59.17.58"
+  - "\u6CD5\u56FD-002-2600:3c07::f03c:94ff:fe41:2c0"
+  - "\u6CD5\u56FD-003-146.59.17.58"
   - "\u6CE2\u5170-000-104.28.225.185"
-  - "\u6CE2\u5170-001-2a09:bac1:5bc0:d60::49:189"
-  - "\u6CE2\u5170-002-104.28.225.185"
   - "\u745E\u5178-000-104.28.193.219"
   - "\u745E\u5178-001-104.28.193.219"
   - "\u7F8E\u56FD-000-23.154.136.2"
-  - "\u7F8E\u56FD-001-2600:3c01::f03c:94ff:fefa:1aaf"
-  - "\u7F8E\u56FD-002-2a01:7e04::f03c:94ff:fefa:b586"
-  - "\u7F8E\u56FD-003-108.181.23.161"
-  - "\u7F8E\u56FD-004-38.110.1.51"
-  - "\u7F8E\u56FD-005-38.110.1.51"
-  - "\u7F8E\u56FD-006-209.141.60.219"
-  - "\u7F8E\u56FD-007-35.87.25.21"
-  - "\u7F8E\u56FD-008-38.110.1.197"
+  - "\u7F8E\u56FD-001-172.233.172.34"
+  - "\u7F8E\u56FD-002-108.181.23.161"
+  - "\u7F8E\u56FD-003-2604:4300:a:17d:ad2:0:cf46:a8d1"
+  - "\u7F8E\u56FD-004-35.91.54.169"
+  - "\u7F8E\u56FD-005-198.2.210.97"
+  - "\u7F8E\u56FD-006-35.87.25.21"
   - "\u82F1\u56FD-000-2001:41d0:801:2000::3d3c"
-  - "\u82F1\u56FD-001-212.71.255.207"
+  - "\u82F1\u56FD-001-52.151.74.225"
   - "\u82F1\u56FD-002-51.38.64.145"
-  - "\u82F1\u56FD-003-2001:41d0:801:2000::3d3c"
-  - "\u8D8A\u5357-000-103.163.218.2"
-  - "\u97E9\u56FD-000-43.201.69.200"
-  - "\u97E9\u56FD-001-43.201.47.36"
-  - "\u97E9\u56FD-002-43.201.34.246"
-  - "\u97E9\u56FD-003-43.203.233.33"
-  - "\u97E9\u56FD-004-43.203.192.6"
-  - "\u97E9\u56FD-005-125.141.31.73"
-  - "\u97E9\u56FD-006-125.141.26.7"
-  - "\u97E9\u56FD-007-43.203.201.192"
-  - "\u9999\u6E2F-000-5.102.96.125"
+  - "\u97E9\u56FD-000-43.201.47.36"
+  - "\u97E9\u56FD-001-43.201.110.81"
+  - "\u97E9\u56FD-002-43.202.41.139"
+  - "\u97E9\u56FD-003-125.141.31.73"
+  - "\u97E9\u56FD-004-3.34.95.205"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
