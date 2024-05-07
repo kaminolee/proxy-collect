@@ -6,14 +6,14 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  country: "\U0001F3C1ZZ"
-  delay: 1321
+  country: "\U0001F1FA\U0001F1F8US"
+  delay: 2831
   h2-opts: {}
   http-opts: {}
   name: "\u53F0\u6E7E-000-111.248.237.83"
   network: ws
   port: 8080
-  server: 104.19.172.163
+  server: 172.67.199.0
   servername: oiictw.yydsii.com
   skip-cert-verify: true
   type: vmess
@@ -24,72 +24,102 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u65E5\u672C-000-2603:c021:800f:a000:b650:96ec:8bab:442d"
+  country: "\U0001F3C1ZZ"
+  delay: 1268
+  h2-opts: {}
+  http-opts: {}
+  name: "\u53F0\u6E7E-001-111.248.237.83"
   network: ws
-  port: 80
-  server: 104.19.45.45
+  port: 8080
+  server: 104.16.58.159
+  servername: oiictw.yydsii.com
   skip-cert-verify: true
-  tls: false
   type: vmess
-  uuid: 34cb3f75-316d-362f-9210-a5f86453b0a4
+  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
   ws-opts:
     headers:
-      host: tk-007.xiaoxiaobujidao.xyz
-    path: /xiaodao?ed=2048
+      HOST: oiictw.yydsii.com
+    path: /
 - alterId: 0
   cipher: auto
-  name: "\u6CE2\u5170-000-77.91.102.85"
+  country: "\U0001F1FA\U0001F1F8US"
+  delay: 1100
+  h2-opts: {}
+  http-opts: {}
+  name: "\u62C9\u8131\u7EF4\u4E9A-000-45.142.213.135"
   network: ws
-  port: 443
-  server: 172.67.132.209
+  port: 80
+  server: 172.67.204.84
+  servername: lv1-vmess.sshmax.xyz
   skip-cert-verify: true
-  tls: true
   type: vmess
-  uuid: 33653184-91f3-4f3f-b707-2fc21e9adeb8
+  uuid: 844b31ab-8270-40aa-9c9a-d07ef2af591e
   ws-opts:
     headers:
-      host: pl1-vmess.sshmax.xyz
+      HOST: lv1-vmess.sshmax.xyz
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-104.168.43.36"
+  name: "\u65E5\u672C-000-87.120.204.6"
   network: ws
-  port: 9444
-  server: 104.168.43.36
-  servername: v2p-us-d.ywandy.top
+  port: 8080
+  server: 87.120.204.6
   skip-cert-verify: true
   tls: true
   type: vmess
-  udp: true
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  uuid: bdd22841-c4d2-4aa8-acf2-95aa9125f159
   ws-opts:
     headers:
-      Host: v2p-us-d.ywandy.top
-    path: /blog
+      Host: 87.120.204.6
+    path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-001-103.182.97.182"
+  name: "\u6CD5\u56FD-000-2600:3c07::f03c:94ff:fe05:4091"
   network: ws
   port: 443
-  server: 103.182.97.182
+  server: 188.114.99.134
   skip-cert-verify: true
   tls: true
   type: vmess
-  udp: true
-  uuid: 27ece66a-6ef6-4189-b7ff-ef0de2710d71
+  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   ws-opts:
     headers:
-      Host: california.servicex.online
-    path: /world
+      Host: linde06.indiavideo.sbs
+    path: /linkws
+- alterId: 0
+  cipher: auto
+  name: "\u6CE2\u5170-000-2a09:bac1:5bc0:d60::49:164"
+  network: ws
+  port: 80
+  server: 151.101.195.10
+  skip-cert-verify: true
+  type: vmess
+  uuid: d39a347a-00c9-4f91-9255-7f536c07c5a8
+  ws-opts:
+    headers:
+      Host: nmsl.kp
+    path: /aries?ed=2560
+- client-fingerprint: chrome
+  name: "\u7F8E\u56FD-000-18.217.125.44"
+  network: tcp
+  password: telegram-id-directvpn
+  port: 22222
+  server: 18.217.125.44
+  skip-cert-verify: false
+  sni: trojan.burgerip.co.uk
+  type: trojan
+  udp: false
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u53F0\u6E7E-000-111.248.237.83"
-  - "\u65E5\u672C-000-2603:c021:800f:a000:b650:96ec:8bab:442d"
-  - "\u6CE2\u5170-000-77.91.102.85"
-  - "\u7F8E\u56FD-000-104.168.43.36"
-  - "\u7F8E\u56FD-001-103.182.97.182"
+  - "\u53F0\u6E7E-001-111.248.237.83"
+  - "\u62C9\u8131\u7EF4\u4E9A-000-45.142.213.135"
+  - "\u65E5\u672C-000-87.120.204.6"
+  - "\u6CD5\u56FD-000-2600:3c07::f03c:94ff:fe05:4091"
+  - "\u6CE2\u5170-000-2a09:bac1:5bc0:d60::49:164"
+  - "\u7F8E\u56FD-000-18.217.125.44"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
