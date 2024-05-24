@@ -6,6 +6,28 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
+  name: "\u4FC4\u7F57\u65AF\u8054\u90A6-000-45.147.200.170"
+  network: tcp
+  port: 56508
+  server: 45.147.200.170
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 892027cd-2cb5-40ca-9dbb-80191e28239c
+- alterId: 0
+  cipher: auto
+  name: "\u52A0\u62FF\u5927-000-2607:5300:203:b680::fd2a:efb"
+  network: tcp
+  port: 50577
+  server: 167.114.90.198
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 132b0296-e304-45a6-b045-4cdf0902e2b7
+  ws-headers:
+    Host: 167.114.90.198
+- alterId: 0
+  cipher: auto
   delay: 1453
   h2-opts: {}
   http-opts: {}
@@ -17,6 +39,22 @@ proxies:
   tls: true
   type: vmess
   uuid: 8259cb1c-dd6c-4739-9c88-af550d977525
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: "\u65E5\u672C-000-2a0c:8a41:5100::2762:9698"
+  network: ws
+  port: 8880
+  server: 104.19.40.48
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: uk.moss.network
+    path: /d/65dd503.TG.WangCai2.WangCai_8:107690
 - alterId: 0
   cipher: auto
   delay: 754
@@ -55,7 +93,10 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
+  - "\u4FC4\u7F57\u65AF\u8054\u90A6-000-45.147.200.170"
+  - "\u52A0\u62FF\u5927-000-2607:5300:203:b680::fd2a:efb"
   - "\u65B0\u52A0\u5761-000-31.192.234.7"
+  - "\u65E5\u672C-000-2a0c:8a41:5100::2762:9698"
   - "\u7F8E\u56FD-000-107.173.146.129"
   - "\u7F8E\u56FD-001-107.173.146.129"
   strategy: round-robin
