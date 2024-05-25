@@ -16,19 +16,29 @@ proxies:
   uuid: 132b0296-e304-45a6-b045-4cdf0902e2b7
   ws-headers:
     Host: 167.114.90.198
+- name: "\u65B0\u52A0\u5761-000-5.44.249.45"
+  network: ws
+  password: b84d16a244460e09
+  port: 3306
+  server: 5.44.249.44
+  skip-cert-verify: true
+  sni: n2.gladns.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: TG.WangCai_1
+    path: /gateway/connect
 - alterId: 0
   cipher: auto
-  delay: 1453
-  h2-opts: {}
-  http-opts: {}
-  name: "\u65B0\u52A0\u5761-000-31.192.234.7"
-  network: tcp
-  port: 12954
-  server: 31.192.234.7
+  name: "\u65E5\u672C-000-158.51.111.114"
+  network: http
+  port: 32365
+  server: 158.51.111.114
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 8259cb1c-dd6c-4739-9c88-af550d977525
+  uuid: f956a5d9-1f30-4f89-adc8-4286f4a3eb16
 - alterId: 0
   cipher: auto
   delay: 754
@@ -84,7 +94,8 @@ proxy-groups:
   name: balanced
   proxies:
   - "\u52A0\u62FF\u5927-000-2607:5300:203:b680::fd2a:efb"
-  - "\u65B0\u52A0\u5761-000-31.192.234.7"
+  - "\u65B0\u52A0\u5761-000-5.44.249.45"
+  - "\u65E5\u672C-000-158.51.111.114"
   - "\u7F8E\u56FD-000-107.173.146.129"
   - "\u7F8E\u56FD-001-107.173.146.129"
   - "\u8377\u5170-000-74.119.195.5"
