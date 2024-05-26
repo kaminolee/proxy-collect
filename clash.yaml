@@ -42,6 +42,33 @@ proxies:
   uuid: f956a5d9-1f30-4f89-adc8-4286f4a3eb16
 - alterId: 0
   cipher: auto
+  delay: 882
+  h2-opts: {}
+  http-opts: {}
+  name: "\u65E5\u672C-001-210.230.206.18"
+  network: tcp
+  port: 39777
+  server: 210.230.206.18
+  skip-cert-verify: true
+  type: vmess
+  uuid: fc78cd01-99ac-a085-cb84-69a60920129d
+- alterId: 0
+  cipher: auto
+  delay: 1131
+  name: "\u6CD5\u56FD-000-84.235.230.9"
+  network: ws
+  port: 80
+  server: 172.64.104.182
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: f0f067fe-8e6d-4d95-816b-601038fd5876
+  ws-opts:
+    headers:
+      Host: fr.grpc.gay
+    path: /rongseven?ed=2048
+- alterId: 0
+  cipher: auto
   delay: 845
   h2-opts: {}
   http-opts: {}
@@ -57,22 +84,6 @@ proxies:
     headers:
       HOST: rn2.hostmjj.com
     path: /
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: "\u8377\u5170-000-74.119.195.5"
-  network: ws
-  port: 80
-  server: 188.114.99.77
-  servername: nl1-vmess.sshmax.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: 2dd253e4-311f-4898-92f5-d4eb88ce27af
-  ws-opts:
-    headers:
-      HOST: nl1-vmess.sshmax.xyz
-    path: /vmess
 proxy-groups:
 - interval: 300
   name: balanced
@@ -80,8 +91,9 @@ proxy-groups:
   - "\u65B0\u52A0\u5761-000-31.192.234.7"
   - "\u65B0\u52A0\u5761-001-5.44.249.45"
   - "\u65E5\u672C-000-158.51.111.114"
+  - "\u65E5\u672C-001-210.230.206.18"
+  - "\u6CD5\u56FD-000-84.235.230.9"
   - "\u7F8E\u56FD-000-107.173.146.129"
-  - "\u8377\u5170-000-74.119.195.5"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
