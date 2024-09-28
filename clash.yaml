@@ -26,7 +26,7 @@ proxies:
     method: GET
     path:
     - /
-  name: "\u610F\u5927\u5229-000-185.247.184.115"
+  name: "\u610F\u5927\u5229-000-2a05:541:110:43::1"
   network: http
   port: 2098
   server: 185.247.184.115
@@ -37,7 +37,7 @@ proxies:
   uuid: 83876222-64a4-4912-aa18-b7d9d34959de
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-108.181.24.39"
+  name: "\u7F8E\u56FD-000-108.181.24.55"
   network: ws
   port: 2086
   server: 104.19.46.17
@@ -50,7 +50,7 @@ proxies:
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-001-108.181.23.41"
+  name: "\u7F8E\u56FD-001-108.181.23.161"
   network: ws
   port: 2086
   server: 104.19.47.36
@@ -63,33 +63,36 @@ proxies:
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-002-108.181.24.39"
+  name: "\u7F8E\u56FD-002-104.28.219.190"
   network: ws
-  port: 2086
-  server: russia.com
+  port: 2095
+  server: 104.19.45.80
+  skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
   ws-opts:
     headers:
-      Host: ip1.1789034.xyz
-    path: github.com/Alvin9999
+      Host: onea.flha.ru
+    path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-003-108.181.24.39"
+  name: "\u7F8E\u56FD-003-2604:4300:a:184:9213:0:4810:67aa"
   network: ws
-  port: 2086
-  server: fbi.gov
+  port: 2095
+  server: 104.19.45.4
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  udp: true
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
   ws-opts:
     headers:
-      Host: ip1.1789034.xyz
-    path: github.com/Alvin9999
+      Host: onea.flha.ru
+    path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-004-108.181.24.39"
+  name: "\u7F8E\u56FD-004-108.181.24.55"
   network: ws
   port: 2086
   server: 104.19.47.77
@@ -102,22 +105,33 @@ proxies:
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-005-104.28.219.190"
+  name: "\u7F8E\u56FD-005-108.181.23.41"
   network: ws
-  port: 2095
-  server: 104.19.45.13
-  skip-cert-verify: true
+  port: 2086
+  server: russia.com
   tls: false
   type: vmess
-  udp: true
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
   ws-opts:
     headers:
-      Host: onea.flha.ru
-    path: /
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-006-51.81.209.55"
+  name: "\u7F8E\u56FD-006-108.181.23.41"
+  network: ws
+  port: 2086
+  server: fbi.gov
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-007-51.81.209.55"
   network: ws
   port: 80
   server: 104.21.71.88
@@ -133,14 +147,15 @@ proxy-groups:
   name: balanced
   proxies:
   - "\u5FB7\u56FD-000-202.78.166.167"
-  - "\u610F\u5927\u5229-000-185.247.184.115"
-  - "\u7F8E\u56FD-000-108.181.24.39"
-  - "\u7F8E\u56FD-001-108.181.23.41"
-  - "\u7F8E\u56FD-002-108.181.24.39"
-  - "\u7F8E\u56FD-003-108.181.24.39"
-  - "\u7F8E\u56FD-004-108.181.24.39"
-  - "\u7F8E\u56FD-005-104.28.219.190"
-  - "\u7F8E\u56FD-006-51.81.209.55"
+  - "\u610F\u5927\u5229-000-2a05:541:110:43::1"
+  - "\u7F8E\u56FD-000-108.181.24.55"
+  - "\u7F8E\u56FD-001-108.181.23.161"
+  - "\u7F8E\u56FD-002-104.28.219.190"
+  - "\u7F8E\u56FD-003-2604:4300:a:184:9213:0:4810:67aa"
+  - "\u7F8E\u56FD-004-108.181.24.55"
+  - "\u7F8E\u56FD-005-108.181.23.41"
+  - "\u7F8E\u56FD-006-108.181.23.41"
+  - "\u7F8E\u56FD-007-51.81.209.55"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
