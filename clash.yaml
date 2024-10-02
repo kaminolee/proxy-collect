@@ -19,6 +19,24 @@ proxies:
     path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS
 - alterId: 0
   cipher: auto
+  mux:
+    concurrency: 8
+    enable: true
+  name: "\u65B0\u52A0\u5761-000-2a09:bac5:55f1:15f::23:452"
+  network: ws
+  port: 8080
+  server: bycf4.netcar.live
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8ecbd879-6ef0-431a-a3c4-3ad0b9f9e159
+  ws-opts:
+    headers:
+      Host: singapore2.netcar.live
+    path: /proxy
+- alterId: 0
+  cipher: auto
   name: "\u6CD5\u56FD-000-129.151.240.46"
   network: ws
   port: 80
@@ -34,21 +52,7 @@ proxies:
     path: /rongseven?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-2604:4300:a:184:9213:0:4810:67aa"
-  network: ws
-  port: 2095
-  server: 104.19.45.80
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-001-104.28.219.190"
+  name: "\u7F8E\u56FD-000-104.28.219.190"
   network: ws
   port: 2095
   server: 104.19.45.4
@@ -63,35 +67,20 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
+  name: "\u7F8E\u56FD-001-2604:4300:a:184:9213:0:4810:67aa"
+  network: ws
+  port: 2095
+  server: 104.19.45.50
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
+- alterId: 0
+  cipher: auto
   name: "\u7F8E\u56FD-002-104.28.219.190"
-  network: ws
-  port: 2095
-  server: 104.19.45.13
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-003-104.28.219.190"
-  network: ws
-  port: 2095
-  server: 104.19.45.238
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-004-2604:4300:a:184:9213:0:4810:67aa"
   network: ws
   port: 2095
   server: 104.19.45.16
@@ -106,10 +95,10 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-005-2604:4300:a:184:9213:0:4810:67aa"
+  name: "\u7F8E\u56FD-003-2604:4300:a:184:9213:0:4810:67aa"
   network: ws
   port: 2095
-  server: 104.19.45.50
+  server: 104.19.45.238
   tls: false
   type: vmess
   uuid: 7a737f41-b792-4260-94ff-3d864da67b80
@@ -119,7 +108,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-006-104.28.219.190"
+  name: "\u7F8E\u56FD-004-2604:4300:a:184:9213:0:4810:67aa"
   network: ws
   port: 2095
   server: 104.19.45.9
@@ -147,20 +136,57 @@ proxies:
     headers:
       Host: kr.freegpt.filegear-sg.me
     path: /rongseven?ed=2048
+- alterId: 0
+  cipher: auto
+  mux:
+    concurrency: 8
+    enable: true
+  name: "\u9999\u6E2F-000-2a09:bac1:31a0::245:23"
+  network: ws
+  port: 8080
+  server: bycf2.netcar.live
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7c3f777e-42cb-448b-bc7f-7928ed6ec304
+  ws-opts:
+    headers:
+      Host: hk1.netcar.live
+    path: /proxy
+- alterId: 0
+  cipher: auto
+  mux:
+    concurrency: 8
+    enable: true
+  name: "\u9999\u6E2F-001-2a09:bac1:31a0::245:23"
+  network: ws
+  port: 8080
+  server: bycf1.netcar.live
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e2c91ac8-1805-43d8-aede-80af4957aa6f
+  ws-opts:
+    headers:
+      Host: hk1.netcar.live
+    path: /proxy
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u5FB7\u56FD-000-202.78.166.167"
+  - "\u65B0\u52A0\u5761-000-2a09:bac5:55f1:15f::23:452"
   - "\u6CD5\u56FD-000-129.151.240.46"
-  - "\u7F8E\u56FD-000-2604:4300:a:184:9213:0:4810:67aa"
-  - "\u7F8E\u56FD-001-104.28.219.190"
+  - "\u7F8E\u56FD-000-104.28.219.190"
+  - "\u7F8E\u56FD-001-2604:4300:a:184:9213:0:4810:67aa"
   - "\u7F8E\u56FD-002-104.28.219.190"
-  - "\u7F8E\u56FD-003-104.28.219.190"
+  - "\u7F8E\u56FD-003-2604:4300:a:184:9213:0:4810:67aa"
   - "\u7F8E\u56FD-004-2604:4300:a:184:9213:0:4810:67aa"
-  - "\u7F8E\u56FD-005-2604:4300:a:184:9213:0:4810:67aa"
-  - "\u7F8E\u56FD-006-104.28.219.190"
   - "\u97E9\u56FD-000-64.110.83.69"
+  - "\u9999\u6E2F-000-2a09:bac1:31a0::245:23"
+  - "\u9999\u6E2F-001-2a09:bac1:31a0::245:23"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
