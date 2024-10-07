@@ -6,19 +6,6 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u5FB7\u56FD-000-202.78.166.167"
-  network: ws
-  port: 80
-  server: 173.245.58.41
-  skip-cert-verify: true
-  type: vmess
-  uuid: a4af6fa2-264f-4ddd-8718-246dc999386b
-  ws-opts:
-    headers:
-      Host: 39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou
-    path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS
-- alterId: 0
-  cipher: auto
   name: "\u6CD5\u56FD-000-129.151.240.46"
   network: ws
   port: 80
@@ -34,21 +21,7 @@ proxies:
     path: /rongseven?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-2604:4300:a:184:9213:0:4810:67aa"
-  network: ws
-  port: 2095
-  server: 104.19.45.80
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-001-2604:4300:a:184:9213:0:4810:67aa"
+  name: "\u7F8E\u56FD-000-104.28.219.190"
   network: ws
   port: 2095
   server: 104.19.45.4
@@ -63,20 +36,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-002-104.28.219.190"
-  network: ws
-  port: 2095
-  server: 104.19.45.238
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-003-104.28.219.190"
+  name: "\u7F8E\u56FD-001-2604:4300:a:184:9213:0:4810:67aa"
   network: ws
   port: 2095
   server: 104.19.45.16
@@ -91,7 +51,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-004-2604:4300:a:184:9213:0:4810:67aa"
+  name: "\u7F8E\u56FD-002-104.28.219.190"
   network: ws
   port: 2095
   server: 104.19.45.13
@@ -106,10 +66,23 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-005-2604:4300:a:184:9213:0:4810:67aa"
+  name: "\u7F8E\u56FD-003-104.28.219.190"
   network: ws
   port: 2095
   server: 104.19.45.50
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-004-2604:4300:a:184:9213:0:4810:67aa"
+  network: ws
+  port: 2095
+  server: 104.19.45.238
   tls: false
   type: vmess
   uuid: 7a737f41-b792-4260-94ff-3d864da67b80
@@ -136,14 +109,12 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u5FB7\u56FD-000-202.78.166.167"
   - "\u6CD5\u56FD-000-129.151.240.46"
-  - "\u7F8E\u56FD-000-2604:4300:a:184:9213:0:4810:67aa"
+  - "\u7F8E\u56FD-000-104.28.219.190"
   - "\u7F8E\u56FD-001-2604:4300:a:184:9213:0:4810:67aa"
   - "\u7F8E\u56FD-002-104.28.219.190"
   - "\u7F8E\u56FD-003-104.28.219.190"
   - "\u7F8E\u56FD-004-2604:4300:a:184:9213:0:4810:67aa"
-  - "\u7F8E\u56FD-005-2604:4300:a:184:9213:0:4810:67aa"
   - "\u97E9\u56FD-000-64.110.83.69"
   strategy: round-robin
   type: load-balance
