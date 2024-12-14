@@ -6,18 +6,66 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-000-140.245.46.166"
+  delay: 901
+  name: "\u65B0\u52A0\u5761-000-13.212.250.91"
   network: ws
-  port: 23451
-  server: 140.245.46.166
+  port: 40000
+  server: 13.212.250.91
+  skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 402e6de3-9dfc-480c-af0b-387cb6b85717
+  uuid: 13364789-a8b2-4bcd-8df7-a794fb6f87e5
   ws-opts:
     headers:
-      Host: westsg2-ddns.oraclenat.cc
-    path: /
+      Host: down.dingtalk.com
+    path: /bby
+- alterId: 0
+  cipher: auto
+  name: "\u6CD5\u56FD-000-84.17.42.46"
+  network: ws
+  port: 443
+  server: root.mid.al
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: a983c698-cae4-4254-d047-51898ccd8ee7
+  ws-opts:
+    headers:
+      Host: kim.gov.kp
+    path: /aries?ed=2048
+- alterId: 0
+  cipher: auto
+  name: "\u6CD5\u56FD-001-84.17.42.46"
+  network: ws
+  port: 80
+  server: root.mid.al
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a983c698-cae4-4254-d047-51898ccd8ee7
+  ws-opts:
+    headers:
+      Host: kim.gov.kp
+    path: /aries?ed=2048
+- alterId: 0
+  cipher: auto
+  delay: 1833
+  name: "\u7F8E\u56FD-000-23.94.243.79"
+  network: ws
+  port: 2052
+  server: 172.67.112.61
+  skip-cert-verify: true
+  type: vmess
+  udp: true
+  uuid: e50bb174-f2cb-3081-931e-fa4bfd69f42d
+  ws-opts:
+    headers:
+      Host: 100-158-80-199.s2.cn-db.top
+    path: /dabai.in104.25.31.219
 - alterId: 0
   cipher: auto
   name: "\u963F\u8054\u914B-000-129.151.146.121"
@@ -27,6 +75,22 @@ proxies:
   skip-cert-verify: false
   tls: false
   type: vmess
+  uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
+  ws-opts:
+    headers:
+      Host: shs.xiaoqi666.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: "\u963F\u8054\u914B-001-129.151.146.121"
+  network: ws
+  port: 2086
+  server: 104.21.89.219
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
   uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
   ws-opts:
     headers:
@@ -60,14 +124,35 @@ proxies:
     headers:
       Host: chunchuan.kejixiaoqi666.store
     path: /
+- alterId: 0
+  cipher: auto
+  name: "\u97E9\u56FD-002-2a09:bac5:4771:1a14::299:c"
+  network: ws
+  port: 80
+  server: 104.16.155.10
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e6543319-0574-42ac-b778-1c4325d626f5
+  ws-opts:
+    headers:
+      Host: chunchuan.kejixiaoqi666.store
+    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u65B0\u52A0\u5761-000-140.245.46.166"
+  - "\u65B0\u52A0\u5761-000-13.212.250.91"
+  - "\u6CD5\u56FD-000-84.17.42.46"
+  - "\u6CD5\u56FD-001-84.17.42.46"
+  - "\u7F8E\u56FD-000-23.94.243.79"
   - "\u963F\u8054\u914B-000-129.151.146.121"
+  - "\u963F\u8054\u914B-001-129.151.146.121"
   - "\u97E9\u56FD-000-2a09:bac5:4771:1a14::299:c"
   - "\u97E9\u56FD-001-2a09:bac5:4771:1a14::299:c"
+  - "\u97E9\u56FD-002-2a09:bac5:4771:1a14::299:c"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
