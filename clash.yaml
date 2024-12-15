@@ -6,20 +6,34 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  delay: 901
-  name: "\u65B0\u52A0\u5761-000-13.212.250.91"
+  name: "\u4E39\u9EA6-000-149.88.109.119"
   network: ws
-  port: 40000
-  server: 13.212.250.91
+  port: 443
+  server: dktwonwydebplc.com
+  servername: dktwonwydebplc.com
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  udp: true
-  uuid: 13364789-a8b2-4bcd-8df7-a794fb6f87e5
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   ws-opts:
     headers:
-      Host: down.dingtalk.com
-    path: /bby
+      Host: dktwonwydebplc.com
+    path: /rbqqvws
+- alterId: 0
+  cipher: auto
+  name: "\u5FB7\u56FD-000-172.104.150.100"
+  network: ws
+  port: 2096
+  server: 104.16.67.38
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+  ws-opts:
+    headers:
+      Host: worker-flat-hat-00f2.ravapim426.workers.dev
+    path: /glweidf.cfd/linkws
 - alterId: 0
   cipher: auto
   name: "\u6CD5\u56FD-000-84.17.42.46"
@@ -57,7 +71,7 @@ proxies:
   name: "\u7F8E\u56FD-000-23.94.243.79"
   network: ws
   port: 2052
-  server: 172.67.112.61
+  server: 172.67.111.206
   skip-cert-verify: true
   type: vmess
   udp: true
@@ -140,11 +154,28 @@ proxies:
     headers:
       Host: chunchuan.kejixiaoqi666.store
     path: /
+- alterId: 0
+  cipher: auto
+  name: "\u9999\u6E2F-000-89.185.27.173"
+  network: ws
+  port: 80
+  server: gost.cloudflare.182682.xyz
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856
+  ws-opts:
+    headers:
+      Host: gost.naiunclient.top
+    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u65B0\u52A0\u5761-000-13.212.250.91"
+  - "\u4E39\u9EA6-000-149.88.109.119"
+  - "\u5FB7\u56FD-000-172.104.150.100"
   - "\u6CD5\u56FD-000-84.17.42.46"
   - "\u6CD5\u56FD-001-84.17.42.46"
   - "\u7F8E\u56FD-000-23.94.243.79"
@@ -153,6 +184,7 @@ proxy-groups:
   - "\u97E9\u56FD-000-2a09:bac5:4771:1a14::299:c"
   - "\u97E9\u56FD-001-2a09:bac5:4771:1a14::299:c"
   - "\u97E9\u56FD-002-2a09:bac5:4771:1a14::299:c"
+  - "\u9999\u6E2F-000-89.185.27.173"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
