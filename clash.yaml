@@ -6,41 +6,49 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  delay: 901
-  name: "\u65B0\u52A0\u5761-000-13.212.74.196"
+  name: "\u7F8E\u56FD-000-208.87.243.123"
   network: ws
-  port: 40000
-  server: 13.212.74.196
-  skip-cert-verify: true
-  tls: false
+  port: 2086
+  server: 104.26.0.131
+  servername: watt-miss-semester-slots.trycloudflare.com
   type: vmess
-  udp: true
-  uuid: 13364789-a8b2-4bcd-8df7-a794fb6f87e5
+  uuid: 7d92ffc9-02e1-4087-8a46-cc4d76560917
   ws-opts:
     headers:
-      Host: down.dingtalk.com
-    path: /bby
-- alterId: 0
-  cipher: auto
-  delay: 1833
-  name: "\u7F8E\u56FD-000-23.94.243.79"
-  network: ws
-  port: 2052
-  server: 172.67.112.123
-  skip-cert-verify: true
-  type: vmess
-  udp: true
-  uuid: e50bb174-f2cb-3081-931e-fa4bfd69f42d
-  ws-opts:
-    headers:
-      Host: 100-158-80-199.s2.cn-db.top
-    path: /dabai.in104.25.31.219
+      Host: watt-miss-semester-slots.trycloudflare.com
+    path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-001-208.87.243.123"
   network: ws
   port: 2086
-  server: 104.26.0.57
+  server: 104.21.238.105
+  servername: watt-miss-semester-slots.trycloudflare.com
+  type: vmess
+  uuid: 7d92ffc9-02e1-4087-8a46-cc4d76560917
+  ws-opts:
+    headers:
+      Host: watt-miss-semester-slots.trycloudflare.com
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-002-208.87.243.123"
+  network: ws
+  port: 2086
+  server: 104.26.0.104
+  servername: watt-miss-semester-slots.trycloudflare.com
+  type: vmess
+  uuid: 7d92ffc9-02e1-4087-8a46-cc4d76560917
+  ws-opts:
+    headers:
+      Host: watt-miss-semester-slots.trycloudflare.com
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-003-208.87.243.123"
+  network: ws
+  port: 2086
+  server: 104.18.114.117
   servername: watt-miss-semester-slots.trycloudflare.com
   type: vmess
   uuid: 7d92ffc9-02e1-4087-8a46-cc4d76560917
@@ -83,34 +91,6 @@ proxies:
   name: "\u97E9\u56FD-000-2a09:bac5:4771:1a14::299:c"
   network: ws
   port: 80
-  server: 104.19.48.236
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: e6543319-0574-42ac-b778-1c4325d626f5
-  ws-opts:
-    headers:
-      Host: chunchuan.kejixiaoqi666.store
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u97E9\u56FD-001-2a09:bac5:4771:1a14::299:c"
-  network: ws
-  port: 80
-  server: 104.17.221.248
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: e6543319-0574-42ac-b778-1c4325d626f5
-  ws-opts:
-    headers:
-      Host: chunchuan.kejixiaoqi666.store
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u97E9\u56FD-002-2a09:bac5:4771:1a14::299:c"
-  network: ws
-  port: 80
   server: 104.16.155.10
   skip-cert-verify: true
   tfo: false
@@ -122,35 +102,17 @@ proxies:
     headers:
       Host: chunchuan.kejixiaoqi666.store
     path: /
-- alterId: 0
-  cipher: auto
-  name: "\u9999\u6E2F-000-89.185.27.173"
-  network: ws
-  port: 80
-  server: gost.cloudflare.182682.xyz
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856
-  ws-opts:
-    headers:
-      Host: gost.naiunclient.top
-    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u65B0\u52A0\u5761-000-13.212.74.196"
-  - "\u7F8E\u56FD-000-23.94.243.79"
+  - "\u7F8E\u56FD-000-208.87.243.123"
   - "\u7F8E\u56FD-001-208.87.243.123"
+  - "\u7F8E\u56FD-002-208.87.243.123"
+  - "\u7F8E\u56FD-003-208.87.243.123"
   - "\u963F\u8054\u914B-000-129.151.146.121"
   - "\u963F\u8054\u914B-001-129.151.146.121"
   - "\u97E9\u56FD-000-2a09:bac5:4771:1a14::299:c"
-  - "\u97E9\u56FD-001-2a09:bac5:4771:1a14::299:c"
-  - "\u97E9\u56FD-002-2a09:bac5:4771:1a14::299:c"
-  - "\u9999\u6E2F-000-89.185.27.173"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
