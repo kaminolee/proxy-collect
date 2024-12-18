@@ -6,7 +6,7 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u5362\u68EE\u5821-000-2a09:bac5:4892:2464::3a0:59"
+  name: "\u5362\u68EE\u5821-000-104.28.215.3"
   network: ws
   port: 443
   server: cf.fovi.tk
@@ -22,36 +22,19 @@ proxies:
     path: /eisasqa
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
+  name: "\u5370\u5EA6-000-65.20.72.177"
   network: ws
-  port: 8880
-  server: 104.16.61.8
-  skip-cert-verify: true
-  tfo: false
-  tls: false
+  port: 2053
+  server: vu-mumbai-01.vnode.info
+  servername: vu-mumbai-01.vnode.info
+  skip-cert-verify: false
+  tls: true
   type: vmess
-  udp: true
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  uuid: a04001f3-2dba-40ed-8c2e-d0c765d9afaa
   ws-opts:
     headers:
-      Host: yaghoob55freenodes.repaco69437403.workers.dev
-    path: /jahfkjha.cfd/linkws
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-001-173.255.253.39"
-  network: ws
-  port: 80
-  server: 104.16.60.8
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  ws-opts:
-    headers:
-      Host: range-shape-b3fuegu.bananok182.workers.dev
-    path: /hms02.fxiaomi.sbs/link
+      Host: vu-mumbai-01.vnode.info
+    path: /
 - alterId: 0
   cipher: auto
   name: "\u963F\u8054\u914B-000-129.151.146.121"
@@ -96,33 +79,15 @@ proxies:
     headers:
       Host: shs.xiaoqi666.xyz
     path: /
-- alterId: 0
-  cipher: auto
-  name: "\u97E9\u56FD-000-2a09:bac1:3f20:b8::20b:4d"
-  network: ws
-  port: 80
-  server: 104.16.155.10
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e6543319-0574-42ac-b778-1c4325d626f5
-  ws-opts:
-    headers:
-      Host: chunchuan.kejixiaoqi666.store
-    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u5362\u68EE\u5821-000-2a09:bac5:4892:2464::3a0:59"
-  - "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
-  - "\u7F8E\u56FD-001-173.255.253.39"
+  - "\u5362\u68EE\u5821-000-104.28.215.3"
+  - "\u5370\u5EA6-000-65.20.72.177"
   - "\u963F\u8054\u914B-000-129.151.146.121"
   - "\u963F\u8054\u914B-001-129.151.146.121"
   - "\u963F\u8054\u914B-002-129.151.146.121"
-  - "\u97E9\u56FD-000-2a09:bac1:3f20:b8::20b:4d"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
