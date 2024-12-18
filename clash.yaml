@@ -20,74 +20,11 @@ proxies:
     headers:
       Host: foxlux.fovi.tk
     path: /eisasqa
-- alterId: 0
-  cipher: auto
-  name: "\u5370\u5EA6-000-65.20.72.177"
-  network: ws
-  port: 2053
-  server: vu-mumbai-01.vnode.info
-  servername: vu-mumbai-01.vnode.info
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: a04001f3-2dba-40ed-8c2e-d0c765d9afaa
-  ws-opts:
-    headers:
-      Host: vu-mumbai-01.vnode.info
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u963F\u8054\u914B-000-129.151.146.121"
-  network: ws
-  port: 2086
-  server: 172.67.165.53
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
-  ws-opts:
-    headers:
-      Host: shs.xiaoqi666.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u963F\u8054\u914B-001-129.151.146.121"
-  network: ws
-  port: 2086
-  server: 104.21.89.219
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
-  ws-opts:
-    headers:
-      Host: shs.xiaoqi666.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u963F\u8054\u914B-002-129.151.146.121"
-  network: ws
-  port: 443
-  server: 108.165.152.71
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
-  ws-opts:
-    headers:
-      Host: shs.xiaoqi666.xyz
-    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u5362\u68EE\u5821-000-104.28.215.3"
-  - "\u5370\u5EA6-000-65.20.72.177"
-  - "\u963F\u8054\u914B-000-129.151.146.121"
-  - "\u963F\u8054\u914B-001-129.151.146.121"
-  - "\u963F\u8054\u914B-002-129.151.146.121"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
