@@ -6,7 +6,7 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u5362\u68EE\u5821-000-104.28.215.3"
+  name: "\u5362\u68EE\u5821-000-2a09:bac5:4892:2464::3a0:29"
   network: ws
   port: 443
   server: cf.fovi.tk
@@ -36,46 +36,12 @@ proxies:
     headers:
       Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
     path: /azumase.ren
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
-  network: ws
-  port: 8880
-  server: 104.16.61.8
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-  ws-opts:
-    headers:
-      Host: yaghoob55freenodes.repaco69437403.workers.dev
-    path: /jahfkjha.cfd/linkws
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-001-74.207.254.169"
-  network: ws
-  port: 80
-  server: 104.16.60.8
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  ws-opts:
-    headers:
-      Host: range-shape-b3fuegu.bananok182.workers.dev
-    path: /hms02.fxiaomi.sbs/link
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u5362\u68EE\u5821-000-104.28.215.3"
+  - "\u5362\u68EE\u5821-000-2a09:bac5:4892:2464::3a0:29"
   - "\u6CE2\u5170-000-2a09:bac5:506d:2432::39b:d8"
-  - "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
-  - "\u7F8E\u56FD-001-74.207.254.169"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
