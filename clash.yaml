@@ -6,38 +6,39 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u5370\u5EA6-000-65.20.72.177"
+  name: "\u5362\u68EE\u5821-000-104.28.215.3"
   network: ws
-  port: 2053
-  server: vu-mumbai-01.vnode.info
-  servername: vu-mumbai-01.vnode.info
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: a04001f3-2dba-40ed-8c2e-d0c765d9afaa
-  ws-opts:
-    headers:
-      Host: vu-mumbai-01.vnode.info
-    path: /
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-000-74.207.254.169"
-  network: ws
-  port: 80
-  server: 104.16.60.8
+  port: 443
+  server: cf.fovi.tk
   skip-cert-verify: true
   tfo: false
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
   ws-opts:
     headers:
-      Host: range-shape-b3fuegu.bananok182.workers.dev
-    path: /hms02.fxiaomi.sbs/link
+      Host: foxlux.fovi.tk
+    path: /eisasqa
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-001-96.126.107.235"
+  delay: 2043
+  name: "\u6CE2\u5170-000-2a09:bac5:506d:2432::39b:d8"
+  network: ws
+  port: 443
+  server: 188.114.96.3
+  servername: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  ws-opts:
+    headers:
+      Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
+    path: /azumase.ren
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
   network: ws
   port: 8880
   server: 104.16.61.8
@@ -51,13 +52,30 @@ proxies:
     headers:
       Host: yaghoob55freenodes.repaco69437403.workers.dev
     path: /jahfkjha.cfd/linkws
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-001-74.207.254.169"
+  network: ws
+  port: 80
+  server: 104.16.60.8
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  ws-opts:
+    headers:
+      Host: range-shape-b3fuegu.bananok182.workers.dev
+    path: /hms02.fxiaomi.sbs/link
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u5370\u5EA6-000-65.20.72.177"
-  - "\u7F8E\u56FD-000-74.207.254.169"
-  - "\u7F8E\u56FD-001-96.126.107.235"
+  - "\u5362\u68EE\u5821-000-104.28.215.3"
+  - "\u6CE2\u5170-000-2a09:bac5:506d:2432::39b:d8"
+  - "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
+  - "\u7F8E\u56FD-001-74.207.254.169"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
