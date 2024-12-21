@@ -6,22 +6,6 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  delay: 1295
-  name: "\u52A0\u62FF\u5927-000-148.113.182.56"
-  network: ws
-  port: 443
-  server: 172.67.233.33
-  servername: cdn-ca.sm-node.com
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: e9ff847b-e8ff-4690-bd68-d024c63c381e
-  ws-opts:
-    headers:
-      Host: cdn-ca.sm-node.com
-    path: /vmess_ws/smjc/index?ed=8192
-- alterId: 0
-  cipher: auto
   name: "\u5362\u68EE\u5821-000-104.28.215.3"
   network: ws
   port: 443
@@ -53,18 +37,6 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-000-4.145.177.123"
-  network: tcp
-  port: 80
-  server: 57.155.30.207
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30812
-  ws-headers:
-    Host: 57.155.30.207
-- alterId: 0
-  cipher: auto
   delay: 2043
   name: "\u6CE2\u5170-000-2a09:bac1:5b80:d60::39b:3d"
   network: ws
@@ -79,23 +51,9 @@ proxies:
     headers:
       Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
     path: /azumase.ren
-- name: "\u6FB3\u5927\u5229\u4E9A-000-192.9.177.204"
-  network: ws
-  password: tg-fq521free
-  port: 443
-  server: 194.76.18.129
-  skip-cert-verify: true
-  sni: torjan.xn--xhq44j.eu.org
-  tfo: false
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: torjan.xn--xhq44j.eu.org
-    path: /
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
+  name: "\u7F8E\u56FD-000-96.126.107.235"
   network: ws
   port: 8880
   server: 104.16.61.8
@@ -113,13 +71,10 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u52A0\u62FF\u5927-000-148.113.182.56"
   - "\u5362\u68EE\u5821-000-104.28.215.3"
   - "\u5370\u5EA6-000-65.20.72.177"
-  - "\u65B0\u52A0\u5761-000-4.145.177.123"
   - "\u6CE2\u5170-000-2a09:bac1:5b80:d60::39b:3d"
-  - "\u6FB3\u5927\u5229\u4E9A-000-192.9.177.204"
-  - "\u7F8E\u56FD-000-2600:3c03::f03c:95ff:fe69:1fab"
+  - "\u7F8E\u56FD-000-96.126.107.235"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
