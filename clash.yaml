@@ -6,37 +6,6 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u5362\u68EE\u5821-000-104.28.215.3"
-  network: ws
-  port: 443
-  server: cf.fovi.tk
-  skip-cert-verify: true
-  tfo: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-  ws-opts:
-    headers:
-      Host: foxlux.fovi.tk
-    path: /eisasqa
-- alterId: 0
-  cipher: auto
-  name: "\u5370\u5EA6-000-65.20.72.177"
-  network: ws
-  port: 2053
-  server: vu-mumbai-01.vnode.info
-  servername: vu-mumbai-01.vnode.info
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: a04001f3-2dba-40ed-8c2e-d0c765d9afaa
-  ws-opts:
-    headers:
-      Host: vu-mumbai-01.vnode.info
-    path: /
-- alterId: 0
-  cipher: auto
   delay: 2043
   name: "\u6CE2\u5170-000-2a09:bac1:5b80:d60::39b:3d"
   network: ws
@@ -51,30 +20,11 @@ proxies:
     headers:
       Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
     path: /azumase.ren
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-000-96.126.107.235"
-  network: ws
-  port: 8880
-  server: 104.16.61.8
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-  ws-opts:
-    headers:
-      Host: yaghoob55freenodes.repaco69437403.workers.dev
-    path: /jahfkjha.cfd/linkws
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u5362\u68EE\u5821-000-104.28.215.3"
-  - "\u5370\u5EA6-000-65.20.72.177"
   - "\u6CE2\u5170-000-2a09:bac1:5b80:d60::39b:3d"
-  - "\u7F8E\u56FD-000-96.126.107.235"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
