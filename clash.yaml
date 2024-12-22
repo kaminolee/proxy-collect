@@ -22,6 +22,37 @@ proxies:
     path: /eisasqa
 - alterId: 0
   cipher: auto
+  name: "\u5FB7\u56FD-000-172.104.229.54"
+  network: ws
+  port: 2052
+  server: 104.16.68.38
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+  ws-opts:
+    headers:
+      Host: square-snowflake-486a.beshir-beisel.workers.dev
+    path: /linde06.indiavideo.sbs/linkws
+- alterId: 0
+  cipher: auto
+  name: "\u6CD5\u56FD-000-2600:3c07::f03c:95ff:fef1:bf51"
+  network: ws
+  port: 2096
+  server: 104.16.67.38
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+  ws-opts:
+    headers:
+      Host: worker-flat-hat-00f2.ravapim426.workers.dev
+    path: /glweidf.cfd/linkws
+- alterId: 0
+  cipher: auto
   delay: 2043
   name: "\u6CE2\u5170-000-2a09:bac1:5b80:d60::39b:3d"
   network: ws
@@ -38,27 +69,29 @@ proxies:
     path: /azumase.ren
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-000-96.126.107.235"
+  name: "\u7F8E\u56FD-000-74.207.254.169"
   network: ws
-  port: 8880
-  server: 104.16.61.8
+  port: 80
+  server: 104.16.60.8
   skip-cert-verify: true
   tfo: false
   tls: false
   type: vmess
   udp: true
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
   ws-opts:
     headers:
-      Host: yaghoob55freenodes.repaco69437403.workers.dev
-    path: /jahfkjha.cfd/linkws
+      Host: range-shape-b3fuegu.bananok182.workers.dev
+    path: /hms02.fxiaomi.sbs/link
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u5362\u68EE\u5821-000-2a09:bac5:4892:2464::3a0:29"
+  - "\u5FB7\u56FD-000-172.104.229.54"
+  - "\u6CD5\u56FD-000-2600:3c07::f03c:95ff:fef1:bf51"
   - "\u6CE2\u5170-000-2a09:bac1:5b80:d60::39b:3d"
-  - "\u7F8E\u56FD-000-96.126.107.235"
+  - "\u7F8E\u56FD-000-74.207.254.169"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
