@@ -6,7 +6,7 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u5FB7\u56FD-000-51.75.65.119"
+  name: "\u5FB7\u56FD-000-2001:41d0:701:1100::8ae8"
   network: ws
   port: 80
   server: 151.101.2.216
@@ -20,23 +20,40 @@ proxies:
     path: /racevpn
 - alterId: 0
   cipher: auto
-  name: "\u6CD5\u56FD-000-172.234.63.6"
+  client-fingerprint: chrome
+  name: "\u65B0\u52A0\u5761-000-140.245.45.71"
   network: ws
-  port: 2096
-  server: 104.16.67.38
-  skip-cert-verify: true
-  tls: true
+  port: 80
+  server: www.aetv.com
+  skip-cert-verify: false
+  tfo: false
+  tls: false
   type: vmess
-  udp: true
-  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
   ws-opts:
     headers:
-      Host: worker-flat-hat-00f2.ravapim426.workers.dev
-    path: /glweidf.cfd/linkws
+      Host: amd.al
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: "\u65B0\u52A0\u5761-001-140.245.45.71"
+  network: ws
+  port: 80
+  server: 151.101.194.168
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
+  ws-opts:
+    headers:
+      Host: amd.al
+    path: /?ed=2048
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
-  name: "\u6CD5\u56FD-001-84.17.60.236"
+  name: "\u6CD5\u56FD-000-84.17.60.236"
   network: ws
   port: 443
   server: primer.ibilibi.li
@@ -68,9 +85,10 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u5FB7\u56FD-000-51.75.65.119"
-  - "\u6CD5\u56FD-000-172.234.63.6"
-  - "\u6CD5\u56FD-001-84.17.60.236"
+  - "\u5FB7\u56FD-000-2001:41d0:701:1100::8ae8"
+  - "\u65B0\u52A0\u5761-000-140.245.45.71"
+  - "\u65B0\u52A0\u5761-001-140.245.45.71"
+  - "\u6CD5\u56FD-000-84.17.60.236"
   - "\u7F8E\u56FD-000-107.174.35.170"
   strategy: round-robin
   type: load-balance
