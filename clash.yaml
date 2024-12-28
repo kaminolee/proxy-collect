@@ -20,53 +20,68 @@ proxies:
     path: /racevpn
 - alterId: 0
   cipher: auto
-  client-fingerprint: chrome
-  name: "\u65B0\u52A0\u5761-000-140.245.45.71"
+  name: "\u65B0\u52A0\u5761-000-152.42.245.73"
   network: ws
-  port: 80
-  server: www.aetv.com
-  skip-cert-verify: false
+  port: 443
+  server: 152.42.245.73
+  skip-cert-verify: true
   tfo: false
-  tls: false
+  tls: true
   type: vmess
-  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
+  udp: true
+  uuid: ef5fca10-41bc-4623-87a3-1170a7b51827
   ws-opts:
     headers:
-      Host: amd.al
-    path: /?ed=2048
+      Host: tls.94.node-for-bigairport.win
+    path: /
 - alterId: 0
   cipher: auto
-  name: "\u65B0\u52A0\u5761-001-140.245.45.71"
+  name: "\u6CD5\u56FD-000-2a04:ecc0:8:a8:4567:e45c:0:1"
   network: ws
-  port: 80
-  server: 151.101.194.168
+  port: 443
+  server: 163.5.159.231
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
+  ws-opts:
+    headers:
+      Host: irvideo.cfd
+    path: /linkws
+- alterId: 0
+  cipher: auto
+  name: "\u6CD5\u56FD-001-45.145.165.133"
+  network: ws
+  port: 2086
+  server: 104.16.60.8
   skip-cert-verify: true
   tfo: false
   tls: false
   type: vmess
   udp: true
-  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
+  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
   ws-opts:
     headers:
-      Host: amd.al
-    path: /?ed=2048
+      Host: 82uple-bird-b087.pemed58443.workers.dev
+    path: /ivideos.sbs/linkws
 - alterId: 0
   cipher: auto
-  client-fingerprint: chrome
-  name: "\u6CD5\u56FD-000-84.17.60.236"
+  name: "\u6CD5\u56FD-002-2a04:ecc0:8:a8:0:266::"
   network: ws
-  port: 443
-  server: primer.ibilibi.li
-  servername: ameblo.jp
-  skip-cert-verify: false
+  port: 8080
+  server: 104.16.60.8
+  skip-cert-verify: true
   tfo: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: e5852393-ca52-4c90-a237-d63cbbb57f21
+  udp: true
+  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
   ws-opts:
     headers:
-      Host: loki.oracle
-    path: /farcry?ed=2560
+      Host: 82uple-bird-b087.pemed58443.workers.dev
+    path: /ivideos.sbs/linkws
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-000-107.174.35.170"
@@ -86,9 +101,10 @@ proxy-groups:
   name: balanced
   proxies:
   - "\u5FB7\u56FD-000-2001:41d0:701:1100::8ae8"
-  - "\u65B0\u52A0\u5761-000-140.245.45.71"
-  - "\u65B0\u52A0\u5761-001-140.245.45.71"
-  - "\u6CD5\u56FD-000-84.17.60.236"
+  - "\u65B0\u52A0\u5761-000-152.42.245.73"
+  - "\u6CD5\u56FD-000-2a04:ecc0:8:a8:4567:e45c:0:1"
+  - "\u6CD5\u56FD-001-45.145.165.133"
+  - "\u6CD5\u56FD-002-2a04:ecc0:8:a8:0:266::"
   - "\u7F8E\u56FD-000-107.174.35.170"
   strategy: round-robin
   type: load-balance
