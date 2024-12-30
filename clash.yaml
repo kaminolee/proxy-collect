@@ -3,41 +3,11 @@ mixed-port: 7892
 mode: rule
 profile:
   store-selected: false
-proxies:
-- alterId: 0
-  cipher: auto
-  name: "\u5FB7\u56FD-000-2001:41d0:701:1100::8ae8"
-  network: ws
-  port: 80
-  server: 151.101.2.216
-  servername: 6606.com
-  skip-cert-verify: true
-  type: vmess
-  uuid: 545485da-9ff4-48c5-ae94-45e6e4ee7d26
-  ws-opts:
-    headers:
-      Host: 6606.com
-    path: /racevpn
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-000-107.174.35.170"
-  network: ws
-  port: 8880
-  server: us-ccs.yuji2022.eu.org
-  servername: us-ccs.yuji2022.eu.org
-  skip-cert-verify: true
-  type: vmess
-  uuid: 4b5e4565-322f-4223-a891-78a84f189726
-  ws-opts:
-    headers:
-      Host: us-ccs.yuji2022.eu.org
-    path: /XSjeg73o6ZdsheahCb5JG
+proxies: []
 proxy-groups:
 - interval: 300
   name: balanced
-  proxies:
-  - "\u5FB7\u56FD-000-2001:41d0:701:1100::8ae8"
-  - "\u7F8E\u56FD-000-107.174.35.170"
+  proxies: []
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
