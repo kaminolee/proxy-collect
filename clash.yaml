@@ -6,20 +6,18 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u6CD5\u56FD-000-163.5.159.231"
+  name: "\u5FB7\u56FD-000-2001:41d0:701:1100::8ae8"
   network: ws
-  port: 443
-  server: 163.5.159.231
+  port: 80
+  server: 151.101.2.216
+  servername: 6606.com
   skip-cert-verify: true
-  tfo: false
-  tls: true
   type: vmess
-  udp: true
-  uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
+  uuid: 545485da-9ff4-48c5-ae94-45e6e4ee7d26
   ws-opts:
     headers:
-      Host: irvideo.cfd
-    path: /linkws
+      Host: 6606.com
+    path: /racevpn
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-000-107.174.35.170"
@@ -38,7 +36,7 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u6CD5\u56FD-000-163.5.159.231"
+  - "\u5FB7\u56FD-000-2001:41d0:701:1100::8ae8"
   - "\u7F8E\u56FD-000-107.174.35.170"
   strategy: round-robin
   type: load-balance
