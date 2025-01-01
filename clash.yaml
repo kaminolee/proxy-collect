@@ -6,37 +6,7 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  name: "\u5370\u5EA6-000-64.227.171.143"
-  network: ws
-  port: 8880
-  server: 104.16.143.237
-  servername: yd.changyouVPN.top
-  skip-cert-verify: true
-  type: vmess
-  uuid: 7efc3b9a-e73f-4e40-b57a-5319c463148b
-  ws-opts:
-    headers:
-      Host: yd.changyouVPN.top
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u5370\u5EA6-001-2603:c024:8000:4fa7::7541"
-  network: ws
-  port: 80
-  server: 151.101.194.168
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
-  ws-opts:
-    headers:
-      Host: amd.al
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: "\u5370\u5EA6-002-2603:c024:8000:4fa7::7541"
+  name: "\u5370\u5EA6-000-2603:c024:8000:4fa7::7541"
   network: ws
   port: 80
   server: 151.101.2.168
@@ -50,25 +20,6 @@ proxies:
     headers:
       Host: amd.al
     path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - iran.ir
-    method: GET
-    path:
-    - /telegram-Gozargah-Azadi
-  name: "\u5FB7\u56FD-000-104.28.193.116"
-  network: http
-  port: 2053
-  server: 91.107.249.225
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a0b2f962-fc82-407a-aa1b-647165a95a12
 - alterId: 0
   cipher: auto
   name: "\u65B0\u52A0\u5761-000-103.106.229.29"
@@ -102,19 +53,18 @@ proxies:
     path: /farcry?ed=2560
 - alterId: 0
   cipher: auto
-  delay: 1496
-  name: "\u7F8E\u56FD-000-167.253.152.186"
+  name: "\u7F8E\u56FD-000-104.168.58.48"
   network: ws
   port: 8880
-  server: lamusa.daozhang.site
-  servername: lamusa.daozhang.site
+  server: 104.16.143.237
+  servername: yd.changyouVPN.top
   skip-cert-verify: true
   type: vmess
-  uuid: 1c1cb7fe-a929-4e47-b292-4073b63d2d4b
+  uuid: 7efc3b9a-e73f-4e40-b57a-5319c463148b
   ws-opts:
     headers:
-      Host: lamusa.daozhang.site
-    path: /
+      Host: yd.changyouVPN.top
+    path: /?ed=2048
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-001-2602:fa4f:900:7be3:3c95:d1c0:4b61:9aec"
@@ -143,19 +93,50 @@ proxies:
     headers:
       Host: tms.dingtalk.com
     path: /wada12222
+- alterId: 0
+  cipher: auto
+  name: "\u8377\u5170-000-2605:e440:2::1:23f"
+  network: ws
+  port: 2053
+  server: 152.70.155.147
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: aa704947-e163-4133-b485-f8032f8f1286
+  ws-opts:
+    headers:
+      Host: nl.zhuk.us.kg
+    path: /ylks
+- alterId: 0
+  cipher: auto
+  name: "\u97E9\u56FD-000-131.186.16.245"
+  network: ws
+  port: 443
+  server: www.csgo.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 33f6d8b0-81f8-4fce-b3df-79dc8fd6d8c5
+  ws-opts:
+    headers:
+      Host: kr.cfyyds.filegear-sg.me
+    path: /rongseven?ed=2048
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u5370\u5EA6-000-64.227.171.143"
-  - "\u5370\u5EA6-001-2603:c024:8000:4fa7::7541"
-  - "\u5370\u5EA6-002-2603:c024:8000:4fa7::7541"
-  - "\u5FB7\u56FD-000-104.28.193.116"
+  - "\u5370\u5EA6-000-2603:c024:8000:4fa7::7541"
   - "\u65B0\u52A0\u5761-000-103.106.229.29"
   - "\u6CD5\u56FD-000-84.17.60.236"
-  - "\u7F8E\u56FD-000-167.253.152.186"
+  - "\u7F8E\u56FD-000-104.168.58.48"
   - "\u7F8E\u56FD-001-2602:fa4f:900:7be3:3c95:d1c0:4b61:9aec"
   - "\u7F8E\u56FD-002-38.150.7.183"
+  - "\u8377\u5170-000-2605:e440:2::1:23f"
+  - "\u97E9\u56FD-000-131.186.16.245"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
