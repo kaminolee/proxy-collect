@@ -6,20 +6,34 @@ profile:
 proxies:
 - alterId: 0
   cipher: auto
-  client-fingerprint: chrome
-  name: "\u65B0\u52A0\u5761-000-168.138.187.98"
+  name: "\u5370\u5EA6-000-2603:c024:8000:4fa7::7541"
   network: ws
   port: 80
-  server: www.aetv.com
-  skip-cert-verify: false
+  server: 151.101.194.168
+  skip-cert-verify: true
   tfo: false
   tls: false
   type: vmess
+  udp: true
   uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
   ws-opts:
     headers:
       Host: amd.al
     path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: "\u65B0\u52A0\u5761-000-103.106.229.29"
+  network: ws
+  port: 47935
+  server: 103.106.229.29
+  tls: false
+  type: vmess
+  udp: true
+  uuid: fb05a8fb-d3ad-4e3f-8676-d5a59d66b5e0
+  ws-opts:
+    headers:
+      Host: tms.dingtalk.com
+    path: /wada12222
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -39,20 +53,34 @@ proxies:
     path: /farcry?ed=2560
 - alterId: 0
   cipher: auto
-  name: "\u8377\u5170-000-2605:e440:2::1:23f"
+  name: "\u7F8E\u56FD-000-104.168.58.48"
   network: ws
-  port: 2053
-  server: 152.70.155.147
+  port: 8880
+  server: 104.16.143.237
+  servername: yd.changyouVPN.top
   skip-cert-verify: true
-  tfo: false
-  tls: true
   type: vmess
-  udp: true
-  uuid: aa704947-e163-4133-b485-f8032f8f1286
+  uuid: 7efc3b9a-e73f-4e40-b57a-5319c463148b
   ws-opts:
     headers:
-      Host: nl.zhuk.us.kg
-    path: /ylks
+      Host: yd.changyouVPN.top
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-001-129.146.3.163"
+  network: ws
+  port: 80
+  server: 151.101.2.168
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
+  ws-opts:
+    headers:
+      Host: amd.al
+    path: /?ed=2048
 - alterId: 0
   cipher: auto
   name: "\u97E9\u56FD-000-131.186.16.245"
@@ -73,9 +101,11 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u65B0\u52A0\u5761-000-168.138.187.98"
+  - "\u5370\u5EA6-000-2603:c024:8000:4fa7::7541"
+  - "\u65B0\u52A0\u5761-000-103.106.229.29"
   - "\u6CD5\u56FD-000-84.17.60.236"
-  - "\u8377\u5170-000-2605:e440:2::1:23f"
+  - "\u7F8E\u56FD-000-104.168.58.48"
+  - "\u7F8E\u56FD-001-129.146.3.163"
   - "\u97E9\u56FD-000-131.186.16.245"
   strategy: round-robin
   type: load-balance
