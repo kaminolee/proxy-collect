@@ -9,7 +9,7 @@ proxies:
   name: "\u5370\u5EA6-000-2603:c024:8000:4fa7::7541"
   network: ws
   port: 80
-  server: 151.101.194.168
+  server: 151.101.2.168
   skip-cert-verify: true
   tfo: false
   tls: false
@@ -34,6 +34,22 @@ proxies:
     headers:
       Host: tms.dingtalk.com
     path: /wada12222
+- alterId: 0
+  cipher: auto
+  name: "\u65B0\u52A0\u5761-001-140.245.47.183"
+  network: ws
+  port: 80
+  server: 151.101.194.168
+  skip-cert-verify: true
+  tfo: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
+  ws-opts:
+    headers:
+      Host: amd.al
+    path: /?ed=2048
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -67,22 +83,6 @@ proxies:
     path: /?ed=2048
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-001-129.146.3.163"
-  network: ws
-  port: 80
-  server: 151.101.2.168
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
-  ws-opts:
-    headers:
-      Host: amd.al
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
   name: "\u97E9\u56FD-000-131.186.16.245"
   network: ws
   port: 443
@@ -103,9 +103,9 @@ proxy-groups:
   proxies:
   - "\u5370\u5EA6-000-2603:c024:8000:4fa7::7541"
   - "\u65B0\u52A0\u5761-000-103.106.229.29"
+  - "\u65B0\u52A0\u5761-001-140.245.47.183"
   - "\u6CD5\u56FD-000-84.17.60.236"
   - "\u7F8E\u56FD-000-104.168.58.48"
-  - "\u7F8E\u56FD-001-129.146.3.163"
   - "\u97E9\u56FD-000-131.186.16.245"
   strategy: round-robin
   type: load-balance
