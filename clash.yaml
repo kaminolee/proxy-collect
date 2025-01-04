@@ -25,17 +25,7 @@ proxies:
   uuid: 8dee19ab-50ce-4d06-be42-5e53c8989ccc
   ws-headers:
     Host: 92.242.220.22
-- alterId: 64
-  cipher: auto
-  name: "\u7F8E\u56FD-000-38.33.19.65"
-  network: tcp
-  port: 41400
-  server: 198.2.218.102
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: "\u7F8E\u56FD-001-129.146.3.163"
+- name: "\u7F8E\u56FD-000-129.146.3.163"
   network: ws
   password: b80Iy90Fma
   port: 443
@@ -51,37 +41,18 @@ proxies:
     path: /cfyyds
 - alterId: 64
   cipher: auto
-  delay: 1560
-  name: "\u7F8E\u56FD-002-198.2.244.17"
-  network: ws
-  port: 36009
-  server: 198.2.196.3
+  name: "\u7F8E\u56FD-001-38.33.19.65"
+  network: tcp
+  port: 41400
+  server: 198.2.218.102
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.84163007.xyz
-    path: /path/1735035359166
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-003-172.104.219.179"
-  network: ws
-  port: 443
-  server: hms02opi.fxiaomi.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  ws-opts:
-    headers:
-      Host: hms02.fxiaomi.sbs
-    path: /link
 - alterId: 64
   cipher: auto
   delay: 1667
-  name: "\u7F8E\u56FD-004-142.0.142.242"
+  name: "\u7F8E\u56FD-002-142.0.142.242"
   network: ws
   port: 37001
   server: 38.33.56.55
@@ -95,8 +66,23 @@ proxies:
     path: /path/1735898936173
 - alterId: 64
   cipher: auto
+  delay: 1560
+  name: "\u7F8E\u56FD-003-198.2.244.17"
+  network: ws
+  port: 36009
+  server: 198.2.196.3
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.84163007.xyz
+    path: /path/1735035359166
+- alterId: 64
+  cipher: auto
   delay: 1570
-  name: "\u7F8E\u56FD-005-198.2.244.17"
+  name: "\u7F8E\u56FD-004-198.2.244.17"
   network: ws
   port: 36009
   server: 198.2.196.7
@@ -110,32 +96,30 @@ proxies:
     path: /path/1735208641002
 - alterId: 0
   cipher: auto
-  delay: 947
-  name: "\u7F8E\u56FD-006-104.168.58.48"
+  name: "\u7F8E\u56FD-005-74.207.254.199"
   network: ws
-  port: 8880
-  server: yx2.changyouVPN.top
-  servername: yd.changyouVPN.top
+  port: 443
+  server: hms02opi.fxiaomi.sbs
   skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: 7efc3b9a-e73f-4e40-b57a-5319c463148b
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
   ws-opts:
     headers:
-      Host: yd.changyouVPN.top
-    path: /?ed=2048
+      Host: hms02.fxiaomi.sbs
+    path: /link
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u4E39\u9EA6-000-185.236.203.66"
   - "\u585E\u6D66\u8DEF\u65AF-000-45.82.254.208"
-  - "\u7F8E\u56FD-000-38.33.19.65"
-  - "\u7F8E\u56FD-001-129.146.3.163"
-  - "\u7F8E\u56FD-002-198.2.244.17"
-  - "\u7F8E\u56FD-003-172.104.219.179"
-  - "\u7F8E\u56FD-004-142.0.142.242"
-  - "\u7F8E\u56FD-005-198.2.244.17"
-  - "\u7F8E\u56FD-006-104.168.58.48"
+  - "\u7F8E\u56FD-000-129.146.3.163"
+  - "\u7F8E\u56FD-001-38.33.19.65"
+  - "\u7F8E\u56FD-002-142.0.142.242"
+  - "\u7F8E\u56FD-003-198.2.244.17"
+  - "\u7F8E\u56FD-004-198.2.244.17"
+  - "\u7F8E\u56FD-005-74.207.254.199"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
