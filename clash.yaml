@@ -4,6 +4,21 @@ mode: rule
 profile:
   store-selected: false
 proxies:
+- alterId: 0
+  cipher: auto
+  delay: 1989
+  name: "\u65B0\u52A0\u5761-000-2402:1f00:8000:800::4277"
+  network: ws
+  port: 80
+  server: cf-vod.nimo.tv
+  servername: ovh.reonolimits.my.id
+  skip-cert-verify: true
+  type: vmess
+  uuid: 4ffc214f-6e89-4097-a791-a5cb22bd9319
+  ws-opts:
+    headers:
+      Host: ovh.reonolimits.my.id
+    path: /vmessws
 - alterId: 64
   cipher: auto
   delay: 1692
@@ -14,6 +29,21 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  delay: 1753
+  name: "\u7F8E\u56FD-001-107.175.213.143"
+  network: ws
+  port: 2082
+  server: s3.db-link01.top
+  servername: 100-158-204-97.s3.db-link01.top
+  skip-cert-verify: true
+  type: vmess
+  uuid: 65c003b7-d0b5-3751-8e22-b959f46463bc
+  ws-opts:
+    headers:
+      Host: 100-158-204-97.s3.db-link01.top
+    path: /dabai.in104.24.107.6
 - name: "\u8377\u5170-000-87.120.167.51"
   network: tcp
   password: '3723507166611775488'
@@ -27,7 +57,9 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
+  - "\u65B0\u52A0\u5761-000-2402:1f00:8000:800::4277"
   - "\u7F8E\u56FD-000-137.175.20.81"
+  - "\u7F8E\u56FD-001-107.175.213.143"
   - "\u8377\u5170-000-87.120.167.51"
   strategy: round-robin
   type: load-balance
