@@ -45,6 +45,21 @@ proxies:
   sni: concrete-buzzard.boa152.lol
   type: trojan
   udp: true
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: 6mHwqI1HSSVtXxCxshcV
+  name: "\u8377\u5170-001-2a12:5940:939c::2"
+  network: grpc
+  port: 443
+  server: 104.21.88.223
+  servername: sth.happyground.ir
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: fd670030-d8c8-467b-a4b9-06d26a0323d8
 proxy-groups:
 - interval: 300
   name: balanced
@@ -52,6 +67,7 @@ proxy-groups:
   - "\u65B0\u52A0\u5761-000-2402:1f00:8000:800::4277"
   - "\u6CD5\u56FD-000-84.17.60.236"
   - "\u8377\u5170-000-87.120.167.51"
+  - "\u8377\u5170-001-2a12:5940:939c::2"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
