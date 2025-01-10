@@ -20,17 +20,9 @@ proxies:
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
     path: /azumase.ren
-- alterId: 64
-  cipher: auto
-  name: "\u7F8E\u56FD-000-38.33.19.65"
-  network: tcp
-  port: 41400
-  server: 198.2.218.100
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-001-2600:3c03::f03c:95ff:fe16:f07a"
+  name: "\u7F8E\u56FD-000-173.255.232.74"
   network: ws
   port: 443
   server: 173.255.232.74
@@ -45,6 +37,14 @@ proxies:
     path: /linkws
 - alterId: 64
   cipher: auto
+  name: "\u7F8E\u56FD-001-38.33.19.65"
+  network: tcp
+  port: 41400
+  server: 198.2.218.100
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 64
+  cipher: auto
   name: "\u7F8E\u56FD-002-38.33.19.65"
   network: tcp
   port: 41400
@@ -53,14 +53,29 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: "\u963F\u8054\u914B-000-129.151.146.121"
+  network: ws
+  port: 2086
+  server: 104.21.89.219
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
+  ws-opts:
+    headers:
+      Host: shs.xiaoqi666.xyz
+    path: /
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u6CD5\u56FD-000-2a09:bac5:3265:1c82::2d7:db"
-  - "\u7F8E\u56FD-000-38.33.19.65"
-  - "\u7F8E\u56FD-001-2600:3c03::f03c:95ff:fe16:f07a"
+  - "\u7F8E\u56FD-000-173.255.232.74"
+  - "\u7F8E\u56FD-001-38.33.19.65"
   - "\u7F8E\u56FD-002-38.33.19.65"
+  - "\u963F\u8054\u914B-000-129.151.146.121"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
