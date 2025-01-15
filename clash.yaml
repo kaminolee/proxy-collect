@@ -4,37 +4,11 @@ mode: rule
 profile:
   store-selected: false
 proxies:
-- name: "\u53F0\u6E7E-000-61.224.82.246"
-  network: ws
-  password: Aimer
-  port: 2096
-  server: 104.19.57.183
-  skip-cert-verify: true
-  sni: ameqo.esslh.filegear-sg.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ameqo.esslh.filegear-sg.me
-    path: /?ed=2560
-- name: "\u53F0\u6E7E-001-61.224.82.246"
+- name: "\u53F0\u6E7E-000-61.224.90.226"
   network: ws
   password: Aimer
   port: 8443
   server: 16.16.45.85
-  skip-cert-verify: true
-  sni: ameqo.esslh.filegear-sg.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ameqo.esslh.filegear-sg.me
-    path: /?ed=2560
-- name: "\u53F0\u6E7E-002-61.224.82.246"
-  network: ws
-  password: Aimer
-  port: 443
-  server: 45.136.199.132
   skip-cert-verify: true
   sni: ameqo.esslh.filegear-sg.me
   type: trojan
@@ -97,7 +71,21 @@ proxies:
     path: /dabai.in104.25.204.117
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-002-23.94.243.79"
+  name: "\u7F8E\u56FD-002-192.227.237.60"
+  network: ws
+  port: 80
+  server: 104.16.155.10
+  servername: 100-49-141-209.s1.db-link02.top
+  skip-cert-verify: true
+  type: vmess
+  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
+  ws-opts:
+    headers:
+      Host: 100-49-141-209.s1.db-link02.top
+    path: /dabai.in104.17.169.115
+- alterId: 0
+  cipher: auto
+  name: "\u7F8E\u56FD-003-23.94.243.79"
   network: ws
   port: 2052
   server: 104.19.48.236
@@ -111,7 +99,7 @@ proxies:
     path: /dabai.in172.67.71.198
 - alterId: 0
   cipher: auto
-  name: "\u7F8E\u56FD-003-192.227.237.60"
+  name: "\u7F8E\u56FD-004-192.227.237.60"
   network: ws
   port: 2086
   server: 104.17.221.248
@@ -123,20 +111,6 @@ proxies:
     headers:
       Host: 100-48-202-143.s1.db-link01.top
     path: /dabai.in104.17.154.223
-- alterId: 0
-  cipher: auto
-  name: "\u7F8E\u56FD-004-192.227.237.60"
-  network: ws
-  port: 80
-  server: 104.16.155.10
-  servername: 100-49-141-209.s1.db-link02.top
-  skip-cert-verify: true
-  type: vmess
-  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
-  ws-opts:
-    headers:
-      Host: 100-49-141-209.s1.db-link02.top
-    path: /dabai.in104.17.169.115
 - alterId: 0
   cipher: auto
   name: "\u7F8E\u56FD-005-192.227.237.60"
@@ -174,15 +148,13 @@ proxy-groups:
 - interval: 300
   name: balanced
   proxies:
-  - "\u53F0\u6E7E-000-61.224.82.246"
-  - "\u53F0\u6E7E-001-61.224.82.246"
-  - "\u53F0\u6E7E-002-61.224.82.246"
+  - "\u53F0\u6E7E-000-61.224.90.226"
   - "\u5FB7\u56FD-000-165.22.74.230"
   - "\u65E5\u672C-000-206.190.234.176"
   - "\u7F8E\u56FD-000-107.175.213.143"
   - "\u7F8E\u56FD-001-107.175.213.143"
-  - "\u7F8E\u56FD-002-23.94.243.79"
-  - "\u7F8E\u56FD-003-192.227.237.60"
+  - "\u7F8E\u56FD-002-192.227.237.60"
+  - "\u7F8E\u56FD-003-23.94.243.79"
   - "\u7F8E\u56FD-004-192.227.237.60"
   - "\u7F8E\u56FD-005-192.227.237.60"
   - "\u7F8E\u56FD-006-104.194.87.59"
