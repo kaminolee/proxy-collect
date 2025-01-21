@@ -22,8 +22,22 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
+  delay: 1626
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: "\u5FB7\u56FD-000-64.225.109.206"
+  network: http
+  port: 2082
+  server: 64.225.109.206
+  skip-cert-verify: true
+  type: vmess
+  uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
+- alterId: 0
+  cipher: auto
   delay: 1798
-  name: "\u5FB7\u56FD-000-23.158.56.241"
+  name: "\u5FB7\u56FD-001-23.158.56.241"
   network: ws
   port: 443
   server: 23.158.56.241
@@ -36,20 +50,6 @@ proxies:
     headers:
       Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /linkvws
-- alterId: 0
-  cipher: auto
-  delay: 1626
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: "\u5FB7\u56FD-001-64.225.109.206"
-  network: http
-  port: 2082
-  server: 64.225.109.206
-  skip-cert-verify: true
-  type: vmess
-  uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
 - alterId: 0
   cipher: auto
   delay: 854
@@ -85,23 +85,8 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  delay: 2517
-  name: "\u7F8E\u56FD-001-192.227.237.60"
-  network: ws
-  port: 8880
-  server: s1.db-link01.top
-  servername: 100-250-32-53.s1.db-link01.top
-  skip-cert-verify: true
-  type: vmess
-  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
-  ws-opts:
-    headers:
-      Host: 100-250-32-53.s1.db-link01.top
-    path: /dabai.in172.67.95.35
-- alterId: 0
-  cipher: auto
   delay: 1616
-  name: "\u7F8E\u56FD-002-23.94.243.79"
+  name: "\u7F8E\u56FD-001-23.94.243.79"
   network: ws
   port: 2052
   server: s2.cn-db.top
@@ -115,7 +100,7 @@ proxies:
 - alterId: 0
   cipher: auto
   delay: 1693
-  name: "\u7F8E\u56FD-003-23.94.243.79"
+  name: "\u7F8E\u56FD-002-23.94.243.79"
   network: ws
   port: 2082
   server: s2.db-link01.top
@@ -126,18 +111,33 @@ proxies:
     headers:
       Host: 100-253-20-251.s2.db-link01.top
     path: /dabai.in172.67.61.61
+- alterId: 0
+  cipher: auto
+  delay: 2517
+  name: "\u7F8E\u56FD-003-192.227.237.60"
+  network: ws
+  port: 8880
+  server: s1.db-link01.top
+  servername: 100-250-32-53.s1.db-link01.top
+  skip-cert-verify: true
+  type: vmess
+  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
+  ws-opts:
+    headers:
+      Host: 100-250-32-53.s1.db-link01.top
+    path: /dabai.in172.67.95.35
 proxy-groups:
 - interval: 300
   name: balanced
   proxies:
   - "\u52A0\u62FF\u5927-000-15.235.83.228"
-  - "\u5FB7\u56FD-000-23.158.56.241"
-  - "\u5FB7\u56FD-001-64.225.109.206"
+  - "\u5FB7\u56FD-000-64.225.109.206"
+  - "\u5FB7\u56FD-001-23.158.56.241"
   - "\u65E5\u672C-000-206.190.234.176"
   - "\u7F8E\u56FD-000-4.153.179.25"
-  - "\u7F8E\u56FD-001-192.227.237.60"
+  - "\u7F8E\u56FD-001-23.94.243.79"
   - "\u7F8E\u56FD-002-23.94.243.79"
-  - "\u7F8E\u56FD-003-23.94.243.79"
+  - "\u7F8E\u56FD-003-192.227.237.60"
   strategy: round-robin
   type: load-balance
   url: http://www.gstatic.com/generate_204
